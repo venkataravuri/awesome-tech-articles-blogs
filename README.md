@@ -26,3 +26,7 @@ List of interesting articles, blogs, tutorials and videos that I come across eve
   - [Demand Zero RPO and Zero Downtime for Business Success](https://www.cockroachlabs.com/blog/demand-zero-rpo/)
   - [Backup and its Role in Disaster Recovery](https://www.mongodb.com/backup-and-its-role-disaster-recovery)
 - [Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
+
+### 26th Oct 2019
+- [Dealing with missing values](https://www.kaggle.com/alexisbcook/missing-values)
+
