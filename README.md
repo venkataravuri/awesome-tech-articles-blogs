@@ -20,3 +20,9 @@ List of interesting articles, blogs, tutorials and videos that I come across eve
 
 ### 23rd Oct 2019 - Pandas read_csv Intro
 - [How to read data using pandas read_csv](https://honingds.com/blog/pandas-read_csv/)
+
+### 26th Oct 2019
+- RPO Zero Notes
+  - [Demand Zero RPO and Zero Downtime for Business Success](https://www.cockroachlabs.com/blog/demand-zero-rpo/)
+  - [Backup and its Role in Disaster Recovery](https://www.mongodb.com/backup-and-its-role-disaster-recovery)
+- [Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
