@@ -1,5 +1,6 @@
 ### String Algorithms
-
+- https://www.geeksforgeeks.org/algorithms-gq/pattern-searching/
+- 
 
 #### Interview Questions
 Stars | Kind | Topic
