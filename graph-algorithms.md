@@ -20,6 +20,6 @@ Given two points in the matrix find the shortest path between these points ](htt
 :star: | :link: | [The "Island Count" Problem. Given a 2D matrix M, filled with either 0s or 1s, count the number of islands of 1s in M. An island is a group of adjacent values that are all 1s. Every cell in M can be adjacent to the 4 cells that are next to it on the same row or column.](https://www.careercup.com/question?id=5708658983829504)
 :star: | :link: | [A company's organizational structure is represented as 1: 2, 3, 4 - In the above employees with id 2, 3 and 4 report to 1
  Assume the following hierarchy. 1: 2, 3, 4; 3: 5, 6, 7; 5: 8, 9, 10 Given an employee Id, return all the employees reporting to him directly or indirectly](https://careercup.com/question?id=5638836259389440)
-:star: | :link: | []()
-:star: | :link: | []()
+:star: | :link: | [There is a 2D matrix of 0s and 1s that depicts the number of rooms that can be formed by a co-working space company like WeWork based on the values. 1 means open space for room and 0 means wall. We need to group as many 1s and possible to form the largest and minimum number of rooms.](https://careercup.com/question?id=5106119094042624)
+:star: | :link: | [How can deadlock be detected and prevented in practical scenarios?](https://www.careercup.com/question?id=84685)
 :star: | :link: | []()
