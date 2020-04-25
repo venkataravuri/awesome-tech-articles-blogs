@@ -16,9 +16,10 @@ Stars | Type | Topic
 are filled. Here X means you cannot traverse to that particular points. From a cell you can either traverse to left, right, up or down
 Given two points in the matrix find the shortest path between these points ](https://www.careercup.com/question?id=5725353829990400)
 :star: | :link: | [Give a connected graph, no cycle,  Find the node where the average distance from all other nodes is the smallest](https://www.careercup.com/question?id=4865575762264064)
-:star: | :link: | []()
-:star: | :link: | []()
-:star: | :link: | []()
+:star: | :link: | [There is a graph where each node represents a city and it contains specific no. of people. A tournament is going on and each match is playing in one city. All city’s people gather to watch match. Traffic department wants to manage how many people travel through city x if match is playing in city y for each x. City x and y can be any city.](https://www.careercup.com/question?id=5705027711664128)
+:star: | :link: | [The "Island Count" Problem. Given a 2D matrix M, filled with either 0s or 1s, count the number of islands of 1s in M. An island is a group of adjacent values that are all 1s. Every cell in M can be adjacent to the 4 cells that are next to it on the same row or column.](https://www.careercup.com/question?id=5708658983829504)
+:star: | :link: | [A company's organizational structure is represented as 1: 2, 3, 4 - In the above employees with id 2, 3 and 4 report to 1
+ Assume the following hierarchy. 1: 2, 3, 4; 3: 5, 6, 7; 5: 8, 9, 10 Given an employee Id, return all the employees reporting to him directly or indirectly](https://careercup.com/question?id=5638836259389440)
 :star: | :link: | []()
 :star: | :link: | []()
 :star: | :link: | []()
