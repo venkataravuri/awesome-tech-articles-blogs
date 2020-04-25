@@ -12,8 +12,10 @@ Stars | Type | Topic
 :star: | :link: | [Print all the cycles in a directed graph](https://www.careercup.com/question?id=5752609117831168)
 :star: | :link: | [Find the common friend between two people in facebook? Use graphs.](https://www.careercup.com/question?id=15499824)
 :star: | :link: | [Given a graph where every two nodes are either friends or enemies with each other. Find a way to go from one node to the other. Restrictions: 1) You can also travel from one node to next if they are friends with each other. 2) You have some “magic potions”. You can convert an enemy path to a friend path with a magic potion. Find the path with min number of magic potions required.](https://www.careercup.com/question?id=5727738531938304)
-:star: | :link: | []()
-:star: | :link: | []()
+:star: | :link: | [Given  a 2 dimensional matrix where some of the elements are filled with 1 and rest of the elements 
+are filled. Here X means you cannot traverse to that particular points. From a cell you can either traverse to left, right, up or down
+Given two points in the matrix find the shortest path between these points ](https://www.careercup.com/question?id=5725353829990400)
+:star: | :link: | [Give a connected graph, no cycle,  Find the node where the average distance from all other nodes is the smallest](https://www.careercup.com/question?id=4865575762264064)
 :star: | :link: | []()
 :star: | :link: | []()
 :star: | :link: | []()
