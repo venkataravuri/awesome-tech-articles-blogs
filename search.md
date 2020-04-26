@@ -1,4 +1,4 @@
-# Search, Full Text Search, Video Search
+# :mag: Search, :page_facing_up: Full Text Search, Video Search
 
 ## Terminology
 = Inverted Index
@@ -31,36 +31,46 @@ Lucene
 Solr
 
 
+### ElasticSearch
+Stars | Type | Topic
+------------ | ------------- | -------------
+:star: | :computer: | [](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
+:star: | :computer: | [](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
+:star: | :link: | []()
 
-
-http://www.slideshare.net/astensby/data-exploration-with-elasticsearch
-http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins
-
-
-Tumblr Search Architecture
-http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup
-
-
-Twitter
-http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy
-
-LinkedIn
-
-http://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search/23-Life_of_a_Query23Query_RewriterPlannerResultsMergingUserQuerySearchResultsSearch
-
-http://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin
-http://www.slideshare.net/HiveData/20140521-hivev3shareable
-https://engineering.linkedin.com/faceting/many-facets-faceted-search
-http://www.slideshare.net/dtunkelang/search-quality-at-linkedin/65-EFFICIENCY_VS_EXPRESSIVENESS_Build_tree
-
-http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction
-
-
+### Engineering Blogs
+Stars | Type | Topic
+------------ | ------------- | -------------
+:star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
+:star: | :computer: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
+:star: | :link: | [LinkedIn](http://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search/23-Life_of_a_Query23Query_RewriterPlannerResultsMergingUserQuerySearchResultsSearch)
+:star: | :link: | [LinkedIn](http://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
+:star: | :link: | [LinkedIn](https://engineering.linkedin.com/faceting/many-facets-faceted-search)
+:star: | :link: | [](http://www.slideshare.net/HiveData/20140521-hivev3shareable)
+:star: | :link: | [](http://www.slideshare.net/dtunkelang/search-quality-at-linkedin/65-EFFICIENCY_VS_EXPRESSIVENESS_Build_tree)
+:star: | :link: | [](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
+:star: | :link: | [](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
+:star: | :tv: | [Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
+:star: | :link: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
+:star: | :link: | []()
 
 
 
 
-https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Inverted Index
 The inverted index is at the core of the Lucene technology, its duty is to map terms to documents, so that these documents can easily be found.
