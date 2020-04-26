@@ -9,6 +9,12 @@
 - Textual Relevancy
     how: exact match, query proximity
     where: name, title, tag, mention, body, etc
+    
+    Search Precision and Recall By Example
+    https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/
+    
+## Recommendations
+https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
 
 ### 
 Autocomplete Suggestions
@@ -52,6 +58,15 @@ Stars | Type | Topic
 :star: | :link: | [](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
 :star: | :tv: | [Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
 :star: | :link: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
+:star: | :link: | [Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
+:star: | :link: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
+:star: | :link: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
+:star: | :link: | []()
+:star: | :link: | []()
+:star: | :link: | []()
+:star: | :link: | []()
+:star: | :link: | []()
+:star: | :link: | []()
 :star: | :link: | []()
 
 
