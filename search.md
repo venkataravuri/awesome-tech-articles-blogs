@@ -77,7 +77,7 @@ Stars | Type | Topic
 :star: | :link: | []()
 :star: | :link: | []()
 :star: | :link: | []()
-:star: | :link: | []()
+:star: | :link: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
 
 [How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud)
 
@@ -104,12 +104,17 @@ https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-l
 https://netflixtechblog.com/graphql-search-indexing-334c92e0d8d5
 
 
+*** https://engineeringblog.yelp.com/2018/06/fast-order-search.html
+https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html
+Maptype — fast doc-value lookups for map data in Elasticsearch
+https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html
+
+https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html
 
 
 
-
-
-
+Reading Between the Lines: How We Make Sense of Users' Searches
+https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html
 
 
 
