@@ -1,5 +1,14 @@
 # :mag: Search, :page_facing_up: Full Text Search, Video Search
 
+***** 
+https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
+
+****
+https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
+
+**
+https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
+
 ## Terminology
 = Inverted Index
 - TF/IDF
