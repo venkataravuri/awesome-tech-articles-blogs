@@ -1,30 +1,36 @@
-Search
+# Search, Full Text Search, Video Search
+
+## Terminology
+= Inverted Index
+- TF/IDF
+- Relevancy
+- Ranking
+- Scoring
+- Textual Relevancy
+    how: exact match, query proximity
+    where: name, title, tag, mention, body, etc
+
+### 
+Autocomplete Suggestions
+Guided suggestions
+Spell Correction
+Typeahead
+Spam-Resilient Signals
+Faceted Search
+
+Trending
+Recommendations
+
+
 Ranking
 Terminology
-Inverted index
 Scoring
-Software
+## Software
+ElasticSearch
 Lucene
 Solr
 
-Creating an easy and well-guided search strategy is important,
 
-
-Search Autocomplete Suggestions
-Guided suggestions
-Spell Correction
-Recommendations
-Interest Modeling
-Interest based recommendations
-Trending
-Typeahead
-Related Search
-Ranking
-Textual Relevancy
-how: exact match, query proximity
-where: name, title, tag, mention, body, etc
-Recency
-Spam-Resilient Signals
 
 
 http://www.slideshare.net/astensby/data-exploration-with-elasticsearch
@@ -56,11 +62,7 @@ http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-predict
 
 https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24
 
-facets have been deprecated in Elasticsearch in favor of aggregations
-
-Terminology
-Inverted index
-
+### Inverted Index
 The inverted index is at the core of the Lucene technology, its duty is to map terms to documents, so that these documents can easily be found.
 
 Figure: Mapping back a set of ingredients to the original recipes. Flour is used in all the bakery products, eggs are only in the Sacher cake, water (ice) is mixed even into the bratwurst (proteins would “melt” during meat mincing).
