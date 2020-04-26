@@ -13,8 +13,13 @@
     Search Precision and Recall By Example
     https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/
     
+    Search Engine Marketing
+    https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/
+    
 ## Recommendations
 https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
+
+[Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
 
 ### 
 Autocomplete Suggestions
@@ -69,7 +74,22 @@ Stars | Type | Topic
 :star: | :link: | []()
 :star: | :link: | []()
 
+[How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud)
 
+[PageRank in Spark](https://developers.soundcloud.com/blog/pagerank-in-spark)
+
+
+[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
+
+[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
+
+https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920/
+
+https://www.facebook.com/notes/facebook-engineering/the-life-of-a-typeahead-query/389105248919/
+
+https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/
+
+https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/
 
 
 
