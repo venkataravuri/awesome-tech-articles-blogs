@@ -1,0 +1,3 @@
+Stream Analytics, Big Data, ...
+
+http://tech.nextroll.com/blog/dev/2019/08/06/hll-in-postgresql.html
