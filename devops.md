@@ -1,4 +1,8 @@
-DevOps
+## DevOps & SRE
+
+https://blog.algolia.com/one-year-load-balancing/
+
+
 What is DevOps?
 What is DevOps?
 Is it a culture? Is it a job title? Is it a way of organizing? Or just a way of thinking? We think it’s a still-evolving movement...
