@@ -21,6 +21,11 @@ https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recomme
 
 [Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
 
+https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
+
+https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
+
+
 ### 
 Autocomplete Suggestions
 Guided suggestions
@@ -96,6 +101,7 @@ https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-l
 
 
 
+https://netflixtechblog.com/graphql-search-indexing-334c92e0d8d5
 
 
 
