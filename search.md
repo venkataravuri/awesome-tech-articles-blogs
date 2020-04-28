@@ -1,20 +1,14 @@
 # :mag: Search Technologies, :thumbsup: Recommendation Engines
 
-**** 
-https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
-
-****
-https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
-
-**
-https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
-
-## Terminology
-= Inverted Index
-- TF/IDF
-- Relevancy
-- Ranking
-- Scoring
+## Search Topics & Terminology
+- Term Frequency & Inverted Document Frequency (TF/IDF)
+- Autocomplete Suggestions
+- Guided suggestions
+- Spell Correction
+- Typeahead
+- Spam-Resilient Signals
+- Faceted Search
+- Ranking & Scoring
 - Textual Relevancy
     how: exact match, query proximity
     where: name, title, tag, mention, body, etc
@@ -26,6 +20,9 @@ https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticse
     https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/
     
 ## Recommendations
+
+Trending
+Recommendations
 https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
 
 [Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
@@ -34,36 +31,20 @@ https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
 
 https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
 
-
-### 
-Autocomplete Suggestions
-Guided suggestions
-Spell Correction
-Typeahead
-Spam-Resilient Signals
-Faceted Search
-
-Trending
-Recommendations
-
-
-Ranking
-Terminology
-Scoring
-## Software
-ElasticSearch
-Lucene
-Solr
-
-
-### ElasticSearch
+### ElasticSearch Tutorials
 Stars | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
 :star: | :computer: | [](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
 :star: | :link: | []()
 
-### Engineering Blogs
+### e-commerce search real-world implemenation
+:star::star::star::star::star: https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
+Explanation article, https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
+
+https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
+
+### Articles form Engineering Blogs
 Stars | Type | Topic
 ------------ | ------------- | -------------
 :star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
