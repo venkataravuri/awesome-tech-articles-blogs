@@ -6,6 +6,7 @@
 - Guided suggestions
 - Spell Correction
 - Typeahead
+- Fuzziness
 - Spam-Resilient Signals
 - Faceted Search
 - Ranking & Scoring
@@ -120,12 +121,20 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 Great Article: http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1
 
 Autocomplete/Auto-Suggest
+ did-you-mean (DYM)
 
+AutoComplete – offers search query completions based on what the user has typed.
 
 There are at least two broad types of autocomplete, what I will call Search Suggest, and Result Suggest. Search Suggest returns suggestions for search phrases, usually based on previously logged searches, ranked by popularity or some other metric. This approach requires logging users' searches and ranking them so that the autocomplete suggestions evolve over time.
 
 
 The second type of autocomplete is Result Suggest. In this case the suggestions are actual results rather than search phrase suggestions.
+
+[Autocomplete best practices](https://blog.griddynamics.com/smart-autocomplete-best-practices/)
+:star::start::star::star: [Autocomplete with Elasticsearch - Part 1: Prefix Queries](https://blog.mimacom.com/autocomplete-elasticsearch-part1/)
+https://www.rea-group.com/blog/implementing-autosuggest-in-elasticsearch/
+https://eatcodeplay.com/on-the-road-to-a-better-elasticsearch-location-typeahead-b75e3eb6dd41
+https://documentation.spryker.com/docs/multi-term-auto-completion
 
 Completion Suggest
 
