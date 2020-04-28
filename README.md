@@ -1,7 +1,7 @@
-# Daily Learning Notes 
-List of interesting articles, blogs, tutorials and videos that I come across everyday.
+## Learning Notes 
+Interesting articles, blogs, tutorials and videos that I come across everyday.
 
-## Topics
+# Topics
 
 | Scalability | [Digital Transformation](digital-transformation.md) | Python |
 |:---:|:---:|:---:|
