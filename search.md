@@ -118,6 +118,13 @@ Great Article: https://qbox.io/blog/introduction-to-elasticsearch-analyzers
 Scoring
 We generally define scoring as giving a higher weight to documents (or data) that meet specific criteria. The objective is often to get a list of documents, sorted on the relevance to the search. Typically, relevance is the numerical output of an algorithm that determines which documents are most textually similar to the query. Elasticsearch employs and enhances standard scoring algorithms and encapsulates these within script_score and function_score.
 
+
+### Typeahead
+
+https://medium.com/pinterest-engineering/rebuilding-the-user-typeahead-9c5bf9723173
+https://engineering.linkedin.com/open-source/cleo-open-source-technology-behind-linkedins-typeahead-search
+
+
 Great Article: http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1
 
 Autocomplete/Auto-Suggest
