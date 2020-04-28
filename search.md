@@ -1,6 +1,6 @@
-# :mag: Search, :page_facing_up: Full Text Search, Video Search
+# :mag: Search Technologies, :thumbsup: Recommendation Engines
 
-***** 
+**** 
 https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
 
 ****
