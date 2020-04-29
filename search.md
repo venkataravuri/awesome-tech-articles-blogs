@@ -32,6 +32,14 @@ https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
 
 https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
 
+## Software
+### Lucene
+Lucene is a powerful search engine framework that lets us add search capability to our application. It exposes easy-to-use API while hiding all the search-related complex operations. Any application can use this library, not just Solr.
+### Solr
+Solr is built around Lucene. It is not just a http-wrapper around Lucene but has been known to add more arsenal to Lucene. Solr is ready-to-use out of box. It is a web application that offers infrastructure related and a lot more features in addition to what Lucene offers.
+
+Solr/Lucene or Elastic search are very power search engine frameworks that are used to provide quick search on large text based data. The documents are indexed using inverted index which makes the search very fast while compromising on the speed while adding new documents. The documents once indexed can be easy queried. Both the frameworks come with REST api using which the data can be indexed , queries and deleted.
+
 ### ElasticSearch Tutorials
 Stars | Type | Topic
 ------------ | ------------- | -------------
@@ -157,12 +165,6 @@ As faceting evolves and product catalogs become more complex, “nested faceting
 
 Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-powerful Aggregations feature changes this. Think of aggregations as “facets of facets.”
 
-
-Software
-Lucene
-Lucene is a powerful search engine framework that lets us add search capability to our application. It exposes easy-to-use API while hiding all the search-related complex operations. Any application can use this library, not just Solr.
-Solr
-Solr is built around Lucene. It is not just a http-wrapper around Lucene but has been known to add more arsenal to Lucene. Solr is ready-to-use out of box. It is a web application that offers infrastructure related and a lot more features in addition to what Lucene offers.
-
-Solr/Lucene or Elastic search are very power search engine frameworks that are used to provide quick search on large text based data. The documents are indexed using inverted index which makes the search very fast while compromising on the speed while adding new documents. The documents once indexed can be easy queried. Both the frameworks come with REST api using which the data can be indexed , queries and deleted.
+### Scoring
+https://www.compose.com/articles/how-scoring-works-in-elasticsearch/
 
