@@ -1,7 +1,7 @@
 # :mag: Search Technologies, :thumbsup: Recommendation Engines
 
 ## Search Topics & Terminology
-- Term Frequency & Inverted Document Frequency (TF/IDF)
+- Indexing & Pipelines
 - Autocomplete Suggestions
 - Guided suggestions
 - Spell Correction
