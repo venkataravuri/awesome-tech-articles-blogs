@@ -1,6 +1,18 @@
 # :mag: Search Technologies, :thumbsup: Recommendation Engines
 
 ## Search Topics & Terminology
+
+https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
+https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
+
+   Tokenization: Break the text into words.
+
+    Lemmatization: Find the basic form of each word variation in the context. Examples are "account" from "accounts" and "break" from "broke."
+
+    Stop Word Filter: Filter out common words. In English, there are hundreds of stop words like "a," "my," and "on," to name a few, that have little bearing on relevance or meaning, and thus can safely be removed from the query in order to target the more valuable words.
+
+    Part of Speech (PoS) Filter: Read through text and give each word a PoS based on the context. There are nine parts in English: adjective, adverb, conjunction, determiner, noun, number, preposition, pronoun, and verb. We only capture nouns, verbs, proper nouns, and adjectives, as they together represent the purpose of a text.
+    
 - Indexing & Pipelines
 - Autocomplete Suggestions
 - Guided suggestions
@@ -115,7 +127,14 @@ https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3
 Reading Between the Lines: How We Make Sense of Users' Searches
 https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html
 
+## NLP Vs ElasticSearch
+[Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
+https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems
+https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support
+https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning
+[Improving Elastic Search Query Result with Query Expansion using Topic Modeling](https://pkghosh.wordpress.com/2018/07/18/improving-elastic-search-query-result-with-query-expansion-using-topic-modeling/)
 
+ElasticSearch uses parts of NLP (e.g., tokenization and stemming). ElasticSearch also includes software engineering elements to ensure a search solution is performant.
 
 ### Inverted Index
 The inverted index is at the core of the Lucene technology, its duty is to map terms to documents, so that these documents can easily be found.
