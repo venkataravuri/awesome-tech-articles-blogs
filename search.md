@@ -1,5 +1,4 @@
 # :mag: Search Topics, Terminology :thumbsup: Recommendation Engines
-
 ## Search Topics & Terminology
 * Text Analysis / Text Mining
    * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
@@ -26,58 +25,15 @@
 - Trending
 - Recommendations
 
-https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
-[Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
-https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
-https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
+- https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
+- [Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
+- https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
+- https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
 
-### ElasticSearch Tutorials
-https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
-
-Stars | Type | Topic
------------- | ------------- | -------------
-:star: | :computer: | [](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
-:star: | :computer: | [](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
-:star: | :link: | []()
-https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
-https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
-
- 
-    Search Precision and Recall By Example
-    https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/
-    
-    Search Engine Marketing
-    https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/
-
-### Search real-world e-Commerce Implemenation
-:star::star::star::star::star: https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
-Explanation article, https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
-https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
-
-### Articles form Engineering Blogs
-Stars | Type | Topic
------------- | ------------- | -------------
-:star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
-:star: | :computer: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
-:star: | :link: | [LinkedIn](http://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search/23-Life_of_a_Query23Query_RewriterPlannerResultsMergingUserQuerySearchResultsSearch)
-:star: | :link: | [LinkedIn](http://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
-:star: | :link: | [](http://www.slideshare.net/HiveData/20140521-hivev3shareable)
-:star: | :link: | [](http://www.slideshare.net/dtunkelang/search-quality-at-linkedin/65-EFFICIENCY_VS_EXPRESSIVENESS_Build_tree)
-:star: | :link: | [](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
-:star: | :link: | [](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
-:star: | :tv: | [Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
-:star: | :link: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
-:star: | :link: | [Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
-:star: | :link: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
-:star: | :link: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
-:star: | :link: | []()
-:star: | :link: | []()
-:star: | :link: | []()
-:star: | :link: | []()
-:star: | :link: | []()
-:star: | :link: | []()
-:star: | :link: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
-
+### Search - A real-world e-Commerce Implemenation
+- :star::star::star::star::star: https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
+- Explanation article, https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
+- https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
 
 
 ### Indexing
@@ -88,25 +44,8 @@ https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-
 
 ### Query Understanding
 [Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
-
-
-#### Facebook Search
-https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/
-[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
-https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/
-
-
-
-
-*** https://engineeringblog.yelp.com/2018/06/fast-order-search.html
-https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html
-Maptype — fast doc-value lookups for map data in Elasticsearch
-https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html
-
-https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html
-
-Reading Between the Lines: How We Make Sense of Users' Searches
-https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html
+:star: | :link: | [](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
+:star: | :link: | [Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
 
 # Auto-Complete/Auto-Suggest
 Auto Complete – offers search query completions based on what the user has typed.
@@ -152,10 +91,50 @@ Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-
 Scoring
 We generally define scoring as giving a higher weight to documents (or data) that meet specific criteria. The objective is often to get a list of documents, sorted on the relevance to the search. Typically, relevance is the numerical output of an algorithm that determines which documents are most textually similar to the query. Elasticsearch employs and enhances standard scoring algorithms and encapsulates these within script_score and function_score.
 
-https://www.compose.com/articles/how-scoring-works-in-elasticsearch/
-Great Article: http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1
-[PageRank in Spark](https://developers.soundcloud.com/blog/pagerank-in-spark)
+- https://www.compose.com/articles/how-scoring-works-in-elasticsearch/
+- Great Article: http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1
+- [PageRank in Spark](https://developers.soundcloud.com/blog/pagerank-in-spark)
+- [Search Precision and Recall By Example](https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/)
+- [Search Engine Marketing](https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/)
 
+## ElasticSearch Tutorials
+Stars | Type | Topic
+------------ | ------------- | -------------
+:star: | :computer: | [Data Exploration With Elasticsearch](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
+:star: | :computer: | [The Ultimiate Guide for Elasticsearch Plugins](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
+:star: | :link: | []()
+
+
+### Articles form Engineering Blogs
+Stars | Type | Topic
+------------ | ------------- | -------------
+:star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
+:star: | :computer: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
+:star: | :link: | [LinkedIn](http://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search/23-Life_of_a_Query23Query_RewriterPlannerResultsMergingUserQuerySearchResultsSearch)
+:star: | :link: | [LinkedIn](http://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
+:star: | :link: | [](http://www.slideshare.net/HiveData/20140521-hivev3shareable)
+:star: | :link: | [](http://www.slideshare.net/dtunkelang/search-quality-at-linkedin/65-EFFICIENCY_VS_EXPRESSIVENESS_Build_tree)
+:star: | :link: | [](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
+:star: | :tv: | [Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
+:star: | :link: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
+:star: | :link: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
+:star: | :link: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
+:star: | :link: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
+:star: | :link: | []()
+#### Facebook Search
+https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/
+[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
+https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/
+
+*** https://engineeringblog.yelp.com/2018/06/fast-order-search.html
+https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html
+Maptype — fast doc-value lookups for map data in Elasticsearch
+https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html
+
+https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html
+
+Reading Between the Lines: How We Make Sense of Users' Searches
+https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html
 
 ## NLP Vs ElasticSearch
 [Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
