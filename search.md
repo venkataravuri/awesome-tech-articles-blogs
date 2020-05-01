@@ -1,5 +1,6 @@
 # :mag: Search Topics, Terminology :thumbsup: Recommendation Engines
 ## Search Topics & Terminology
+> Cross referenced with Natural Language Processing (NLP) notes.
 * Text Analysis / Text Mining
    * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
    * [Stemming]()
@@ -8,7 +9,6 @@
    * [Parts of Speech (POS) Tagging]()
    * [TF-IDF]()
    * [Word Embeddings]()
-> Cross referenced with Natural Language Processing (NLP) notes.
 * Topic Mining
 * Indexing Pipelines
 * Query Understanding
@@ -31,21 +31,25 @@
 - https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
 
 ### Search - A real-world e-Commerce Implemenation
-- :star::star::star::star::star: https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
-- Explanation article, https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
-- https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
-
+-|Type|Topic
+------------: | ------------- | -------------
+:star::star::star:|:newspaper:|[On-Site Search Design Patterns for E-Commerce: Schema Structure, Data Driven Ranking & More](https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/)
+:star:|:newspaper:|[Explantion to above article](https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55)
+:star:|:newspaper:|[Reviving an e-commerce search engine using Elasticsearch](https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99)
 
 ### Indexing
-https://netflixtechblog.com/graphql-search-indexing-334c92e0d8d5
-[How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud)
-https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920/
-
+-|Type|Topic
+------------: | ------------- | -------------
+:star:|:newspaper:|[How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud)
+:star:|:newspaper:|[Facebook - Under the Hood: Indexing and ranking in Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920/)
+:star:|:newspaper:|[GraphQL Search Indexing](https://netflixtechblog.com/graphql-search-indexing-334c92e0d8d5)
 
 ### Query Understanding
-[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
-:star: | :link: | [](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
-:star: | :link: | [Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
+-|Type|Topic
+------------: | ------------- | -------------
+:star:|:newspaper:|[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
+:star:|:newspaper:|[Query recommendation by search filters and criteria prediction](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
+:star:|:newspaper:|[Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
 
 ### Auto-Complete/Auto-Suggest
 Auto Complete – offers search query completions based on what the user has typed.
@@ -57,22 +61,26 @@ Search Suggest returns suggestions for search phrases, usually based on previous
 
 The second type of autocomplete is Result Suggest. In this case the suggestions are actual results rather than search phrase suggestions.
 
-:star::star::star: [Autocomplete best practices](https://blog.griddynamics.com/smart-autocomplete-best-practices/)
-:star::star: [Autocomplete with Elasticsearch - Part 1: Prefix Queries](https://blog.mimacom.com/autocomplete-elasticsearch-part1/)
-https://www.rea-group.com/blog/implementing-autosuggest-in-elasticsearch/
-https://eatcodeplay.com/on-the-road-to-a-better-elasticsearch-location-typeahead-b75e3eb6dd41
-https://documentation.spryker.com/docs/multi-term-auto-completion
+-|Type|Topic
+------------: | ------------- | -------------
+:star:|:newspaper:|[Autocomplete best practices](https://blog.griddynamics.com/smart-autocomplete-best-practices/)
+:star:|:newspaper:|[Autocomplete with Elasticsearch - Part 1: Prefix Queries](https://blog.mimacom.com/autocomplete-elasticsearch-part1/)
+:star:|:newspaper:|[Implementing Autosuggest in Elasticsearch](https://www.rea-group.com/blog/implementing-autosuggest-in-elasticsearch/)
+:star:|:newspaper:|[On the Road to a Better ElasticSearch Location Typeahead](https://eatcodeplay.com/on-the-road-to-a-better-elasticsearch-location-typeahead-b75e3eb6dd41)
+:star:|:newspaper:|[Multi-Term Auto Completion](https://documentation.spryker.com/docs/multi-term-auto-completion)
 
-Completion Suggest
+#### Completion Suggest
 Elasticsearch provides a convenient way to get autocomplete up and running quickly with its completion suggester feature.
 
 #### Did you mean?
 did-you-mean (DYM)
 
 ### Typeahead
-https://www.facebook.com/notes/facebook-engineering/the-life-of-a-typeahead-query/389105248919/
-https://medium.com/pinterest-engineering/rebuilding-the-user-typeahead-9c5bf9723173
-https://engineering.linkedin.com/open-source/cleo-open-source-technology-behind-linkedins-typeahead-search
+-|Type|Topic
+------------: | ------------- | -------------
+:star:|:newspaper:|[Facebook - The Life of a Typeahead Query](https://www.facebook.com/notes/facebook-engineering/the-life-of-a-typeahead-query/389105248919/)
+:star:|:newspaper:|[Pinterest - Rebuilding the user typeahead](https://medium.com/pinterest-engineering/rebuilding-the-user-typeahead-9c5bf9723173)
+:star:|:newspaper:|[Cleo: the open source technology behind LinkedIn's typeahead search](https://engineering.linkedin.com/open-source/cleo-open-source-technology-behind-linkedins-typeahead-search)
 
 ### Faceted Search
 faceted search refers to a method of navigation that allows users to filter data. This term can also be interchanged with other terms such as “guided navigation” or “layered navigation.
@@ -97,7 +105,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 - [Search Engine Marketing](https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/)
 
 ## ElasticSearch Tutorials
-Stars | Type | Topic
+-: | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [Data Exploration With Elasticsearch](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
 :star: | :computer: | [The Ultimiate Guide for Elasticsearch Plugins](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
@@ -105,7 +113,7 @@ Stars | Type | Topic
 
 
 ## Search articles form Engineering Blogs
-Stars | Type | Topic
+-: | Type | Topic
 ------------ | ------------- | -------------
 :star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
 :star: | :computer: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
