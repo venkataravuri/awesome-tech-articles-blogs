@@ -105,7 +105,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 - [Search Engine Marketing](https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/)
 
 ## ElasticSearch Tutorials
--: | Type | Topic
+? | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [Data Exploration With Elasticsearch](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
 :star: | :computer: | [The Ultimiate Guide for Elasticsearch Plugins](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
@@ -113,7 +113,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 
 
 ## Search articles form Engineering Blogs
-- | Type | Topic
+? | Type | Topic
 ------------: | ------------- | -------------
 :star: |:tv:|[Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
 :star: | :newspaper: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
@@ -138,7 +138,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 :star: | :newspaper: | [Reading Between the Lines: How We Make Sense of Users' Searches](https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html)
 
 #### Facebook Search
-- | Type | Topic
+ | Type | Topic
 ------------: | ------------- | -------------
 :star: |:tv:|[](https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/)
 :star: |:tv:|[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
@@ -146,7 +146,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 
 ## NLP Vs ElasticSearch
 ElasticSearch uses parts of NLP (e.g., tokenization and stemming). ElasticSearch also includes software engineering elements to ensure a search solution is performant.
-- | Type | Topic
+? | Type | Topic
 ------------: | ------------- | -------------
 :star::star:|:newspaper:|[Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
 :star: |:newspaper:|[?](https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems)
