@@ -21,13 +21,6 @@
 * Spam-Resilient Signals
 * [Ranking & Scoring](#scoring)
 
-- https://www.slideshare.net/dtunkelang/information-retrieval-search-at-linkedin
-- https://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search
-- https://www.slideshare.net/dtunkelang/search-quality-at-linkedin
-- https://www.slideshare.net/dtunkelang/find-and-be-found-information-retrieval-at-linked-in
-- https://www.slideshare.net/HiveData/20140521-hivev3shareable
--https://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin
-
 ## Recommendation Engine Topics
 - Trending
 - Recommendations
@@ -54,7 +47,7 @@ https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-
 :star: | :link: | [](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
 :star: | :link: | [Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
 
-# Auto-Complete/Auto-Suggest
+### Auto-Complete/Auto-Suggest
 Auto Complete – offers search query completions based on what the user has typed.
 There are at least two broad types of autocomplete,
 * Search Suggest
@@ -81,7 +74,7 @@ https://www.facebook.com/notes/facebook-engineering/the-life-of-a-typeahead-quer
 https://medium.com/pinterest-engineering/rebuilding-the-user-typeahead-9c5bf9723173
 https://engineering.linkedin.com/open-source/cleo-open-source-technology-behind-linkedins-typeahead-search
 
-# Faceted Search
+### Faceted Search
 faceted search refers to a method of navigation that allows users to filter data. This term can also be interchanged with other terms such as “guided navigation” or “layered navigation.
 
 Facets allow you to have an overview of your query that corresponds to the summary data within its result set. Let's say that you search for a laptop. You probably would've noticed the counts of entries that fall in that particular group alongside the facet. This lets you guide your search in such a way that you can refine your result set to include or eliminate results according to your choice. You'd also probably notice a distribution histogram like that of a price histogram that lets you select your product that falls in that particular price range.
@@ -92,7 +85,6 @@ Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-
 
 ### Engineering Blogs
 :star: | :link: | [LinkedIn](https://engineering.linkedin.com/faceting/many-facets-faceted-search)
-
 
 ### Scoring
 Scoring
@@ -112,7 +104,7 @@ Stars | Type | Topic
 :star: | :link: | []()
 
 
-### Articles form Engineering Blogs
+## Search articles form Engineering Blogs
 Stars | Type | Topic
 ------------ | ------------- | -------------
 :star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
@@ -127,7 +119,14 @@ Stars | Type | Topic
 :star: | :link: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
 :star: | :link: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
 :star: | :link: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
+:star: | :slide: | [[In]formation Retrieval: Search at LinkedIn](https://www.slideshare.net/dtunkelang/information-retrieval-search-at-linkedin)
+:star: | :slide: | [Structure, Personalization, Scale: A Deep Dive Into LinkedIn Search](https://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search)
+:star: | :slide: | [Search Quality at LinkedIn](https://www.slideshare.net/dtunkelang/search-quality-at-linkedin)
+:star: | :slide: | [Find and be Found: Information Retrieval at LinkedIn](https://www.slideshare.net/dtunkelang/find-and-be-found-information-retrieval-at-linked-in)
+:star: | :slide: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
+:star: | :slide: | [Personalizing Search at LinkedIn](https://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
 :star: | :link: | []()
+
 #### Facebook Search
 https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/
 [Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
