@@ -1,4 +1,4 @@
-# :mag: Search Topics, Terminology, Technologies, :thumbsup: Recommendation Engines
+# :mag: Search Topics, Terminology :thumbsup: Recommendation Engines
 
 ## Search Topics & Terminology
 * Text Analysis / Text Mining
@@ -10,42 +10,27 @@
    * [TF-IDF]()
    * [Word Embeddings]()
 > Cross referenced with Natural Language Processing (NLP) notes.
-- Topic Mining
-- Indexing Pipelines
-- Typeahead
-- Autocomplete Suggestions
-- Guided Search
-- Spell Correction
-- Fuzziness
-- Faceted Search
-- Spam-Resilient Signals
-- Ranking & Scoring
+* Topic Mining
+* Indexing Pipelines
+* Typeahead
+* Autocomplete Suggestions
+* Guided Search
+* Spell Correction
+* Fuzziness
+* Faceted Search
+* Spam-Resilient Signals
+* Ranking & Scoring
     
-    Search Precision and Recall By Example
-    https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/
-    
-    Search Engine Marketing
-    https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/
-    
-## Recommendations
+## Recommendation Engine Topics
+- Trending
+- Recommendations
 
-Trending
-Recommendations
 https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
-
 [Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
-
 https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
-
 https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
 
-## Software
-### Lucene
-Lucene is a powerful search engine framework that lets us add search capability to our application. It exposes easy-to-use API while hiding all the search-related complex operations. Any application can use this library, not just Solr.
-### Solr
-Solr is built around Lucene. It is not just a http-wrapper around Lucene but has been known to add more arsenal to Lucene. Solr is ready-to-use out of box. It is a web application that offers infrastructure related and a lot more features in addition to what Lucene offers.
 
-Solr/Lucene or Elastic search are very power search engine frameworks that are used to provide quick search on large text based data. The documents are indexed using inverted index which makes the search very fast while compromising on the speed while adding new documents. The documents once indexed can be easy queried. Both the frameworks come with REST api using which the data can be indexed , queries and deleted.
 
 ### ElasticSearch Tutorials
 https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
@@ -57,6 +42,13 @@ Stars | Type | Topic
 :star: | :link: | []()
 https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
 https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
+
+ 
+    Search Precision and Recall By Example
+    https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/
+    
+    Search Engine Marketing
+    https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/
 
 ### Search real-world e-Commerce Implemenation
 :star::star::star::star::star: https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
@@ -184,4 +176,12 @@ Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-
 
 ### Scoring
 https://www.compose.com/articles/how-scoring-works-in-elasticsearch/
+
+## Software
+### Lucene
+Lucene is a powerful search engine framework that lets us add search capability to our application. It exposes easy-to-use API while hiding all the search-related complex operations. Any application can use this library, not just Solr.
+### Solr
+Solr is built around Lucene. It is not just a http-wrapper around Lucene but has been known to add more arsenal to Lucene. Solr is ready-to-use out of box. It is a web application that offers infrastructure related and a lot more features in addition to what Lucene offers.
+
+Solr/Lucene or Elastic search are very power search engine frameworks that are used to provide quick search on large text based data. The documents are indexed using inverted index which makes the search very fast while compromising on the speed while adding new documents. The documents once indexed can be easy queried. Both the frameworks come with REST api using which the data can be indexed , queries and deleted.
 
