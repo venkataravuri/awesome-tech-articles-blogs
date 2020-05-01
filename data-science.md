@@ -1,5 +1,7 @@
 # NLP
 
+## Text Analysis
+
 ### TF-IDF
 :star::star::star: https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/
 https://www.slideshare.net/DanSullivan10/a-first-look-at-tf-idfpdx-data-science-meetup
