@@ -1,59 +1,70 @@
 # :mag: Search Topics, Terminology :thumbsup: Recommendation Engines
+
 ## Search Topics & Terminology
+
 > Cross referenced with Natural Language Processing (NLP) notes.
+
 * Text Analysis / Text Mining
-   * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
-   * [Stemming]()
-   * [Lemmatization]()
-   * [Stop Words Removal]()
-   * [Parts of Speech (POS) Tagging]()
-   * [TF-IDF]()
-   * [Word Embeddings]()
-* Topic Mining
-* Indexing Pipelines
-* Query Understanding
-* Typeahead
-* Autocomplete Suggestions
-* Guided Search
-* Spell Correction
-* Fuzziness
-* Faceted Search
-* Spam-Resilient Signals
+  * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
+  * [Stemming]()
+  * [Lemmatization]()
+  * [Stop Words Removal]()
+  * [Parts of Speech (POS) Tagging]()
+  * [TF-IDF]()
+  * [Word Embeddings]()
+* [Topic Mining](#topicmining)
+* [Search Indexing Pipelines]()
+* [Query Understanding]()
+* [Typeahead](#typeahead)
+* [Autocomplete Suggestions](#auto-completeauto-suggest)
+* [Guided Search]()
+* [Spell Correction]()
+* [Fuzziness]()
+* [Faceted Search](#faceted-search)
+* [Spam-Resilient Signals]()
 * [Ranking & Scoring](#scoring)
 
 ## Recommendation Engine Topics
-- Trending
-- Recommendations
 
-- https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/
-- [Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
-- https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44
-- https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b
+* Trending
+* Recommendations
+
+?|Type|Topic
+------------: | ------------- | -------------
+ -|:newspaper:|[Building a Marketplace — Search and Recommendation at Eventbrite](https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/)
+ -|:newspaper:|[Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
+-|:newspaper:|[Netflix - Highlights from Personalized Recommendations workshop](https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44)
+-|:newspaper:|[Netflix - Recommending for the World](https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b)
 
 ### Search - A real-world e-Commerce Implemenation
--|Type|Topic
+
+?|Type|Topic
 ------------: | ------------- | -------------
 :star::star::star:|:newspaper:|[On-Site Search Design Patterns for E-Commerce: Schema Structure, Data Driven Ranking & More](https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/)
 :star:|:newspaper:|[Explantion to above article](https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55)
 :star:|:newspaper:|[Reviving an e-commerce search engine using Elasticsearch](https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99)
 
 ### Indexing
--|Type|Topic
+
+?|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud)
 :star:|:newspaper:|[Facebook - Under the Hood: Indexing and ranking in Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920/)
 :star:|:newspaper:|[GraphQL Search Indexing](https://netflixtechblog.com/graphql-search-indexing-334c92e0d8d5)
 
 ### Query Understanding
--|Type|Topic
+
+?|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
 :star:|:newspaper:|[Query recommendation by search filters and criteria prediction](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
 :star:|:newspaper:|[Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
 
 ### Auto-Complete/Auto-Suggest
+
 Auto Complete – offers search query completions based on what the user has typed.
 There are at least two broad types of autocomplete,
+
 * Search Suggest
 * Result Suggest
 
@@ -61,7 +72,7 @@ Search Suggest returns suggestions for search phrases, usually based on previous
 
 The second type of autocomplete is Result Suggest. In this case the suggestions are actual results rather than search phrase suggestions.
 
--|Type|Topic
+?|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Autocomplete best practices](https://blog.griddynamics.com/smart-autocomplete-best-practices/)
 :star:|:newspaper:|[Autocomplete with Elasticsearch - Part 1: Prefix Queries](https://blog.mimacom.com/autocomplete-elasticsearch-part1/)
@@ -70,19 +81,23 @@ The second type of autocomplete is Result Suggest. In this case the suggestions 
 :star:|:newspaper:|[Multi-Term Auto Completion](https://documentation.spryker.com/docs/multi-term-auto-completion)
 
 #### Completion Suggest
+
 Elasticsearch provides a convenient way to get autocomplete up and running quickly with its completion suggester feature.
 
-#### Did you mean?
+#### Did you mean
+
 did-you-mean (DYM)
 
 ### Typeahead
--|Type|Topic
+
+? | Type | Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Facebook - The Life of a Typeahead Query](https://www.facebook.com/notes/facebook-engineering/the-life-of-a-typeahead-query/389105248919/)
 :star:|:newspaper:|[Pinterest - Rebuilding the user typeahead](https://medium.com/pinterest-engineering/rebuilding-the-user-typeahead-9c5bf9723173)
 :star:|:newspaper:|[Cleo: the open source technology behind LinkedIn's typeahead search](https://engineering.linkedin.com/open-source/cleo-open-source-technology-behind-linkedins-typeahead-search)
 
 ### Faceted Search
+
 faceted search refers to a method of navigation that allows users to filter data. This term can also be interchanged with other terms such as “guided navigation” or “layered navigation.
 
 Facets allow you to have an overview of your query that corresponds to the summary data within its result set. Let's say that you search for a laptop. You probably would've noticed the counts of entries that fall in that particular group alongside the facet. This lets you guide your search in such a way that you can refine your result set to include or eliminate results according to your choice. You'd also probably notice a distribution histogram like that of a price histogram that lets you select your product that falls in that particular price range.
@@ -92,34 +107,39 @@ As faceting evolves and product catalogs become more complex, “nested faceting
 Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-powerful Aggregations feature changes this. Think of aggregations as “facets of facets.”
 
 ### Engineering Blogs
-:star: | :link: | [LinkedIn](https://engineering.linkedin.com/faceting/many-facets-faceted-search)
+
+? | Type | Topic
+------------ | ------------- | -------------
+:star: | :computer: | [LinkedIn](https://engineering.linkedin.com/faceting/many-facets-faceted-search)
 
 ### Scoring
-Scoring
+
 We generally define scoring as giving a higher weight to documents (or data) that meet specific criteria. The objective is often to get a list of documents, sorted on the relevance to the search. Typically, relevance is the numerical output of an algorithm that determines which documents are most textually similar to the query. Elasticsearch employs and enhances standard scoring algorithms and encapsulates these within script_score and function_score.
 
-- https://www.compose.com/articles/how-scoring-works-in-elasticsearch/
-- Great Article: http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1
-- [PageRank in Spark](https://developers.soundcloud.com/blog/pagerank-in-spark)
-- [Search Precision and Recall By Example](https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/)
-- [Search Engine Marketing](https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/)
+? | Type | Topic
+------------ | ------------- | -------------
+:star: | :computer: | [How scoring works in Elasticsearch](https://www.compose.com/articles/how-scoring-works-in-elasticsearch/)
+:star: | :computer: | [Scoring using Elasticsearch Scripts](http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1)
+:star: | :computer: | [PageRank in Spark](https://developers.soundcloud.com/blog/pagerank-in-spark)
+:star: | :computer: | [Search Precision and Recall By Example](https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/)
+:star: | :computer: | [Search Engine Marketing](https://www.tripadvisor.com/engineering/improving-sem-landing-page-quality-for-our-experiences-business/)
 
 ## ElasticSearch Tutorials
+
 ? | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [Data Exploration With Elasticsearch](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
 :star: | :computer: | [The Ultimiate Guide for Elasticsearch Plugins](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
-:star: | :link: | []()
-
 
 ## Search articles form Engineering Blogs
+
 ? | Type | Topic
 ------------: | ------------- | -------------
 :star: |:tv:|[Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
 :star: | :newspaper: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
 :star: | :newspaper: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
 :star: | :newspaper: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
-:star: | :newspaper: | [Evolution of e-commerce search @ shopping24 ](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
+:star: | :newspaper: | [Evolution of e-commerce search @ shopping24](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
 :star: | :newspaper: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
 :star: | :newspaper: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
 :star: | :newspaper: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
@@ -130,26 +150,28 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 :star: | :newspaper: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
 :star: | :newspaper: | [Personalizing Search at LinkedIn](https://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
 :star: | :newspaper: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
-:star: | :newspaper: | [](https://engineeringblog.yelp.com/2018/06/fast-order-search.html)
+:star: | :newspaper: | [Fast Order Search Using Yelp’s Data Pipeline and Elasticsearch](https://engineeringblog.yelp.com/2018/06/fast-order-search.html)
 :star: | :newspaper: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
-:star: | :newspaper: | [](https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html)
+:star: | :newspaper: | [Moving Yelp's Core Business Search to Elasticsearch](https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html)
 :star: | :newspaper: | [Maptype — fast doc-value lookups for map data in Elasticsearch](https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html)
-:star: | :newspaper: | [?](https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html)
+:star: | :newspaper: | [Performance Improvements for Search on The Yelp Android App - Part 1](https://engineeringblog.yelp.com/2018/05/android-search-perf-improvements-part-1.html)
 :star: | :newspaper: | [Reading Between the Lines: How We Make Sense of Users' Searches](https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html)
 
-#### Facebook Search
- | Type | Topic
+### Facebook Search
+
+ ? | Type | Topic
 ------------: | ------------- | -------------
-:star: |:tv:|[](https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/)
+:star: |:tv:|[Intro to Facebook Search](https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/)
 :star: |:tv:|[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
-:star: |:tv:|[](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/)
+:star: |:tv:|[Under the Hood: The natural language interface of Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/)
 
 ## NLP Vs ElasticSearch
+
 ElasticSearch uses parts of NLP (e.g., tokenization and stemming). ElasticSearch also includes software engineering elements to ensure a search solution is performant.
 ? | Type | Topic
 ------------: | ------------- | -------------
 :star::star:|:newspaper:|[Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
-:star: |:newspaper:|[?](https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems)
-:star: |:newspaper:|[?](https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support)
-:star: |:newspaper:|[?](https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning)
+:star: |:newspaper:|[Marrying Elasticsearch with NLP to solve real-world search problems](https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems)
+:star: |:newspaper:|[How natural language processing helps LinkedIn members get support easily](https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support)
+:star: |:newspaper:|[Machine Learning for Smarter Search With Elasticsearch](https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning)
 :star: |:newspaper:|[Improving Elastic Search Query Result with Query Expansion using Topic Modeling](https://pkghosh.wordpress.com/2018/07/18/improving-elastic-search-query-result-with-query-expansion-using-topic-modeling/)
