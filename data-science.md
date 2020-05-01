@@ -11,10 +11,10 @@ https://www.slideshare.net/DanSullivan10/a-first-look-at-tf-idfpdx-data-science-
 
 ### Normalizing
 
-Great Article: https://qbox.io/blog/introduction-to-elasticsearch-analyzers
-https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support
-https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
-https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
+* https://qbox.io/blog/introduction-to-elasticsearch-analyzers
+* https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support
+* https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
+* https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
 
 #### Stemming 
 Helps normalize the spelling of words, for instance translating the tokens 'sing', 'sings', and 'singing' all into the single stem 'sing'.
