@@ -1,30 +1,25 @@
-# :mag: Search Technologies, :thumbsup: Recommendation Engines
+# :mag: Search Topics, Terminology, Technologies, :thumbsup: Recommendation Engines
 
 ## Search Topics & Terminology
-
-https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
-https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
-
-   Tokenization: Break the text into words.
-
-    Lemmatization: Find the basic form of each word variation in the context. Examples are "account" from "accounts" and "break" from "broke."
-
-    Stop Word Filter: Filter out common words. In English, there are hundreds of stop words like "a," "my," and "on," to name a few, that have little bearing on relevance or meaning, and thus can safely be removed from the query in order to target the more valuable words.
-
-    Part of Speech (PoS) Filter: Read through text and give each word a PoS based on the context. There are nine parts in English: adjective, adverb, conjunction, determiner, noun, number, preposition, pronoun, and verb. We only capture nouns, verbs, proper nouns, and adjectives, as they together represent the purpose of a text.
-    
-- Indexing & Pipelines
-- Autocomplete Suggestions
-- Guided suggestions
-- Spell Correction
+* Text Analysis / Text Mining
+   * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
+   * [Stemming]()
+   * [Lemmatization]()
+   * [Stop Words Removal]()
+   * [Parts of Speech (POS) Tagging]()
+   * [TF-IDF]()
+   * [Word Embeddings]()
+> Cross referenced with Natural Language Processing (NLP) notes.
+- Topic Mining
+- Indexing Pipelines
 - Typeahead
+- Autocomplete Suggestions
+- Guided Search
+- Spell Correction
 - Fuzziness
-- Spam-Resilient Signals
 - Faceted Search
+- Spam-Resilient Signals
 - Ranking & Scoring
-- Textual Relevancy
-    how: exact match, query proximity
-    where: name, title, tag, mention, body, etc
     
     Search Precision and Recall By Example
     https://www.eventbrite.com/engineering/search-precision-and-recall-by-example/
@@ -53,16 +48,19 @@ Solr is built around Lucene. It is not just a http-wrapper around Lucene but has
 Solr/Lucene or Elastic search are very power search engine frameworks that are used to provide quick search on large text based data. The documents are indexed using inverted index which makes the search very fast while compromising on the speed while adding new documents. The documents once indexed can be easy queried. Both the frameworks come with REST api using which the data can be indexed , queries and deleted.
 
 ### ElasticSearch Tutorials
+https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
+
 Stars | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
 :star: | :computer: | [](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
 :star: | :link: | []()
+https://logz.io/blog/language-analyzers-tokenizers-not-built-elasticsearch-where-find-them/
+https://www.elastic.co/blog/text-classification-made-easy-with-elasticsearch
 
-### e-commerce search real-world implemenation
+### Search real-world e-Commerce Implemenation
 :star::star::star::star::star: https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/
 Explanation article, https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55
-
 https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99
 
 ### Articles form Engineering Blogs
