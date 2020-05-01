@@ -153,12 +153,3 @@ ElasticSearch uses parts of NLP (e.g., tokenization and stemming). ElasticSearch
 :star: |:newspaper:|[?](https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support)
 :star: |:newspaper:|[?](https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning)
 :star: |:newspaper:|[Improving Elastic Search Query Result with Query Expansion using Topic Modeling](https://pkghosh.wordpress.com/2018/07/18/improving-elastic-search-query-result-with-query-expansion-using-topic-modeling/)
-
-## Software
-### Lucene
-Lucene is a powerful search engine framework that lets us add search capability to our application. It exposes easy-to-use API while hiding all the search-related complex operations. Any application can use this library, not just Solr.
-### Solr
-Solr is built around Lucene. It is not just a http-wrapper around Lucene but has been known to add more arsenal to Lucene. Solr is ready-to-use out of box. It is a web application that offers infrastructure related and a lot more features in addition to what Lucene offers.
-
-Solr/Lucene or Elastic search are very power search engine frameworks that are used to provide quick search on large text based data. The documents are indexed using inverted index which makes the search very fast while compromising on the speed while adding new documents. The documents once indexed can be easy queried. Both the frameworks come with REST api using which the data can be indexed , queries and deleted.
-
