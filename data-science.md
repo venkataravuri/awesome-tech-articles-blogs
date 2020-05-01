@@ -2,9 +2,21 @@
 
 ## Text Analysis
 
+### Tokenization
+Break the text into words.
+
 ### TF-IDF
 :star::star::star: https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/
 https://www.slideshare.net/DanSullivan10/a-first-look-at-tf-idfpdx-data-science-meetup
+
+### Lemmatization
+Find the basic form of each word variation in the context. Examples are "account" from "accounts" and "break" from "broke."
+
+### Stop Words
+Stop Word Filter: Filter out common words. In English, there are hundreds of stop words like "a," "my," and "on," to name a few, that have little bearing on relevance or meaning, and thus can safely be removed from the query in order to target the more valuable words.
+
+### Part of Speech (PoS) 
+Part of Speech (PoS) Filter: Read through text and give each word a PoS based on the context. There are nine parts in English: adjective, adverb, conjunction, determiner, noun, number, preposition, pronoun, and verb. We only capture nouns, verbs, proper nouns, and adjectives, as they together represent the purpose of a text.
 
 ### Word Embeddings
 :star::star: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
