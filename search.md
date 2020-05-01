@@ -113,51 +113,46 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 
 
 ## Search articles form Engineering Blogs
--: | Type | Topic
------------- | ------------- | -------------
-:star: | :link: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
-:star: | :computer: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
-:star: | :link: | [LinkedIn](http://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search/23-Life_of_a_Query23Query_RewriterPlannerResultsMergingUserQuerySearchResultsSearch)
-:star: | :link: | [LinkedIn](http://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
-:star: | :link: | [](http://www.slideshare.net/HiveData/20140521-hivev3shareable)
-:star: | :link: | [](http://www.slideshare.net/dtunkelang/search-quality-at-linkedin/65-EFFICIENCY_VS_EXPRESSIVENESS_Build_tree)
-:star: | :link: | [](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
-:star: | :tv: | [Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
-:star: | :link: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
-:star: | :link: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
-:star: | :link: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
-:star: | :link: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
-:star: | :slide: | [[In]formation Retrieval: Search at LinkedIn](https://www.slideshare.net/dtunkelang/information-retrieval-search-at-linkedin)
-:star: | :slide: | [Structure, Personalization, Scale: A Deep Dive Into LinkedIn Search](https://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search)
-:star: | :slide: | [Search Quality at LinkedIn](https://www.slideshare.net/dtunkelang/search-quality-at-linkedin)
-:star: | :slide: | [Find and be Found: Information Retrieval at LinkedIn](https://www.slideshare.net/dtunkelang/find-and-be-found-information-retrieval-at-linked-in)
-:star: | :slide: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
-:star: | :slide: | [Personalizing Search at LinkedIn](https://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
-:star: | :link: | []()
+- | Type | Topic
+------------: | ------------- | -------------
+:star: |:tv:|[Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
+:star: | :newspaper: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
+:star: | :newspaper: | [Twitter](http://www.slideshare.net/lucenerevolution/twitter-search-lucenerevolutioneu2013-copy)
+:star: | :newspaper: | [Twitter Search](https://blog.twitter.com/engineering/en_us/a/2011/the-engineering-behind-twitter-s-new-search-experience.html)
+:star: | :newspaper: | [Evolution of e-commerce search @ shopping24 ](https://speakerdeck.com/tboeghk/evolution-of-e-commerce-search-at-shopping24)
+:star: | :newspaper: | [Pnterest - Manas: A high performing customized search system](https://medium.com/pinterest-engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
+:star: | :newspaper: | [Eventbrite](https://www.eventbrite.com/engineering/fundamental-problem-search/)
+:star: | :newspaper: | [A Dive into Stack Overflow Jobs Search](https://medium.com/@aurelien.gasser/a-dive-into-stack-overflow-jobs-search-62bc6e628f83)
+:star: | :newspaper: | [[In]formation Retrieval: Search at LinkedIn](https://www.slideshare.net/dtunkelang/information-retrieval-search-at-linkedin)
+:star: | :newspaper: | [Structure, Personalization, Scale: A Deep Dive Into LinkedIn Search](https://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search)
+:star: | :newspaper: | [Search Quality at LinkedIn](https://www.slideshare.net/dtunkelang/search-quality-at-linkedin)
+:star: | :newspaper: | [Find and be Found: Information Retrieval at LinkedIn](https://www.slideshare.net/dtunkelang/find-and-be-found-information-retrieval-at-linked-in)
+:star: | :newspaper: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
+:star: | :newspaper: | [Personalizing Search at LinkedIn](https://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin)
+:star: | :newspaper: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
+:star: | :newspaper: | [](https://engineeringblog.yelp.com/2018/06/fast-order-search.html)
+:star: | :newspaper: | [Search at Linkedin](https://www.slideshare.net/HiveData/20140521-hivev3shareable)
+:star: | :newspaper: | [](https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html)
+:star: | :newspaper: | [Maptype — fast doc-value lookups for map data in Elasticsearch](https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html)
+:star: | :newspaper: | [?](https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html)
+:star: | :newspaper: | [Reading Between the Lines: How We Make Sense of Users' Searches](https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html)
 
 #### Facebook Search
-https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/
-[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
-https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/
-
-*** https://engineeringblog.yelp.com/2018/06/fast-order-search.html
-https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html
-Maptype — fast doc-value lookups for map data in Elasticsearch
-https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html
-
-https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html
-
-Reading Between the Lines: How We Make Sense of Users' Searches
-https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html
+- | Type | Topic
+------------: | ------------- | -------------
+:star: |:tv:|[](https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/)
+:star: |:tv:|[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
+:star: |:tv:|[](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/)
 
 ## NLP Vs ElasticSearch
-[Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
-https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems
-https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support
-https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning
-[Improving Elastic Search Query Result with Query Expansion using Topic Modeling](https://pkghosh.wordpress.com/2018/07/18/improving-elastic-search-query-result-with-query-expansion-using-topic-modeling/)
-
 ElasticSearch uses parts of NLP (e.g., tokenization and stemming). ElasticSearch also includes software engineering elements to ensure a search solution is performant.
+- | Type | Topic
+------------: | ------------- | -------------
+:star::star:|:newspaper:|[Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
+:star: |:newspaper:|[?](https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems)
+:star: |:newspaper:|[?](https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support)
+:star: |:newspaper:|[?](https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning)
+:star: |:newspaper:|[Improving Elastic Search Query Result with Query Expansion using Topic Modeling](https://pkghosh.wordpress.com/2018/07/18/improving-elastic-search-query-result-with-query-expansion-using-topic-modeling/)
 
 ## Software
 ### Lucene
