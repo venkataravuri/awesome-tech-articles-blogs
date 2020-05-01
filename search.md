@@ -20,7 +20,14 @@
 * Faceted Search
 * Spam-Resilient Signals
 * [Ranking & Scoring](#scoring)
-    
+
+- https://www.slideshare.net/dtunkelang/information-retrieval-search-at-linkedin
+- https://www.slideshare.net/dtunkelang/structure-personalization-scale-a-deep-dive-into-linkedin-search
+- https://www.slideshare.net/dtunkelang/search-quality-at-linkedin
+- https://www.slideshare.net/dtunkelang/find-and-be-found-information-retrieval-at-linked-in
+- https://www.slideshare.net/HiveData/20140521-hivev3shareable
+-https://www.slideshare.net/VietHaThuc/personalizing-search-at-linkedin
+
 ## Recommendation Engine Topics
 - Trending
 - Recommendations
