@@ -1,6 +1,6 @@
 # NLP
 
-## Text Analysis
+## Text Analysis / Text Mining
 
 https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support
 
@@ -12,10 +12,11 @@ Break the text into words.
 :star::star::star: https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/
 https://www.slideshare.net/DanSullivan10/a-first-look-at-tf-idfpdx-data-science-meetup
 
-
 ### Normalizing
 
 #### Stemming 
+Helps normalize the spelling of words, for instance translating the tokens 'sing', 'sings', and 'singing' all into the single stem 'sing'.
+In ElasticSeaarch, you can use 'snowball' analyzer. 
 
 #### Lemmatization
 Find the basic form of each word variation in the context. Examples are "account" from "accounts" and "break" from "broke."
@@ -28,7 +29,6 @@ Part of Speech (PoS) Filter: Read through text and give each word a PoS based on
 
 ### Word Embeddings
 :star::star: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
-
 
 ### 1st April 2019
 - [How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud) :tv:
