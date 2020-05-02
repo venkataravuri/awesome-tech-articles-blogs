@@ -1,4 +1,4 @@
-# :mag: Search Topics, Terminology :thumbsup: Recommendation Engines
+# :mag: Search Topics, Terminology
 
 ## Search Topics & Terminology
 
@@ -6,35 +6,24 @@
 
 * Text Analysis / Text Mining
   * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
-  * [Stemming]()
-  * [Lemmatization]()
-  * [Stop Words Removal]()
-  * [Parts of Speech (POS) Tagging]()
-  * [TF-IDF]()
-  * [Word Embeddings]()
-* [Topic Mining](#topicmining)
-* [Search Indexing Pipelines]()
-* [Query Understanding]()
+  * [Stemming](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stemming)
+  * [Lemmatization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#lemmatization)
+  * [Stop Words Removal](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stop-words-removal)
+  * [Parts of Speech (POS) Tagging](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#parts-of-speech)
+  * [TF-IDF](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tf-idf)
+  * [Word Embeddings](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#word-embeddings)
+* [Topic Mining](#topic-mining)
+* [Search Indexing & Pipelines](#indexing)
+* [Query Understanding](#query-understanding)
 * [Typeahead](#typeahead)
 * [Autocomplete Suggestions](#auto-completeauto-suggest)
-* [Guided Search]()
-* [Spell Correction]()
-* [Fuzziness]()
+* [Did you mean](#did-you-mean)
+* [Guided Search](#guided-search)
+* [Spell Correction](#spell-correction)
+* [Fuzziness](#fuzziness)
 * [Faceted Search](#faceted-search)
-* [Spam-Resilient Signals]()
+* [Spam-Resilient Signals](#span-resilient-signals)
 * [Ranking & Scoring](#scoring)
-
-## Recommendation Engine Topics
-
-* Trending
-* Recommendations
-
-?|Type|Topic
-------------: | ------------- | -------------
- -|:newspaper:|[Building a Marketplace — Search and Recommendation at Eventbrite](https://www.eventbrite.com/engineering/building-a-marketplace-search-and-recommendation-at-eventbrite/)
- -|:newspaper:|[Can a machine surprise you? We believe so.](https://developers.soundcloud.com/blog/introducing_suggested_tracks)
--|:newspaper:|[Netflix - Highlights from Personalized Recommendations workshop](https://netflixtechblog.com/highlights-from-prs2016-workshop-57f36fa34b44)
--|:newspaper:|[Netflix - Recommending for the World](https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b)
 
 ### Search - A real-world e-Commerce Implemenation
 
@@ -60,6 +49,8 @@
 :star:|:newspaper:|[Query recommendation by search filters and criteria prediction](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
 :star:|:newspaper:|[Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
 
+### Topic Mining
+
 ### Auto-Complete/Auto-Suggest
 
 Auto Complete – offers search query completions based on what the user has typed.
@@ -72,6 +63,8 @@ Search Suggest returns suggestions for search phrases, usually based on previous
 
 The second type of autocomplete is Result Suggest. In this case the suggestions are actual results rather than search phrase suggestions.
 
+Elasticsearch provides a convenient way to get autocomplete up and running quickly with its completion suggester feature.
+
 ?|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Autocomplete best practices](https://blog.griddynamics.com/smart-autocomplete-best-practices/)
@@ -80,9 +73,9 @@ The second type of autocomplete is Result Suggest. In this case the suggestions 
 :star:|:newspaper:|[On the Road to a Better ElasticSearch Location Typeahead](https://eatcodeplay.com/on-the-road-to-a-better-elasticsearch-location-typeahead-b75e3eb6dd41)
 :star:|:newspaper:|[Multi-Term Auto Completion](https://documentation.spryker.com/docs/multi-term-auto-completion)
 
-#### Completion Suggest
+#### Guided Search
 
-Elasticsearch provides a convenient way to get autocomplete up and running quickly with its completion suggester feature.
+### Spell Correction
 
 #### Did you mean
 
@@ -106,11 +99,13 @@ As faceting evolves and product catalogs become more complex, “nested faceting
 
 Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-powerful Aggregations feature changes this. Think of aggregations as “facets of facets.”
 
-### Engineering Blogs
-
 ? | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [LinkedIn](https://engineering.linkedin.com/faceting/many-facets-faceted-search)
+
+### Fuzziness
+
+### Spam-Resilient Signals
 
 ### Scoring
 
