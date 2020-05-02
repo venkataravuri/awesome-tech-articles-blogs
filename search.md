@@ -15,6 +15,7 @@
 * [Topic Mining](#topic-mining)
 * [Search Indexing & Pipelines](#indexing)
 * [Query Understanding](#query-understanding)
+* [Query Expansion](#query-expansion)
 * [Typeahead](#typeahead)
 * [Autocomplete Suggestions](#auto-completeauto-suggest)
 * [Did you mean](#did-you-mean)
@@ -43,11 +44,22 @@
 
 ### Query Understanding
 
-?|Type|Topic
+| |Type|Topic
 ------------: | ------------- | -------------
-:star:|:newspaper:|[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
+|:star::star:|:newspaper:|[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)|
+|:star::star:|:computer:|[Better Search Through Query Understanding](https://www.slideshare.net/dtunkelang/better-search-through-query-understanding)|
+|:star::star:|:computer:|[Reading Between the Lines: How We Make Sense of Users' Searches](https://engineeringblog.yelp.com/2015/02/reading-between-the-lines-how-we-make-sense-of-users-searches.html)|
+:star:|:newspaper:|[Food Discovery with Uber Eats: Building a Query Understanding Engine](https://eng.uber.com/uber-eats-query-understanding/)
 :star:|:newspaper:|[Query recommendation by search filters and criteria prediction](http://www.slideshare.net/dhwajr/query-recommendation-by-search-criteria-prediction)
 :star:|:newspaper:|[Pinterest - Building a platform to understand search queries](https://medium.com/pinterest-engineering/building-a-platform-to-understand-search-queries-7138e923c06a)
+:star:|:newspaper:|[Pinterest - Building a universal search system for Pinterest](https://tech.olx.com/understanding-language-through-search-78ea37be7ac8)
+
+### Query Expansion
+
+| |Type|Topic
+------------: | ------------- | -------------
+|:star::star:|:newspaper:|[OLX/Avito - Understanding language through search](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)|
+|:star:|:newspaper:|[Grubhub - Query2vec: Search query expansion with query embeddings](https://bytes.grubhub.com/search-query-embeddings-using-query2vec-f5931df27d79)|
 
 ### Topic Mining
 
@@ -76,6 +88,10 @@ Elasticsearch provides a convenient way to get autocomplete up and running quick
 #### Guided Search
 
 ### Spell Correction
+
+| | Type | Topic
+------------: | ------------- | -------------
+|:star:|:newspaper:|[Query Segmentation and Spelling Correction](https://towardsdatascience.com/query-segmentation-and-spelling-correction-483173008981)|
 
 #### Did you mean
 
@@ -159,6 +175,13 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 :star: |:tv:|[Intro to Facebook Search](https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/)
 :star: |:tv:|[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
 :star: |:tv:|[Under the Hood: The natural language interface of Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920/)
+
+### Search Architecture
+
+| | Type | Topic
+------------: | ------------- | -------------
+|:star: |:newspaper:|[Search Federation Architecture at LinkedIn](https://engineering.linkedin.com/blog/2018/03/search-federation-architecture-at-linkedin)|
+|:star: |:newspaper:|[Architecture of Nautilus, the new Dropbox search engine](https://dropbox.tech/machine-learning/architecture-of-nautilus-the-new-dropbox-search-engine)|
 
 ## NLP Vs ElasticSearch
 
