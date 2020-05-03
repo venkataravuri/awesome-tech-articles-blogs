@@ -16,6 +16,7 @@
 * [Search Indexing & Pipelines](#indexing)
 * [Query Understanding](#query-understanding)
 * [Query Expansion](#query-expansion)
+* [Entity Recognition](#entity-recognition)
 * [Typeahead](#typeahead)
 * [Autocomplete Suggestions](#auto-completeauto-suggest)
 * [Did you mean](#did-you-mean)
@@ -60,6 +61,12 @@
 ------------: | ------------- | -------------
 |:star::star:|:newspaper:|[OLX/Avito - Understanding language through search](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)|
 |:star:|:newspaper:|[Grubhub - Query2vec: Search query expansion with query embeddings](https://bytes.grubhub.com/search-query-embeddings-using-query2vec-f5931df27d79)|
+
+### Entity Recognition
+
+| |Type|Topic
+------------: | ------------- | -------------
+|:star::star:|:newspaper:|[?](?)|
 
 ### Topic Mining
 
