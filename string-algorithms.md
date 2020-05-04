@@ -1,8 +1,9 @@
 ### String Algorithms
-- https://www.geeksforgeeks.org/algorithms-gq/pattern-searching/
-- 
+
+* https://www.geeksforgeeks.org/algorithms-gq/pattern-searching/
 
 #### Interview Questions
+
 Stars | Kind | Topic
 ------------ | ------------- | -------------
 :star: | :link: | [Find the largest substring palindrome in a given string.](https://careercup.com/question?id=5720308512194560)
