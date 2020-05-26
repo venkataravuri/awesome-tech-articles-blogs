@@ -10,6 +10,17 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ------------: | ------------- | -------------
 ||:newspaper:|[Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
 
+### Sharding
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[MongoDB Sharding](https://docs.mongodb.com/manual/sharding/)
+
+### Time Series
+|Rating|Type|Topic
+------------: | ------------- | -------------
+|:star::star:|:newspaper:|[Alibaba Cloud - Key Concepts and Features of Time Series Databases](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
+||:newspaper:|[Timescale - Time-series data: Why (and how) to use a relational database instead of NoSQL](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
+
 ## Disaster Recovery
 
 ### RPO & RTO
