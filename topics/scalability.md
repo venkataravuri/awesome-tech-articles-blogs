@@ -15,6 +15,10 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ------------: | ------------- | -------------
 ||:newspaper:|[Tinder - Geosharded Recommendations Part 1: Sharding Approach](https://medium.com/tinder-engineering/geosharded-recommendations-part-1-sharding-approach-d5d54e0ec77a)
 ||:newspaper:|[MongoDB Sharding](https://docs.mongodb.com/manual/sharding/)
+||:newspaper:|[Sharding Pinterest: How we scaled our MySQL fleet](https://medium.com/pinterest-engineering/sharding-pinterest-how-we-scaled-our-mysql-fleet-3f341e96ca6f/)
+||:newspaper:|[Sharding & IDs at Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)
+||:newspaper:|[Patpal - Application Design Considerations for Sharding High Volume Databases](https://medium.com/paypal-engineering/application-design-considerations-for-sharding-high-volume-databases-429b9455a6c3)
+||:newspaper:|[Youtube - Scaling MySQL in the cloud with Vitess and Kubernetes](https://youtube-eng.googleblog.com/2015/04/scaling-mysql-in-cloud-with-vitess-and.html)
 
 ### Time Series
 |Rating|Type|Topic
