@@ -13,6 +13,7 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ### Sharding
 |Rating|Type|Topic
 ------------: | ------------- | -------------
+||:newspaper:|[Tinder - Geosharded Recommendations Part 1: Sharding Approach](https://medium.com/tinder-engineering/geosharded-recommendations-part-1-sharding-approach-d5d54e0ec77a)
 ||:newspaper:|[MongoDB Sharding](https://docs.mongodb.com/manual/sharding/)
 
 ### Time Series
