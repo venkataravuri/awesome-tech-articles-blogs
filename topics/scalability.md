@@ -52,4 +52,4 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ## Kafka
 https://stackoverflow.com/questions/23751708/is-zookeeper-a-must-for-kafka
 https://data-flair.training/blogs/zookeeper-in-kafka/
-
+https://data-flair.training/blogs/apache-kafka-tutorial/
