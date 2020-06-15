@@ -31,3 +31,9 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 |Rating|Type|Topic
 ------------: | ------------- | -------------
 ||:tv:|[Shopify's Architecture by Simon Eskildsen](https://vieira.pt/posts/goto17-shopify/)
+
+## Caching
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[How Stack Overflow Caches Apps for a Multi-Tenant Architecture](https://stackoverflow.blog/2019/08/06/how-stack-overflow-caches-apps-for-a-multi-tenant-architecture/)
