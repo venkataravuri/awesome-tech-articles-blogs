@@ -1,5 +1,8 @@
 ### String Algorithms
 
+http://www.whocouldthat.be/visualizing-string-matching/
+https://www.byte-by-byte.com/strings/
+
 * https://www.geeksforgeeks.org/algorithms-gq/pattern-searching/
 
 #### Interview Questions

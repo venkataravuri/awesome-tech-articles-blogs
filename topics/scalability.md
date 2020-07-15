@@ -10,6 +10,22 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ------------: | ------------- | -------------
 ||:newspaper:|[Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
 
+### Sharding
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[Tinder - Geosharded Recommendations Part 1: Sharding Approach](https://medium.com/tinder-engineering/geosharded-recommendations-part-1-sharding-approach-d5d54e0ec77a)
+||:newspaper:|[MongoDB Sharding](https://docs.mongodb.com/manual/sharding/)
+||:newspaper:|[Sharding Pinterest: How we scaled our MySQL fleet](https://medium.com/pinterest-engineering/sharding-pinterest-how-we-scaled-our-mysql-fleet-3f341e96ca6f/)
+||:newspaper:|[Sharding & IDs at Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)
+||:newspaper:|[Patpal - Application Design Considerations for Sharding High Volume Databases](https://medium.com/paypal-engineering/application-design-considerations-for-sharding-high-volume-databases-429b9455a6c3)
+||:newspaper:|[Youtube - Scaling MySQL in the cloud with Vitess and Kubernetes](https://youtube-eng.googleblog.com/2015/04/scaling-mysql-in-cloud-with-vitess-and.html)
+
+### Time Series
+|Rating|Type|Topic
+------------: | ------------- | -------------
+|:star::star:|:newspaper:|[Alibaba Cloud - Key Concepts and Features of Time Series Databases](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
+||:newspaper:|[Timescale - Time-series data: Why (and how) to use a relational database instead of NoSQL](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
+
 ## Disaster Recovery
 
 ### RPO & RTO
@@ -18,6 +34,8 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ------------: | ------------- | -------------
 ||:newspaper:|[Demand Zero RPO and Zero Downtime for Business Success](https://www.cockroachlabs.com/blog/demand-zero-rpo/)
 ||:newspaper:|[Backup and its Role in Disaster Recovery](https://www.mongodb.com/backup-and-its-role-disaster-recovery)
+
+[Build highly available MySQL applications using Amazon Aurora Multi-Master](https://aws.amazon.com/blogs/database/building-highly-available-mysql-applications-using-amazon-aurora-mmsr/)
 
 ## Performance
 
@@ -37,3 +55,8 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 |Rating|Type|Topic
 ------------: | ------------- | -------------
 ||:newspaper:|[How Stack Overflow Caches Apps for a Multi-Tenant Architecture](https://stackoverflow.blog/2019/08/06/how-stack-overflow-caches-apps-for-a-multi-tenant-architecture/)
+
+## Kafka
+https://stackoverflow.com/questions/23751708/is-zookeeper-a-must-for-kafka
+https://data-flair.training/blogs/zookeeper-in-kafka/
+https://data-flair.training/blogs/apache-kafka-tutorial/

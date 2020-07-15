@@ -20,3 +20,8 @@ Stars | Type | Topic
 :star: | :link: | [There is a 2D matrix of 0s and 1s that depicts the number of rooms that can be formed by a co-working space company like WeWork based on the values. 1 means open space for room and 0 means wall. We need to group as many 1s and possible to form the largest and minimum number of rooms.](https://careercup.com/question?id=5106119094042624)
 :star: | :link: | [How can deadlock be detected and prevented in practical scenarios?](https://www.careercup.com/question?id=84685)
 :star: | :link: | [Given a family tree for a few generations for the entire population and two people write a routine that will find out if they are blood related.  Siblings are blood related since they have the same parents.  Cousins are blood related since one of their parents have the same parents etc.  Design the data structure first and then write the routine.](https://www.careercup.com/question?id=4812957531766784)
+
+Design a train system which suggests shortest path and transfer needed to reach from source to destination. What can be the optimization.
+For example: A system may have 10 trains from t1 to t10. There are total 100 stops in the system s1 to s100. Each train has fixed set of stops. You could allow to change and transfer train of source and destination does not cover using just 1 train.
+What all can be APIs, data structure, optimizations scalable option.
+https://careercup.com/question?id=5723105072775168
