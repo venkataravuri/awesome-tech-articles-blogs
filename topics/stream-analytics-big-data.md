@@ -1,20 +1,22 @@
-# :chart_with_upwards_trend: Stream Analytics, :mount_fuji: Big Data
+# :mount_fuji: Big Data :chart_with_upwards_trend: Stream Analytics
 
-## Sorted Sets
+## Datastructures & Algorithms
+
+### Sorted Sets
 
 Sorted Sets are a near-perfect data structure for leaderboards. 
 
-||Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 :star::star::star:|:newspaper:|[Redis - Leaderboard for online game](https://redislabs.com/blog/redis-game-mechanics-scoring/)
 
 
-## Top-K 
+### Top-K 
 
 - Maintains a list of K most frequent items.
 - Finding the largest K elements in a data set or a stream.
 
-||Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 ||:newspaper:|[Realtime tracking of top 100 twitter words per min/hour/day](https://stackoverflow.com/questions/10189685/realtime-tracking-of-top-100-twitter-words-per-min-hour-day)
 ||:newspaper:|[How to find high frequency words in a book in an environment low on memory?](https://stackoverflow.com/questions/742125/how-to-find-high-frequency-words-in-a-book-in-an-environment-low-on-memory/742132#742132)
@@ -27,11 +29,20 @@ Sorted Sets are a near-perfect data structure for leaderboards.
 
 ### Rate Limiting
 
-||Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 :star::star::star:|:newspaper:|[Figma - An alternative approach to rate limiting](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/)
 :star::star:|:newspaper:|[Kong - How to Design a Scalable Rate Limiting Algorithm](https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/)
 :star::star:|:newspaper:|[Introduction to rate limiting with Redis [Part 2]](https://www.binpress.com/rate-limiting-with-redis-2/)
+
+## Realtime Streaming Data Pipelines
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+|:star::star::star:|:newspaper:|[Yelp: Realtime data pipelines](https://engineeringblog.yelp.com/2016/07/billions-of-messages-a-day-yelps-real-time-data-pipeline.html)
+||:newspaper:|[A hashtag recommendation system for twitter data streams](https://computationalsocialnetworks.springeropen.com/articles/10.1186/s40649-016-0028-9)
+||:newspaper:|[Mining Twitter: Exploring Trending Topics, Discovering What People Are Talking About, and More](https://www.oreilly.com/library/view/mining-the-social/9781449368180/ch01.html)
+||:newspaper:|[Real-time Twitter data analysis using Hadoop ecosystem](https://www.tandfonline.com/doi/full/10.1080/23311916.2018.1534519)
 
 ## Probabilistic Data Structures
 
@@ -91,7 +102,7 @@ There is a system that tracks a huge number of web events and each event is mark
   - If the user ID passes this test, it is additionally tested against the additional BF that corresponds to the report itself and, if passed, the final report counter is increased.
 - Solution 2: using HLL for each tag value
 
-||Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Redis - Streaming Analytics with Probabilistic Data Structures](https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/)
 :star:|:newspaper:|[Redis - Data structure for leaderboards](https://redislabs.com/blog/redis-game-mechanics-scoring/)
@@ -116,7 +127,7 @@ There is a system that tracks a huge number of web events and each event is mark
 
 - To solve the problem with CMS, we simply iterate through the log once and build up the sketch [2] . To query the sketch, we need to come up with candidate keys to check for. If we do not have an existing candidate set, we can simple go through the log again and look up each page in the CMS, remembering the most important ones.
 
-||Type|Topic|
+|Rating|Type|Topic|
 ------------: | ------------- | -------------
 |:star::star:star:|:newspaper:|[Probabilistic data structures. Part 3. Frequency](https://www.slideshare.net/gakhov/probabilistic-data-structures-part-3-frequency)
 |:star::star:|:newspaper:|[Big Data with Sketchy Structures, Part 1 — the Count-Min Sketch](https://towardsdatascience.com/big-data-with-sketchy-structures-part-1-the-count-min-sketch-b73fb3a33e2a)
@@ -147,21 +158,20 @@ There is a system that tracks traffic by IP address and it is required to detect
 - A hash-based probabilistic algorithm for counting number of distinct values in te presence of duplicates.
 - HyperLogLog++ is improved version of HyperLogLog.
 
-e.g., How many different words are used in Wikipedia?
-
 - HLL counts unique items in a stream, without having to remember the whole history. 
 In fact, an HLL counter takes up to 12KB of memory regardless of how many items you put into it. Lastly, an HLL counter will have a standard error rate of 0.81%, which is a perfectly sustainable error rate for most streaming analytics use cases.
-
-https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/
-
-||Type|Topic
-------------: | ------------- | -------------
-:star::star::star:|:newspaper:|[HLL in PostresSQL](http://tech.nextroll.com/blog/dev/2019/08/06/hll-in-postgresql.html)
 
 #### Real world use cases
 
 - Count the number of unique visitors
 - Redis uses the HyperLogLog data structure to count unique elements in a set
+- How many different words are used in Wikipedia?
+
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+:star::star::star:|:newspaper:|[HLL in PostresSQL](http://tech.nextroll.com/blog/dev/2019/08/06/hll-in-postgresql.html)
+|||[Redis](https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/)
 
 #### Case Study 1
 
@@ -198,12 +208,3 @@ https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structure
 
 - Use scalable layered-BF to track k-times user actions on objects
 - Use HLL to count users on each k-times action
-
-### Realtime Data Pipelines
-
-||Type|Topic
-------------: | ------------- | -------------
-|:star::star::star:|:newspaper:|[Yelp: Realtime data pipelines](https://engineeringblog.yelp.com/2016/07/billions-of-messages-a-day-yelps-real-time-data-pipeline.html)
-||:newspaper:|[A hashtag recommendation system for twitter data streams](https://computationalsocialnetworks.springeropen.com/articles/10.1186/s40649-016-0028-9)
-||:newspaper:|[Mining Twitter: Exploring Trending Topics, Discovering What People Are Talking About, and More](https://www.oreilly.com/library/view/mining-the-social/9781449368180/ch01.html)
-||:newspaper:|[Real-time Twitter data analysis using Hadoop ecosystem](https://www.tandfonline.com/doi/full/10.1080/23311916.2018.1534519)
