@@ -1,11 +1,11 @@
-# Curated list of interesting technical articles & engineering blog entries
+## Curated list of interesting technical articles & engineering blog entries
 
 A curated list of interesting technical articles, tutorials, engineering blog entries and videos that I come across everyday.
 
 || Topic | Description |
 |---|:---|:---|
 |:rocket:|**[Scalability & Performance](topics/scalability.md)** | Articles on high avialability, scalability, performance optimization notes.|
-|::|**[Digital & Business Transformation](topics/digital-transformation.md)** | Capability mapping, Technology Roadmap, ...|
+|:heavy_dollar_sign:|**[Digital & Business Transformation](topics/digital-transformation.md)** | Capability mapping, Technology Roadmap, ...|
 |:cloud:|**[Cloud Computing](topics/cloud.md)** | Articles on Cloud Computing|
 |:love_hotel:|**[SaaS & Multitenancy](topics/saas-multi-tenancy.md)** | How to design multitenancy SaaS services?|
 |:bar_chart:|**[Data Science](topics/data-science.md)** | NLP, Neural Networks, Kaggle, Scikit-Learn and more. |
