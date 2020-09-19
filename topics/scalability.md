@@ -2,6 +2,8 @@
 
 A curalted list of articles on system scalabilitiy, high availability and performance tuning.
 
+RazorPay: The Day of the RDS Multi-AZ Failover, Replication Failure & Data Loss (https://razorpay.com/blog/day-of-rds-multi-az-failover)
+
 ## High Availability
 
 ### Active-Active Deployments
