@@ -1,5 +1,48 @@
 # :mount_fuji: Big Data :chart_with_upwards_trend: Stream Analytics
 
+Data Availability, Data Accuraccy, Data Qualiity 
+
+## Analytics & Growth Tools (for Startups)
+
+### Web & Event Analytics
+
+Web & product Analytics
+
+Google Analytics is bet for content marketing. Goal setting & conversion
+
+Mixpanel & Amplitude 
+
+
+
+### Live Chat
+
+Intercom
+
+
+### Data Warehouse & BI
+
+Amazon Redshit
+
+Mode Analytics
+
+### User Testing
+
+Record what users are doing. Mostly see customer experience by product managers. Mostly usability challenges that impacts product market fit.
+
+Fullstory & Hotjar
+
+### Email & Push
+
+SendGrid 
+
+Marketing campaigns
+Marketo, consent.
+
+# Support & Help Desk
+
+Funnels
+
+
 ## Datastructures & Algorithms
 
 ### Sorted Sets
