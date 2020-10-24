@@ -2,6 +2,8 @@
 
 Data Availability, Data Accuraccy, Data Qualiity 
 
+Tools that used in SaaS transformation journey.
+
 ## Analytics & Growth Tools (for Startups)
 
 ### Web & Event Analytics
