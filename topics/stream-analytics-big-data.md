@@ -2,6 +2,11 @@
 
 Data Availability, Data Accuraccy, Data Qualiity 
 
+Data Profiling to examin data available. It provide stats such as,
+1. Column stats: type, unique values, missing values
+2. Potential keys and foreign keys
+3. data quality at column level. missing values, distinct values, ...
+
 Tools that used in SaaS transformation journey.
 
 ## Analytics & Growth Tools (for Startups)
