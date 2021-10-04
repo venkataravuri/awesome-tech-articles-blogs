@@ -2,8 +2,6 @@
 
 A curalted list of articles on system scalabilitiy, high availability and performance tuning.
 
-RazorPay: The Day of the RDS Multi-AZ Failover, Replication Failure & Data Loss (https://razorpay.com/blog/day-of-rds-multi-az-failover)
-
 ## High Availability
 
 ### Active-Active Deployments
@@ -12,7 +10,13 @@ RazorPay: The Day of the RDS Multi-AZ Failover, Replication Failure & Data Loss 
 ------------: | ------------- | -------------
 ||:newspaper:|[Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
 
-### Sharding
+### DB Engine Upgrade, Instance Upgrade, Patching
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[RazorPay: The Day of the RDS Multi-AZ Failover, Replication Failure & Data Loss](https://razorpay.com/blog/day-of-rds-multi-az-failover)
+||:newspaper:|[Zero Downtime Maintenances on MySQL RDS](https://workmarket.tech/zero-downtime-maintenances-on-mysql-rds-ba13b51103c2)
+
+### DB Sharding
 |Rating|Type|Topic
 ------------: | ------------- | -------------
 ||:newspaper:|[Tinder - Geosharded Recommendations Part 1: Sharding Approach](https://medium.com/tinder-engineering/geosharded-recommendations-part-1-sharding-approach-d5d54e0ec77a)
@@ -59,6 +63,6 @@ RazorPay: The Day of the RDS Multi-AZ Failover, Replication Failure & Data Loss 
 ||:newspaper:|[How Stack Overflow Caches Apps for a Multi-Tenant Architecture](https://stackoverflow.blog/2019/08/06/how-stack-overflow-caches-apps-for-a-multi-tenant-architecture/)
 
 ## Kafka
-https://stackoverflow.com/questions/23751708/is-zookeeper-a-must-for-kafka
-https://data-flair.training/blogs/zookeeper-in-kafka/
-https://data-flair.training/blogs/apache-kafka-tutorial/
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[Is Zookeeper must for Kafka?](https://stackoverflow.com/questions/23751708/is-zookeeper-a-must-for-kafka)
