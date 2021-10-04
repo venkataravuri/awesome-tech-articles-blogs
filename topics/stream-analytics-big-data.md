@@ -7,50 +7,12 @@ Data Profiling to examin data available. It provide stats such as,
 2. Potential keys and foreign keys
 3. data quality at column level. missing values, distinct values, ...
 
-Tools that used in SaaS transformation journey.
+## Analytics
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[NextRoll - Making 1M Click Predictions per Second using AWS ](https://tech.nextroll.com/blog/data-science/2018/04/26/just-binary-classifier.html)
 
-## Analytics & Growth Tools (for Startups)
-
-### Web & Event Analytics
-
-Web & product Analytics
-
-Google Analytics is bet for content marketing. Goal setting & conversion
-
-Mixpanel & Amplitude 
-
-
-
-### Live Chat
-
-Intercom
-
-
-### Data Warehouse & BI
-
-Amazon Redshit
-
-Mode Analytics
-
-### User Testing
-
-Record what users are doing. Mostly see customer experience by product managers. Mostly usability challenges that impacts product market fit.
-
-Fullstory & Hotjar
-
-### Email & Push
-
-SendGrid 
-
-Marketing campaigns
-Marketo, consent.
-
-# Support & Help Desk
-
-Funnels
-
-
-## Datastructures & Algorithms
+## Probabalistic Algorithms
 
 ### Sorted Sets
 
@@ -203,6 +165,7 @@ There is a system that tracks traffic by IP address and it is required to detect
 ## Counting
 
 ### HyperLogLog
+HyperLogLog (HLL) is a useful and interesting probabilistic data structure used to count unique values in a given data set with good accuracy and speed. Normally, to count unique values accurately requires memory proportional to the number of unique values. This becomes a problem when working with large data sets. HyperLogLog solves this problem by allowing us to trade memory consumption for (tunable) precision, making it possible to estimate cardinalities larger than 1 billion with a standard error of 2% using only 1.5 kilobytes of memory.
 
 - How do we count distinct things in a stream?
 - A hash-based probabilistic algorithm for counting number of distinct values in te presence of duplicates.
