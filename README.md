@@ -1,6 +1,7 @@
-## Curated list of Technical Articles, Engineering Blog entries and Tech Conference Videos
+## Awesome Technical Articles, Engineering Blog entries and Tech Conference Videos
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)]()
 
-A curated list of technical articles, How-To tutorials, engineering blog entries and videos that I come across everyday.
+A curated list of awesome technical articles, How-To tutorials, engineering blog entries and videos that I come across everyday.
 
 || Topic | Description |
 |---|:---|:---|
