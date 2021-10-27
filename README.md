@@ -18,3 +18,4 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 |:loudspeaker:|**[Programming](topics/oops-programing-paradigms.md)** | Programming paradigms, [Python (Pandas)](topics/python.md) |
 |:moyai:|**[Design Patterns](topics/design-patterns.md)** | Software design patterns |
 |:hotsprings:|**[Algorithms](topics/string-algorithms.md)**| [String search algorithms](topics/string-algorithms.md), [Graph data structure and algorithms](topics/graph-algorithms.md)|
+|:hotsprings:|**[Security](topics/security.md)**| OAuth, CORS, CSRF, ...|
