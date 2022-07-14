@@ -6,6 +6,17 @@
 ------------: | ------------- | -------------
 ||:tv:|[Python - Classes Tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)
 
+## Syntatic Sugar
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[Python Print Formatting](https://www.skillsugar.com/python-print-formatting)
+||:newspaper:|[list Comprehension](https://www.programiz.com/python-programming/list-comprehension)
+||:newspaper:|[list Comprehension](https://realpython.com/list-comprehension-python/)
+||:newspaper:|[Python: Lambda, Map, Filter, Reduce and Zip functions](https://medium.com/analytics-vidhya/python-lambda-map-filter-reduce-and-zip-functions-73556a86a454)
+||:newspaper:|[]()
+
+
 ## Pandas
 
 |Rating|Type|Topic

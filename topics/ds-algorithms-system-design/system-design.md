@@ -6,3 +6,7 @@
 - [Design payments system like Google Pay or PayTM](https://careercup.com/page?pid=system-design-interview-questions)
 - [How do find out the top trendings products on a last hour/day/monthly basis? Given that we have access to a real-time stream of sold product ids.](https://careercup.com/question?id=5386246879707136)
 - 
+
+
+Rate Limiting Part 1
+https://hechao.li/2018/06/25/Rate-Limiter-Part1/
