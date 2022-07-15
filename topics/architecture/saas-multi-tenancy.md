@@ -1,5 +1,22 @@
 # Multi-tenancy
 
+Factors such as noisy neighbor and data isolation influence strategy to store tenant data, either a “silo” model, or a “pool” model.
+
+A silo model an option for compliance or other isolation needs and want to avoid noisy neighbor conditions. Usually  separate tables per tenant.
+
+In a pool model, data resides in a single table, segregated by tenant identifiers. 
+Eeffectively distribute tenant data within a single table 
+Prevent cross tenant data access
+
+Obvious way to achieve this would be to add TenantID as the partition key. tenant identifier as a partition key could concentrate data in a given partition.  partition key scheme in a way that will better distribute tenant data across multiple partitions, and limit your chances of hitting the hot partition problem.
+
+augment your partition key, by adding a suffix to the original tenant identifier. 
+
+[Building a Multi-Tenant App With NodeJS + MongoDB](https://medium.com/geekculture/building-a-multi-tenant-app-with-nodejs-mongodb-ec9b5be6e737)
+
+
+
+
 ## Architecture & Design
 
 |Rating|Type|Topic
