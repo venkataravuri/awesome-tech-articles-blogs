@@ -9,7 +9,7 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 |:rocket:|**[Availability, Scalability & Performance](topics/scalability.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
 |:heavy_dollar_sign:|**[Digital Transformation](topics/digital-transformation.md)** | What is it? How to do? ...|
 |:cloud:|**[Cloud Computing](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
-|:love_hotel:|**[SaaS & Multitenant Systems](topics/saas-multi-tenancy.md)** | How to design multitenant SaaS services?|
+|:love_hotel:|**[SaaS & Multitenant Systems](topics/architecture/saas-multi-tenancy.md)** | How to design multitenant SaaS services?|
 |:bar_chart:|**[Machine Learning](topics/data-science.md)** | NLP, Neural Networks, Kaggle, Scikit-Learn and more. |
 |:chart_with_upwards_trend:|**[Analytics & Big Data](topics/stream-analytics-big-data.md)**| Probalistic datastructures & algorithms, streaming analytics and more|
 |:mag_right:|**[Search Concepts & Technologies](topics/search.md)** | Search optimizatin techniques |
