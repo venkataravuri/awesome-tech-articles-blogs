@@ -1,5 +1,13 @@
 # Multi-tenancy
 
+Isolating tenant data is a fundamental responsibility for Software as a Service (SaaS) providers. 
+
+Implement multi-tenant data isolation using PostgreSQL row level security policies.
+https://github.com/aws-samples/aws-saas-factory-postgresql-rls/blob/main/app/src/main/java/com/amazon/aws/partners/saasfactory/pgrls/repository/TenantAwareDataSource.java
+https://github.com/aws-samples/aws-saas-factory-postgresql-rls/blob/main/app/src/main/java/com/amazon/aws/partners/saasfactory/pgrls/repository/DataSourceRepository.java
+
+For the pool model, where there are two queues for scalability, the message is published to the queue with th fewest messages in it. This is to show how you can reduce a noisy neighbor problem. The messages have a TenantID attribute to pass the context downstream to the consumer services.
+
 Factors such as noisy neighbor and data isolation influence strategy to store tenant data, either a “silo” model, or a “pool” model.
 
 A silo model an option for compliance or other isolation needs and want to avoid noisy neighbor conditions. Usually  separate tables per tenant.
