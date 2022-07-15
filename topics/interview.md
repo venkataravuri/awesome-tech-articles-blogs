@@ -32,3 +32,11 @@ vIDM
 Group Sync
 
 
+Foundational Services
+
+Tenant Metrics & Analytics
+https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics
+
+https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics
+
+
