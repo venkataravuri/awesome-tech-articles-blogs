@@ -62,7 +62,17 @@ A curalted list of articles on system scalabilitiy, high availability and perfor
 ------------: | ------------- | -------------
 ||:newspaper:|[How Stack Overflow Caches Apps for a Multi-Tenant Architecture](https://stackoverflow.blog/2019/08/06/how-stack-overflow-caches-apps-for-a-multi-tenant-architecture/)
 
-## Kafka
+## Kafka Articles
+
 |Rating|Type|Topic
 ------------: | ------------- | -------------
 ||:newspaper:|[Is Zookeeper must for Kafka?](https://stackoverflow.com/questions/23751708/is-zookeeper-a-must-for-kafka)
+
+[Kafka Redesign and Lessons Learned](https://www.moengage.com/blog/kafka-at-moengage/)
+[DoctorKafka: Kafka cluster healing and workload balancing](https://medium.com/pinterest-engineering/open-sourcing-doctorkafka-kafka-cluster-healing-and-workload-balancing-e51ad25b6b17)
+[DoctorKafka: Kafka cluster healing and workload balancing](https://medium.com/pinterest-engineering/open-sourcing-doctorkafka-kafka-cluster-healing-and-workload-balancing-e51ad25b6b17)
+[Running Kafka Streams applications in AWS](https://engineering.zalando.com/posts/2017/11/running-kafka-streams-applications-aws.html)
+
+
+https://blogboard.io/topic/Kafka
+
