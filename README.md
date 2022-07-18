@@ -6,7 +6,7 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 || Topic | Description |
 |---|:---|:---|
 |:rocket:|**[Startup Cohorts](topics/startup.md)** | Startup cohort ideas.|
-|:rocket:|**[Availability, Scalability & Performance](topics/scalability.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
+|:rocket:|**[Availability, Scalability & Performance](topics/architecture/scalability.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
 |:heavy_dollar_sign:|**[Digital Transformation](topics/digital-transformation.md)** | What is it? How to do? ...|
 |:cloud:|**[Cloud Computing](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
 |:love_hotel:|**[SaaS & Multitenant Systems](topics/architecture/saas-multi-tenancy.md)** | How to design multitenant SaaS services?|
