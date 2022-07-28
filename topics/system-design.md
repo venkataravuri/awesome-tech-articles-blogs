@@ -10,3 +10,4 @@
 
 [Design a Chat Service - Whatsapp Architecture](https://www.cometchat.com/blog/whatsapps-architecture-and-system-design)
 
+[Hashmap design](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
