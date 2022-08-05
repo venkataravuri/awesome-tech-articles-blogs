@@ -10,3 +10,8 @@
 
 Rate Limiting Part 1
 https://hechao.li/2018/06/25/Rate-Limiter-Part1/
+
+Flash Sale
+https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858
+https://redis.io/docs/reference/patterns/distributed-locks/
+https://george24601.github.io/2019/10/24/flash-sale.html
