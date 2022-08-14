@@ -55,3 +55,14 @@ https://www.educative.io/blog/uber-backend-system-design
 
 Design a Finate Sate Machine
 https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
+
+
+## Engineering Blogs
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:tv:|[Shopify's Architecture by Simon Eskildsen](https://vieira.pt/posts/goto17-shopify/)
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:tv:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)

@@ -1,23 +1,21 @@
-## Awesome Technical Articles, Engineering Blog entries and Conference Videos
+## Awesome Technical Articles, Engineering Blogs and Conference Videos
+
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)]()
 
 A curated list of awesome technical articles, How-To tutorials, engineering blog entries and videos that I come across everyday.
 
 || Topic | Description |
 |---|:---|:---|
-|:rocket:|**[Startup Cohorts](topics/startup.md)** | Startup cohort ideas.|
-|:rocket:|**[System Design](topics/system-design.md)** | System design interview material. |
-|:rocket:|**[Availability, Scalability & Performance](topics/architecture/scalability.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
-|:heavy_dollar_sign:|**[Digital Transformation](topics/digital-transformation.md)** | What is it? How to do? ...|
-|:cloud:|**[Cloud Computing](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
-|:love_hotel:|**[SaaS & Multitenant Systems](topics/architecture/saas-multi-tenancy.md)** | How to design multitenant SaaS services?|
-|:bar_chart:|**[Machine Learning](topics/data-science.md)** | NLP, Neural Networks, Kaggle, Scikit-Learn and more. |
-|:chart_with_upwards_trend:|**[Analytics & Big Data](topics/stream-analytics-big-data.md)**| Probalistic datastructures & algorithms, streaming analytics and more|
-|:mag_right:|**[Search Concepts & Technologies](topics/search.md)** | Search optimizatin techniques |
-|:ok_hand:|**[Recommendations](topics/recommendations.md)** | Recommendation engines |
-|:ferris_wheel:|**[DevOps & Infrastructure Automation](topics/devops.md)** | DevOps articles, [Docker, Kubenetes](topics/docker-kubernetes.md) |
-|:loudspeaker:|**[Programming](topics/oops-programing-paradigms.md)** | Programming paradigms, [Python (Pandas)](topics/python.md) |
-|:moyai:|**[Design Patterns](topics/design-patterns.md)** | Software design patterns |
-|:hotsprings:|**[Algorithms](topics/string-algorithms.md)**| [String search algorithms](topics/string-algorithms.md), [Graph data structure and algorithms](topics/graph-algorithms.md)|
-|:hotsprings:|**[Security](topics/security.md)**| OAuth, CORS, CSRF, ...|
-|:hotsprings:|**[Interview](topics/interview.md)**| |
+|:rocket:|**[System Design Articles](topics/architecture-design/system-design.md)** | System design interview material |
+|:love_hotel:|**[Multi-tenant SaaS Systems Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
+|:mag_right:|**[Search - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
+|:rocket:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
+|:rocket:|**[NoSQL & DBs - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
+|:heavy_dollar_sign:|**[Business & Digital Transformation](topics/architecture-design/digital-transformation.md)** | What is Digital Transformation? How to do? ...|
+|:cloud:|**[Cloud Computing - AWS](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
+|:bar_chart:|**[Machine Learning](topics/data-analytics-big-data/data-science.md)** | NLP, Neural Networks, Kaggle, Scikit-Learn and more. |
+|:chart_with_upwards_trend:|**[Analytics & Big Data](topics/data-analytics-big-data/stream-analytics-big-data.md)**| Probalistic datastructures & algorithms, streaming analytics and more|
+|:ok_hand:|**[Recommendations](topics/data-analytics-big-data/recommendations.md)**|
+|:ferris_wheel:|**[DevOps - Kubernetes, Infrastructure Automation](topics/devops/devops.md)** | DevOps articles, [Docker, Kubenetes](topics/devops/docker-kubernetes.md) |
+|:hotsprings:|**[Security](topics/devops/security.md)**| OAuth, CORS, CSRF, ...|
+|:rocket:|**[Startup Cohorts](topics/general/startup.md)** | Startup cohort ideas.|

@@ -1,4 +1,4 @@
-
+# Kafka Internals, Scalability & Performance
 
 #### How Kafka Nodes and zookeeper will communicate with each other?
 
@@ -24,3 +24,19 @@ https://stackoverflow.com/questions/54989802/where-kafka-store-the-meta-data-on-
 #### Metadata requests in Kafka producer
 The first time the producer makes a metadata request is when it connects to the bootstrap servers that you set in the client configuration. Of course, it can be just one broker or more but not necessarily all the brokers in the cluster (so the metadata request is not for each broker). In this way, the producer gets information about where are the topics that it wants to send messages. During its life, more metadata requests can be done when it receives an error connecting to the broker leader for the partition it's writing, in this case, it needs to know which broker is the new leader for connecting to it (if not connected yet for other topics) and starting to send.
 https://stackoverflow.com/questions/56794122/metadata-requests-in-kafka-producer
+
+||:newspaper:|[Is Zookeeper must for Kafka?](https://stackoverflow.com/questions/23751708/is-zookeeper-a-must-for-kafka)
+
+## Kafka Engineering Blogs
+
+https://blogboard.io/topic/Kafka
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+|||[Kafka Redesign and Lessons Learned](https://www.moengage.com/blog/kafka-at-moengage/)|
+|||[DoctorKafka: Kafka cluster healing and workload balancing](https://medium.com/pinterest-engineering/open-sourcing-doctorkafka-kafka-cluster-healing-and-workload-balancing-e51ad25b6b17)
+|||[DoctorKafka: Kafka cluster healing and workload balancing](https://medium.com/pinterest-engineering/open-sourcing-doctorkafka-kafka-cluster-healing-and-workload-balancing-e51ad25b6b17)
+|||[Running Kafka Streams applications in AWS](https://engineering.zalando.com/posts/2017/11/running-kafka-streams-applications-aws.html)
+
+
+

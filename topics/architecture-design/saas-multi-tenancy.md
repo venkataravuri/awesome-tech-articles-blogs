@@ -58,3 +58,12 @@ augment your partition key, by adding a suffix to the original tenant identifier
 ||:newspaper:|[Multi-Tenancy Implementation using Spring Boot + Hibernate](https://medium.com/swlh/multi-tenancy-implementation-using-spring-boot-hibernate-6a8e3ecb251a)
 ||:newspaper:|[How to handle multi-tenancy in Cumul.io](https://blog.cumul.io/2019/08/22/how-to-handle-multi-tenancy-in-cumul-io/)
 ||:newspaper:|[Providing Multitenancy with Spring Boot](https://bytefish.de/blog/spring_boot_multitenancy/)
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:newspaper:|[How Stack Overflow Caches Apps for a Multi-Tenant Architecture](https://stackoverflow.blog/2019/08/06/how-stack-overflow-caches-apps-for-a-multi-tenant-architecture/)
+
+Tenant Metrics & Analytics
+https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics
+
+https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics
