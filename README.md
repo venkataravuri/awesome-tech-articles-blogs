@@ -11,6 +11,7 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 |:mag_right:|**[Search - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
 |:rocket:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
 |:rocket:|**[NoSQL & DBs - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
+|:rocket:|**[Redis - Scalability & Performance](topics/architecture-design/redis.md)** | Redis|
 |:heavy_dollar_sign:|**[Business & Digital Transformation](topics/architecture-design/digital-transformation.md)** | What is Digital Transformation? How to do? ...|
 |:cloud:|**[Cloud Computing - AWS](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
 |:bar_chart:|**[Machine Learning](topics/data-analytics-big-data/data-science.md)** | NLP, Neural Networks, Kaggle, Scikit-Learn and more. |

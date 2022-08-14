@@ -67,3 +67,9 @@ Tenant Metrics & Analytics
 https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics
 
 https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics
+
+## Engineering Blogs
+
+|Rating|Type|Topic
+------------: | ------------- | -------------
+||:tv:|[Shopify's Architecture by Simon Eskildsen](https://vieira.pt/posts/goto17-shopify/)

@@ -5,18 +5,21 @@
 - [How do find out the top trendings products on a last hour/day/monthly basis? Given that we have access to a real-time stream of sold product ids.](https://careercup.com/question?id=5386246879707136)
 - [Most frequent keywords on Google search engine, Most watched videos on Youtube, Most played songs on Spotify, Most shared posts on Facebook, Most retweeted tweet on Twitter](https://coblob.com/blogs/Count-Min-Sketch-to-solve-Top-K-or-Frequent-K-Heavy-Hitters-System-Design-problems-5b21ca3eeb7f6fbccd473689)
 
-### Design a Flash Sale
-- https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858
-- https://redis.io/docs/reference/patterns/distributed-locks/
-- https://george24601.github.io/2019/10/24/flash-sale.html
+### Design a Flash Sale System
 
-### Search Engine
+|Rating|Type|Topic|Description|
+------------: | ------------- | ------------- | ------------ |
+|:star:|Engineering Blog|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| Conference presentations |
+|:star:|Blog|[Flash Sale](https://george24601.github.io/2019/10/24/flash-sale.html)| ? |
+|:star:|Blog|[Flash Sale](https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858)| ? |
+
+### Design a Search Engine
 - [Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
 
 ### Design a Parking Lot
 - [Design a Parking Lot System](https://medium.com/double-pointer/system-design-interview-parking-lot-system-ff2c58167651)
 
-### Rate Limiting
+### Design a Rate Limiter
 - [Rate limiter](https://hechao.li/2018/06/25/Rate-Limiter-Part1/)
 
 ### Design a Video Streaming Service
@@ -32,7 +35,7 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 
 - [Hashmap design](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
 
-### Scan Malware
+### How to Scan Malware?
 - [Design a service to scan photos/videos for any malware?](https://careercup.com/question?id=5091933672701952)
 
 ### Design a Voting System
@@ -44,7 +47,7 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 - https://medium.com/interviewnoodle/vending-machine-system-architecture-ce28c215c2b1
 - https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html#axzz7bO38EcZi
 
-### Design Payments
+### Design Payments System
 - [Design payments system like Google Pay or PayTM](https://careercup.com/page?pid=system-design-interview-questions)
 
 
@@ -55,14 +58,3 @@ https://www.educative.io/blog/uber-backend-system-design
 
 Design a Finate Sate Machine
 https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
-
-
-## Engineering Blogs
-
-|Rating|Type|Topic
-------------: | ------------- | -------------
-||:tv:|[Shopify's Architecture by Simon Eskildsen](https://vieira.pt/posts/goto17-shopify/)
-
-|Rating|Type|Topic
-------------: | ------------- | -------------
-||:tv:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)
