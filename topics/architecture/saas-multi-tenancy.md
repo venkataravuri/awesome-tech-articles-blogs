@@ -2,6 +2,8 @@
 
 Isolating tenant data is a fundamental responsibility for Software as a Service (SaaS) providers. 
 
+https://aws.amazon.com/blogs/database/multi-tenant-data-isolation-with-postgresql-row-level-security/
+
 Implement multi-tenant data isolation using PostgreSQL row level security policies.
 https://github.com/aws-samples/aws-saas-factory-postgresql-rls/blob/main/app/src/main/java/com/amazon/aws/partners/saasfactory/pgrls/repository/TenantAwareDataSource.java
 https://github.com/aws-samples/aws-saas-factory-postgresql-rls/blob/main/app/src/main/java/com/amazon/aws/partners/saasfactory/pgrls/repository/DataSourceRepository.java

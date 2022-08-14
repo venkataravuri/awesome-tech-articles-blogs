@@ -44,8 +44,14 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 - https://medium.com/interviewnoodle/vending-machine-system-architecture-ce28c215c2b1
 - https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html#axzz7bO38EcZi
 
-
-
-
 ### Design Payments
 - [Design payments system like Google Pay or PayTM](https://careercup.com/page?pid=system-design-interview-questions)
+
+
+# Design a Ride Share App
+https://www.geeksforgeeks.org/system-design-of-uber-app-uber-system-architecture/
+https://www.educative.io/blog/uber-backend-system-design
+
+
+Design a Finate Sate Machine
+https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
