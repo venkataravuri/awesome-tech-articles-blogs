@@ -34,10 +34,20 @@ A curalted list of articles on database scalabilitiy, high availability and perf
 ||:newspaper:|[Patpal - Application Design Considerations for Sharding High Volume Databases](https://medium.com/paypal-engineering/application-design-considerations-for-sharding-high-volume-databases-429b9455a6c3)
 ||:newspaper:|[Youtube - Scaling MySQL in the cloud with Vitess and Kubernetes](https://youtube-eng.googleblog.com/2015/04/scaling-mysql-in-cloud-with-vitess-and.html)
 
+https://luanjunyi.medium.com/system-design-paradigm-sharding-77cb6498a6dc
+
+https://docs.oracle.com/en/cloud/paas/nosql-cloud/csnsd/shard-keys-and-primary-keys.html)
+
 ## Time Series
 |Rating|Type|Topic
 ------------: | ------------- | -------------
 |:star::star:|:newspaper:|[Alibaba Cloud - Key Concepts and Features of Time Series Databases](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
 ||:newspaper:|[Timescale - Time-series data: Why (and how) to use a relational database instead of NoSQL](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
+
+
+## Redshift
+
+https://medium.com/doctolib/redshift-troubleshouting-made-simple-ed73b38d10d5
+https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998
 
 
