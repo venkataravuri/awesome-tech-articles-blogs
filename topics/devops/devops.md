@@ -14,3 +14,24 @@ Agile software development paved the way, steering away from the waterfall metho
 DevOps essentially extends the continuous development goals of the Agile movement to continuous integration and release. In order to accommodate continuous releases, DevOps encourages automation of the change, configuration and release processes.
 
 https://newrelic.com/devops/what-is-devops 
+
+
+### DevSecOps Tools
+Prior to build
+ - Automated Code Quality Inspection
+  - SonarCube
+ 
+ - Security Scanning
+  - Coverity
+
+- Static code analysis for application security
+- Fortify
+
+Build time
+
+- OSS Scan
+- Source Composition Analysis
+- Black Duck
+
+- Container Security
+- Octane
