@@ -25,9 +25,16 @@ https://devopsdice.com/difference-between-aws-transit-gateway-and-vpc-peering/
 
 https://devopsdice.com/difference-between-aws-security-group-and-nacl/
 
+https://visualstorageintelligence.com/chargeback-vs-showback/
+
 ### IAM
 
 https://devopsdice.com/aws-iam-identity-and-access-management/
+
+
+https://visualstorageintelligence.com/chargeback-vs-showback/
+
+
 
 
 ## Cloud Governance
