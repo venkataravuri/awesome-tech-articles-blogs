@@ -15,6 +15,19 @@
 ## [AWS Solution Architect Professional Exam Notes 2](aws-solution-architect-associate-notes-2.md)
 
 - 
+## Networking
+
+#### What is the difference between AWS Transit Gateway and VPC Peering?
+
+https://devopsdice.com/difference-between-aws-transit-gateway-and-vpc-peering/
+
+#### Difference between AWS Security Groups and NACL?
+
+https://devopsdice.com/difference-between-aws-security-group-and-nacl/
+
+### IAM
+
+https://devopsdice.com/aws-iam-identity-and-access-management/
 
 
 ## Cloud Governance
