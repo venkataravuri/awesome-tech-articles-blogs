@@ -1,19 +1,8 @@
-# :mag: Search Topics, Terminology
+# :mag: Search Topics & Terminology
 
-## Search Topics & Terminology
-
-> Cross referenced with Natural Language Processing (NLP) notes.
-
-* Text Analysis / Text Mining
-  * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
-  * [Stemming](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stemming)
-  * [Lemmatization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#lemmatization)
-  * [Stop Words Removal](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stop-words-removal)
-  * [Parts of Speech (POS) Tagging](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#parts-of-speech)
-  * [TF-IDF](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tf-idf)
-  * [Word Embeddings](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#word-embeddings)
+* [Text Analysis / Text Mining (NLP)](../data-analytics-big-data/data-science.md)
+* [Search Indexing & Pipelines](#search-indexing)
 * [Topic Mining](#topic-mining)
-* [Search Indexing & Pipelines](#indexing)
 * [Query Understanding](#query-understanding)
 * [Query Expansion](#query-expansion)
 * [Entity Recognition](#entity-recognition)
@@ -27,17 +16,18 @@
 * [Spam-Resilient Signals](#span-resilient-signals)
 * [Ranking & Scoring](#scoring)
 
-### Search - A real-world e-Commerce Implemenation
+## e-commerce search solutions
 
-?|Type|Topic
+Rating|Type|Topic
 ------------: | ------------- | -------------
 :star::star::star:|:newspaper:|[On-Site Search Design Patterns for E-Commerce: Schema Structure, Data Driven Ranking & More](https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/)
 :star:|:newspaper:|[Explantion to above article](https://medium.com/@johntucker_48673/elasticsearch-by-example-part-1-a4a38cd97f55)
 :star:|:newspaper:|[Reviving an e-commerce search engine using Elasticsearch](https://medium.com/quantyca/reviving-an-e-commerce-search-engine-using-elasticsearch-e540751c6d99)
 
-### Indexing
 
-?|Type|Topic
+## Search Indexing
+
+Rating|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[How to Reindex One Billion Documents in One Hour at SoundCloud](https://developers.soundcloud.com/blog/how-to-reindex-1-billion-documents-in-1-hour-at-soundcloud)
 :star:|:newspaper:|[Facebook - Under the Hood: Indexing and ranking in Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920/)
@@ -45,7 +35,7 @@
 
 ### Query Understanding
 
-| |Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 |:star::star:|:newspaper:|[Query Understanding At TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)|
 |:star::star:|:computer:|[Better Search Through Query Understanding](https://www.slideshare.net/dtunkelang/better-search-through-query-understanding)|
@@ -57,18 +47,20 @@
 
 ### Query Expansion
 
-| |Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 |:star::star:|:newspaper:|[OLX/Avito - Understanding language through search](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)|
 |:star:|:newspaper:|[Grubhub - Query2vec: Search query expansion with query embeddings](https://bytes.grubhub.com/search-query-embeddings-using-query2vec-f5931df27d79)|
 
 ### Entity Recognition
 
-| |Type|Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 |:star::star:|:newspaper:|[?](?)|
 
 ### Topic Mining
+
+TODO
 
 ### Auto-Complete/Auto-Suggest
 
@@ -96,7 +88,7 @@ Elasticsearch provides a convenient way to get autocomplete up and running quick
 
 ### Spell Correction
 
-| | Type | Topic
+|Rating|Type|Topic
 ------------: | ------------- | -------------
 |:star:|:newspaper:|[Query Segmentation and Spelling Correction](https://towardsdatascience.com/query-segmentation-and-spelling-correction-483173008981)|
 
@@ -106,7 +98,7 @@ did-you-mean (DYM)
 
 ### Typeahead
 
-? | Type | Topic
+Rating | Type | Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Facebook - The Life of a Typeahead Query](https://www.facebook.com/notes/facebook-engineering/the-life-of-a-typeahead-query/389105248919/)
 :star:|:newspaper:|[Pinterest - Rebuilding the user typeahead](https://medium.com/pinterest-engineering/rebuilding-the-user-typeahead-9c5bf9723173)
@@ -122,7 +114,7 @@ As faceting evolves and product catalogs become more complex, “nested faceting
 
 Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-powerful Aggregations feature changes this. Think of aggregations as “facets of facets.”
 
-? | Type | Topic
+Rating | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [LinkedIn](https://engineering.linkedin.com/faceting/many-facets-faceted-search)
 
@@ -134,7 +126,7 @@ Prior to Elasticsearch v1, creating nested faceting was difficult. But the uber-
 
 We generally define scoring as giving a higher weight to documents (or data) that meet specific criteria. The objective is often to get a list of documents, sorted on the relevance to the search. Typically, relevance is the numerical output of an algorithm that determines which documents are most textually similar to the query. Elasticsearch employs and enhances standard scoring algorithms and encapsulates these within script_score and function_score.
 
-? | Type | Topic
+Rating | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [How scoring works in Elasticsearch](https://www.compose.com/articles/how-scoring-works-in-elasticsearch/)
 :star: | :computer: | [Scoring using Elasticsearch Scripts](http://qbox.io/blog/scoring-using-elasticsearch-scripts-part1)
@@ -144,14 +136,14 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 
 ## ElasticSearch Tutorials
 
-? | Type | Topic
+Rating | Type | Topic
 ------------ | ------------- | -------------
 :star: | :computer: | [Data Exploration With Elasticsearch](http://www.slideshare.net/astensby/data-exploration-with-elasticsearch)
 :star: | :computer: | [The Ultimiate Guide for Elasticsearch Plugins](http://www.slideshare.net/synhershko/the-ultimate-guide-for-elasticsearch-plugins)
 
 ## Search articles form Engineering Blogs
 
-? | Type | Topic
+Rating | Type | Topic
 ------------: | ------------- | -------------
 :star: |:tv:|[Shopify](https://www.youtube.com/watch?v=HZw70MbjuGE)
 :star: | :newspaper: | [Tumblr Search Architecture](http://www.slideshare.net/otisg/search-at-tumblr-nyc-search-meetup)
@@ -177,7 +169,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 
 ### Facebook Search
 
- ? | Type | Topic
+ Rating | Type | Topic
 ------------: | ------------- | -------------
 :star: |:tv:|[Intro to Facebook Search](https://www.facebook.com/notes/facebook-engineering/intro-to-facebook-search/365915113919/)
 :star: |:tv:|[Facebook Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-posts-search/10151755593228920/)
@@ -185,7 +177,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 
 ### Search Architecture
 
-| | Type | Topic
+| Rating | Type | Topic
 ------------: | ------------- | -------------
 |:star: |:newspaper:|[Search Federation Architecture at LinkedIn](https://engineering.linkedin.com/blog/2018/03/search-federation-architecture-at-linkedin)|
 |:star: |:newspaper:|[Architecture of Nautilus, the new Dropbox search engine](https://dropbox.tech/machine-learning/architecture-of-nautilus-the-new-dropbox-search-engine)|
@@ -193,7 +185,7 @@ We generally define scoring as giving a higher weight to documents (or data) tha
 ## NLP Vs ElasticSearch
 
 ElasticSearch uses parts of NLP (e.g., tokenization and stemming). ElasticSearch also includes software engineering elements to ensure a search solution is performant.
-? | Type | Topic
+Rating | Type | Topic
 ------------: | ------------- | -------------
 :star::star:|:newspaper:|[Semantic search with NLP and elasticsearch](https://stackoverflow.com/questions/8772692/semantic-search-with-nlp-and-elasticsearch)
 :star: |:newspaper:|[Marrying Elasticsearch with NLP to solve real-world search problems](https://www.slideshare.net/GrokkingVN/techtalk-13-grokking-marrying-elasticsearch-with-nlp-to-solve-realworld-search-problems)
