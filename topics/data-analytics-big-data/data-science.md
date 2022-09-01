@@ -1,5 +1,14 @@
 # Machine Learning
 
+* [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
+* [Stemming](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stemming)
+* [Lemmatization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#lemmatization)
+* [Stop Words Removal](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stop-words-removal)
+* [Parts of Speech (POS) Tagging](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#parts-of-speech)
+* [TF-IDF](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tf-idf)
+* [Word Embeddings](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#word-embeddings)
+
+
 ## Feature Engineering
 
 |Rating|Type|Topic
