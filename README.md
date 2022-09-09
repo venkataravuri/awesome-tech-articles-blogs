@@ -7,7 +7,7 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 || Topic | Description |
 |---|:---|:---|
 |:rocket:|**[System Design Articles](topics/architecture-design/system-design.md)** | Realworld system design samples. |
-|:rocket:|**[Probabilistic Data Structures](topics/architecture-design/system-design.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
+|:rocket:|**[Probabilistic Data Structures](topics/architecture-design/data-structures.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
 |:love_hotel:|**[Multi-Tenant SaaS Systems Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
 |:mag_right:|**[Search Technologies - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
 |:rocket:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
