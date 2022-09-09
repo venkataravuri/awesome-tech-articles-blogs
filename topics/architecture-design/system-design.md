@@ -1,20 +1,21 @@
 
-# System Design Interview Concepts
+# System Design Articles
 
+## Design Food / Grocery Delivery System
 
-### 
+System design approaches for systems similar to DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ... 
 
- Food Delivery Time Prediction
- 
-https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20
-https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html
-https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d
-https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2
+| | Article / Blog | Notes |
+------------: | ------------- | -------------
+|:star:|[Food Delivery Time Prediction](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? Data Structures: ? | Algroithms: ?
+|:star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
+|:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
+|:star:|[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
 
 ### Design a Flash Sale System
 
-|Rating|Type|Topic|Description|
-------------: | ------------- | ------------- | ------------ |
+|Rating|Type|Topic
+------------: | ------------- | -------------
 |:star:|Engineering Blog|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| Conference presentations |
 |:star:|Blog|[Flash Sale](https://george24601.github.io/2019/10/24/flash-sale.html)| ? |
 |:star:|Blog|[Flash Sale](https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858)| ? |
