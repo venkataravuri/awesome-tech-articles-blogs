@@ -1,8 +1,20 @@
 # General Data Structures
 
-||Article / Blog|Topic
-------------: | ------------- | -------------
-:star::star:|[How does Hashmap is designed?](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
+||Article / Blog||
+------------:|:------------|:-------------
+|:star::star:|[How Hashmap is designed?](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
+
+
+||Article / Blog||
+------------: |:------------- | -------------
+|:star::star::star:|[Realtime tracking of top 100 twitter words per min/hour/day](https://stackoverflow.com/questions/10189685/realtime-tracking-of-top-100-twitter-words-per-min-hour-day)
+||[How to find high frequency words in a book in an environment low on memory?](https://stackoverflow.com/questions/742125/how-to-find-high-frequency-words-in-a-book-in-an-environment-low-on-memory/742132#742132)
+||[Stock ticker data structure for getting top k stock prices](https://stackoverflow.com/questions/43550873/stock-ticker-data-structure-for-getting-top-k-stock-prices)
+||[Find out top 10 companies with highest volume trades](https://stackoverflow.com/questions/20213589/find-out-top-10-companies-with-highest-volume-trades)
+||[Give the k most frequent IP addresses from the large stream of IP address in constant time and constant space](https://stackoverflow.com/questions/30149732/give-the-k-most-frequent-ip-addresses-from-the-large-stream-of-ip-address-in-con)
+||[Design a service to calculate the top k listened to songs in past 24 hrs](https://stackoverflow.com/questions/50207691/design-a-service-to-calculate-the-top-k-listened-to-songs-in-past-24-hrs)
+||[Algorithm to find 100 closest stars to the origin](https://stackoverflow.com/questions/9202315/algorithm-to-find-100-closest-stars-to-the-origin)
+
 
 # Probabilistic Data Structures
 
@@ -20,16 +32,6 @@ An efficient data structure to answer below,
 - Finding the largest K elements in a data set or a stream.
 
 
-||Article / Blog|
-------------: | ------------- | -------------
-:star::star::star:|[Realtime tracking of top 100 twitter words per min/hour/day](https://stackoverflow.com/questions/10189685/realtime-tracking-of-top-100-twitter-words-per-min-hour-day)
-||[How to find high frequency words in a book in an environment low on memory?](https://stackoverflow.com/questions/742125/how-to-find-high-frequency-words-in-a-book-in-an-environment-low-on-memory/742132#742132)
-||[Stock ticker data structure for getting top k stock prices](https://stackoverflow.com/questions/43550873/stock-ticker-data-structure-for-getting-top-k-stock-prices)
-||[Find out top 10 companies with highest volume trades](https://stackoverflow.com/questions/20213589/find-out-top-10-companies-with-highest-volume-trades)
-||[Give the k most frequent IP addresses from the large stream of IP address in constant time and constant space](https://stackoverflow.com/questions/30149732/give-the-k-most-frequent-ip-addresses-from-the-large-stream-of-ip-address-in-con)
-||[Design a service to calculate the top k listened to songs in past 24 hrs](https://stackoverflow.com/questions/50207691/design-a-service-to-calculate-the-top-k-listened-to-songs-in-past-24-hrs)
-|||[Algorithm to find 100 closest stars to the origin](https://stackoverflow.com/questions/9202315/algorithm-to-find-100-closest-stars-to-the-origin)
-
 
 ## Leaderboards
 
@@ -39,80 +41,53 @@ Sorted Sets are a near-perfect data structure for leaderboards.
 ------------: | ------------- | -------------
 :star::star::star:|[Redis - Leaderboard for online game](https://redislabs.com/blog/redis-game-mechanics-scoring/)
 |:star:|[Redis - Leaderboard benchmark using Sorted Set vs. Top-K](https://redislabs.com/blog/meet-top-k-awesome-probabilistic-addition-redisbloom/)
+:star:|[Redis - Data structure for leaderboards](https://redislabs.com/blog/redis-game-mechanics-scoring/)
 
 
 ## Membership
 
 ### Bloom Filters
+A data structure that enables you to store information about the presence of an element in a set in a very small space of a fixed size. If you ask Bloom Filter whether an item exists in a set, it can provide you any of the 2 answers — ‘May be present’ or ‘No. Bloom filter guarantees ‘No’ answer for membership check if the item does not exist in the set, but it’s not so sure about the item when it exists in the set — there is a very high chance that the item exists in the set, but not necessarily it exists.
 
-- Checks the membership of an item in a set of similar items.
-- Checking for presence of an element in a set.
-- A data structure that enables you to store information about the presence of an element in a set in a very small space of a fixed size.
-- If you ask Bloom Filter whether an item exists in a set, it can provide you any of the 2 answers — ‘May be present’ or ‘No’.
-- Bloom filter guarantees ‘No’ answer for membership check if the item does not exist in the set, but it’s not so sure about the item when it exists in the set — there is a very high chance that the item exists in the set, but not necessarily it exists.
+It checks for presence of an element in a set.
 
-#### Bloom Filter Real World Use Cases
-
-- _*Is this URL malicious?*_ - A cloud based security service which protects you from accessing malicious urls. That service might host a database of millions of malicious urls, might cater to millions of request per minute worldwide. Traditional approach, searching a url in their database or cache is huge challenge. Rather use some approximation or probability here quickly identifies if the url is safe or not?
-- Google Chrome Browser uses Bloom Filters to identify malicious websites by their URLs. Google’s Chrome web browser uses a Bloom filter as a first level screen of suspicious URLs, and positive results are subjected to a second level test to confirm the issue before a warning is issued to the user.
+- Is this URL malicious? Google Chrome Browser uses Bloom Filters to identify malicious websites by their URLs. Google’s Chrome web browser uses a Bloom filter as a first level screen of suspicious URLs, and positive results are subjected to a second level test to confirm the issue before a warning is issued to the user.
 - Is this word contained in the document?
 - Is this IP address blacklisted?
 - Has this URL already been crawled?
 - Was this entry already present in the stream?
 - Is this record in the database?
 - Determine if their desired username is taken or not. 
-
-- Akamai's web servers use Bloom filters to prevent "one-hit- wonders" from being stored in its disk caches
+- Akamai's web servers use Bloom filters to prevent "one-hit-wonders" from being stored in its disk caches
 - Google BigTable, Apache HBase and Apache Cassandra use Bloom filters to reduce the disk lookups for non-existent rows or columns
 - The Squid Web Proxy Cache uses Bloom filters for cache digests
 - Bitcoin uses Bloom filters to speed up wallet synchronization
 - Ethereum uses Bloom filters for quickly finding logs on the Ethereum blockchain.
 - The Exim mail transfer agent (MTA) uses Bloom filters in its rate-limit feature
 - Medium uses Bloom Filters to recommend stories to its members.
-
 - a simple _*spellchecker*_. You get the whole dictionary and add every word to the bloom filter. When you get a text you need to spellcheck, check every word against the filter. If you get a negative result back for a word, you’re sure that it’s misspelled and you can feel confident in highlighting it as one. Sometimes, however, you’d have a misspelled word that the filter marked as “maybe present” and then you’d fail to mark it as misspelled. But considering we didn’t need to store the entire dictionary in memory and we control the rate of false positives, this is probably an acceptable trade-off.
 
 #### How does a Bloom filter work?
 https://redislabs.com/blog/redis-redisbloom-bloom-filters/
-
 Bloom filters varients for streaming data,
  - Rotating Bloom Filters. e.g. remember everthing in last hour
  - Scalable Bloom Filters. e.g. Dynamically allocating chained filters
  - Stable Bloom Filters. e.g. Continuously evict stale data 
 
-#### Case Study
-
-There is a system that tracks a huge number of web events and each event is marked by a number of tags including a user ID this event corresponds to. It is required to report a number of unique users that meet the specified combination of tags (like users from the city C that visited site A or site B).
-
-- Solution 1
-  - Maintain a BF that tracks user IDs for each tag value and a BF that contains user IDs that correspond to the final result.
-  - A user ID from each incoming event is tested against the per-tag filters – does it satisfy the required combination of tags or not.
-  - If the user ID passes this test, it is additionally tested against the additional BF that corresponds to the report itself and, if passed, the final report counter is increased.
-- Solution 2: using HLL for each tag value
-
 |Rating|Type|Topic
 ------------: | ------------- | -------------
 :star:|:newspaper:|[Redis - Streaming Analytics with Probabilistic Data Structures](https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/)
-:star:|:newspaper:|[Redis - Data structure for leaderboards](https://redislabs.com/blog/redis-game-mechanics-scoring/)
 :star:|:newspaper:|[Redis - Bloom Filters introduction](https://redislabs.com/blog/redis-redisbloom-bloom-filters/)
 :star:|:newspaper:|[Bloom Filter: A simple but interesting data structure](https://medium.com/datadriveninvestor/bloom-filter-a-simple-but-interesting-data-structure-37fd53b11606)
 :star:|:newspaper:|[Bloom Filter: A Probabilistic Search Approach in Data Structures](https://medium.com/techspace-usict/bloom-filter-a-probabilistic-search-approach-in-data-structures-cb3dd48c6632)
 ||:newspaper:|[When Bloom filters don't bloom](https://blog.cloudflare.com/when-bloom-filters-dont-bloom/)
 
-### Quotient Filter
-
-### Cuckoo Filter
-
 ## Frequency
 
 ### Count-Min Sketch
-
-- A space-efficient probabilistic data structure to estimate frequencies of elements in data streams. 
-- To Estimate number of times an element occurs in a set.
-- Count-Min Sketch is a solution to the _*"heavy hitters problem"*_
+A space-efficient probabilistic data structure to estimate frequencies of elements in data streams. To Estimate number of times an element occurs in a set.
 
 [Count-Min Sketch](https://coblob.com/blogs/Count-Min-Sketch-to-solve-Top-K-or-Frequent-K-Heavy-Hitters-System-Design-problems-5b21ca3eeb7f6fbccd473689)
-
 
 - Finding Heavy Hitters - A common task in many analytics application is finding heavy hitters, elements that appear a lot of times. For example, given a huge log of website visits, we might want to determine the most popular pages and how often they were visited. Again, building up a full hash table could scale badly if there is a long tail of unpopular pages that have few visits.
 
@@ -123,23 +98,10 @@ There is a system that tracks a huge number of web events and each event is mark
 |:star::star:star:|:newspaper:|[Probabilistic data structures. Part 3. Frequency](https://www.slideshare.net/gakhov/probabilistic-data-structures-part-3-frequency)
 |:star::star:|:newspaper:|[Big Data with Sketchy Structures, Part 1 — the Count-Min Sketch](https://towardsdatascience.com/big-data-with-sketchy-structures-part-1-the-count-min-sketch-b73fb3a33e2a)
 
-#### Realworld Use Cases
-
 - Find the most trending hashtags on Twitter
 - AT&T has used Count-Min Sketch in network switches to perform analyses on netowrk traffic using limited memory.
 - To find frequent items sold for an online retailer: the product sold can be the item and frequency can the number of times the item was sold.
 - To make a password strong, we can keep track of how many times a password was used for a given website. In this scenario, the password is the item and frequency is the number of times the given string was used as a password.
-
-#### Case Study
-
-There is a system that tracks traffic by IP address and it is required to detect most traffic-intensive addresses.
-
-#### Solution
-
-- CMS?!!
-- The problem is not trivial because we need to track the total traffic for each address, not a frequency of items.
-- Counters in the CMS implementation can be incremented not by 1, but by absolute amount of traffic for each observation (i.e, size of IP packet if sketch is updated for each packet)
-- In this case, sketch will track amounts of traffic for each address and a heap with the most traffic-intensive addresses can be maintained (top-k or heavy-hitter).
 
 ## Counting
 
