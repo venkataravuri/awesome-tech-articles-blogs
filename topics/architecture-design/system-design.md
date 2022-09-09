@@ -3,81 +3,100 @@
 
 ## Design Food / Grocery Delivery System
 
-System design approaches for systems similar to DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ... 
+System design approaches for applications similar to DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ... 
 
 | | Article / Blog | Notes |
 ------------: | ------------- | -------------
-|:star:|[Food Delivery Time Prediction](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? Data Structures: ? | Algroithms: ?
-|:star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
-|:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
+|:star:|[Food Delivery Time Prediction](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? <br/>Data Structures: ? <br/>Algroithms: ?
+|:star::star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
 |:star:|[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
+|:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
 
-### Design a Flash Sale System
+## Design a Flash Sale System
 
-|Rating|Type|Topic
+||Article / Blog| Notes
 ------------: | ------------- | -------------
-|:star:|Engineering Blog|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| Conference presentations |
-|:star:|Blog|[Flash Sale](https://george24601.github.io/2019/10/24/flash-sale.html)| ? |
-|:star:|Blog|[Flash Sale](https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858)| ? |
+|:star:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| |
+|:star:|[Flash Sale](https://george24601.github.io/2019/10/24/flash-sale.html)|  |
+|:star:|[Flash Sale](https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858)| |
 
-### Design a Search Engine
-- [Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
-
-### Design a Parking Lot
-- [Design a Parking Lot System](https://medium.com/double-pointer/system-design-interview-parking-lot-system-ff2c58167651)
-
-### Design a Rate Limiter
-- [Rate limiter](https://hechao.li/2018/06/25/Rate-Limiter-Part1/)
-
-|Rating|Type|Topic
+## Design a Search Engine
+||Article / Blog| Notes
 ------------: | ------------- | -------------
-:star::star::star:|:newspaper:|[Figma - An alternative approach to rate limiting](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/)
-:star::star:|:newspaper:|[Kong - How to Design a Scalable Rate Limiting Algorithm](https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/)
-:star::star:|:newspaper:|[Introduction to rate limiting with Redis [Part 2]](https://www.binpress.com/rate-limiting-with-redis-2/)
+|:star:|[Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
+
+## Design a Parking Lot
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star::star::star:|[Design a Parking Lot System](https://medium.com/double-pointer/system-design-interview-parking-lot-system-ff2c58167651)
+
+## Design a Rate Limiter
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Rate limiter](https://hechao.li/2018/06/25/Rate-Limiter-Part1/)
+|:star::star:|[Introduction to rate limiting with Redis [Part 2]](https://www.binpress.com/rate-limiting-with-redis-2/)
+|:star::star:|[Figma - An alternative approach to rate limiting](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/)
+|:star:|[Kong - How to Design a Scalable Rate Limiting Algorithm](https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/)
 
 
-### Design a Video Streaming Service
-- [Design a video streaming service](https://medium.com/double-pointer/system-design-interview-video-streaming-service-e-g-netflix-or-youtube-design-adc2402e54a1)
-
-### Design a Typeahead Search
-- [Proximity-Based Typeahead Search as a Service](https://engblog.nextdoor.com/typeahead-search-at-nextdoor-1875e70c67e8)
-https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahead-system-for-a-search-box-1ac968f9f121
-- [Design Yelp or Nearby Places/Friends a proximity server](https://codeburst.io/design-a-proximity-server-like-yelp-part-2-d430879203a5)
-
-### Design a Chat Service
-- [Design a Chat Service - Whatsapp Architecture](https://www.cometchat.com/blog/whatsapps-architecture-and-system-design)
-
-- [Hashmap design](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
-
-### How to Scan Malware?
-- [Design a service to scan photos/videos for any malware?](https://careercup.com/question?id=5091933672701952)
-
-### Design a Voting System
-- [Design a voting system](https://careercup.com/question?id=5630501784649728)
-
-### Design a Vending Machine
-
-- [Design vending system](https://careercup.com/question?id=5768722967429120)
-- https://medium.com/interviewnoodle/vending-machine-system-architecture-ce28c215c2b1
-- https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html#axzz7bO38EcZi
-
-### Design Payments System
-- [Design payments system like Google Pay or PayTM](https://careercup.com/page?pid=system-design-interview-questions)
-
+## Design a Vending Machine
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Design vending system](https://careercup.com/question?id=5768722967429120)
+|:star:|https://medium.com/interviewnoodle/vending-machine-system-architecture-ce28c215c2b1
+|:star:|https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html#axzz7bO38EcZi
 
 ## Design a Ride Share App
-https://www.geeksforgeeks.org/system-design-of-uber-app-uber-system-architecture/
-https://www.educative.io/blog/uber-backend-system-design
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|https://www.geeksforgeeks.org/system-design-of-uber-app-uber-system-architecture/
+|:star:|https://www.educative.io/blog/uber-backend-system-design
 
+## Design Payments System
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Design payments system like Google Pay or PayTM](https://careercup.com/page?pid=system-design-interview-questions)
+
+## Design a Video Streaming Service
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Design a video streaming service](https://medium.com/double-pointer/system-design-interview-video-streaming-service-e-g-netflix-or-youtube-design-adc2402e54a1)
+
+## Design a Typeahead Search
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star::star:|[Proximity-Based Typeahead Search as a Service](https://engblog.nextdoor.com/typeahead-search-at-nextdoor-1875e70c67e8)
+https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahead-system-for-a-search-box-1ac968f9f121
+|:star:|[Design Yelp or Nearby Places/Friends a proximity server](https://codeburst.io/design-a-proximity-server-like-yelp-part-2-d430879203a5)
+
+## Design a Chat Service
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Design a Chat Service - Whatsapp Architecture](https://www.cometchat.com/blog/whatsapps-architecture-and-system-design)
+
+## How to Scan Malware?
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Design a service to scan photos/videos for any malware?](https://careercup.com/question?id=5091933672701952)
+
+## Design a Voting System
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Design a voting system](https://careercup.com/question?id=5630501784649728)
 
 ## Design a Finate Sate Machine
-https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
+||Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
 
 ## Probabilistic Data Structures
 
 ![](https://www.gakhov.com/static/www/images/articles/kdnuggets/pdsa-in-big-data.jpg)
 
 :star::star: [Exceeding Classical: Probabilistic Data Structures in Data Intensive Applications](https://www.slideshare.net/gakhov/exceeding-classical-probabilistic-data-structures-in-data-intensive-applications)
+
+[Hashmap design](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
+
 
 ### Top-K, Top Trends & Leaderboards
 
