@@ -1,9 +1,8 @@
 # General Data Structures
 
-
-|Rating|Type|Topic
+||Article / Blog|Topic
 ------------: | ------------- | -------------
-:star::star:|[How does Hashmap designed](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
+:star::star:|[How does Hashmap is designed?](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
 
 # Probabilistic Data Structures
 
@@ -144,39 +143,22 @@ There is a system that tracks traffic by IP address and it is required to detect
 
 ## Counting
 
+- Count the number of unique visitors for the specified date range, visited site and geography, etc.
+- How many different words are used in Wikipedia?
+- How do we count distinct things in a stream?
+
 ### HyperLogLog
 HyperLogLog (HLL) is a useful and interesting probabilistic data structure used to count unique values in a given data set with good accuracy and speed. Normally, to count unique values accurately requires memory proportional to the number of unique values. This becomes a problem when working with large data sets. HyperLogLog solves this problem by allowing us to trade memory consumption for (tunable) precision, making it possible to estimate cardinalities larger than 1 billion with a standard error of 2% using only 1.5 kilobytes of memory.
 
-- How do we count distinct things in a stream?
 - A hash-based probabilistic algorithm for counting number of distinct values in te presence of duplicates.
 - HyperLogLog++ is improved version of HyperLogLog.
-
 - HLL counts unique items in a stream, without having to remember the whole history. 
 In fact, an HLL counter takes up to 12KB of memory regardless of how many items you put into it. Lastly, an HLL counter will have a standard error rate of 0.81%, which is a perfectly sustainable error rate for most streaming analytics use cases.
-
-#### Real world use cases
-
-- Count the number of unique visitors
-- Redis uses the HyperLogLog data structure to count unique elements in a set
-- How many different words are used in Wikipedia?
-
-
-|Rating|Type|Topic
-------------: | ------------- | -------------
-:star::star::star:|:newspaper:|[HLL in PostresSQL](http://tech.nextroll.com/blog/dev/2019/08/06/hll-in-postgresql.html)
-|||[Redis](https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/)
-
-#### Case Study 1
-
-- There is a system that receives events on user visits from different internet sites.
-- This system enables analysis to query a number of unique visitors for the specified date range and site.
-  
-#### Solution 1
-
 - HLL can be used to aggregate information about visitor IDs for each day and site, masks for each day are saved, and a query can be processed using bitwise OR-ing of the daily masks.
+- Redis uses the HyperLogLog data structure to count unique elements in a set
 
-#### Case Study 2
+|| Article / Blog |
+------------: | ------------- | -------------
+:star::star::star:|[HLL in PostresSQL](http://tech.nextroll.com/blog/dev/2019/08/06/hll-in-postgresql.html)
+|:star:|[Redis](https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/)
 
-- There is a system that monitors traffic and counts unique visitors for different criteria (visited site, geography, etc.)
-- It is required to compute 100 most popular sites using a number of unique visitors as a metric of popularity.
-- Popularity should be computed every day on the basis of data for last 30-day, i.e. every day one-day partition added, another one is removed from the scope.
