@@ -5,3 +5,5 @@ Concurrency
 - [Improving Performance with Java’s CompletableFuture](https://reflectoring.io/java-completablefuture/)
 
 - [HashMap Vs. ConcurrentHashMap](https://medium.com/javarevisited/comparing-hashmap-and-concurrenthashmap-in-java-e131769c2eec)
+
+- [CountdownLatch](https://medium.com/@krishnakishorev/java-multithreading-concurrency-and-parallelism-part-20-2-bc03421bbc04)
