@@ -3,6 +3,7 @@
 ||Article / Blog||
 ------------:|:------------|:-------------
 |:star::star:|[How Hashmap is designed?](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
+|:star::star:|[How to Implement LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
 
 
 ||Article / Blog||
