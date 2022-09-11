@@ -25,6 +25,9 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 ------------: | ------------- | -------------
 |:star:|[Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
 
+https://github.com/davidmoten/state-machine
+https://github.com/davidmoten/state-machine
+
 ## Design a Parking Lot
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
