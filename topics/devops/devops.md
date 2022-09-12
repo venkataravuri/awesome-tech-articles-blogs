@@ -17,21 +17,22 @@ https://newrelic.com/devops/what-is-devops
 
 
 ### DevSecOps Tools
-Prior to build
- - Automated Code Quality Inspection
-  - SonarCube
+
+### Prior to build
+* Automated Code Quality Inspection
+	- SonarCube
  
- - Security Scanning
-  - Coverity
+- Security Scanning
+	- Coverity
 
 - Static code analysis for application security
-- Fortify
+	- Fortify
 
-Build time
+### Build Time
 
 - OSS Scan
-- Source Composition Analysis
-- Black Duck
+	- Source Composition Analysis
+		* Black Duck
 
 - Container Security
-- Octane
+	- Octane
