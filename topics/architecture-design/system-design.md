@@ -28,9 +28,6 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 ------------: | ------------- | -------------
 |:star:|[Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
 
-https://github.com/davidmoten/state-machine
-https://github.com/davidmoten/state-machine
-
 ## Design a Parking Lot
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -94,3 +91,4 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
+|:star:|[Finate State Machine](https://github.com/davidmoten/state-machine)
