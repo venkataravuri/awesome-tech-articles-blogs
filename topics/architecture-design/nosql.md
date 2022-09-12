@@ -8,7 +8,6 @@ A curalted list of articles on database scalabilitiy, high availability and perf
 ------------: | ------------- | -------------
 ||:newspaper:|[Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
 
-
 ## MySQL, AWS RDS
 
 |Rating|Type|Topic
