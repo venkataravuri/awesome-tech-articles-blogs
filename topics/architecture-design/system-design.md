@@ -11,6 +11,9 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 |:star::star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
 |:star:|[Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? <br/>Data Structures: ? <br/>Algroithms: ?
 |:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
+|:star:|[Yelp System Design](https://systemdesigntutorial.com/yelp/)
+|:star:|[Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
+|:star:|[Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
 
 ## Design a Flash Sale System
 
