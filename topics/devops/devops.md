@@ -22,8 +22,8 @@ https://newrelic.com/devops/what-is-devops
 * Automated Code Quality Inspection
 	- SonarCube
  
-- Security Scanning
-	- Coverity
+- Security Scanning -  Static application security testing (SAST), also referred to as static analysis to find security and quality issues by analyzing source code automatically with low false positives. 
+	- Coverity - is the SAST solution for web application security. CWE, OWASP
 
 - Static code analysis for application security
 	- Fortify
