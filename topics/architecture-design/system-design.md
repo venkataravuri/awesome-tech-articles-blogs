@@ -7,9 +7,9 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 | | Article / Blog | Notes |
 ------------: | ------------- | -------------
-|:star:|[Food Delivery Time Prediction](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? <br/>Data Structures: ? <br/>Algroithms: ?
+|:star::star:|[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
 |:star::star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
-|:star:|[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
+|:star:|[Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? <br/>Data Structures: ? <br/>Algroithms: ?
 |:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
 
 ## Design a Flash Sale System
