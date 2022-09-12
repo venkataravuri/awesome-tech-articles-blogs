@@ -1,17 +1,5 @@
 # Kafka Internals, Scalability & Performance
 
-
-<details>
-    <summary>Kafka No Longer Requires ZooKeeper (In future)</summary>
-
-
-Until now, Apache ZooKeeper was used by Kafka as a metadata store. Metadata for partitions and brokers were stored to the ZooKeeper quorum that was also responsible for Kafka Controller election.
-
-In upcoming release v2.8.0, ZooKeeper can be replaced by an internal Raft quorum of controllers. When Kafka Raft Metadata mode is enabled, Kafka will store its metadata and configurations into a topic called @metadata. This internal topic is managed by the internal quorum and replicated across the cluster. The nodes of the cluster can now serve as brokers, controllers or both (called combined nodes).
-    https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
-    
-</details>
-
 <details>
 <summary>How Kafka Nodes and zookeeper will communicate with each other?</summary>
 
@@ -22,8 +10,15 @@ In order to remain part of the Kafka cluster, each broker has to send keep-alive
 https://stackoverflow.com/questions/54013250/how-kafka-nodes-and-zookeeper-will-communicate-with-each-other
 </details>
 
+<details>
+    <summary>Kafka No Longer Requires ZooKeeper (In future)</summary>
 
+Until now, Apache ZooKeeper was used by Kafka as a metadata store. Metadata for partitions and brokers were stored to the ZooKeeper quorum that was also responsible for Kafka Controller election.
 
+In upcoming release v2.8.0, ZooKeeper can be replaced by an internal Raft quorum of controllers. When Kafka Raft Metadata mode is enabled, Kafka will store its metadata and configurations into a topic called @metadata. This internal topic is managed by the internal quorum and replicated across the cluster. The nodes of the cluster can now serve as brokers, controllers or both (called combined nodes).
+    https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
+    
+</details>
 
 <details>
     <summary>Where kafka store the metadata on zookeeper? ( which path? )</summary>
@@ -44,11 +39,6 @@ https://stackoverflow.com/questions/54989802/where-kafka-store-the-meta-data-on-
     <summary>Metadata requests in Kafka producer</summary>
 The first time the producer makes a metadata request is when it connects to the bootstrap servers that you set in the client configuration. Of course, it can be just one broker or more but not necessarily all the brokers in the cluster (so the metadata request is not for each broker). In this way, the producer gets information about where are the topics that it wants to send messages. During its life, more metadata requests can be done when it receives an error connecting to the broker leader for the partition it's writing, in this case, it needs to know which broker is the new leader for connecting to it (if not connected yet for other topics) and starting to send.
 https://stackoverflow.com/questions/56794122/metadata-requests-in-kafka-producer
-</details>
-
-<details>
-    <summary>Is Zookeeper must for Kafka?<summary>
-sssss
 </details>
 
 <details>
