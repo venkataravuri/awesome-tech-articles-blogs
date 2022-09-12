@@ -82,6 +82,8 @@ A. Rebalancing is the re-assignment of partition ownership among consumers withi
 
 A. A Group coordinator is a kafka broker which receives heartbeats from all consumers of a consumer group. Every consumer group has a group coordinator.
 
+</details>
+    
 <details>
     <summary> What is a Group Leader?</summary>
 
