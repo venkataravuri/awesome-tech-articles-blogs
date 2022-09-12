@@ -93,6 +93,10 @@ A. The first consumer that joins a consumer group is called the Group Leader of 
 
 A. Apache Kafka doesn’t support decreasing the partitions of a topic. Since, all the data sent to a topic is sent to all the partitions and removing one of them means data loss.
 </details>
+    
+### How did you setup Kafka on K8s?
+    
+https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k8s-operator-2c1d21d7b89a
 
 ## Kafka Engineering Blogs
 
