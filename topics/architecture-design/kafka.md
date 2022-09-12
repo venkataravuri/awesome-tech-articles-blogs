@@ -1,5 +1,17 @@
 # Kafka Internals, Scalability & Performance
 
+
+<details>
+    <summary>Kafka No Longer Requires ZooKeeper (In future)</summary>
+
+
+Until now, Apache ZooKeeper was used by Kafka as a metadata store. Metadata for partitions and brokers were stored to the ZooKeeper quorum that was also responsible for Kafka Controller election.
+
+In upcoming release v2.8.0, ZooKeeper can be replaced by an internal Raft quorum of controllers. When Kafka Raft Metadata mode is enabled, Kafka will store its metadata and configurations into a topic called @metadata. This internal topic is managed by the internal quorum and replicated across the cluster. The nodes of the cluster can now serve as brokers, controllers or both (called combined nodes).
+    https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
+    
+</details>
+
 <details>
 <summary>How Kafka Nodes and zookeeper will communicate with each other?</summary>
 
@@ -44,6 +56,50 @@ sssss
 The consumers in a group divide the topic partitions as fairly amongst themselves as possible by establishing that each partition is only consumed by a single consumer from the group. When the number of consumers is lower than partitions, same consumers are going to read messages from more than one partition.
 
 Ideally, the number of partitions should be equal to the number of consumers. Should the number of consumers be greater, the excess consumers were to be idle, wasting client resources. If the number of partitions is greater, some consumers will read from multiple partitions, which should not be an issue unless the ordering of messages is important.
+</details>
+        
+<details>
+    <summary>Is having a Consumer Group mandatory in Kafka?</summary>
+
+A. Yes, it is mandatory to specify Kafka which consumer would belong to which consumer group. If you do not set the consumer group id in your app, you will get an exception. If you start a consumer to consume from a topic using the Kafka CLI command, then a new random consumer group is created with the name console-consumer-<some_random_number> and the consumer automatically falls under this consumer group.
+    
+</details>
+
+<details>
+    <summary>If a new consumer joins a consumer group, how would the partitions be assigned to the new consumer?
+
+A. Let’s say we have 1 topic with 3 partitions; and 1 consumer group consisting of 2 consumers. Out of the 3 partitions, 2 would be assigned to one consumer and the remaining partition would be assigned to the other consumer. Now, consider these two cases
+
+    Case 1: If a new consumer joins the consumer group, rebalancing happens and each consumer is now assigned to a single partition (since we have equal number of partitions and consumers).
+    Case 2: If a consumer goes down, then there’d be only 1 consumer left in the consumer group and all the partitions would be assigned to this consumer through rebalancing.
+</details>
+    
+<details>
+    <summary>What is rebalancing in Kafka?</summary>
+
+A. Rebalancing is the re-assignment of partition ownership among consumers within a given consumer group such that every consumer in a consumer group is assigned one or more partitions. Rebalancing happens when:
+
+    A new consumer joins the consumer group
+    An existing consumer goes down
+    New partitions are added
+    An existing consumer is considered dead by the Group coordinator
+</details>
+    
+<details>
+    <summary>What is a Group coordinator?</summary>
+
+A. A Group coordinator is a kafka broker which receives heartbeats from all consumers of a consumer group. Every consumer group has a group coordinator.
+
+<details>
+    <summary> What is a Group Leader?</summary>
+
+A. The first consumer that joins a consumer group is called the Group Leader of that consumer group
+</details>
+    
+<details>
+    <summary>Can we decrease the number of partitions in a topic?</summary>
+
+A. Apache Kafka doesn’t support decreasing the partitions of a topic. Since, all the data sent to a topic is sent to all the partitions and removing one of them means data loss.
 </details>
 
 ## Kafka Engineering Blogs
