@@ -1,6 +1,9 @@
 
 # Cloud Computing Articles & Notes
 
+# API Gateway integration with EKS
+[API Gateway integration with EKS](https://aws.amazon.com/blogs/containers/integrate-amazon-api-gateway-with-amazon-eks/)
+
 ## [AWS Notes](aws.md)
 
 - AWS FAQ
