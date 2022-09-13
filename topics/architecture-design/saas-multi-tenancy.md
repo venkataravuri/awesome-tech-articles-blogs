@@ -1,5 +1,29 @@
 # Multi-tenancy
 
+#### How to detect & propagate with Tenant ID in REST API?
+
+- URL path based tenant identification. example: https://<your-domain>.com/<tenant-id>/<api-context>
+- Domain-based tenant identification. example: https://<tenant-domain>.<your-domain>.com/<api-context>
+- Custom Http header-based tenant identification. In this method, we can pass the tenant-id as part of your own custom Http headers like X-TENANT-ID
+- As part of the custom attribute in JWT token - JSON Web Token is an open industry standard for representing claims securely between two parties. Click here to know more about JWT.
+    {
+    “sub”: “1234567890”,
+    “name”: “<user-name>”,
+    “iat”: 1516239022,
+    “userid”: “<user-id>”,
+    “tenantid”: “<tenant-id>”
+    }
+
+https://medium.com/@vivekmadurai/multi-tenancy-in-rest-api-a570d728620c
+
+
+#### How to Pass Tenant ID To New Thread In Java?
+
+In a Java based multi-tenant database application, we resolve tenant ID for every web transaction. After resolving tenant ID, we set it to tenant context and retrieve it later from anywhere in application to access database within the scope of current thread ...
+
+Read more here, https://arifng.medium.com/best-way-to-pass-tenant-id-to-new-thread-in-java-9e658032387f
+
+
 Isolating tenant data is a fundamental responsibility for Software as a Service (SaaS) providers. 
 
 https://aws.amazon.com/blogs/database/multi-tenant-data-isolation-with-postgresql-row-level-security/
