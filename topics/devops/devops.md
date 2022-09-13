@@ -36,3 +36,9 @@ https://newrelic.com/devops/what-is-devops
 
 - Container Security
 	- Octane
+
+
+
+Blue green
+Canary Releases
+A/B Testing
