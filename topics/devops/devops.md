@@ -39,6 +39,37 @@ https://newrelic.com/devops/what-is-devops
 
 
 
+## Observability
+
+What are most important metrics/SLIs & KPIs you monitor? What is your monitoring strategy?
+
+We focus on USE & RED metrics
+
+USE metrics - Utilization, Saturation, and Errors. “For every resource, check utilization, saturation, and errors.”
+- Utilization: the average time the resource was busy servicing work
+- Saturation: the degree to which the resource has extra work which it can't service, often queued
+- Errors: the count of error events
+
+USE metrics (resource-scoped) provides internal, service-centric view. The goal is to understand how resources behave while handling the workload. 
+
+The RED metrics is about the workload itself (request-scoped). These are request-scoped, not resource-scoped as the USE method is. 
+
+R = Request Throughput, in requests per second
+E = Request Error Rate, as either a throughput metric or a fraction of overall throughput
+D (Duration) = Latency, Response Time
+
+### Do you have business metrics? How do you capture them?
+
+### SRE
+
+Performance Budgets
+
+SLI, SLO, SLI
+
+
+
+
+
 Blue green
 Canary Releases
 A/B Testing
