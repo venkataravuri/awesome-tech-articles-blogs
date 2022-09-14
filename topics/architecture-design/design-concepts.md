@@ -67,3 +67,5 @@ If we choose to implement distributed system, that means, we are tolerating netw
 - In order that an application be deployed in the cloud and enjoy features such as auto scaling, it first needs to be cloud native
 - Using methodology, you can make scalable and resilient apps that can be continuously deployed with maximum agility.
 - Acts as a acceptance criteria when evaluating whether software is production ready.
+
+https://newrelic.com/blog/best-practices/twelve-factor-app
