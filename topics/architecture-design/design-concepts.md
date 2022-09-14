@@ -1,7 +1,5 @@
 
-Optimising Locking
 Event Sourcing
-CAP theorm
 Observabulkty - What your metrics you monitor
 12 Factor
 Test-Driven Development
@@ -52,7 +50,14 @@ Pessimistic locking is suitable when the cost of retrying a transaction is very 
 Depending on isolation level you've chosen, specific resource is going to be locked until given transaction commits or rollback - it can be lock on a whole table, row or block of sql. It's a pessimistic locking and it's ensured on database level when running a transaction.
 Optimistic locking on the other hand assumes that multiple transactions rarely interfere with each other so no locks are required in this approach. It is a application-side check that uses @Version attribute in order to establish whether version of a record has changed between fetching and attempting to update it.
 
+### CAP Theorm
 
+CAP (Consistency, Availability, and Partition tolerance) theorem helps us to make our choice while designing distributed systems. We can incorporate any two of these 3 functionalities into our system, not all of them.
+Consistency:
 
+Partition Tolerance:
 
+Tolerating partition means we are agreed to embrace distributed system - our machines are in different networks. There might have some sorts of network outage between different networks in distributed systems, but in that case our system should be operational. If our system does not tolerate network partition, then it is an application with one machine - not a distributed system.
+
+If we choose to implement distributed system, that means, we are tolerating network partition. So, in the presence of P(Partition tolerance), we either choose C(Consistency) or A(Availability).
 
