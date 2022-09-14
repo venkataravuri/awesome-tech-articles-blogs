@@ -41,7 +41,10 @@ https://newrelic.com/devops/what-is-devops
 
 ## Observability
 
-What are most important metrics/SLIs & KPIs you monitor? What is your monitoring strategy?
+observability is a property of a system, similar to testability, operability, usability, etc. A **_system that’s observable is instrumented and emits telemetry_**, so systems that capture that telemetry can be used to interrogate the system about its behavior and derive answers (e.g. an observable system supports analytics and diagnostics).
+
+
+#### What are most important metrics/SLIs & KPIs you monitor? What is your monitoring strategy?
 
 We focus on USE & RED metrics
 
@@ -59,6 +62,23 @@ E = Request Error Rate, as either a throughput metric or a fraction of overall t
 D (Duration) = Latency, Response Time
 
 ### Do you have business metrics? How do you capture them?
+
+Spring boot provides Micrometer can help you take measurements from your application, and publish those metrics ready to be scraped by many different applications, including Prometheus.
+
+To instrument our application to collect metrics to send to Prometheus, we need to add a few dependencies first.
+
+The first dependency we need to add is the Spring Boot Actuator. This is the part of Spring Boot which exposes some APIs, for health-checking and monitoring of your apps.
+
+https://www.tutorialworks.com/spring-boot-prometheus-micrometer/
+
+
+
+Prometheus is one way of solving this problem. It is a time-series database, which stores a sequence of data points, across time
+
+Prometheus polls your application for its latest metrics data – this is known as scraping
+
+Prometheus uses a pull-based approach for getting metrics.
+
 
 ### SRE
 
