@@ -140,11 +140,17 @@ Yes, a broker can handle numerous partitions on multiple topics. There is an ove
     multiple partitions on a topic and these multiple partitions being consumed by multiple consumers within a single consumer group. That way you can achieve maximum throughput in your application. If you only use a single consumer thread for multiple partitions it would be of no use. Basically More partitions could lead to Higher throughput if you manage your cluster resources cleverly.
     
     create multiple partitions for the Topic in terms of parallelism/performance in the context of consumers. If you have multiple consumers in a single consumer group and multiple partitions in the topic, then it is guaranteed that consumers will receive data from different partitions which will give you parallelism and performance boost while processing from kafka. 
+    
+Java Producer with Keys
+
+Keys become useful when a user wants to introduce ordering and ensure the messages that share the same key end up in the same partition.
+
+
 
 ### How did you setup Kafka on K8s?
     
 https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k8s-operator-2c1d21d7b89a
-    
+  
 
 ## Kafka Engineering Blogs
 
