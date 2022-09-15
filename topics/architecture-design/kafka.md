@@ -45,6 +45,8 @@ The rest of the brokers will create a watch on this “/controller” node.
     
 As soon as the controller goes down or its session with the zookeeper is lost then this znode will be deleted and the rest of the brokers will be notified, and a new controller will be elected again.
     
+    In a Kafka cluster, one of the brokers serves as the controller, which is responsible for managing the states of partitions and replicas and for performing administrative tasks like reassigning partitions. At any given time there is only one controller broker in your cluster.
+    
 </details>
 
 <details>
