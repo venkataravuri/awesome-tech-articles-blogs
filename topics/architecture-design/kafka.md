@@ -16,8 +16,7 @@ https://stackoverflow.com/questions/54013250/how-kafka-nodes-and-zookeeper-will-
 Until now, Apache ZooKeeper was used by Kafka as a metadata store. Metadata for partitions and brokers were stored to the ZooKeeper quorum that was also responsible for Kafka Controller election.
 
 In upcoming release v2.8.0, ZooKeeper can be replaced by an internal Raft quorum of controllers. When Kafka Raft Metadata mode is enabled, Kafka will store its metadata and configurations into a topic called @metadata. This internal topic is managed by the internal quorum and replicated across the cluster. The nodes of the cluster can now serve as brokers, controllers or both (called combined nodes).
-    https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104
-    
+    https://towardsdatascience.com/kafka-no-longer-requires-zookeeper-ebfbf3862104 
 </details>
 
 <details>
@@ -26,7 +25,7 @@ In upcoming release v2.8.0, ZooKeeper can be replaced by an internal Raft quorum
 It depends which metadata!
 
 By default, Kafka uses a number of paths in zookeeper:
-    /brokers: This contains alive brokers as well as topics configuration, assignments and current ISRs
+- /brokers: This contains alive brokers as well as topics configuration, assignments and current ISRs (In-Syn Replicas)
     /controller: This ZNode is owned by the current controller in the Kafka cluster
     /admin: This contains delete topic requests
     /config: This contains overriden configs for brokers, quotas
@@ -34,6 +33,19 @@ By default, Kafka uses a number of paths in zookeeper:
 https://stackoverflow.com/questions/54989802/where-kafka-store-the-meta-data-on-zookeeper-which-path
 </details>
 
+<details>
+    <summary>Explan role of Kafka Controller?</summary>
+Kafka controller is a thread that runs inside only one broker in a Kafka cluster i.e. If we have a cluster of N brokers then there will be only one broker that is the controller.
+
+It is like a brain for the cluster so that the cluster functions in a smooth and resilient way.
+
+Whenever a Kafka Cluster is spun up, the brokers will first create a session with the zookeeper and the brokers will try to create an ephemeral node “/controller” inside the zookeeper. The broker that will be able to successfully create the “/controller” node will become the controller.
+
+The rest of the brokers will create a watch on this “/controller” node.
+    
+As soon as the controller goes down or its session with the zookeeper is lost then this znode will be deleted and the rest of the brokers will be notified, and a new controller will be elected again.
+    
+</details>
 
 <details>
     <summary>Metadata requests in Kafka producer</summary>
@@ -96,9 +108,30 @@ A. The first consumer that joins a consumer group is called the Group Leader of 
 A. Apache Kafka doesn’t support decreasing the partitions of a topic. Since, all the data sent to a topic is sent to all the partitions and removing one of them means data loss.
 </details>
     
+<details>
+    <summary>What is a Partition Leader in Kafka?</summary>
+
+In Kafka, there is a concept of leader for each partition.
+
+At any point in time, a partition can have only one broker as the leader. And only that leader can serve the data for the partition. Followers will sync the data from the leader.
+    </details>
+    
+<details>
+    <summary>Replication in Kafka and ISR</summary>
+
+In Kafka, replication happens at the partition level i.e. copies of the partition are maintained at multiple broker instances.
+
+When we say a topic has a replication factor of 3, this means we will be having three copies of each of its partitions. Kafka considers that a record is committed when all replicas in the In-Sync Replica set (ISR) have confirmed that they have taking the record into account.
+
+While creating a Kafka topic, we can define replication-factor, the number of copies we want to have for the data. We define this using the  config setting.
+
+ISR indicates replicas are In Sync with the partition leader, i.e. those followers that have the same data as the leader.
+    </details>
+    
 ### How did you setup Kafka on K8s?
     
 https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k8s-operator-2c1d21d7b89a
+    
 
 ## Kafka Engineering Blogs
 
