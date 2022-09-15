@@ -49,6 +49,10 @@ As soon as the controller goes down or its session with the zookeeper is lost th
     
 </details>
 
+Producer Example: https://www.conduktor.io/kafka/complete-kafka-producer-with-java
+
+Java Consumer Example: https://www.conduktor.io/kafka/complete-kafka-consumer-with-java
+
 <details>
     <summary>Metadata requests in Kafka producer</summary>
 The first time the producer makes a metadata request is when it connects to the bootstrap servers that you set in the client configuration. Of course, it can be just one broker or more but not necessarily all the brokers in the cluster (so the metadata request is not for each broker). In this way, the producer gets information about where are the topics that it wants to send messages. During its life, more metadata requests can be done when it receives an error connecting to the broker leader for the partition it's writing, in this case, it needs to know which broker is the new leader for connecting to it (if not connected yet for other topics) and starting to send.
