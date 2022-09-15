@@ -130,6 +130,17 @@ While creating a Kafka topic, we can define replication-factor, the number of co
 ISR indicates replicas are In Sync with the partition leader, i.e. those followers that have the same data as the leader.
     </details>
     
+Can a Kafka broker have multiple partitions of same topic?
+    The short answer is YES. The same partition is identical on all brokers. Different partitions contain different messages. However, Kafka is a moving system, so not everything is aligned all the time.
+
+Can a broker have multiple partitions?
+Yes, a broker can handle numerous partitions on multiple topics. There is an overhead to having more partitions, so choosing the "right" number requires knowledge of many factors.    
+    
+    
+    multiple partitions on a topic and these multiple partitions being consumed by multiple consumers within a single consumer group. That way you can achieve maximum throughput in your application. If you only use a single consumer thread for multiple partitions it would be of no use. Basically More partitions could lead to Higher throughput if you manage your cluster resources cleverly.
+    
+    create multiple partitions for the Topic in terms of parallelism/performance in the context of consumers. If you have multiple consumers in a single consumer group and multiple partitions in the topic, then it is guaranteed that consumers will receive data from different partitions which will give you parallelism and performance boost while processing from kafka. 
+
 ### How did you setup Kafka on K8s?
     
 https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k8s-operator-2c1d21d7b89a
