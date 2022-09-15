@@ -69,3 +69,22 @@ If we choose to implement distributed system, that means, we are tolerating netw
 - Acts as a acceptance criteria when evaluating whether software is production ready.
 
 https://newrelic.com/blog/best-practices/twelve-factor-app
+
+
+## Resiliency Patterns
+
+Resiliency Aspects applied in following order:
+
+Retry ( CircuitBreaker ( RateLimiter ( TimeLimiter ( Bulkhead ( Function ) ) ) ) )
+
+Retry is applied at the end (if needed).
+
+The execution order:
+1. supplier, then decorate in order with resilience:
+2. RateLimiter (prevent a call if rate-limit exceeded)
+3. TimeLimiter (time-out a call)
+4. CircuitBreaker (fail-fast)
+5. Retry (retry on exceptions)
+6. Fallback (fallback as last resort)
+
+A suitable reference order is for example auto-configured in the Spring-Boot extension. See the official Guides, Getting started with resilience4j-spring-boot2 about Aspect order
