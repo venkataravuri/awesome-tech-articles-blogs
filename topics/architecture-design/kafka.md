@@ -49,6 +49,8 @@ As soon as the controller goes down or its session with the zookeeper is lost th
     
 </details>
 
+**_Transaction log is a Kafka Topic_**, it comes with the associated durability guarantees.
+
 Producer Example: https://www.conduktor.io/kafka/complete-kafka-producer-with-java
 
 Java Consumer Example: https://www.conduktor.io/kafka/complete-kafka-consumer-with-java
