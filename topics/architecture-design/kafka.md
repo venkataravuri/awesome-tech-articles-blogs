@@ -1,5 +1,7 @@
 # Kafka Internals, Scalability & Performance
 
+https://thanhnamit.netlify.app/2020/08/25/scaling-a-kafka-consumer-group-with-kubernetes-operator-and-hpa/
+
 <details>
 <summary>How Kafka Nodes and zookeeper will communicate with each other?</summary>
 
