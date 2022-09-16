@@ -110,3 +110,33 @@ SLI, SLO, SLI
 Blue green
 Canary Releases
 A/B Testing
+
+
+### Kubernetes vault
+
+Role-based access control (RBAC) is commonly used to enforce authorization in the Kubernetes control plane, for both users and workloads (service accounts). Roles and RoleBindings are Kubernetes objects that are used at a namespace level to enforce access control in your application;
+
+Service accounts on the other hand are tied to a specific namespace.
+default service account created in the default namespace of a Kubernetes cluster.
+
+When the process in the pod wants to communicate with the API server, the API server expects an Authorization header with a value of Bearer THETOKEN . The bearer token is the JWT token that is mounted to the pod as a secret. (/var/run/secrets/kubernetes.io/serviceaccount)
+
+
+Kubernetes does not have objects which represent normal user accounts.’
+
+Any user that presents a valid certificate signed by the cluster’s certificate authority (CA) is considered authenticated. So you need to create a certificate for you username.
+
+Ofcourse you need RBAC to user
+
+https://devopstales.github.io/kubernetes/k8s-user-accounts/
+
+
+### AWS IAM + K8s Service Account
+
+AWS Identity and Access Management (IAM) allows you to assign permissions to AWS services: for example, an app can access an S3 bucket. 
+
+In the context of Kubernetes, the complementary system to define permissions towards Kubernetes resources is Kubernetes Role-based Access Control (RBAC).
+
+IAM Roles for Service Accounts (IRSA) makes pods first class citizens in IAM
+you can now use IAM roles at the pod level.
+AWS identity APIs to recognize Kubernetes pods.
