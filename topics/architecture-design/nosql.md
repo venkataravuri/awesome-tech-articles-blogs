@@ -8,6 +8,11 @@ MongoDB also gets high-availability through automatic failover in replica sets: 
 Mongostat
 db.stats()
 
+Phantom reads
+A phantom read is a situation that occurs when two identical queries are executed and the collection of rows returned by the second query is different.
+
+https://www.mongodb.com/developer/products/mongodb/everything-you-know-is-wrong/
+
 ## MongoDB
 
 |Rating|Type|Topic
