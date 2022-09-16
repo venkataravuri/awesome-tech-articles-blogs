@@ -1,9 +1,20 @@
 
-Event Sourcing
-Observabulkty - What your metrics you monitor
-12 Factor
-Test-Driven Development
-CQRS
+# Modern System Design Concepts 
+
+### Cloud Native Applications
+
+Cloud native apps are designed and built to exploit scale, elasticity, resiliency, and flexibility provided by in public, private, and hybrid clouds.
+
+Usually designed as self contained services or microservices, packed as containers for portability, deployed to immutable infrastructure.
+
+Microservices are the core of cloud native application architecture
+
+Cloud native microservices communicate with each other via APIs and use event-driven architecture, which makes them loosely coupled, serves to enhance the overall performance of each application.
+
+Adheres to 12-factor principles
+
+
+### Event Sourcing & CQRS
 
 ### Domain Driven Design
 
@@ -88,3 +99,6 @@ The execution order:
 6. Fallback (fallback as last resort)
 
 A suitable reference order is for example auto-configured in the Spring-Boot extension. See the official Guides, Getting started with resilience4j-spring-boot2 about Aspect order
+
+
+Test-Driven Development
