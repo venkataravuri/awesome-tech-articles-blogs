@@ -122,4 +122,69 @@ Depending on isolation level you've chosen, specific resource is going to be loc
 Optimistic locking on the other hand assumes that multiple transactions rarely interfere with each other so no locks are required in this approach. It is a application-side check that uses @Version attribute in order to establish whether version of a record has changed between fetching and attempting to update it.
 
 
+### Peer to peer task choreography & Orchestration Engine
+
+Initially we adopted peer to peer task choreography. process flows are orchestrated in ad-hoc manner using a combination of event  driven pub/sub, making direct REST calls, and using a database to manage the state.
+
+As the number of microservices grow and the complexity of the processes increases, getting visibility into these distributed workflows becomes difficult without a central orchestrator.
+
+Process flows are “embedded” within the code of multiple applications
+
+A JSON DSL based blueprint defines the execution flow.
+
+A workflow blueprint defines a series of tasks that needs be executed. Each of the tasks are either a control task (e.g. fork, join, decision, sub workflow, etc.) or a worker task
+
+Workflow engine is a state machine, As workflow events occur combines with workflow blueprint with current state, to identify next state and schedules tasks, updates states machine
+
+Task Workers are intended to be idempotent stateless functions. The polling model allows us to handle backpressure on the workers and provide auto-scalability based on the queue depth when possible.
+
+Workers are language agnostic, allowing each microservice to be written in the language most suited for the service.
+
+https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40
+
+
+### An note on HTTP error codes
+
+https://www.yeahhub.com/1xx-2xx-3xx-4xx-5xx-http-status-codes/
+
+
+https://medium.com/javarevisited/completablefuture-usage-and-best-practises-4285c4ceaad4
+
+### Explan Event Loop in Node.js
+
+The key building blocks in non-blocking IO are: Event Demultiplexer, Event Queue, Event Loop
+
+https://tusharf5.com/posts/node-design-patterns-reactor-pattern
+
+Non blocking I/O - handle all I/O activities asynchronously
+
+#### Event Demultiplexer
+Also called Event Notification Interface is another way to react to events. In this mechanism the system collects and queues I/O events coming from a set of watched resources. It blocks the process until new events are available. So no CPU time is wasted waiting for events. This is also called the Event loop.
+
+### Inversion of Control & Dependency Inversion
+
+IOC can be done using Dependency Injection (DI). It explains how to inject the concrete implementation into a class that is using abstraction, in other words an interface inside.
+
+The IoC container creates an object of the specified class and also injects all the dependency objects through a constructor, a property or a method at run time and disposes it at the appropriate time.
+
+### BFF Patterns
+
+https://blog.bitsrc.io/bff-pattern-backend-for-frontend-an-introduction-e4fa965128bf
+
+### Microfrontends
+
+https://medium.com/bb-tutorials-and-thoughts/7-different-ways-to-implement-micro-frontends-with-react-907b5e262230
+
+### GraphQL
+
+GraphQL, I see it as query language for API
+
+https://www.slideshare.net/nburk/react-graphql?qid=e496f1f4-ad5f-43fa-9b8b-e74762825f3e&v=&b=&from_search=5
+
+
+3 operation types:
+- Query
+- Mutation (Write and Get)
+- Subscription
+
 Test-Driven Development
