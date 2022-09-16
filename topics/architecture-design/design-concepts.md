@@ -67,6 +67,19 @@ The execution order:
 
 A suitable reference order is for example auto-configured in the Spring-Boot extension. See the official Guides, Getting started with resilience4j-spring-boot2 about Aspect order
 
+### Circuit Breaker
+
+A technique to avoid cascading failures in an interdependent microservices environment, where dependent service has outage or degraded performance. 
+
+Circuit Breaker framework monitors communications for failures. Once the failures reach a certain threshold, the circuit breaker trips, and all further calls to the circuit breaker return with an error or with some alternative service or default message
+
+It make sure system is responsive & resilient and threads are not waiting for an unresponsive call. 
+
+The circuit breaker has three distinct states: Closed, Open, and Half-Open:
+* Closed – remains in the closed state and all calls pass through to the services. When the number of failures exceeds a predetermined threshold the breaker trips, and it goes into the Open state.
+* Open – The circuit breaker returns an error for calls without executing the function.
+* Half-Open – After a timeout period, the circuit switches to a half-open state to test if the underlying problem still exists. If a single call fails in this half-open state, the breaker is once again tripped. If it succeeds, the circuit breaker resets back to the normal, closed state. 
+
 ### CAP Theorm
 
 CAP (Consistency, Availability, and Partition tolerance) theorem helps us to make our choice while designing distributed systems. We can incorporate any two of these 3 functionalities into our system, not all of them.
