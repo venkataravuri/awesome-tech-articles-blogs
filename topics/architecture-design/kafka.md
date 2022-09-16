@@ -74,6 +74,41 @@ Yes, it is mandatory to specify Kafka which consumer would belong to which consu
 https://medium.com/javarevisited/kafka-partitions-and-consumer-groups-in-6-mins-9e0e336c6c00
     
 </details>
+    
+    <details>
+    <summary>Message Delivery Guarantees by Kafka?</summary>
+Three different Message Delivery Guarantee types are supported by Kafka.
+
+- Exactly once: Despite broker failures or producer retries, Kafka guarantees that every message will be stored only once, without duplications or data loss
+- At-Least Once: Every message will always be saved in Kafka at least once, according to this rule. There is no chance of message loss, but if the producer tries again after the message has already been persisted, the message may be duplicated.
+- At most Once: Every message in Kafka is only stored once, at most. If the producer doesn’t retry on failures, messages could be lost.
+
+Source: https://hevodata.com/blog/kafka-exactly-once-semantics/#intro
+        
+Idempotent Producer?
+
+Idempotency is the second name of Kafka Exactly Once Semantics. To stop processing a message multiple times, it must be persisted to Kafka topic only once. During initialization, a unique ID gets assigned to the producer, which is called producer ID or PID.
+
+PID and a sequence number are bundled together with the message and sent to the broker. As the sequence number starts from zero and is monotonically increasing, a Broker will only accept the message if the sequence number of the message is exactly one greater than the last committed message from that PID/TopicPartition pair. When it is not the case, the producer resends the message.
+
+        The Idempotent producer ensures Exactly Once Semantics message delivery per partition. To do so in multiple partitions, Kafka guarantees atomic transactions, which powers the applications to produce multiple TopicPartitions atomically. All writes to these TopicPartitions will either succeed or fail as a single unit. The application must provide a unique id, TransactionalId, to the producer, which is stable across all sessions of the application.....
+        <Code>
+{
+    producer.initTransactions();
+    try{
+     producer.beginTransaction();
+        producer.send(record0);
+        producer.send(record1);
+        producer.sendOffsetsToTxn(…);
+        producer.commitTransaction();
+    } catch( ProducerFencedException e) {
+        producer.close();
+    } catch( KafkaException e ) {
+        producer.abortTransaction();
+    }
+} 
+</Code>
+</details>
 
 <details>
     <summary>If a new consumer joins a consumer group, how would the partitions be assigned to the new consumer?</summary>
