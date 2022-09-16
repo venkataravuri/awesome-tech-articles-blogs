@@ -92,6 +92,7 @@ Idempotency is the second name of Kafka Exactly Once Semantics. To stop processi
 PID and a sequence number are bundled together with the message and sent to the broker. As the sequence number starts from zero and is monotonically increasing, a Broker will only accept the message if the sequence number of the message is exactly one greater than the last committed message from that PID/TopicPartition pair. When it is not the case, the producer resends the message.
 
         The Idempotent producer ensures Exactly Once Semantics message delivery per partition. To do so in multiple partitions, Kafka guarantees atomic transactions, which powers the applications to produce multiple TopicPartitions atomically. All writes to these TopicPartitions will either succeed or fail as a single unit. The application must provide a unique id, TransactionalId, to the producer, which is stable across all sessions of the application.....
+        
         <Code>
 {
     producer.initTransactions();
@@ -108,6 +109,10 @@ PID and a sequence number are bundled together with the message and sent to the 
     }
 } 
 </Code>
+        
+What about consumer?
+https://dzone.com/articles/kafka-clients-at-most-once-at-least-once-exactly-o
+        
 </details>
 
 <details>
