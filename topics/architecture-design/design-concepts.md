@@ -80,6 +80,17 @@ The circuit breaker has three distinct states: Closed, Open, and Half-Open:
 * Open – The circuit breaker returns an error for calls without executing the function.
 * Half-Open – After a timeout period, the circuit switches to a half-open state to test if the underlying problem still exists. If a single call fails in this half-open state, the breaker is once again tripped. If it succeeds, the circuit breaker resets back to the normal, closed state. 
 
+### Idempotency
+
+Perform an operation multiple times without changing the result.
+
+Ex. Update the contact details of a user in the system, delete a file.
+
+Not idempotent operations - send payment, create orders. REST - POST, PATCH
+
+Receives a request with the same idempotence key (could be UUID (or) request/reference id), it knows that it’s a retry.
+
+
 ### CAP Theorm
 
 CAP (Consistency, Availability, and Partition tolerance) theorem helps us to make our choice while designing distributed systems. We can incorporate any two of these 3 functionalities into our system, not all of them.
