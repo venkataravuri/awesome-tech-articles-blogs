@@ -7,11 +7,12 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 || Topic | Description |
 |---|:---|:---|
 |:rocket:|**[System Design Articles](topics/architecture-design/system-design.md)** | Realworld system design samples. |
+|:rocket:|**[Design Concepts & Patterns](topics/architecture-design/design-concepts.md)** | Clout-Native Architectures, OOPS, GOF, ... |
 |:rocket:|**[Probabilistic Data Structures](topics/architecture-design/data-structures.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
 |:love_hotel:|**[Multi-Tenant SaaS Systems Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
 |:mag_right:|**[Search Technologies - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
 |:rocket:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
-|:rocket:|**[MongoDB, Redshift - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
+|:rocket:|**[NoSQL - MongoDB, Redshift, ...](topics/architecture-design/nosql.md)** | SQL & NoSQL concepts, concurrency, scalability, performance techniques and more.|
 |:rocket:|**[Redis - Scalability & Performance](topics/architecture-design/redis.md)** | Redis|
 |:heavy_dollar_sign:|**[Business & Digital Transformation](topics/architecture-design/digital-transformation.md)** | What is Digital Transformation? How to do? ...|
 |:cloud:|**[Cloud Computing - AWS](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
