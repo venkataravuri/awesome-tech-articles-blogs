@@ -17,11 +17,16 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 ## Design a Flash Sale System
 
+### Challenges
+- Handle write heavy traffic & high concurrency
+- Avoid overselling inventory
+- Multiple requests from same user (different browser sessions)
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
-|:star:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| |
-|:star:|[Flash Sale](https://george24601.github.io/2019/10/24/flash-sale.html)|  |
+|:star::star:|[Flash Sale](https://george24601.github.io/2019/10/24/flash-sale.html)|  |
 |:star:|[Flash Sale](https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858)| |
+|:star:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| |
 
 ## Design a Search Engine
 ||Article / Blog| Notes
