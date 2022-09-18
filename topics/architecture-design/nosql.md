@@ -13,6 +13,11 @@ The phenomena which are prohibited at various levels are:
 - Phantom read –  A transaction re-executes a query returning a set of rows that satisfy a search condition and finds that the set of rows satisfying the condition has changed due to another recently-committed transaction.
 - Serialization anomaly  – The result of successfully committing a group of transactions is inconsistent with all possible orderings of running those transactions one at a time.
 
+- Read uncommitted
+- Read committed
+- Repeatable read
+- Serializable
+
 # NoSQL & Databases
 
 A curalted list of articles on database scalabilitiy, high availability and performance tuning.
