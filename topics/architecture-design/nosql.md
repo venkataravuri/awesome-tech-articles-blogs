@@ -1,3 +1,18 @@
+## PostgreSQL
+
+To guarantee true serializability PostgreSQL uses predicate locking, which means that it keeps locks which allow it to determine when a write would have had an impact on the result of a previous read from a concurrent transaction, had it run first.
+
+Predicate locks in PostgreSQL, are based on data actually accessed by a transaction. These will show up in the pg_locks system view with a mode of SIReadLock.
+
+The particular locks acquired during execution of a query will depend on the plan used by the query, and multiple finer-grained locks (e.g., tuple locks) may be combined into fewer coarser-grained locks (e.g., page locks) during the course of the transaction to prevent exhaustion of the memory used to track the locks.
+
+The phenomena which are prohibited at various levels are:
+
+- Dirty read –  A transaction reads data written by a concurrent uncommitted transaction.
+- Nonrepeatable read –  A transaction re-reads data it has previously read and finds that data has been modified by another transaction (that committed since the initial read).
+- Phantom read –  A transaction re-executes a query returning a set of rows that satisfy a search condition and finds that the set of rows satisfying the condition has changed due to another recently-committed transaction.
+- Serialization anomaly  – The result of successfully committing a group of transactions is inconsistent with all possible orderings of running those transactions one at a time.
+
 # NoSQL & Databases
 
 A curalted list of articles on database scalabilitiy, high availability and performance tuning.
