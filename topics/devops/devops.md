@@ -38,6 +38,7 @@ https://newrelic.com/devops/what-is-devops
 ### Prior to build
 * Automated Code Quality Inspection
 	- SonarCube
+		- Cyclomatic Complexity calculated based on the number of paths through the code. Whenever the control flow of a function splits, the complexity counter gets incremented by one. 
  
 - Security Scanning -  Static application security testing (SAST), also referred to as static analysis to find security and quality issues by analyzing source code automatically with low false positives. 
 	- Coverity - is the SAST solution for web application security. CWE, OWASP
@@ -53,7 +54,6 @@ https://newrelic.com/devops/what-is-devops
 
 - Container Security
 	- Octane
-
 
 
 ## Observability
