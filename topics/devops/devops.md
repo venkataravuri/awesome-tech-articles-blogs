@@ -141,6 +141,15 @@ IAM Roles for Service Accounts (IRSA) makes pods first class citizens in IAM
 you can now use IAM roles at the pod level.
 AWS identity APIs to recognize Kubernetes pods.
 
+IAM roles for service accounts by completing the following procedures:
+
+Creating an IAM OIDC provider for your cluster – You only complete this procedure once for each cluster.
+
+Configuring the AWS Security Token Service endpoint for a service account – Complete this procedure for each unique set of permissions that you want an application to have.
+
+Configuring pods to use a Kubernetes service account – Complete this procedure for each pod that needs access to AWS services.
+
+
 
 #### How do you SSH to Bastion servers?
 SSH Bastions as the entry point. The network path originates from the On-Prem network, goes through DX/VPN to the transit gateway (TGW), and then is routed to the Shared Services VPC. 
