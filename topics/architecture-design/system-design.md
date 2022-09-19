@@ -109,3 +109,8 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 ------------: | ------------- | -------------
 |:star:|https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
 |:star:|[Finate State Machine](https://github.com/davidmoten/state-machine)
+
+## Design a Elevator
+|Article / Blog| Notes
+------------: | ------------- | -------------
+|:star:|[Elevator System Design](https://medium.com/geekculture/system-design-elevator-system-design-interview-question-6e8d03ce1b44)
