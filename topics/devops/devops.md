@@ -122,7 +122,7 @@ default service account created in the default namespace of a Kubernetes cluster
 When the process in the pod wants to communicate with the API server, the API server expects an Authorization header with a value of Bearer THETOKEN . The bearer token is the JWT token that is mounted to the pod as a secret. (/var/run/secrets/kubernetes.io/serviceaccount)
 
 
-Kubernetes does not have objects which represent normal user accounts.’
+**_Kubernetes does not have objects which represent normal user accounts._**
 
 Any user that presents a valid certificate signed by the cluster’s certificate authority (CA) is considered authenticated. So you need to create a certificate for you username.
 
@@ -140,3 +140,7 @@ In the context of Kubernetes, the complementary system to define permissions tow
 IAM Roles for Service Accounts (IRSA) makes pods first class citizens in IAM
 you can now use IAM roles at the pod level.
 AWS identity APIs to recognize Kubernetes pods.
+
+
+#### How do you SSH to Bastion servers?
+SSH Bastions as the entry point. The network path originates from the On-Prem network, goes through DX/VPN to the transit gateway (TGW), and then is routed to the Shared Services VPC. 
