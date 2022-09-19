@@ -74,9 +74,9 @@ USE metrics (resource-scoped) provides internal, service-centric view. The goal 
 
 The RED metrics is about the workload itself (request-scoped). These are request-scoped, not resource-scoped as the USE method is. 
 
-R = Request Throughput, in requests per second
-E = Request Error Rate, as either a throughput metric or a fraction of overall throughput
-D (Duration) = Latency, Response Time
+- R = Request Throughput, in requests per second
+- E = Request Error Rate, as either a throughput metric or a fraction of overall throughput
+- D (Duration) = Latency, Response Time
 
 ### Do you have business metrics? How do you capture them?
 
