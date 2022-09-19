@@ -18,6 +18,8 @@ Features¶
 
 Argo Rollouts is a Kubernetes controller and a set of CRDs which provides progressive delivery features along with advanced deployments such as blue-green, canary, canary analysis. It has the potential to control and shift traffic to a newer version of software through ingress controllers and service meshes.
 
+Argo Rollout is a Kubernetes controller and has several options for Blue/Green deployments, but the most interesting one is the “preview” service that allows you to test the new color before making the traffic switch to live users.
+
 - [Argo Blue Green Deployment](https://www.infracloud.io/blogs/progressive-delivery-argo-rollouts-blue-green-deployment/)
 - [Argo Canary Deployment](https://www.infracloud.io/blogs/progressive-delivery-argo-rollouts-canary-deployment/)
 
