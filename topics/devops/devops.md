@@ -10,11 +10,16 @@ ArgoCD & Flux uses GitOps methodology to automate deployment of the desired appl
 ArgoCD is implemented as a kubernetes controller which continuously monitors running applications and compares the current, live state against the desired target state (as specified in the Git repo). A deployed application whose live state deviates from the target state is considered OutOfSync. Argo CD reports & visualizes the differences, while providing facilities to automatically or manually sync the live state back to the desired target state. 
 
 Features¶
-Automated deployment of applications to specified target environments
-Support for multiple config management/templating tools (Kustomize, Helm, Jsonnet, plain-YAML)
-Automated configuration drift detection and visualization
-Automated or manual syncing of applications to its desired state
-PreSync, Sync, PostSync hooks to support complex application rollouts (e.g.blue/green & canary upgrades)
+- Automated deployment of applications to specified target environments
+- Support for multiple config management/templating tools (Kustomize, Helm, Jsonnet, plain-YAML)
+- Automated configuration drift detection and visualization
+- Automated or manual syncing of applications to its desired state
+- PreSync, Sync, PostSync hooks to support complex application rollouts (e.g.blue/green & canary upgrades)
+
+Argo Rollouts is a Kubernetes controller and a set of CRDs which provides progressive delivery features along with advanced deployments such as blue-green, canary, canary analysis. It has the potential to control and shift traffic to a newer version of software through ingress controllers and service meshes.
+
+- [Argo Blue Green Deployment](https://www.infracloud.io/blogs/progressive-delivery-argo-rollouts-blue-green-deployment/)
+- [Argo Canary Deployment](https://www.infracloud.io/blogs/progressive-delivery-argo-rollouts-canary-deployment/)
 
 
 https://blog.algolia.com/one-year-load-balancing/
