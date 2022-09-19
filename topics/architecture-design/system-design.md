@@ -61,11 +61,12 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 |:star:|https://www.educative.io/blog/uber-backend-system-design
 
 ## Design a Distributed Job Schedular
-### Challenges
+#### Challenges
 - Scheduling millions of jobs.
-### Data Structures, Algorithms, Patterns
-On single computer, Sorted Set + HashMap + Multiprocessing Queues
-Must be disttibued for scaling, ...
+#### Data Structures, Algorithms, Patterns
+- On single computer, Sorted Set + HashMap + Multiprocessing Queues
+- Must be disttibued for scaling, ...
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[System Design — Distributed Job Scheduler](https://mecha-mind.medium.com/system-design-distributed-job-scheduler-19c2758f0d6b)
