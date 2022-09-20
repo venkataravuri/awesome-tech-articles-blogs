@@ -115,53 +115,5 @@ Performance Budgets
 
 SLI, SLO, SLI
 
-
-
-
-
-Blue green
-Canary Releases
-A/B Testing
-
-
-### Kubernetes vault
-
-Role-based access control (RBAC) is commonly used to enforce authorization in the Kubernetes control plane, for both users and workloads (service accounts). Roles and RoleBindings are Kubernetes objects that are used at a namespace level to enforce access control in your application;
-
-Service accounts on the other hand are tied to a specific namespace.
-default service account created in the default namespace of a Kubernetes cluster.
-
-When the process in the pod wants to communicate with the API server, the API server expects an Authorization header with a value of Bearer THETOKEN . The bearer token is the JWT token that is mounted to the pod as a secret. (/var/run/secrets/kubernetes.io/serviceaccount)
-
-
-**_Kubernetes does not have objects which represent normal user accounts._**
-
-Any user that presents a valid certificate signed by the cluster’s certificate authority (CA) is considered authenticated. So you need to create a certificate for you username.
-
-Ofcourse you need RBAC to user
-
-https://devopstales.github.io/kubernetes/k8s-user-accounts/
-
-
-### AWS IAM + K8s Service Account
-
-AWS Identity and Access Management (IAM) allows you to assign permissions to AWS services: for example, an app can access an S3 bucket. 
-
-In the context of Kubernetes, the complementary system to define permissions towards Kubernetes resources is Kubernetes Role-based Access Control (RBAC).
-
-IAM Roles for Service Accounts (IRSA) makes pods first class citizens in IAM
-you can now use IAM roles at the pod level.
-AWS identity APIs to recognize Kubernetes pods.
-
-IAM roles for service accounts by completing the following procedures:
-
-Creating an IAM OIDC provider for your cluster – You only complete this procedure once for each cluster.
-
-Configuring the AWS Security Token Service endpoint for a service account – Complete this procedure for each unique set of permissions that you want an application to have.
-
-Configuring pods to use a Kubernetes service account – Complete this procedure for each pod that needs access to AWS services.
-
-
-
 #### How do you SSH to Bastion servers?
 SSH Bastions as the entry point. The network path originates from the On-Prem network, goes through DX/VPN to the transit gateway (TGW), and then is routed to the Shared Services VPC. 
