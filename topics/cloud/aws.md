@@ -108,6 +108,29 @@ Star and snowflake schemas organize around a central fact table that contains me
 
 In columnar DBs you can avoid star schema. you don’t need to separate the textual and numerical values in separate table anymore as its taken care in columnar storage. So adding star schema on top of redshift will not make it efficient.
 
+### AWS Redshift
+
+* OLAP – Online analytics processing & Data warehouse service
+* Massive parallel processing
+* Columnar data storage, when storing data in columnar format Redshift uses a 1024Kb blocksize. Advanced compression due to columnar architecture.
+* Doesn’t require indexes or materialized views.
+* Amazon Redshift cluster consists of nodes
+* Each cluster has a _**leader node**_ and one or more _**compute nodes**_.
+    * The leader node receives queries from client applications, parses the queries, and develops query execution plans.
+    * The leader node then coordinates the parallel execution of these plans with the compute nodes and aggregates the intermediate results from these nodes.
+* Redshift can not work on Multi AZ!  All the cluster nodes are provisioned in the same Availability Zone. 
+* Can restore snapshots to a new AZ in case of outages.
+* Amazon Redshift workload management (WLM) enables users to flexibly manage priorities within workloads so that short, fast-running queries won't get stuck in queues behind long-running queries.
+
+#### Ecnryption
+* In transit with SSL
+* At rest with AES-256
+* You can enable encryption when you launch your cluster, or you can modify an unencrypted cluster to use AWS Key Management Service (AWS KMS) encryption. To do so, you can use either an AWS-managed key or a customer-managed key (CMK).
+* Amazon Redshift uses a hierarchy of encryption keys to encrypt the database.
+* You can use either AWS Key Management Service (AWS KMS) or a hardware security module (HSM) to manage the top-level encryption keys in this hierarchy.
+* When you choose AWS KMS for key management with Amazon Redshift, there is a four-tier hierarchy of encryption keys.
+* These keys, in hierarchical order, are the master key, a cluster encryption key (CEK), a database encryption key (DEK), and data encryption keys.
+
 ### Redshift Peformance Metrics
 
 - **_svv_table_info_** - provides a lot of useful information on the performance health of your tables, including areas like,
