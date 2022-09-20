@@ -183,42 +183,7 @@ No Free Tier usage available. Also available only in select regions. Takes sligh
 
 :star:star: https://aws.amazon.com/blogs/database/building-highly-available-mysql-applications-using-amazon-aurora-mmsr/
 
-### AWS Redshift
 
-* OLAP – Online analytics processing
-* Data warehouse service
-* Columnar data storage
-* When storing data in columnar format Redshift uses a 1024Kb blocksize.
-* Advanced compression due to columnar architecture.
-* Doesn’t require indexes or materialized views.
-* Massive parallel processing
-* Amazon Redshift cluster consists of nodes
-* Each cluster has a _**leader node**_ and one or more _**compute nodes**_.
-* The leader node receives queries from client applications, parses the queries, and develops query execution plans.
-* The leader node then coordinates the parallel execution of these plans with the compute nodes and aggregates the intermediate results from these nodes.
-* Redshift can not work on Multi AZ!  All the cluster nodes are provisioned in the same Availability Zone. 
-* Can restore snapshots to a new AZ in case of outages.
-* Amazon Redshift workload management (WLM) enables users to flexibly manage priorities within workloads so that short, fast-running queries won't get stuck in queues behind long-running queries.
-  
-#### Pricing
-
-Compute node hours (not charged for leader node hours)
-
-#### Backup
-
-Data transfer (only within a VPC, not outside it).
-
-#### Ecnryption
-
-* In transit with SSL
-* At rest with AES-256
-
-* You can enable encryption when you launch your cluster, or you can modify an unencrypted cluster to use AWS Key Management Service (AWS KMS) encryption. To do so, you can use either an AWS-managed key or a customer-managed key (CMK).
-* Amazon Redshift uses a hierarchy of encryption keys to encrypt the database.
-* You can use either AWS Key Management Service (AWS KMS) or a hardware security module (HSM) to manage the top-level encryption keys in this hierarchy.
-
-* When you choose AWS KMS for key management with Amazon Redshift, there is a four-tier hierarchy of encryption keys.
-* These keys, in hierarchical order, are the master key, a cluster encryption key (CEK), a database encryption key (DEK), and data encryption keys.
 
 ## Storage
 
