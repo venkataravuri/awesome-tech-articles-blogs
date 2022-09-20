@@ -1,10 +1,40 @@
 # DevSecOps & SRE
 
 ## Table of Contents
+* [DevSecOps](#devsecops-pipelines)
+	* [GitOps](#gitops)
+* [SRE](#sre)
+	* [Observability](#observability)
 * [Kubernetes](docker-kubernetes.md)
 	* [Storage — PV, PVC and Storage Class]()
-	* 
+	* [k8s Authentication & Authorization](/docker-kubernetes.md#kubernetes-authentication--authorization))
 
+# DevOps
+DevOps  extends  continuous development goals of the Agile movement to continuous integration and release. In order to accommodate continuous releases, DevOps encourages automation of the change, configuration and release processes.
+
+https://newrelic.com/devops/what-is-devops 
+
+### DevSecOps Pipelines
+
+### Prior to build
+* Automated Code Quality Inspection
+	- SonarCube
+		- Cyclomatic Complexity calculated based on the number of paths through the code. Whenever the control flow of a function splits, the complexity counter gets incremented by one. 
+ 
+- Security Scanning -  Static application security testing (SAST), also referred to as static analysis to find security and quality issues by analyzing source code automatically with low false positives. 
+	- Coverity - is the SAST solution for web application security. CWE, OWASP
+
+- Static code analysis for application security
+	- Fortify
+
+### Build Time
+
+- OSS Scan
+	- Source Composition Analysis
+		* Black Duck
+
+- Container Security
+	- Octane
 
 ### GitOps
 
@@ -31,44 +61,13 @@ Argo Rollout is a Kubernetes controller and has several options for Blue/Green d
 
 https://blog.algolia.com/one-year-load-balancing/
 
+## SRE
 
-What is DevOps?
-What is DevOps?
-Is it a culture? Is it a job title? Is it a way of organizing? Or just a way of thinking? We think it’s a still-evolving movement...
+Performance Budgets
 
-DevOps movement emphasizes communication, collaboration and integration between software developers and IT operations. Rather than seeing these two groups as silos who pass things along but don’t really work together.
+SLI, SLO, SLI
 
-Agile software development paved the way, steering away from the waterfall method of software development toward a continuous development cycle. But it didn’t include the operations side so while development could be continuous, deployment was still waterfall-oriented.
-
-DevOps essentially extends the continuous development goals of the Agile movement to continuous integration and release. In order to accommodate continuous releases, DevOps encourages automation of the change, configuration and release processes.
-
-https://newrelic.com/devops/what-is-devops 
-
-
-### DevSecOps Tools
-
-### Prior to build
-* Automated Code Quality Inspection
-	- SonarCube
-		- Cyclomatic Complexity calculated based on the number of paths through the code. Whenever the control flow of a function splits, the complexity counter gets incremented by one. 
- 
-- Security Scanning -  Static application security testing (SAST), also referred to as static analysis to find security and quality issues by analyzing source code automatically with low false positives. 
-	- Coverity - is the SAST solution for web application security. CWE, OWASP
-
-- Static code analysis for application security
-	- Fortify
-
-### Build Time
-
-- OSS Scan
-	- Source Composition Analysis
-		* Black Duck
-
-- Container Security
-	- Octane
-
-
-## Observability
+### Observability
 
 observability is a property of a system, similar to testability, operability, usability, etc. A **_system that’s observable is instrumented and emits telemetry_**, so systems that capture that telemetry can be used to interrogate the system about its behavior and derive answers (e.g. an observable system supports analytics and diagnostics).
 
@@ -109,11 +108,7 @@ Prometheus polls your application for its latest metrics data – this is known 
 Prometheus uses a pull-based approach for getting metrics.
 
 
-### SRE
 
-Performance Budgets
-
-SLI, SLO, SLI
 
 #### How do you SSH to Bastion servers?
 SSH Bastions as the entry point. The network path originates from the On-Prem network, goes through DX/VPN to the transit gateway (TGW), and then is routed to the Shared Services VPC. 
