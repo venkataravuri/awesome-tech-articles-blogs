@@ -35,25 +35,6 @@ Kubernetes has below storage types for running stateful containers,
 #### Reclaim Policy
 - PV that are dynamically created by a StorageClass will have the reclaim policy specified in the reclaimPolicy field of the class, which can be either Delete or Retain.
 
-
-### Kubernetes vault
-
-Role-based access control (RBAC) is commonly used to enforce authorization in the Kubernetes control plane, for both users and workloads (service accounts). Roles and RoleBindings are Kubernetes objects that are used at a namespace level to enforce access control in your application;
-
-Service accounts on the other hand are tied to a specific namespace.
-default service account created in the default namespace of a Kubernetes cluster.
-
-When the process in the pod wants to communicate with the API server, the API server expects an Authorization header with a value of Bearer THETOKEN . The bearer token is the JWT token that is mounted to the pod as a secret. (/var/run/secrets/kubernetes.io/serviceaccount)
-
-
-**_Kubernetes does not have objects which represent normal user accounts._**
-
-Any user that presents a valid certificate signed by the cluster’s certificate authority (CA) is considered authenticated. So you need to create a certificate for you username.
-
-Ofcourse you need RBAC to user
-
-https://devopstales.github.io/kubernetes/k8s-user-accounts/
-
 ## Kubernetes Authentication & Authorization
 
 Role-based access control (RBAC) is commonly used to enforce authorization in the Kubernetes control plane, for both users and workloads (service accounts). Roles and RoleBindings are Kubernetes objects that are used at a namespace level to enforce access control in your application.
