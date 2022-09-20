@@ -35,8 +35,15 @@ Kubernetes has below storage types for running stateful containers,
 #### Reclaim Policy
 - PV that are dynamically created by a StorageClass will have the reclaim policy specified in the reclaimPolicy field of the class, which can be either Delete or Retain.
 
-How users authenticate with Kubernetes cluster without k8s service accounts? Trough IDPs, AD, LDAP, …
-https://medium.com/upstream-engineering/kubernetes-authentication-using-ldap-and-oauth2-83c3457becf8
+### How users authenticate with Kubernetes cluster without k8s service accounts? Trough IDPs, AD, LDAP, …
+
+Kubernetes provides solid authorization using RBAC and provides several authentication strategies for integrating with an external user store.
+
+kubernetes and LDAP integrated through Dex, an identity service that uses OpenID Connect (OIDC) to drive authentication for other apps. Dex was developed and open-sourced by CoreOS.
+
+In the OAuth2/OIDC flow, Dex is the authorization server, kubectl is the client and the Kubernetes API server is the resource server. As stated in Dex github repo, Dex acts as a portal to other Identity Providers (IdP) through connectors. This lets Dex defer authentication to LDAP servers, SAML providers, or established Identity Providers like GitHub, Google, and Active Directory.
+
+Reference: https://medium.com/upstream-engineering/kubernetes-authentication-using-ldap-and-oauth2-83c3457becf8
 
 #### Deployments Vs. ReplicaSets
 
