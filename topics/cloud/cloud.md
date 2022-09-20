@@ -3,11 +3,13 @@
 
 #### Table of Contents  
 ### [AWS](aws.md#aws-rds)
+ * [VPC](aws.md#vpc)
  * [Networking](aws.md#networking)
  * [IAM](aws.md#identity--access-managment-iam)
  * [RDS PostgreSQL](aws.md#aws-rds)
  * [Redshift](aws.md#aws-rds)
  * [EKS](aws.md#eks)
+ * [Route 53](aws.md#route-53)
 
 ### [Cloud Governance](governance.md)
 
