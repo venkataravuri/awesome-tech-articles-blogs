@@ -1,5 +1,12 @@
 # AWS
 
+## VPC
+
+### Gateway VPC endpoints
+VPC endpoints has two types:
+- **Gateway endpoints** - VPC gateway endpoints which supported:Amazon S3 and DynamoDB
+- **Interface endpoints** - VPC interface endpoints which supported a lot of aws service including RDS data API, but Interface endpoints are powered by AWS PrivateLink
+
 ## Networking
 
 #### What is the difference between AWS Transit Gateway and VPC Peering?
@@ -75,3 +82,10 @@ In columnar DBs you can avoid star schema. you don’t need to separate the text
 
 - Use the ANALYZE command to update the statistical metadata that the query planner uses to build and choose optimal plans.
 - The VACUUM command is used to re-sort data added to non-empty tables, and to recover space freed when you delete or update a significant number of rows.
+
+
+
+### Route 53
+
+- Geolocation routing policy – Use when you want to route traffic based on the location of your users.
+- Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
