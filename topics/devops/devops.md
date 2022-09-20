@@ -9,7 +9,6 @@
 	* [Storage — PV, PVC and Storage Class]()
 	* [k8s Authentication & Authorization](/docker-kubernetes.md#kubernetes-authentication--authorization))
 
-# DevOps
 DevOps  extends  continuous development goals of the Agile movement to continuous integration and release. In order to accommodate continuous releases, DevOps encourages automation of the change, configuration and release processes.
 
 https://newrelic.com/devops/what-is-devops 
@@ -99,15 +98,9 @@ The first dependency we need to add is the Spring Boot Actuator. This is the par
 
 https://www.tutorialworks.com/spring-boot-prometheus-micrometer/
 
-
-
 Prometheus is one way of solving this problem. It is a time-series database, which stores a sequence of data points, across time
-
 Prometheus polls your application for its latest metrics data – this is known as scraping
-
 Prometheus uses a pull-based approach for getting metrics.
-
-
 
 
 #### How do you SSH to Bastion servers?
