@@ -20,7 +20,20 @@ Kubernetes has below storage types for running stateful containers,
 - ReadWriteMany(RWX) — Multiple pods running on multiple nodes can use a single volume and read/write data. If a pod mounts a volume with ReadWriteMany access mode, other pod can also mount it.
 - ReadWriteOncePod(RWOP) — volume can be mounted as read-write by a single Pod.
 
-https://stackoverflow.com/questions/57798267/kubernetes-persistent-volume-access-modes-readwriteonce-vs-readonlymany-vs-read
+### Persistent Volume Claims (PVC)
+- PVC is binding between a Pod and PV. Pod request the Volume through the PVC.
+- PVC is the request to provision persistent storage with a specific type and configuration.
+- Kubernetes looks for a PV that meets the criteria defined in the PVC, and if there is one, it matches claim to PV.
+- Claims can request specific size and access modes (e.g., they can be mounted ReadWriteOnce, ReadOnlyMany or ReadWriteMany).
+
+### Storage Classes (SC)
+- StorageClass allows dynamic provisioning of Persistent Volumes, when PVC claims it.
+- StorageClass abstracts underlying storage provider.
+- StorageClass is used in conjunction with PVC that allow Pods to dynamically request a new storage.
+- StorageClass use provisioners that are specific to the storage platform or cloud provider to give Kubernetes access to the physical storage.
+
+#### Reclaim Policy
+- PV that are dynamically created by a StorageClass will have the reclaim policy specified in the reclaimPolicy field of the class, which can be either Delete or Retain.
 
 How users authenticate with Kubernetes cluster without k8s service accounts? Trough IDPs, AD, LDAP, …
 https://medium.com/upstream-engineering/kubernetes-authentication-using-ldap-and-oauth2-83c3457becf8
