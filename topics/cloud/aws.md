@@ -2,13 +2,27 @@
 
 ## Networking
 
+#### What is the difference between AWS Transit Gateway and VPC Peering?
+
+https://devopsdice.com/difference-between-aws-transit-gateway-and-vpc-peering/
+
+#### Difference between AWS Security Groups and NACL?
+
+https://devopsdice.com/difference-between-aws-security-group-and-nacl/
+
+https://visualstorageintelligence.com/chargeback-vs-showback/
+
 - [AWS Direct Connect](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect.html)
 
 - [AWS Direct Connect + AWS Transit Gateway + VPN](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-aws-transit-gateway-vpn.html)
 
-## Identity & Access Managment
+## Identity & Access Managment (IAM)
 
 - [AWS IAM Users vs. IAM Roles](https://www.howtogeek.com/devops/iam-users-vs-iam-roles-which-one-should-you-use/) 
+
+https://devopsdice.com/aws-iam-identity-and-access-management/
+
+https://visualstorageintelligence.com/chargeback-vs-showback/
 
 ## RDS PostgreSQL
 
