@@ -15,7 +15,7 @@ https://newrelic.com/devops/what-is-devops
 
 ### DevSecOps Pipelines
 
-### Prior to build
+### Pre-Build Stage
 * Automated Code Quality Inspection
 	- SonarCube
 		- Cyclomatic Complexity calculated based on the number of paths through the code. Whenever the control flow of a function splits, the complexity counter gets incremented by one. 
@@ -26,7 +26,7 @@ https://newrelic.com/devops/what-is-devops
 - Static code analysis for application security
 	- Fortify
 
-### Build Time
+### Build Stage
 
 - OSS Scan
 	- Source Composition Analysis
