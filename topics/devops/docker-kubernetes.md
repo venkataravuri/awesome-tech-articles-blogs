@@ -84,8 +84,3 @@ During a Deployment update, it will create another ReplicaSet with a new configu
 Argo Rollouts uses Rollout resource instead of Deployment resource. Similar to Deployment, Rollout uses ReplicaSet to spin up new pods.
 
 # Docker
-
-## Satefulset, Persistent Volumes, Headless Services
-||| Topic
------------- | ------------- | -------------
-:star: | :link: | [Conquering Statefulness on Kubernetes](https://medium.com/capital-one-tech/conquering-statefulness-on-kubernetes-26336d5f4f17)
