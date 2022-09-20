@@ -76,6 +76,14 @@ In the OAuth2/OIDC flow, Dex is the authorization server, kubectl is the client 
 
 Reference: https://medium.com/upstream-engineering/kubernetes-authentication-using-ldap-and-oauth2-83c3457becf8
 
+### Kubernetes - Vault Integration
+
+1. Initally we use Spring Vault, vault token is loaded through spring yaml files backed by Github & DevOps pipeline based Kubernetes ConfigMap.
+2. Later, we took InitContainer approach (https://blog.picnic.nl/hitchhikers-guide-to-hashicorp-vault-in-kubernetes-part-1-system-integration-ce17800049da). Query Valut API for 'Vault token' using authenting Kubernetes Service Account JWT token (KUBE TOKEN).
+3. Now switched to, Agent Sidecar Injector
+ *  At a minimum, every container in the pod will be configured to mount a shared memory volume. This volume is mounted to /vault/secrets and will be used by the Vault Agent containers for sharing secrets with the other containers in the pod.
+ *  The Vault Agent Injector alters pod specifications to include Vault Agent containers that render Vault secrets to a shared memory volume using Vault Agent Templates. By rendering secrets to a shared volume, containers within the pod can consume Vault secrets without being Vault aware.
+
 #### Deployments Vs. ReplicaSets
 
 Deployment, under the hood, creates a ReplicaSet object which manages pods from this Deployment.
