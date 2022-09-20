@@ -6,8 +6,8 @@
 * [SRE](#sre)
 	* [Observability](#observability)
 * [Kubernetes](docker-kubernetes.md)
-	* [Storage — PV, PVC and Storage Class]()
-	* [k8s Authentication & Authorization](/docker-kubernetes.md#kubernetes-authentication--authorization))
+	* [Storage — PV, PVC and Storage Class](docker-kubernetes.md#storage-types)
+	* [k8s Authentication & Authorization](docker-kubernetes.md#kubernetes-authentication--authorization)
 
 DevOps  extends  continuous development goals of the Agile movement to continuous integration and release. In order to accommodate continuous releases, DevOps encourages automation of the change, configuration and release processes.
 
