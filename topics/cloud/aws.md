@@ -24,6 +24,11 @@ https://devopsdice.com/aws-iam-identity-and-access-management/
 
 https://visualstorageintelligence.com/chargeback-vs-showback/
 
+## EKS
+
+#### API Gateway integration with EKS
+[API Gateway integration with EKS](https://aws.amazon.com/blogs/containers/integrate-amazon-api-gateway-with-amazon-eks/)
+
 ## RDS PostgreSQL
 
 #### How failover works in RDS?
