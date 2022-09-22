@@ -51,9 +51,9 @@ DDD Architecture Layers
 
 ### Resiliency Patterns
 
-Resiliency Aspects applied in following order:
+We decorate network-bound calls with resiliency aspects in following order:
 
-Retry ( CircuitBreaker ( RateLimiter ( TimeLimiter ( Bulkhead ( Function ) ) ) ) )
+** Retry ( CircuitBreaker ( RateLimiter ( TimeLimiter ( Bulkhead ( Function ) ) ) ) ) **
 
 Retry is applied at the end (if needed).
 
