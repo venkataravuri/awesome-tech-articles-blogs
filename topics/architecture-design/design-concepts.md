@@ -102,6 +102,9 @@ Tolerating partition means we are agreed to embrace distributed system - our mac
 
 If we choose to implement distributed system, that means, we are tolerating network partition. So, in the presence of P(Partition tolerance), we either choose C(Consistency) or A(Availability).
 
+#### Which database falls under which category (AP, CP)?
+https://bikas-katwal.medium.com/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15
+
 ## Optimistic Lock Vs. Pessimistic Lock
 
 Optimistic Locking allows a conflict to occur, but it needs to detect it at write time. This can be done using either a physical or a logical clock. However, since logical clocks are superior to physical clocks when it comes to implementing a concurrency control mechanism, we are going to **use a version column** to capture the read-time row snapshot information.
