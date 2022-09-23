@@ -21,4 +21,5 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 |:ok_hand:|**[Recommendations](topics/data-analytics-big-data/recommendations.md)**|
 |:ferris_wheel:|**[DevOps - Kubernetes, Infrastructure Automation](topics/devops/devops.md)** | DevOps articles, [Docker, Kubenetes](topics/devops/docker-kubernetes.md) |
 |:hotsprings:|**[Security](topics/devops/security.md)**| OAuth, CORS, CSRF, ...|
+|:green_book:|**Programming Languages - [Java](topics/general/java.md), [JavaScript](topics/general/javascript.md), [Python]()**| Language concepts.|
 |:rocket:|**[Startup Cohorts](topics/general/startup.md)** | Startup cohort ideas.|
