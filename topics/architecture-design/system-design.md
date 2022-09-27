@@ -3,7 +3,7 @@
 
 - [Design a Gorcery/food Delvery Application](system-design.md#design-a-food--grocery-delivery-system)
 - [Design a Flash Sale System](system-design.md#design-a-flash-sale-system)
-= [Design a Search Engine](system-design.md#design-a-search-engine)
+- [Design a Search Engine](system-design.md#design-a-search-engine)
 - [Design a Parking Lot System](system-design.md#design-a-parking-lot)
 - [Design a Rate Limiter](system-design.md#design-a-rate-limiter)
 - [Design a Vending Machine](system-design.md#design-a-vending-machine)
