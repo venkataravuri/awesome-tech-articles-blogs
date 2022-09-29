@@ -74,10 +74,39 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 |:star:|https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html#axzz7bO38EcZi
 
 ## Design a Ride Share App
+
+#### Data Structures
+
+- Quadtrees are a data structure that encode a two-dimensional space into adaptable cells. quadtrees are a tree structure where every non-leaf node has exactly four children. In the context of location, these nodes represent the four quadrants: NW, NE, SW, and SE. 
+- Google S2 library (which uses a quadtree data structure). This library divides the map data into tiny cells (for example 2km) and gives the unique ID to each cell. Suppose you want to figure out all the cabs available within a 2km radius of a city. Using the S2 libraries you can draw a circle of 2km radius and it will filter out all the cells with IDs lies in that particular circle. This way you can easily match the rider to the driver and you can easily find out the number of cab available in a particular region.
+- Uber's H3 algorithm partitions the Earth’s surface into a network of hexagons. You can select the amount of detail each hexagon contains by choosing among the available sixteen levels. You can think of these as “zoom” levels on a map. Each hexagon is unique and is identifiable through a unique sixty-four-bit identifier, an ideal key for a database table, or an in-memory dictionary. These identifiers are consistent across “zoom” levels, so you can mix and match them as you please.
+
+The QuadKeys in leaf nodes has reference to SortedSet in Redis, where drivers information is stored by priority (rating, distance?)
+
+#### Driver Location servers
+Driver Location Hash Table - Stores DriveID in the hash table along with driver’s current and previous location. Distribute DriverLocation HT on multiple servers based on the DriverID. This will help with scalability, performance, and fault tolerance. We will refer to the  this information as the Driver Location servers.
+
+1. Server will also notify the respective QuadTree server to refresh the driver’s location.
+2. Once server receives an update on a driver’s location, it will broadcast that information to relevant customers. 
+
+Update data structures to reflect active drivers’ reported locations every three seconds. To update a driver to a new location, we must find the right grid based on the driver’s previous location.
+If the new position doesn’t belong to the current grid, we remove the driver from the current grid and reinsert them to the right grid. If the new grid reaches a maximum limit, we have to repartition it.
+We need a quick mechanism to propagate the current location of nearby drivers to customers in the area. Our system needs to notify both the driver and customer on the car’s location throughout the ride’s duration.
+
+#### Broadcasting driver locations
+
+When a customer opens the Uber app, they’ll query the server to find nearby drivers. On the server side, we subscribe the customer to all updates from nearby drivers. Each update in a driver’s location in DriverLocation HT will be broadcast to all subscribed customers. This ensures that each driver’s current location is displayed.
+
+Customers will send their current location so that the server can find nearby drivers from our QuadTree. 
+
+We’ve assumed one million active customers and 500 thousand active drivers per day. Let’s assume that five customers subscribe to one driver. We’ll store this information in a hash table for quick updates.
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
+|:star::star::star:|https://www.educative.io/blog/uber-backend-system-design
+|:star::star:|https://engblog.yext.com/post/geolocation-caching
 |:star:|https://www.geeksforgeeks.org/system-design-of-uber-app-uber-system-architecture/
-|:star:|https://www.educative.io/blog/uber-backend-system-design
+
 
 ## Design a Distributed Job Schedular
 #### Challenges
