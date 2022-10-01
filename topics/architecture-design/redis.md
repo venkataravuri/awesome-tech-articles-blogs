@@ -20,6 +20,13 @@ Every node in a Redis Cluster is responsible for a subset of the hash slots, so 
     Node B contains hash slots from 5501 to 11000.
     Node C contains hash slots from 11001 to 16383.
     
+###  Redis Cluster TCP ports
+
+Every Redis Cluster node requires two TCP connections open. 
+- The normal Redis TCP port used to serve clients, for instance let’s take 7000,
+- Cluster Bus port obtained by adding 10000 to the data port, so 17000.
+
+Cluster bus is a node-to-node communication channel using a binary protocol. The Cluster bus is used by nodes for failure detection, configuration update, failover authorization and so forth. 
 
 ### How inter node communication in a Redis Cluster?
 
@@ -27,6 +34,9 @@ All nodes continuously PING other nodes in the cluster. A node recognizes and ma
 
 Every PING and PONG packet contain a GOSSIP section which contains the information about other nodes idle times, from the point of view of the sending node.
 
+### Redis Cluster Bus
+
+This second high port (In here, 17000) is used for the Cluster bus, that is a node-to-node communication channel using a binary protocol. The Cluster bus is used by nodes for failure detection, configuration update, failover authorization and so forth. If you don’t open both TCP ports, your cluster will not work as expected. So make sure that you open both ports in your firewall.
 
 ### How Gossip Protocol Works?
 
