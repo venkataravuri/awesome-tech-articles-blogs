@@ -46,6 +46,26 @@ Every node begins a gossip round for every second to exchange the state informat
 
 Soure: https://www.elprocus.com/gossip-protocol/
 
+### How Redis persistence writes data to disk?
+
+Persistence refers to the writing of data to durable storage, such as a solid-state disk (SSD). Redis itself provides a range of persistence options:
+
+- RDB (Redis Database): The RDB persistence performs point-in-time snapshots of your dataset at specified intervals. RDB files are perfect for backups. For instance you may want to archive your RDB files every hour for the latest 24 hours, and to save an RDB snapshot every day for 30 days.
+- AOF (Append Only File): The AOF persistence logs every write operation received by the server, that will be played again at server startup, reconstructing the original dataset. Commands are logged using the same format as the Redis protocol itself, in an append-only fashion. Redis is able to rewrite the log in the background when it gets too big. AOF log is an append-only log, so there are no seeks, nor corruption problems if there is a power outage. Even if the log ends with a half-written command for some reason (disk full or other reasons) the redis-check-aof tool is able to fix it easily.
+- No persistence: If you wish, you can disable persistence completely, if you want your data to just exist as long as the server is running.
+- RDB + AOF: It is possible to combine both AOF and RDB in the same instance. Notice that, in this case, when Redis restarts the AOF file will be used to reconstruct the original dataset since it is guaranteed to be the most complete.
+
+### How can use Redis for Distributed Locks?
+
+Redis uses Redlock algorithm, which implements a DLM (Distributed Lock Manager) which we believe to be safer than the vanilla single instance approach.
+
+Minimum guarantees needed to use distributed locks in an effective way.
+
+- **Safety property**: Mutual exclusion. At any given moment, only one client can hold a lock.
+- **Liveness property A**: Deadlock free. Eventually it is always possible to acquire a lock, even if the client that locked a resource crashes or gets partitioned.
+- **Liveness property B**: Fault tolerance. As long as the majority of Redis nodes are up, clients are able to acquire and release locks.
+
+
 https://redis.io/docs/reference/patterns/distributed-locks/
 
 
