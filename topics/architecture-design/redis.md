@@ -1,5 +1,17 @@
-Redis is mostly single-threaded, except background IO
 
+# Redis
+
+**Re**mote **Di**ctionary **S**ervice
+
+A distributed data structure server
+- Key:String => Value:String
+- Key:String => Value:List
+- Key:String => Value:Set
+- Key:String => Value:Zset
+
+Operations on any Type
+
+Redis is mostly single-threaded, except background IO
 
 ### Atomicity in Redis
 
