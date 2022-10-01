@@ -1,4 +1,12 @@
+### Redis Clustering
 
+Redis Clustering provides a consistent and resilient data service where data is automatically sharded (Partitions data) across multiple Redis nodes (Automatically split your dataset among multiple nodes). 
+
+And it provides a master/slave setup for enhance availability in case of a failure.
+
+Minimal cluster that works as expected requires to contain at least 3 master nodes in the cluster and Redis recommendation is to have at least one slave for each master.
+- Minimum 3 Redis master nodes on separate 3 machines for each
+- Minimum 3 Redis slaves (One replica for each master node), 1 slave per master (to allow minimal fail-over mechanism)
 
 ### How Redis Cluster does data sharding?
 
@@ -11,6 +19,13 @@ Every node in a Redis Cluster is responsible for a subset of the hash slots, so 
     Node A contains hash slots from 0 to 5500.
     Node B contains hash slots from 5501 to 11000.
     Node C contains hash slots from 11001 to 16383.
+    
+
+### How inter node communication in a Redis Cluster?
+
+All nodes continuously PING other nodes in the cluster. A node recognizes and marks another node as possibly failing when there is a timeout longer than N seconds.
+
+Every PING and PONG packet contain a GOSSIP section which contains the information about other nodes idle times, from the point of view of the sending node.
 
 
 ### How Gossip Protocol Works?
