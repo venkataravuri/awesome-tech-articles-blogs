@@ -1,3 +1,36 @@
+Redis is mostly single-threaded, except background IO
+
+
+### Atomicity in Redis
+
+- Series of operations
+    - Guaranteed to all run or none run
+    - Prevents operations from running partially
+- The effects all operations are immedately visible, i.e. another client cannot see partial updates
+
+#### Atomi Operations
+
+INCR key   # GET key, value++, SET key value
+
+#### Pipelining
+
+- Ensures commands are run in order per-connection
+- Sends batch of commands seperated by newlines
+- Commands are sent in same message
+
+**Pipelining is NOT atomic**. It for,
+- Reduce latency
+- Send several commands in one message
+- Receive several responses in one message
+
+Use MULTI for true atomicity
+- Atomic regardless of other clients and connections
+- Client sends MULTI; more commands, EXEC
+
+Use LUA script to reduce latency.
+
+Source: https://www.slideshare.net/RedisLabs/atomicity-in-redis-thomas-hunter
+
 ### Redis Clustering
 
 Redis Clustering provides a consistent and resilient data service where data is automatically sharded (Partitions data) across multiple Redis nodes (Automatically split your dataset among multiple nodes). 
