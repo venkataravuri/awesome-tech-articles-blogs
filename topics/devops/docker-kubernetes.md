@@ -1,5 +1,30 @@
 # Kubernetes
 
+## Networking
+
+Source: https://itnext.io/an-illustrated-guide-to-kubernetes-networking-part-1-d1ede3322727
+
+Kubernetes Networking has one important fundamental design philosophy: **_Every Pod has a unique IP_**
+
+This Pod IP is shared by all the containers in this Pod, and it’s routable from all the other Pods.
+
+Ever notice some “pause” containers running on your Kubernetes nodes? They are called “sandbox containers”, whose only job is to reserve and hold a network namespace (netns) which is shared by all the containers in a pod. This way, a pod IP doesn’t change even if a container dies and a new one in created in it’s place.
+
+K8s isn’t responsible for network connectivity between containers: for this, various CNI (Container Networking Interface) plugins are used.
+
+For example, the most popular of such plugins, Flannel, enables full network connectivity between all cluster nodes by running a small binary agent on each node. With it, Flannel allocates a subnet to each host. However, full and unregulated network accessibility is not always good. To ensure minimum isolation in the cluster, you have to deal with the firewall configuration. Generally, the CNI itself is in charge of such a configuration, that is why any third-party attempts to modify iptables rules might be interpreted incorrectly or ignored altogether.
+
+
+### Calico
+
+Calico plugin as a stand-alone tool or with Flannel (via Canal subproject) to implement network connectivity features and to manage accessibility.
+
+Well, here is the list of NetworkPolicy’s features:
+- policies are limited to an environment (namespaces);
+- policies are applied to pods marked with labels;
+- you can apply rules to pods, environments or subnets;
+- the rules may contain protocols, numerical or named ports.
+
 ## Storage Types
 
 Kubernetes has below storage types for running stateful containers,
