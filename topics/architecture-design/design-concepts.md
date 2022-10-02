@@ -47,6 +47,30 @@ DDD Architecture Layers
 
 ### How DDD benefits? Is it worth?
 
+### SOLID Principles
+
+- S – Single Responsibility Principle
+- O – Open-Closed Principle
+- L – Liskov Substitution Principle
+- I – Interface Segregation Principle
+- D – Dependency Inversion Principle
+
+https://www.linkedin.com/pulse/solid-design-principles-python-examples-hiral-amodia
+
+**Single Responsibility Principle** states that **a class should have only one primary responsibility and should not take other responsibilities**. “A class should have only one reason to change”.
+
+Open Closed Principle states that “Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.”
+Following this principle ensures that a class is well defined to do what it is supposed to do. Adding any further features can be done by creating new entities that extend the existing class’s features and add more features to itself.
+
+Liskov Substitution Principle states that "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+
+The Interface Segregation Principle states that “No client should be forced to depend on methods it does not use”.
+
+The Dependency Inversion Principle states that:
+
+a). High level module should not depend on low level modules. Both should depend on abstractions
+b). Abstractions should not depend on details. Details should depend on abstractions. 
+
 ### Event Sourcing & CQRS
 
 ### Resiliency Patterns
