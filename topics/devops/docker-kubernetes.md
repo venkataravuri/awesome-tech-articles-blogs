@@ -14,6 +14,12 @@ K8s isn’t responsible for network connectivity between containers: for this, v
 
 For example, the most popular of such plugins, Flannel, enables full network connectivity between all cluster nodes by running a small binary agent on each node. With it, Flannel allocates a subnet to each host. However, full and unregulated network accessibility is not always good. To ensure minimum isolation in the cluster, you have to deal with the firewall configuration. Generally, the CNI itself is in charge of such a configuration, that is why any third-party attempts to modify iptables rules might be interpreted incorrectly or ignored altogether.
 
+#### Kubernetes Network Policies vs. Firewalls: What Is the Difference?
+
+Kubernetes NetworkPolicy resource allows you to limit traffic to and from pods.
+
+NetworkPolicy in a Kubernetes cluster, it is not a replacement for firewalls. A NetworkPolicy controls traffic within the cluster (known as east-west traffic) while a firewall restricts ingress and egress traffic to or from the cluster (known as north-west traffic).
+
 
 ### Calico
 
