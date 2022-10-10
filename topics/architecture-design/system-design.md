@@ -176,3 +176,39 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 |:star:|[Elevator System Design](https://medium.com/geekculture/system-design-elevator-system-design-interview-question-6e8d03ce1b44)
 
 ## Design a TinyURL Service
+
+## Design a Twitter
+
+Twitter is read-heavy
+
+Publishing
+
+Publishing is the step where the feed data is pushed according to each specific user. This can be a quite heavy operation, as a user may have millions of friends or followers. To deal with this, we have three different approaches:
+
+Pull Model (or Fan-out on load)
+
+When a user creates a tweet, and a follower reloads their newsfeed, the feed is created and stored in memory.
+
+Push Model (or Fan-out on write)
+
+In this model, once a user creates a tweet, it is "pushed" to all the follower's feeds immediately. This prevents the system from having to go through a user's entire followers list to check for updates.
+
+Hybrid model allows only users with a lesser number of followers to use the push model and for users with a higher number of followers celebrities, the pull model will be used.
+
+- Fanout approach for writes -Do a lot of processing when tweets arrive to figure out where tweets should go. This makes read time access fast and easy. Don’t do any computation on reads.
+- 
+
+https://systemdesigntutorial.com/design-twitter/
+
+Data Partitioning
+
+To scale out our databases we will need to partition our data. Horizontal partitioning (aka Sharding) can be a good first step. We can use partitions schemes such as:
+
+    Hash-Based Partitioning
+    List-Based Partitioning
+    Range Based Partitioning
+    Composite Partitioning
+
+The above approaches can still cause uneven data and load distribution, we can solve this using Consistent hashing.
+
+
