@@ -121,9 +121,21 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 |:star:|[A design for large-scale job schedulers](https://towardsdatascience.com/ace-the-system-design-interview-job-scheduling-system-b25693817950)
 
 ## Design Payments System
+
+#### Challenges
+- Relaibility with high throughput
+- Payment processing should be idempotent and crash-tolerant
+- Resiliencey when service crash
+- Charged once and exactly once.
+
+- ront-end service accepts a user’s payment request. The first order of business is to set up a record in a database 
+- front-end service also puts a message on the payment queue
+- Centralized Orchestrator like Netflix Conducutor. 
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design payments system like Google Pay or PayTM](https://careercup.com/page?pid=system-design-interview-questions)
+|:star:|[System design practice: designing a payment system](https://www.linkedin.com/pulse/system-design-practice-designing-payment-avik-das)
 
 ## Design a Video Streaming Service
 ||Article / Blog| Notes
