@@ -1,4 +1,8 @@
 
+https://sbcode.net/python/observer/#observerobserver_conceptpy
+
+
+
 
 ### Observer Pattern
 
