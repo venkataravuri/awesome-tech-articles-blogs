@@ -67,6 +67,17 @@ producer.send(producerRecord, new Callback() {
                 "Timestamp: " + recordMetadata.timestamp());
 ```
 
+--bootstrap-server parameter occurs only for consumer. On the other side, --broker-list is on parameter list only for producer.
+
+--broker-list
+    - a full list of servers, if any missing producer may not work
+    - related to producer commands
+
+--bootstrap-servers
+    - one is enough to discover all others
+    - related to consumer commands
+    - Zookeeper involved
+
 ### Java Producer with Keys
 
 Keys become useful when a user wants to introduce ordering and ensure the messages that share the same key end up in the same partition.
