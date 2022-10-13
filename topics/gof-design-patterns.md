@@ -2,7 +2,8 @@
 https://sbcode.net/python/observer/#observerobserver_conceptpy
 
 
-
+Python Finate State Machine + State Pattern:
+https://auth0.com/blog/state-pattern-in-python/
 
 ### Observer Pattern
 
