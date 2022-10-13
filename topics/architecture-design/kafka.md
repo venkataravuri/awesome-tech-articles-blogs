@@ -31,9 +31,7 @@ By default, Kafka uses a number of paths in zookeeper:
 - Consumer offset: /consumers/[groupId]/offsets/[topic]/[partitionId] -> long (offset)
 - /admin: This contains delete topic requests
 - /config: This contains overriden configs for brokers, quotas
-    
-And the list goes on ...
-https://stackoverflow.com/questions/54989802/where-kafka-store-the-meta-data-on-zookeeper-which-path
+    - /config/topics/[topic_name]
 
 ### Explan role of Kafka Controller?
 
@@ -43,9 +41,7 @@ It is like a brain for the cluster so that the cluster functions in a smooth and
 
 Whenever a Kafka Cluster is spun up, the brokers will first create a session with the zookeeper and the brokers will try to create an ephemeral node “/controller” inside the zookeeper. The broker that will be able to successfully create the “/controller” node will become the controller.
 
-The rest of the brokers will create a watch on this “/controller” node.
-    
-As soon as the controller goes down or its session with the zookeeper is lost then this znode will be deleted and the rest of the brokers will be notified, and a new controller will be elected again.
+The rest of the brokers will create a watch on this “/controller” node. As soon as the controller goes down or its session with the zookeeper is lost then this znode will be deleted and the rest of the brokers will be notified, and a new controller will be elected again.
 
 In a Kafka cluster, one of the brokers serves as the controller, which is responsible for managing the states of partitions and replicas and for performing administrative tasks like reassigning partitions. At any given time there is only one controller broker in your cluster.
 
@@ -53,7 +49,23 @@ In a Kafka cluster, one of the brokers serves as the controller, which is respon
 
 ### Producer Example
 
-https://www.conduktor.io/kafka/complete-kafka-producer-with-java
+Source: https://www.conduktor.io/kafka/complete-kafka-producer-with-java
+```
+ProducerRecord<String, String> producerRecord = new ProducerRecord<>(topic, key, value);
+
+// send data - asynchronous
+producer.send(producerRecord, new Callback() {
+    public void onCompletion(RecordMetadata recordMetadata, Exception e) {
+        // executes every time a record is successfully sent or an exception is thrown
+        if (e == null) {
+            // the record was successfully sent
+            log.info("Received new metadata. \n" +
+                "Topic:" + recordMetadata.topic() + "\n" +
+                "Key:" + producerRecord.key() + "\n" +
+                "Partition: " + recordMetadata.partition() + "\n" +
+                "Offset: " + recordMetadata.offset() + "\n" +
+                "Timestamp: " + recordMetadata.timestamp());
+```
 
 ### Java Producer with Keys
 
