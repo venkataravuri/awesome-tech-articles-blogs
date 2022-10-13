@@ -82,6 +82,12 @@ producer.send(producerRecord, new Callback() {
 
 Keys become useful when a user wants to introduce ordering and ensure the messages that share the same key end up in the same partition.
 
+Batching messages enables a Kafka producer to increase its throughput. Reducing the number of network requests the producer makes in order to send data will improve the performance of the system.
+
+There are two parameters to configure on the Kafka producer that control message batching, and understanding these is key to optimising throughput. 
+- batch.size - Upper bound batch size
+- linger.ms - The maximum time to wait to reach batch size
+
 ### Consumer Example
 
 https://www.conduktor.io/kafka/complete-kafka-consumer-with-java
