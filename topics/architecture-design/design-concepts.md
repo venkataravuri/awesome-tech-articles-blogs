@@ -55,14 +55,23 @@ DDD Architecture Layers
 - I – Interface Segregation Principle
 - D – Dependency Inversion Principle
 
+**Design Pattern** - is like a cure against some disease. And **Disease** - is violation of _S.O.L.I.D._
+
+All Design Patterns compliance S.O.L.I.D principles, and other principles: Prefer composition to inheritance Incapsulate changes Do high cohesion and low coupling etc 
+
 https://www.linkedin.com/pulse/solid-design-principles-python-examples-hiral-amodia
 
 **Single Responsibility Principle** states that **a class should have only one primary responsibility and should not take other responsibilities**. “A class should have only one reason to change”.
 
-Open Closed Principle states that “Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.”
+**Open-Closed Principle** states that “Software entities (classes, modules, functions, etc.) **should be open for extension, but closed for modification**_.”
+
 Following this principle ensures that a class is well defined to do what it is supposed to do. Adding any further features can be done by creating new entities that extend the existing class’s features and add more features to itself.
 
-Liskov Substitution Principle states that "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+Open-close is a principle which strategy pattern is a good way to implementing that, There are other patterns that help achieve OCP, like Abstract Factory. You can achieve OCP in a class by externalizing some of its responsibilities to a Strategy and writing new Strategies instead of modifying the class itself, but it is not the only way of respecting OCP. 
+
+Collections.sort works on any collection of objects that implement the Comparable interface, it is not limited to sorting just integers or just strings — it is not limited to any specific type. The sorting algorithm will work as it was designed, so we can say that it is closed to modification, but the sorting criteria will vary depending on the compareTo method implementation
+
+_**Liskov Substitution Principle**_ states that "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
 
 The Interface Segregation Principle states that “No client should be forced to depend on methods it does not use”.
 
