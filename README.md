@@ -7,7 +7,7 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 || Topic | Description |
 |---|:---|:---|
 |:rocket:|**[System Design Articles](topics/architecture-design/system-design.md)** | Realworld system design samples. |
-|:fire:|**[Design Concepts & Patterns](topics/architecture-design/design-concepts.md)** | Clout-Native Architectures, OOPS, GOF, ... |
+|:fire:|**[CNA Concepts](topics/architecture-design/design-concepts.md)**, [Design Patterns](topics/gof-design-patterns.md)| Clout-Native Architectures, OOPS, GOF Patterns, ... |
 |:hamburger:|**[Probabilistic Data Structures](topics/architecture-design/data-structures.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
 |:love_hotel:|**[Multi-Tenant SaaS Systems Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
 |:mag_right:|**[Search Technologies - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
