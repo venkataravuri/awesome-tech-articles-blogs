@@ -21,14 +21,17 @@
 
 
 ## Design a Food/Grocery Delivery System
+### Overview
+System design approaches for applications similar to DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
+### Data Structures & Algorithms
 
-System design approaches for applications similar to DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ... 
+### Design Patterns
 
-| | Article / Blog | Notes |
-------------: | ------------- | -------------
+| | Article / Blog |
+------------: | ------------- |
 |:star::star:|[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
 |:star::star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
-|:star:|[Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|Design Patterns: ? <br/>Data Structures: ? <br/>Algroithms: ?
+|:star:|[Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|
 |:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
 |:star:|[Yelp System Design](https://systemdesigntutorial.com/yelp/)
 |:star:|[Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
@@ -36,10 +39,14 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 ## Design a Flash Sale System
 
-### Challenges
+### Overview
 - Handle write heavy traffic & high concurrency
 - Avoid overselling inventory
-- Multiple requests from same user (different browser sessions)
+- Multiple requests from same user (different browser sessions)### Data Structures & Algorithms
+
+### Data Structures & Algorithms
+
+### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -48,16 +55,37 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 |:star:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| |
 
 ## Design a Search Engine
+
+### Overview
+
+### Data Structures & Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
 
 ## Design a Parking Lot
+
+### Overview
+
+### Data Structures & Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star::star::star:|[Design a Parking Lot System](https://medium.com/double-pointer/system-design-interview-parking-lot-system-ff2c58167651)
 
 ## Design a Rate Limiter
+
+### Overview
+
+### Data Structures & Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Rate limiter](https://hechao.li/2018/06/25/Rate-Limiter-Part1/)
@@ -67,6 +95,13 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 
 ## Design a Vending Machine
+
+### Overview
+
+### Data Structures & Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design vending system](https://careercup.com/question?id=5768722967429120)
@@ -75,7 +110,9 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 ## Design a Ride Share App
 
-#### Data Structures
+### Overview
+
+### Data Structures & Algorithms
 
 - Quadtrees are a data structure that encode a two-dimensional space into adaptable cells. quadtrees are a tree structure where every non-leaf node has exactly four children. In the context of location, these nodes represent the four quadrants: NW, NE, SW, and SE. 
 - Google S2 library (which uses a quadtree data structure). This library divides the map data into tiny cells (for example 2km) and gives the unique ID to each cell. Suppose you want to figure out all the cabs available within a 2km radius of a city. Using the S2 libraries you can draw a circle of 2km radius and it will filter out all the cells with IDs lies in that particular circle. This way you can easily match the rider to the driver and you can easily find out the number of cab available in a particular region.
@@ -101,6 +138,8 @@ Customers will send their current location so that the server can find nearby dr
 
 We’ve assumed one million active customers and 500 thousand active drivers per day. Let’s assume that five customers subscribe to one driver. We’ll store this information in a hash table for quick updates.
 
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star::star::star:|https://www.educative.io/blog/uber-backend-system-design
@@ -109,11 +148,15 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 
 ## Design a Distributed Job Schedular
-#### Challenges
+
+### Overview
 - Scheduling millions of jobs.
-#### Data Structures, Algorithms, Patterns
+
+### Data Structures, Algorithms
 - On single computer, Sorted Set + HashMap + Multiprocessing Queues
 - Must be disttibued for scaling, ...
+
+### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -122,7 +165,7 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 ## Design Payments System
 
-#### Challenges
+### Overview
 - Relaibility with high throughput
 - Payment processing should be idempotent and crash-tolerant
 - Resiliencey when service crash
@@ -131,6 +174,10 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 - ront-end service accepts a user’s payment request. The first order of business is to set up a record in a database 
 - front-end service also puts a message on the payment queue
 - Centralized Orchestrator like Netflix Conducutor. 
+
+### Data Structures, Algorithms
+
+### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -143,6 +190,13 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 |:star:|[Design a video streaming service](https://medium.com/double-pointer/system-design-interview-video-streaming-service-e-g-netflix-or-youtube-design-adc2402e54a1)
 
 ## Design a Typeahead Search
+
+### Overview
+
+### Data Structures, Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star::star:|[Proximity-Based Typeahead Search as a Service](https://engblog.nextdoor.com/typeahead-search-at-nextdoor-1875e70c67e8)
@@ -150,27 +204,63 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 |:star:|[Design Yelp or Nearby Places/Friends a proximity server](https://codeburst.io/design-a-proximity-server-like-yelp-part-2-d430879203a5)
 
 ## Design a Chat Service
+
+
+### Overview
+
+### Data Structures, Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a Chat Service - Whatsapp Architecture](https://www.cometchat.com/blog/whatsapps-architecture-and-system-design)
 
 ## How to Scan Malware?
+
+### Overview
+
+### Data Structures, Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a service to scan photos/videos for any malware?](https://careercup.com/question?id=5091933672701952)
 
 ## Design a Voting System
+
+### Overview
+
+### Data Structures, Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a voting system](https://careercup.com/question?id=5630501784649728)
 
 ## Design a Finate Sate Machine
+
+### Overview
+
+### Data Structures, Algorithms
+
+### Design Patterns
+
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
 |:star:|[Finate State Machine](https://github.com/davidmoten/state-machine)
 
 ## Design a Elevator
+
+### Overview
+
+### Data Structures, Algorithms
+
+### Design Patterns
+
 |Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Elevator System Design](https://medium.com/geekculture/system-design-elevator-system-design-interview-question-6e8d03ce1b44)
@@ -178,6 +268,8 @@ https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahea
 ## Design a TinyURL Service
 
 ## Design a Twitter
+
+### Overview
 
 Twitter is read-heavy
 
@@ -211,4 +303,7 @@ To scale out our databases we will need to partition our data. Horizontal partit
 
 The above approaches can still cause uneven data and load distribution, we can solve this using Consistent hashing.
 
+### Data Structures, Algorithms
+
+### Design Patterns
 
