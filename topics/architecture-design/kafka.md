@@ -99,9 +99,15 @@ https://stackoverflow.com/questions/56794122/metadata-requests-in-kafka-producer
 
 ### Consumers partition allcoation
 
-The consumers in a group divide the topic partitions as fairly amongst themselves as possible by establishing that each partition is only consumed by a single consumer from the group. When the number of consumers is lower than partitions, same consumers are going to read messages from more than one partition.
+https://medium.com/lydtech-consulting/kafka-consumer-group-rebalance-1-of-2-7a3e00aa3bb4
 
-Ideally, the number of partitions should be equal to the number of consumers. Should the number of consumers be greater, the excess consumers were to be idle, wasting client resources. If the number of partitions is greater, some consumers will read from multiple partitions, which should not be an issue unless the ordering of messages is important.
+A consumer belongs to a consumer group. Within the consumer group, consumers are assigned topic partitions from which to consume. Group membership is managed on the broker side, and partition assignment is managed on the client side.
+
+Group Coordinator manages the consumer group and the consumers, is a Kafka component that lives on the broker side. It will make one consumer the lead, and this will be responsible for computing the topic partition assignments. These are returned to the Group Coordinator which then assigns the partitions to the consumers.
+
+Given a single application instance, with a consumer with a group.id of ‘foo’ listening to a particular topic, and that topic has six partitions, then the consumer will poll for messages across all six partitions.
+
+Now a second instance of the application is started. This therefore starts a second consumer instance with the same group.id of ‘foo’. The second consumer instance sends a JoinGroup request to the Group Coordinator, and the partitions are reassigned across the consumer group to spread the load. With two members in the consumer group, three partitions are assigned to each consumer instance.
 
 ### Is having a Consumer Group mandatory in Kafka?
 
