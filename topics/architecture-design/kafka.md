@@ -1,5 +1,10 @@
 # Kafka Internals, Scalability & Performance
 
+### Challenges faced
+
+The application couldn’t send a heartbeat to the Kafka consumer coordinator and the application was going for a rebalance.
+
+
 ### How Kafka Nodes and zookeeper will communicate with each other?
 
 Apache Kafka uses Zookeeper to,
