@@ -1,5 +1,20 @@
 # Machine Learning
 
+
+### Loss Vs. Optimizer
+
+Think of loss function has what to minimize and optimizer how to minimize the loss.
+
+The *loss* is way of measuring difference between target label(s) and prediction label(s).
+* Loss could be "mean squared error", "mean absolute error loss also known as L2 Loss", "Cross Entropy" ... and in order to reduce it, weights and biases are updated after each epoch. Optimizer is used to calculate and update them.
+
+The optimization strategies aim at minimizing the cost function.
+
+#### Loss Function Vs. Cost Function
+Cost function and loss function are synonymous and used interchangeably, they are different.
+
+A loss function is for a single training example. It is also sometimes called an error function. A cost function, on the other hand, is the average loss over the entire training dataset.
+
 * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
 * [Stemming](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stemming)
 * [Lemmatization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#lemmatization)
