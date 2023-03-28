@@ -1,5 +1,34 @@
 # Machine Learning
 
+### Activation Functions
+
+Activation functions transforms the weighted sum of a neuron so that the output is non-linear
+
+#### Sigmoid
+
+The most common sigmoid function used in machine learning is Logistic Function, as the formula below.
+https://miro.medium.com/v2/resize:fit:382/format:webp/1*VE7kb7J2lEo5zsUGyHgMWQ.png
+
+The formula is simple, but it is quite useful because it offers us some nice properties:
+* It maps the feature space into probability functions
+* It uses exponential
+* It is differentiable
+
+
+Sigmoid is used for binary classification
+
+#### Softmax
+
+The Softmax function is a generalized form of the logistic function
+
+the softmax function also has the following advantages so that people are widely using it in multi-class classification problems:
+
+* It maps the feature space into probability functions
+* It uses exponential
+* It is differentiable
+
+Softmax is used for multi-classification
+The probabilities sum will be 1
 
 ### Loss Vs. Optimizer
 
