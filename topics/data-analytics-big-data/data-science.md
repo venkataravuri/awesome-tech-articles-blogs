@@ -30,6 +30,11 @@ the softmax function also has the following advantages so that people are widely
 Softmax is used for multi-classification
 The probabilities sum will be 1
 
+
+
+References: 
+* https://towardsdatascience.com/understanding-sigmoid-logistic-softmax-functions-and-cross-entropy-loss-log-loss-dbbbe0a17efb
+
 ### Loss Vs. Optimizer
 
 Think of loss function has what to minimize and optimizer how to minimize the loss.
@@ -44,6 +49,8 @@ Cost function and loss function are synonymous and used interchangeably, they ar
 
 A loss function is for a single training example. It is also sometimes called an error function. A cost function, on the other hand, is the average loss over the entire training dataset.
 
+the log magnifies the mistake in the classification, so the misclassification will be penalized much more heavily compared to any linear loss functions. The closer the predicted value is to the opposite of the true value, the higher the loss will be, which will eventually become infinity. That’s exactly what we want a loss function to be. 
+
 * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
 * [Stemming](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stemming)
 * [Lemmatization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#lemmatization)
@@ -51,6 +58,13 @@ A loss function is for a single training example. It is also sometimes called an
 * [Parts of Speech (POS) Tagging](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#parts-of-speech)
 * [TF-IDF](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tf-idf)
 * [Word Embeddings](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#word-embeddings)
+
+
+#### Cross Entropy Loss 
+
+##### Log Loss - Binary Cross-Entropy Loss
+
+
 
 
 ## Feature Engineering
