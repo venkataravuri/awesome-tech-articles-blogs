@@ -11,6 +11,13 @@ Confusion Matrix, Accuracy, Precision, Recall and F1Score
 
 You shouldn’t use accuracy on imbalanced problems. Then, it is easy to get a high accuracy score by simply classifying all observations as the majority class.
 
+### Large Language Models Evaluation Metrics
+
+Perplexity (PPL) is one of the most common metrics for evaluating language models. 
+https://huggingface.co/docs/transformers/perplexity
+
+https://github.com/openai/evals
+
 
 ### Activation Functions
 
