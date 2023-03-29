@@ -1,5 +1,17 @@
 # Machine Learning
 
+### Model Evaluation Metrics
+
+
+#### Binary Classfication Metric
+
+Confusion Matrix, Accuracy, Precision, Recall and F1Score
+
+:star::star::star: https://medium.com/analytics-vidhya/confusion-matrix-accuracy-precision-recall-f1-score-ade299cf63cd
+
+You shouldn’t use accuracy on imbalanced problems. Then, it is easy to get a high accuracy score by simply classifying all observations as the majority class.
+
+
 ### Activation Functions
 
 Activation functions transforms the weighted sum of a neuron so that the output is non-linear
