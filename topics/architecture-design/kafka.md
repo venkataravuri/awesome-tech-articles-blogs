@@ -16,6 +16,19 @@ In order to remain part of the Kafka cluster, each broker has to send keep-alive
 
 Source: https://stackoverflow.com/questions/54013250/how-kafka-nodes-and-zookeeper-will-communicate-with-each-other
 
+
+#### What is Difference between broker-list and bootstrap servers?
+
+--broker-list as it is now deprecated.
+
+Now for both producer and consumer we have to use --bootstrap-server
+
+#### Will Consumers connect to Zookeeper?
+
+From v0.9 onwards, consumer has no zookeeper dependency and does not connect to zookeeper at all.
+
+Consumer connects to a Kafka broker directly. Consumer offsets are stored in specific topic named __consumer_offsets.
+
 ### Kafka NO Longer Requires ZooKeeper (In future)
 
 Until now, Apache ZooKeeper was used by Kafka as a metadata store. Metadata for partitions and brokers were stored to the ZooKeeper quorum that was also responsible for Kafka Controller election.
