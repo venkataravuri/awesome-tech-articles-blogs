@@ -114,6 +114,9 @@ Given a single application instance, with a consumer with a group.id of ‘foo�
 
 Now a second instance of the application is started. This therefore starts a second consumer instance with the same group.id of ‘foo’. The second consumer instance sends a JoinGroup request to the Group Coordinator, and the partitions are reassigned across the consumer group to spread the load. With two members in the consumer group, three partitions are assigned to each consumer instance.
 
+#### Consumer Group Coordinator Vs. Consumer Group Leader
+https://stackoverflow.com/questions/42015158/what-is-the-difference-in-kafka-between-a-consumer-group-coordinator-and-a-consu
+
 ### Is having a Consumer Group mandatory in Kafka?
 
 Yes, it is mandatory to specify Kafka which consumer would belong to which consumer group. If you do not set the consumer group id in your app, you will get an exception. If you start a consumer to consume from a topic using the Kafka CLI command, then a new random consumer group is created with the name console-consumer-<some_random_number> and the consumer automatically falls under this consumer group.
