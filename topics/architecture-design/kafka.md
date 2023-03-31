@@ -117,6 +117,8 @@ https://stackoverflow.com/questions/56794122/metadata-requests-in-kafka-producer
 
 ### Consumers partition allcoation
 
+:star::star::star https://developer.confluent.io/learn-kafka/architecture/consumer-group-protocol/
+
 https://medium.com/lydtech-consulting/kafka-consumer-group-rebalance-1-of-2-7a3e00aa3bb4
 
 A consumer belongs to a consumer group. Within the consumer group, consumers are assigned topic partitions from which to consume. Group membership is managed on the broker side, and partition assignment is managed on the client side.
@@ -238,6 +240,8 @@ Leverage k8s’s Operator pattern and Custom Resource Definition (CRD) to manage
 The _**record-lag metric**_ and number of partitions per topic are dynamic values that can be changed anytime in production environment.
     
 The new CRD KconsumerGroup is a Primary Resource and its spec describes the individual consumer specification such as consumer name, image, the topic it should poll messages from, minReplicas indicates the minimum number of consumers to start with, averageRecordsLagLimit set the threshold for HPA to scale out. In term of status, we want to see active pods and a customised message.
+
+You can have multiple Kafka clusters share a common zookeeper ensemble but it's not recommended because it will complicate your ability to upgrade zookeeper
 
 ### How did you setup Kafka on K8s?
     
