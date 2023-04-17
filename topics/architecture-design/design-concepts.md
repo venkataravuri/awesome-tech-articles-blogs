@@ -57,6 +57,8 @@ DDD Architecture Layers
 
 **Design Pattern** - is like a cure against some disease. And **Disease** - is violation of _S.O.L.I.D._
 
+https://www.slideshare.net/DrTrucho/python-solid
+
 All Design Patterns compliance S.O.L.I.D principles, and other principles: Prefer composition to inheritance Incapsulate changes Do high cohesion and low coupling etc 
 
 https://www.linkedin.com/pulse/solid-design-principles-python-examples-hiral-amodia
