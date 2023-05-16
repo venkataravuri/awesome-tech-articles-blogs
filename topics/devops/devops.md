@@ -32,8 +32,21 @@ https://newrelic.com/devops/what-is-devops
 	- Source Composition Analysis
 		* Black Duck
 
+Static image analysis
+- Carbon Black
+
+Static workload analysis
+- Carbon Black
+
+Artifact signing using CoSign
+Image signing using CoSign
+
+Image Verification via Sigstore
+
 - Container Security
 	- Octane
+
+Secure infrastructure provisioning via Saltstack
 
 ### GitOps
 
