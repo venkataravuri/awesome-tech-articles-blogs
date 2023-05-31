@@ -338,3 +338,5 @@ The above approaches can still cause uneven data and load distribution, we can s
 
 ### Design Patterns
 
+
+https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-service-for-powering-autocomplete-c20f98e2eff1
