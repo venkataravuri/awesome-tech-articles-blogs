@@ -1,6 +1,9 @@
 
 # System Design Articles
 
+What could be interviewer expectations?
+System components/Architecture, Data Structures, Algorithms, Design Methdolgoies, Technology Choices, Tradeoffs, ...
+
 - [Design a Gorcery/food Delvery Application](system-design.md#design-a-food--grocery-delivery-system)
 - [Design a Flash Sale System](system-design.md#design-a-flash-sale-system)
 - [Design a Search Engine](system-design.md#design-a-search-engine)
