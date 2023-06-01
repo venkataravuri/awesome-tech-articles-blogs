@@ -186,7 +186,7 @@ https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-se
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
-|:star:|[Design a voting system](https://careercup.com/question?id=5630501784649728)
+|:star:|[Design a voting system]()
 
 ## Design a Finate Sate Machine
 
@@ -194,10 +194,11 @@ https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-se
 ------------: | ------------- | -------------
 |:star:|https://medium.datadriveninvestor.com/state-machine-design-pattern-why-how-example-through-spring-state-machine-part-1-f13872d68c2d
 |:star:|[Finate State Machine](https://github.com/davidmoten/state-machine)
+|:star::star:|[Python - State Machine Implementation](https://github.com/pytransitions/transitions)
 
 ## Design a Elevator
 
-|Article / Blog| Notes
+||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Elevator System Design](https://medium.com/geekculture/system-design-elevator-system-design-interview-question-6e8d03ce1b44)
 
