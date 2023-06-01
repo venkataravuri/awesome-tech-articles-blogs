@@ -1,7 +1,7 @@
 
 # System Design Articles
 
-### Preword
+### Quick Guidance
 
 Focus on,
 - Identity subsystem components that make up solution - Functional modules, services, APIs, ...
