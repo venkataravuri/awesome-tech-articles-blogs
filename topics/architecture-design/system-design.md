@@ -245,3 +245,6 @@ To scale out our databases we will need to partition our data. Horizontal partit
     Composite Partitioning
 
 The above approaches can still cause uneven data and load distribution, we can solve this using Consistent hashing.
+https://www.toptal.com/big-data/consistent-hashing
+
+
