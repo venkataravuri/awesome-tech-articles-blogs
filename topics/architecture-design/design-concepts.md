@@ -61,6 +61,8 @@ https://www.slideshare.net/DrTrucho/python-solid
 
 All Design Patterns compliance S.O.L.I.D principles, and other principles: Prefer composition to inheritance Incapsulate changes Do high cohesion and low coupling etc 
 
+https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling
+
 https://www.linkedin.com/pulse/solid-design-principles-python-examples-hiral-amodia
 
 **Single Responsibility Principle** states that **a class should have only one primary responsibility and should not take other responsibilities**. “A class should have only one reason to change”.
