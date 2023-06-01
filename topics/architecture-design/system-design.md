@@ -1,8 +1,16 @@
 
 # System Design Articles
 
-What could be interviewer expectations?
-System components/Architecture, Data Structures, Algorithms, Design Methdolgoies, Technology Choices, Tradeoffs, ...
+### Preword
+
+Focus on,
+- Identity subsystem components that make up solution - Functional modules, services, APIs, ...
+- Identify Data Structures and Algorithms
+- Identify Design Methdolgoies & Tradeoffs - Pub/Sub, Microservices, Read-Write Heavy, DDD, SOLID Princples, CAP, ...
+- 4 + 1 views - Functional Architecture, Layered Technical Architecture, Deployment Architecture, Security Architecture, ...
+- Make technology choices - Polyglot Databases, Frameworks, ...
+
+## Popular System Design Articles
 
 - [Design a Gorcery/food Delvery Application](system-design.md#design-a-food--grocery-delivery-system)
 - [Design a Flash Sale System](system-design.md#design-a-flash-sale-system)
@@ -23,12 +31,9 @@ System components/Architecture, Data Structures, Algorithms, Design Methdolgoies
 - [Design a TinyURL Service](system-design.md#design-a-tinyurl-service)
 
 
-## Design a Food/Grocery Delivery System
-### Overview
-System design approaches for applications similar to DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
-### Data Structures & Algorithms
+### Design a Food/Grocery Delivery System
 
-### Design Patterns
+System design approaches for aps such as DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
 
 | | Article / Blog |
 ------------: | ------------- |
@@ -38,18 +43,14 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 |:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
 |:star:|[Yelp System Design](https://systemdesigntutorial.com/yelp/)
 |:star:|[Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
-|:star:|[Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
+|:star::star:|[Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
 
 ## Design a Flash Sale System
 
-### Overview
+### Design Considerations
 - Handle write heavy traffic & high concurrency
 - Avoid overselling inventory
 - Multiple requests from same user (different browser sessions)### Data Structures & Algorithms
-
-### Data Structures & Algorithms
-
-### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -59,35 +60,17 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 ## Design a Search Engine
 
-### Overview
-
-### Data Structures & Algorithms
-
-### Design Patterns
-
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a Search Engine](https://medium.com/double-pointer/system-design-interview-search-engine-edb66b64fd5e)
 
 ## Design a Parking Lot
 
-### Overview
-
-### Data Structures & Algorithms
-
-### Design Patterns
-
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star::star::star:|[Design a Parking Lot System](https://medium.com/double-pointer/system-design-interview-parking-lot-system-ff2c58167651)
 
 ## Design a Rate Limiter
-
-### Overview
-
-### Data Structures & Algorithms
-
-### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -99,12 +82,6 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 
 ## Design a Vending Machine
 
-### Overview
-
-### Data Structures & Algorithms
-
-### Design Patterns
-
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design vending system](https://careercup.com/question?id=5768722967429120)
@@ -112,8 +89,6 @@ System design approaches for applications similar to DoorDash, Dunzo, Zomato, Sw
 |:star:|https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html#axzz7bO38EcZi
 
 ## Design a Ride Share App
-
-### Overview
 
 ### Data Structures & Algorithms
 
@@ -152,14 +127,11 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 ## Design a Distributed Job Schedular
 
-### Overview
-- Scheduling millions of jobs.
+How to schedule millions of jobs?
 
 ### Data Structures, Algorithms
 - On single computer, Sorted Set + HashMap + Multiprocessing Queues
 - Must be disttibued for scaling, ...
-
-### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -168,7 +140,7 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 ## Design Payments System
 
-### Overview
+### Design Considerations
 - Relaibility with high throughput
 - Payment processing should be idempotent and crash-tolerant
 - Resiliencey when service crash
@@ -177,10 +149,6 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 - ront-end service accepts a user’s payment request. The first order of business is to set up a record in a database 
 - front-end service also puts a message on the payment queue
 - Centralized Orchestrator like Netflix Conducutor. 
-
-### Data Structures, Algorithms
-
-### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -194,26 +162,15 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 ## Design a Typeahead Search
 
-### Overview
-
-### Data Structures, Algorithms
-
-### Design Patterns
-
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star::star:|[Proximity-Based Typeahead Search as a Service](https://engblog.nextdoor.com/typeahead-search-at-nextdoor-1875e70c67e8)
 |:star:|https://medium.com/double-pointer/system-design-interview-autocomplete-type-ahead-system-for-a-search-box-1ac968f9f121
 |:star:|[Design Yelp or Nearby Places/Friends a proximity server](https://codeburst.io/design-a-proximity-server-like-yelp-part-2-d430879203a5)
 
+https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-service-for-powering-autocomplete-c20f98e2eff1
+
 ## Design a Chat Service
-
-
-### Overview
-
-### Data Structures, Algorithms
-
-### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -221,35 +178,17 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 ## How to Scan Malware?
 
-### Overview
-
-### Data Structures, Algorithms
-
-### Design Patterns
-
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a service to scan photos/videos for any malware?](https://careercup.com/question?id=5091933672701952)
 
 ## Design a Voting System
 
-### Overview
-
-### Data Structures, Algorithms
-
-### Design Patterns
-
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Design a voting system](https://careercup.com/question?id=5630501784649728)
 
 ## Design a Finate Sate Machine
-
-### Overview
-
-### Data Structures, Algorithms
-
-### Design Patterns
 
 ||Article / Blog| Notes
 ------------: | ------------- | -------------
@@ -258,19 +197,11 @@ We’ve assumed one million active customers and 500 thousand active drivers per
 
 ## Design a Elevator
 
-### Overview
-
-### Data Structures, Algorithms
-
-### Design Patterns
-
 |Article / Blog| Notes
 ------------: | ------------- | -------------
 |:star:|[Elevator System Design](https://medium.com/geekculture/system-design-elevator-system-design-interview-question-6e8d03ce1b44)
 
 ## Design TinyURL Service
-
-### Overview
 
 URL Shortening logic: 6 or 7 or 8 char random ID
 
@@ -297,13 +228,8 @@ Sequence numbers are per-thread and worker numbers are chosen at startup via zoo
 
 https://www.thinksoftwarelearning.com/pages/tiny-url-design
 
-### Data Structures, Algorithms
-
-### Design Patterns
 
 ## Design a Twitter
-
-### Overview
 
 Twitter is read-heavy
 
@@ -336,10 +262,3 @@ To scale out our databases we will need to partition our data. Horizontal partit
     Composite Partitioning
 
 The above approaches can still cause uneven data and load distribution, we can solve this using Consistent hashing.
-
-### Data Structures, Algorithms
-
-### Design Patterns
-
-
-https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-service-for-powering-autocomplete-c20f98e2eff1
