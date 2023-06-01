@@ -20,6 +20,10 @@ Kubernetes NetworkPolicy resource allows you to limit traffic to and from pods.
 
 NetworkPolicy in a Kubernetes cluster, it is not a replacement for firewalls. A NetworkPolicy controls traffic within the cluster (known as east-west traffic) while a firewall restricts ingress and egress traffic to or from the cluster (known as north-west traffic).
 
+**In TKG ** Antrea is default CNI.
+
+https://medium.com/geekculture/k8s-node-ip-vs-pod-ip-vs-cluster-ip-65f75d4432b8
+
 
 ### Calico
 
