@@ -203,31 +203,13 @@ https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-se
 
 ## Design TinyURL Service
 
-URL Shortening logic: 6 or 7 or 8 char random ID
+#### Design Considerations & Challenges
 
-Base 62/64 Vs. MD5
-Base 62: Take int/long and gives out base62 output which contains int or char(small/caps), safest bet.
-MD5:Take unique string (long URL) and gives base62 output, gives a lengthy output of which we take only 7 chars which can result in lots of collisions. same unique id leads to data corruption.
+- URL Shortening logic: 6 or 7 or 8 random characters
+- Unquiness of Short URL & Concurrency 
 
-Base62 Python Code: https://miro.medium.com/max/4800/1*R5qb0AC0joNblNhPy5g9Pw.png
-
-Unquiness of Short URL & Concurrency 
-
-Pre-generated IDs and allocate.
-
-Zookeeper to maintain a range of counter values that each app server can use for generating short URLs. However, this adds extra complexity to the design as now you also need to maintain another service. 
-
-key-generation service (KGS), which generates unique short URLs and returns them to the app servers. If KGS has more than one server, it adds lots of complexity to KGS service's design that how the KGS service will be generating unique keys and passing them to the app server when several app servers contact KGS service. 
-
-data store, we are storing a counter key-value. Now when an app-server comes up, it will go to the datastore and read and increment this counter value in a database transaction by some increment value. The increment value could be passed to the server as a starting configuration and could be 10, 100, or 1000. Let us take 100 as an example increment value right now. Now when after reading and incrementing the counter by 100 when the app server commits the transaction successfully, then it can safely assume that it can use all the counter values starting from the read value up to read value plus 99 for generating short URLs.
-
-Twitter Snowflake
-
-generate the roughly-sorted 64 bit ids in an uncoordinated manner, we settled on a composition of: timestamp, worker number and sequence number.
-Sequence numbers are per-thread and worker numbers are chosen at startup via zookeeper (though that’s overridable via a config file).
-
-https://www.thinksoftwarelearning.com/pages/tiny-url-design
-
+|:star:|[Tiny URL Design](https://www.thinksoftwarelearning.com/pages/tiny-url-design)
+|:star:|[Twitter Snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)
 
 ## Design a Twitter
 
