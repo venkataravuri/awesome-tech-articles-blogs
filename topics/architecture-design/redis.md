@@ -1,17 +1,24 @@
 
 # Redis
 
-**Re**mote **Di**ctionary **S**ervice
+Redis ~ **Re**mote **Di**ctionary **S**ervice
+- Redis is mostly single-threaded, except background IO
+- A distributed data structure server
+    - Key:String => Value:String
+    - Key:String => Value:List
+    - Key:String => Value:Set
+    - Key:String => Value:Zset
+    - [List of Redis Data Structures](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Jo5_Qy3oXe4i0gqLQINi0A.png)
+- Operations on any Type
 
-A distributed data structure server
-- Key:String => Value:String
-- Key:String => Value:List
-- Key:String => Value:Set
-- Key:String => Value:Zset
+### Redis Sorted Sets
 
-Operations on any Type
+[Try to understand Sorted Sets with a leaderboard example](https://medium.com/analytics-vidhya/redis-sorted-sets-explained-2d8b6302525)
+[Redis SortedSets](https://redis.io/docs/data-types/sorted-sets/)
 
-Redis is mostly single-threaded, except background IO
+In Redis, sorted sets having scaling limitations. A sorted set cannot be partitioned. As a result, if the size of a sorted set exceeds the size of the partition, there is nothing you can do (without modifying Redis).
+
+[ChatGPT redis-py data leak issue](https://openai.com/blog/march-20-chatgpt-outage)
 
 ### Atomicity in Redis
 
@@ -42,6 +49,13 @@ Use MULTI for true atomicity
 Use LUA script to reduce latency.
 
 Source: https://www.slideshare.net/RedisLabs/atomicity-in-redis-thomas-hunter
+
+### Redis Sentinel Vs. Redis Cluster 
+
+- If you need high availability, even if it is not scalable, and you have less data than RAM on a machine -> Use Redis Sentinel
+- You need data sharding, scalability and automatic failover, it doesn’t have to be entirely highly available and you have more data than RAM on a server -> Use Redis Cluster
+
+[Redis Solutions: Standalone vs Sentinel vs Cluster](https://medium.com/hepsiburadatech/redis-solutions-standalone-vs-sentinel-vs-cluster-f46e703307a9)
 
 ### Redis Clustering
 
@@ -113,7 +127,3 @@ Minimum guarantees needed to use distributed locks in an effective way.
 
 https://redis.io/docs/reference/patterns/distributed-locks/
 
-
-[Redis SortedSets](https://redis.io/docs/data-types/sorted-sets/)
-
-In Redis, sorted sets having scaling limitations. A sorted set cannot be partitioned. As a result, if the size of a sorted set exceeds the size of the partition, there is nothing you can do (without modifying Redis).
