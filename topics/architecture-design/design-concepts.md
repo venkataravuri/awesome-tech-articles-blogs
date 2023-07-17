@@ -20,7 +20,8 @@ Adheres to 12-factor principles
 - Using methodology, you can make scalable and resilient apps that can be continuously deployed with maximum agility.
 - Acts as a acceptance criteria when evaluating whether software is production ready.
 
-https://newrelic.com/blog/best-practices/twelve-factor-app
+- [Twelve Factor App Principles Quick Summary](https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser)
+- [Twelve Factor App Principles Detailed Summary](https://newrelic.com/blog/best-practices/twelve-factor-app)
 
 ### Domain Driven Design
 
