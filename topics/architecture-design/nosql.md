@@ -30,26 +30,30 @@ In the context of scaling MongoDB:
 Replication and sharding are typically combined to created a sharded cluster where each shard is supported by a replica set.
 
 From a client application point of view you also have some control in relation to the replication/sharding interaction, in particular:
-- Read preferences
-- Write concerns
+- Read preferences - to control the consistency of the data returned by the query. For example, a ReadConcern of majority tells MongoDB to only return data that has been replicated to a majority of nodes in the replica set.
+- Write concerns - The write concern enables the application to specify the number of replica set members that must apply the write before MongoDB acknowledges the write to the application.
 
-### MongoDB Sharding
+### MongoDB Sharded Cluster
+
+A MongoDB sharded cluster consists of the following components:
+- **Shard**: Each shard contains a subset of the sharded data. Each shard can be deployed as a replica set.
+- **Mongos**: The mongos acts as a query router, providing an interface between client applications and the sharded cluster. Starting in MongoDB 4.4, mongos can support hedged reads to minimize latencies.
+- **Config servers**: Config servers store metadata and configuration settings for the cluster.
 
 MongoDB supports automatically ensuring data and requests are sent to the correct replica sets, and merging results from multiple shards.
 
-Mongos is a proxy for the sharded cluster which handles the routing of requests and responses. For high availability, you need at least two instances of mongos.
+<img src="https://www.mongodb.com/docs/manual/images/sharded-cluster-production-architecture.bakedsvg.svg" width="35%" height="35%" />
+
+[How to shard a collection?](https://www.mongodb.com/docs/manual/core/sharding-shard-a-collection/)
 
 #### How do you tune MongoDB?
 
 Mongostat
 db.stats()
 
+### Additional Material
 
-## MongoDB
-
-|Rating|Type|Topic
-------------: | ------------- | -------------
-||:newspaper:|[Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
+[Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
 
 ## MySQL, AWS RDS
 
