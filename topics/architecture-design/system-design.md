@@ -32,7 +32,7 @@ Focus on,
 
 **Design Concepts**
 
-- [Data Partitioning & Sharding]()
+- [Data Partitioning & Sharding](#data-partitioning--sharding)
 
 
 ### Design a Food/Grocery Delivery System
@@ -252,9 +252,24 @@ The routing algorithm decides which partition (shard) stores the dat,
 
 **Hash-based sharding**: This algorithm applies a hash function to one column or several columns to decide which row goes to which table. For example, the diagram below uses User ID mod 2 as a hash function. User IDs 1 and 3 are in shard 1, User IDs 2 and 4 are in shard 2.
 
+**Geo-Hashing?**
+
 [Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
 
 #### How MongoDB sharding works?
+
+"Shards" in MongoDB are just replica sets with something called a "router" in front of them. Your application will connect to the router, issue queries, and it will decide which replica set (shard) to forward things on to. It's significantly more complex than a single replica set because you have the router and config servers to deal with (these keep track of what data is stored where).
+
+A collection is sharded based upon the Shard Key. Shard key determines how the collection data will be distributed across the shards. The shard key is also important in the read operation performance.
+
+In a sharded cluster a database can have number of sharded and unsharded collections. You can decide which collections need to be sharded (distribute a collection's data across shards).
+
+In MongoDB with the autosharding feature, a sharded collection will be distributed somehow evenly along all the shards you have.
+
+With those collections which you not likely to shard (which are not sharded) you can specify a primary shard which will they reside on. This primary shard is a given one for a specific database, so it is on per database level.
+
+A mongos (the router) receives all the queries in a sharded cluster before routing to specific shard(s). When you submit a query, it is like submitting a query to a standalone server, the syntax is same; it is transparent to the application (or code). The router determines which shards the query must visit to get your data.
+
 
 #### How AWS Redshift sharding works?
 
@@ -264,6 +279,7 @@ The routing algorithm decides which partition (shard) stores the dat,
 - The partitions are created on foreign servers and PostgreSQL FDW is used for accessing the foreign servers 
 
 - [PostgreSQL Sharding](https://wiki.postgresql.org/wiki/WIP_PostgreSQL_Sharding)
+- [PostgreSQL Sharding Documentation](https://www.postgresql.org/docs/11/ddl-partitioning.html)
 - [Sharding JDBC](https://shardingsphere.apache.org/document/legacy/4.x/document/en/manual/sharding-jdbc/)
 
 **How to manage DB connection pool under sharded environment?**
