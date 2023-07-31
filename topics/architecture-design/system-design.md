@@ -254,22 +254,13 @@ The routing algorithm decides which partition (shard) stores the dat,
 
 **Geo-Hashing?**
 
+Two key attributes of an effective shard key are high **cardinality** and well-distributed **frequency**. **Cardinality** refers to the number of possible values of that key. If a shard key only has three possible values, then there can only be a maximum of three shards. **Frequency** refers to the distribution of the data along the possible values. 
+
 [Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
 
 #### How MongoDB sharding works?
 
-"Shards" in MongoDB are just replica sets with something called a "router" in front of them. Your application will connect to the router, issue queries, and it will decide which replica set (shard) to forward things on to. It's significantly more complex than a single replica set because you have the router and config servers to deal with (these keep track of what data is stored where).
-
-A collection is sharded based upon the Shard Key. Shard key determines how the collection data will be distributed across the shards. The shard key is also important in the read operation performance.
-
-In a sharded cluster a database can have number of sharded and unsharded collections. You can decide which collections need to be sharded (distribute a collection's data across shards).
-
-In MongoDB with the autosharding feature, a sharded collection will be distributed somehow evenly along all the shards you have.
-
-With those collections which you not likely to shard (which are not sharded) you can specify a primary shard which will they reside on. This primary shard is a given one for a specific database, so it is on per database level.
-
-A mongos (the router) receives all the queries in a sharded cluster before routing to specific shard(s). When you submit a query, it is like submitting a query to a standalone server, the syntax is same; it is transparent to the application (or code). The router determines which shards the query must visit to get your data.
-
+[MongoDB Sharding Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#mongodb-sharded-cluster)
 
 #### How AWS Redshift sharding works?
 
