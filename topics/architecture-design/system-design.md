@@ -1,18 +1,10 @@
 
 # System Design Articles
 
-### Quick Guidance
-
-Focus on,
-- Identity subsystem components that make up solution - Functional modules, services, APIs, ...
-- Identify Data Structures and Algorithms
-- Identify Design Methdolgoies & Tradeoffs - Pub/Sub, Microservices, Read-Write Heavy, DDD, SOLID Princples, CAP, ...
-- 4 + 1 views - Functional Architecture, Layered Technical Architecture, Deployment Architecture, Security Architecture, ...
-- Make technology choices - Polyglot Databases, Frameworks, ...
-
-## Popular System Design Articles
+### Table of Contents
 
 - [Design a Gorcery/food Delvery Application](system-design.md#design-a-food--grocery-delivery-system)
+- [Geo-Proxmity Search / Spatial Search]()
 - [Design a Flash Sale System](system-design.md#design-a-flash-sale-system)
 - [Design a Search Engine](system-design.md#design-a-search-engine)
 - [Design a Parking Lot System](system-design.md#design-a-parking-lot)
@@ -34,16 +26,29 @@ Focus on,
 
 - [Data Partitioning & Sharding](#data-partitioning--sharding)
 
+---
+
+### Quick Guidelines
+
+- Identity sub-system components that make up a solution - functional modules, services, APIs, ...
+- Identify Data Structures & Algorithms
+- Identify Design Methdolgoies & Tradeoffs - Pub/Sub, Microservices, Read-Write Heavy, DDD, SOLID Princples, CAP Therom, ...
+- 4 + 1 views - Functional Architecture, Layered Technical Architecture, Deployment Architecture, Security Architecture, ...
+- Make technology choices - Polyglot Databases, Frameworks, Libraries, ...
+
+---
 
 ### Design a Food/Grocery Delivery System
 
 System design approaches for apps such as DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
 
-[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
-|:star::star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
-|:star:|[Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|
-|:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
-|:star:|[Yelp System Design](https://systemdesigntutorial.com/yelp/)
+- :star::star::star: [DoorDash System Design](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
+- :star: [Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
+- :star: [Yelp System Design](https://systemdesigntutorial.com/yelp/)
+- [Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp) & [Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)
+- [Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)
+
+---
 
 ### Geo-Proxmity Search
 
@@ -65,14 +70,16 @@ Since S2 uses the Hilbert Curve to enumerate the cells, this means that cell val
 - [Google’s S2, geometry on the sphere, cells and Hilbert curve](https://blog.christianperone.com/2015/08/googles-s2-geometry-on-the-sphere-cells-and-hilbert-curve/)
 - [Google S2 library](https://medium.com/@self.maurya/lesser-known-things-about-googles-s2-fea42f852f67)
 
-Geo-proximity & Spatial idexing realworld usages,
+Blogs/Articles,
 
 - [Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
 - [Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
 
-## Design a Flash Sale System
+---
 
-### Design Considerations
+### Design a Flash Sale System
+
+#### Design Considerations
 - Handle write heavy traffic & high concurrency
 - Avoid overselling inventory
 - Multiple requests from same user (different browser sessions)### Data Structures & Algorithms
