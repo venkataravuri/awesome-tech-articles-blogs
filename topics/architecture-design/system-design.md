@@ -30,6 +30,10 @@ Focus on,
 - [Design a Elevator](system-design.md#design-a-elevator)
 - [Design a TinyURL Service](system-design.md#design-a-tinyurl-service)
 
+**Design Concepts**
+
+- [Data Partitioning & Sharding]()
+
 
 ### Design a Food/Grocery Delivery System
 
@@ -235,16 +239,24 @@ Hybrid model allows only users with a lesser number of followers to use the push
 
 https://systemdesigntutorial.com/design-twitter/
 
-Data Partitioning
+### Data Partitioning & Sharding
 
-To scale out our databases we will need to partition our data. Horizontal partitioning (aka Sharding) can be a good first step. We can use partitions schemes such as:
+Partitioning of relational data, usually refers to decomposing your tables either row-wise (horizontally) or column-wise (vertically).
 
-    Hash-Based Partitioning
-    List-Based Partitioning
-    Range Based Partitioning
-    Composite Partitioning
+🔹 Vertical partitioning: means some columns are moved to new tables. Each table contains the same number of rows but fewer columns.
+🔹 Horizontal partitioning (often called sharding): Divides a table into multiple smaller tables. Each table is a separate data store, and it contains the same number of columns, but fewer rows.
+
+The routing algorithm decides which partition (shard) stores the dat,
+
+**Range Based Partitioning**: This algorithm uses ordered columns, such as integers, longs, timestamps, to separate the rows. For example, the diagram below uses the User ID column for range partition: User IDs 1 and 2 are in shard 1, User IDs 3 and 4 are in shard 2.
+
+**Hash-based sharding**: This algorithm applies a hash function to one column or several columns to decide which row goes to which table. For example, the diagram below uses User ID mod 2 as a hash function. User IDs 1 and 3 are in shard 1, User IDs 2 and 4 are in shard 2.
+
+[Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
 
 The above approaches can still cause uneven data and load distribution, we can solve this using Consistent hashing.
-https://www.toptal.com/big-data/consistent-hashing
+
+#### Consistent Hasshing
+[Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
 
 
