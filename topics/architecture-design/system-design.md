@@ -37,17 +37,38 @@ Focus on,
 
 ### Design a Food/Grocery Delivery System
 
-System design approaches for aps such as DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
+System design approaches for apps such as DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
 
-| | Article / Blog |
-------------: | ------------- |
-|:star::star:|[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
+[System Design: DoorDash — a prepared food delivery service](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
 |:star::star:|[Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp)<br />[Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)|
 |:star:|[Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)|
 |:star:|[Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
 |:star:|[Yelp System Design](https://systemdesigntutorial.com/yelp/)
-|:star:|[Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
-|:star::star:|[Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
+
+### Geo-Proxmity Search
+
+_**Spatial indices** are a family of algorithms that arrange geometric data for efficient search._
+
+For example, doing queries like “return all buildings in this area”, “find 1000 closest gas stations to this point”, and returning results within milliseconds even when searching millions of objects.
+
+#### Quatree
+A quadtree is a spatial tree data structure in which each node has exactly four children. A child node can either be a limited list of objects, or a list containing four inner sub-quadtrees.
+
+A quadtree is a tree data structure in which each node has zero or four children. Its main peculiarity is its way of recursively dividing a flat 2-D space into four quadrants.
+
+#### Google's S2 library
+
+The S2 library attempts to resolve this using a very clever construct called the Hilbert Curve (also known as a Hilbert space-filling curve) which is a continuous fractal space-filling curve.
+
+Since S2 uses the Hilbert Curve to enumerate the cells, this means that cell values close in value are also spatially close to each other.
+
+- [Google’s S2, geometry on the sphere, cells and Hilbert curve](https://blog.christianperone.com/2015/08/googles-s2-geometry-on-the-sphere-cells-and-hilbert-curve/)
+- [Google S2 library](https://medium.com/@self.maurya/lesser-known-things-about-googles-s2-fea42f852f67)
+
+Geo-proximity & Spatial idexing realworld usages,
+
+- [Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
+- [Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
 
 ## Design a Flash Sale System
 
