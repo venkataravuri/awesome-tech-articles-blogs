@@ -116,17 +116,16 @@ The Read Models can be read by front-ends or by APIs.
 
 ### Resiliency Patterns
 
-In a distributed system, failures can happen. Network can have transient failures, hardware can fail. 
+In a distributed system, failures can happen. Network can have transient failures, hardware can fail, storage disks can corrupt. Therefore, design an application to be self-healing when failures occur. 
 
-Therefore, design an application to be self-healing when failures occur. This requires a three-pronged approach:
+This requires a three-pronged approach:
+- Detect failures.
+- Respond to failures gracefully.
+- Log and monitor failures, to give operational insight.
 
-    Detect failures.
-    Respond to failures gracefully.
-    Log and monitor failures, to give operational insight.
+Resiliency is the capability to handle partial failures while continuing to execute and not crash. Applications that communicate with remote services and resources must be sensitive to transient faults. 
 
-Resiliency is the capability to handle partial failures while continuing to execute and not crash.
-
-Applications that communicate with remote services and resources must be sensitive to transient faults. Transient faults include the momentary loss of network connectivity to components and services, the temporary unavailability of a service, or timeouts that arise when a service is busy. These faults are often self-correcting, and if the action is repeated after a suitable delay it is likely to succeed.
+Transient faults include the momentary loss of network connectivity to components and services, the temporary unavailability of a service, or timeouts that arise when a service is busy. These faults are often self-correcting, and if the action is repeated after a suitable delay it is likely to succeed.
 
 We decorate network-bound calls with resiliency aspects in following order:
 
@@ -142,7 +141,9 @@ The execution order:
 5. Retry (retry on exceptions)
 6. Fallback (fallback as last resort)
 
-A suitable reference order is for example auto-configured in the Spring-Boot extension. See the official Guides, Getting started with resilience4j-spring-boot2 about Aspect order
+A suitable reference order is for example auto-configured in the Spring-Boot extension. See the official Guides, Getting started with resilience4j-spring-boot2 about Aspect order.
+
+Resilience4j is a lightweight fault tolerance designed for functional programming.
 
 ### Circuit Breaker
 
@@ -155,7 +156,22 @@ It make sure system is responsive & resilient and threads are not waiting for an
 The circuit breaker has three distinct states: Closed, Open, and Half-Open:
 * Closed – remains in the closed state and all calls pass through to the services. When the number of failures exceeds a predetermined threshold the breaker trips, and it goes into the Open state.
 * Open – The circuit breaker returns an error for calls without executing the function.
-* Half-Open – After a timeout period, the circuit switches to a half-open state to test if the underlying problem still exists. If a single call fails in this half-open state, the breaker is once again tripped. If it succeeds, the circuit breaker resets back to the normal, closed state. 
+* Half-Open – After a timeout period, the circuit switches to a half-open state to test if the underlying problem still exists. If a single call fails in this half-open state, the breaker is once again tripped. If it succeeds, the circuit breaker resets back to the normal, closed state.
+
+### Bulkhead
+
+Bulkehead for concurrency controller (limits concurrent handling) and circuit breaker to control constant overlaod.
+
+Will protect from bursts & spikes. With bulkhead pattern, components of an application are isolated into pools so that if one fails, the others will continue to function.
+
+The benefits of this pattern include:
+- Isolates consumers and services from cascading failures. An issue affecting a consumer or service can be isolated within its own bulkhead, preventing the entire solution from failing.
+- Allows you to preserve some functionality in the event of a service failure. Other services and features of the application will continue to work.
+- Allows you to deploy services that offer a different quality of service for consuming applications. A high-priority consumer pool can be configured to use high-priority services.
+
+**References**
+
+https://dzone.com/articles/resilient-microservices-pattern-bulkhead-pattern
 
 ### Idempotency
 
@@ -247,13 +263,19 @@ IOC can be done using Dependency Injection (DI). It explains how to inject the c
 
 The IoC container creates an object of the specified class and also injects all the dependency objects through a constructor, a property or a method at run time and disposes it at the appropriate time.
 
-### BFF Patterns
-
-https://blog.bitsrc.io/bff-pattern-backend-for-frontend-an-introduction-e4fa965128bf
-
 ### Microfrontends
 
 https://medium.com/bb-tutorials-and-thoughts/7-different-ways-to-implement-micro-frontends-with-react-907b5e262230
+
+## BFF - Backends for Frontends
+
+BFF are a lightweight translation layers (aka backend services) that decouple individual clients from downstream services and serve only a single frontend. Adopt separate backend services for different types of clients, . That way, a single backend service doesn't need to handle the conflicting requirements of various client types. This pattern can help keep each microservice simple, by separating client-specific concerns.
+
+https://blog.bitsrc.io/bff-pattern-backend-for-frontend-an-introduction-e4fa965128bf
+
+## Backend-as-a-Service (BaaS)
+
+Backend-as-a-Service allows to hook up mobile/webapps to the backend with a set of core app features, including authentication, authorization, managing users, sending push notifications, and connecting to third-party cloud providers.
 
 ### GraphQL
 
@@ -289,13 +311,3 @@ In read-through/write-through cache, application treats cache as the main data s
 #### Write-Behind
 
 In the Write-Behind scenario, modified cache entries are asynchronously written to the data source.
-
-
-## BFF - Backends for Frontends
-
-BFF are a lightweight translation layers (aka backend services) that decouple individual clients from downstream services and serve only a single frontend. Adopt separate backend services for different types of clients, . That way, a single backend service doesn't need to handle the conflicting requirements of various client types. This pattern can help keep each microservice simple, by separating client-specific concerns.
-
-
-## Backend-as-a-Service (BaaS)
-
-Backend-as-a-Service allows to hook up mobile/webapps to the backend with a set of core app features, including authentication, authorization, managing users, sending push notifications, and connecting to third-party cloud providers.
