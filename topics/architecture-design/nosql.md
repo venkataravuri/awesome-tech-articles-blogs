@@ -55,19 +55,6 @@ db.stats()
 
 [Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
 
-## MySQL, AWS RDS
-
-|Rating|Type|Topic
-------------: | ------------- | -------------
-||:newspaper:|[Zero Downtime Maintenances on MySQL RDS](https://workmarket.tech/zero-downtime-maintenances-on-mysql-rds-ba13b51103c2)
-||:newspaper:|[RazorPay: The Day of the RDS Multi-AZ Failover, Replication Failure & Data Loss](https://razorpay.com/blog/day-of-rds-multi-az-failover)
-
-### Zero-Downtime Deployments
-
-|Rating|Type|Topic
-------------: | ------------- | -------------
-||:newspaper:|[Demand Zero RPO and Zero Downtime for Business Success](https://www.cockroachlabs.com/blog/demand-zero-rpo/)
-[Build highly available MySQL applications using Amazon Aurora Multi-Master](https://aws.amazon.com/blogs/database/building-highly-available-mysql-applications-using-amazon-aurora-mmsr/)
 
 
 ### Database Sharding
@@ -91,11 +78,15 @@ https://docs.oracle.com/en/cloud/paas/nosql-cloud/csnsd/shard-keys-and-primary-k
 ||:newspaper:|[Timescale - Time-series data: Why (and how) to use a relational database instead of NoSQL](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
 
 
-## Redshift
+## AWS Redshift
 
 https://medium.com/doctolib/redshift-troubleshouting-made-simple-ed73b38d10d5
 https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998
 
+### Redshift Scalability
+
+
+### Redshift Performance Tuning
 
 
 ## PostgreSQL
