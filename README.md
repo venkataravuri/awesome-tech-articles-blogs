@@ -14,6 +14,7 @@ A curated list of awesome system design, design principles & patterns, technical
 |:tada:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
 |:gem:|**[Redis - Scalability & Performance](topics/architecture-design/redis.md)** | Redis|
 |:ok_hand:|**[NoSQL - MongoDB, Redshift](topics/architecture-design/nosql.md)** | SQL & NoSQL concepts, concurrency, scalability, performance techniques and more.|
+|:racehorse:|**[AWS RDS, MySQL, PostgreSQL](topics/architecture-design/rdbms.md)** | RDBMS concepts.|
 |:hamburger:|**[Probabilistic Data Structures](topics/architecture-design/data-structures.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
 |:cloud:|**[Cloud Computing - AWS](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
 |:heavy_dollar_sign:|**[Business & Digital Transformation](topics/architecture-design/digital-transformation.md)** | What is Digital Transformation? How to do? ...|
