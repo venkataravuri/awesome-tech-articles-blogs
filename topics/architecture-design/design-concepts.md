@@ -1,24 +1,39 @@
 
-# Modern System Design Concepts 
+# Modern System Design Concepts
+
+**Table of contents**
+
+- [Cloud-Native Applications]()
+  - [Twelve Factor App]()
+- [SOLID Principles]()
+- [Domain-driven Design (DDD)]()
+  - [Event Sourcing & CQRS]()
+- [Resiliency Patterns]()
+  - [Circuit Breaker]()
+  - [Event Loop]()
+- [CAP Therom]()   
+- [Microfrontends]()
+- [Chaos Engineering]()
+- [GraphQL]()
 
 ### Cloud Native Applications
 
 Cloud native apps are designed and built to exploit scale, elasticity, resiliency, and flexibility provided by in public, private, and hybrid clouds.
 
-Usually designed as self contained services or microservices, packed as containers for portability, deployed to immutable infrastructure.
-
-Microservices are the core of cloud native application architecture
-
-Cloud native microservices communicate with each other via APIs and use event-driven architecture, which makes them loosely coupled, serves to enhance the overall performance of each application.
-
-Adheres to 12-factor principles
+- Usually designed as self contained services or microservices, packed as containers for portability, deployed to immutable infrastructure.
+- Microservices are the core of cloud native application architecture
+- Cloud native microservices communicate with each other via APIs and use event-driven architecture, which makes them loosely coupled, serves to enhance the overall performance of each application.
+- Adheres to 12-factor principles
 
 ## Twelve-Factor App
 
 12 Factor App is a set of best practices that guide you to build a great cloud native application.
+
 - In order that an application be deployed in the cloud and enjoy features such as auto scaling, it first needs to be cloud native
 - Using methodology, you can make scalable and resilient apps that can be continuously deployed with maximum agility.
 - Acts as a acceptance criteria when evaluating whether software is production ready.
+
+**Notes**
 
 - [Twelve Factor App Principles Quick Summary](https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser)
 - [Twelve Factor App Principles Detailed Summary](https://newrelic.com/blog/best-practices/twelve-factor-app)
