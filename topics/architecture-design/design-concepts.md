@@ -15,6 +15,7 @@
 - [Microfrontends]()
 - [Chaos Engineering]()
 - [GraphQL]()
+- [Cache Strategies]()
 
 ### Cloud Native Applications
 
@@ -102,7 +103,30 @@ b). Abstractions should not depend on details. Details should depend on abstract
 
 ### Event Sourcing & CQRS
 
+CQRS — Command Query Response Segregation - allows to scale system read functions and write functions independently. It is often that a system handles more reads than writes.
+
+CQRS is often DDD-oriented, associated with Event-Source and Eventual Consistency.
+
+The patterns employs "One Write Model, N Read Models"
+
+- One internal model it writes with: the write model, altered by Commands
+- One or several read models it and other applications read from.
+
+The Read Models can be read by front-ends or by APIs.
+
 ### Resiliency Patterns
+
+In a distributed system, failures can happen. Network can have transient failures, hardware can fail. 
+
+Therefore, design an application to be self-healing when failures occur. This requires a three-pronged approach:
+
+    Detect failures.
+    Respond to failures gracefully.
+    Log and monitor failures, to give operational insight.
+
+Resiliency is the capability to handle partial failures while continuing to execute and not crash.
+
+Applications that communicate with remote services and resources must be sensitive to transient faults. Transient faults include the momentary loss of network connectivity to components and services, the temporary unavailability of a service, or timeouts that arise when a service is busy. These faults are often self-correcting, and if the action is repeated after a suitable delay it is likely to succeed.
 
 We decorate network-bound calls with resiliency aspects in following order:
 
@@ -243,4 +267,35 @@ https://www.slideshare.net/nburk/react-graphql?qid=e496f1f4-ad5f-43fa-9b8b-e7476
 - Mutation (Write and Get)
 - Subscription
 
-Test-Driven Development
+### Test-Driven Development
+
+## Cache Strategies
+
+Cache repeatedly access information held in a data store into memory to improve performance. 
+
+#### Cache Aside
+
+Cache-aside is also called as lazy caching, wherein first check item exist in cache. If the item exists in the cache, use that. If the item does not exist in the cache, query the data store, however on the way back you drop the item in the cache.
+
+In cache-aside, application is responsible for reading and writing from the database and the cache doesn't interact with the database at all. Cache is "kept aside" as a faster and more scalable in-memory data store.
+
+#### Read-through & Write-through Cache
+
+In read-through/write-through cache, application treats cache as the main data store and reads data from it and writes data to it. The cache is responsible for reading and writing this data to the database, thereby relieving the application of this responsibility.
+
+- In **read-through cache**, the application always requests data from the cache. If cache has no data, it is responsible for retrieving the data from the DB using an underlying provider plugin. Compared to Cache-Aside, Read-Through moves the responsibility of getting the value from the datastore to the cache provider.
+- In **write-through cache**, the cache is updated in real time when the database is updated. So, if a user updates his or her profile, the updated profile is also pushed into the cache. You can think of this as being proactive to avoid unnecessary cache misses. Similar to Read-Through but for writes, Write-Through moves the writing responsibility to the cache provider.
+
+#### Write-Behind
+
+In the Write-Behind scenario, modified cache entries are asynchronously written to the data source.
+
+
+## BFF - Backends for Frontends
+
+BFF are a lightweight translation layers (aka backend services) that decouple individual clients from downstream services and serve only a single frontend. Adopt separate backend services for different types of clients, . That way, a single backend service doesn't need to handle the conflicting requirements of various client types. This pattern can help keep each microservice simple, by separating client-specific concerns.
+
+
+## Backend-as-a-Service (BaaS)
+
+Backend-as-a-Service allows to hook up mobile/webapps to the backend with a set of core app features, including authentication, authorization, managing users, sending push notifications, and connecting to third-party cloud providers.
