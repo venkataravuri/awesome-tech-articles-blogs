@@ -7,10 +7,10 @@ A curated list of awesome technical articles, How-To tutorials, engineering blog
 || Topic | Description |
 |---|:---|:---|
 |:rocket:|**[System Design Articles](topics/architecture-design/system-design.md)** | Realworld system design samples. |
-|:fire:|**[CNA Concepts](topics/architecture-design/design-concepts.md)**, [Design Patterns](topics/gof-design-patterns.md)| Clout-Native Architectures, OOPS, GOF Patterns, ... |
+|:fire:|**[CNA Concepts](topics/architecture-design/design-concepts.md)** <br/> **[Design Patterns](topics/gof-design-patterns.md)** | Clout-Native Architectures, OOPS, GOF Patterns, ... |
 |:bar_chart:|**[AI/ML](topics/data-analytics-big-data/data-science.md)** | NLP, Neural Networks, PyTorch, Kaggle, Scikit-Learn and more. |
 |:hamburger:|**[Probabilistic Data Structures](topics/architecture-design/data-structures.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
-|:love_hotel:|**[Multi-Tenant SaaS Systems Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
+|:love_hotel:|**[Multi-Tenant SaaS App Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
 |:mag_right:|**[Search Technologies - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
 |:tada:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
 |:rocket:|**[NoSQL - MongoDB, Redshift, ...](topics/architecture-design/nosql.md)** | SQL & NoSQL concepts, concurrency, scalability, performance techniques and more.|
