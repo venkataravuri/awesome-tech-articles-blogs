@@ -103,6 +103,8 @@ Configuring pods to use a Kubernetes service account – Complete this procedure
 
 ### How users authenticate with Kubernetes cluster without k8s service accounts? Trough IDPs, AD, LDAP, …
 
+https://rafay.co/the-kubernetes-current/diy-access-management-using-dex-and-kubelogin/
+
 Kubernetes provides solid authorization using RBAC and provides several authentication strategies for integrating with an external user store.
 
 kubernetes and LDAP integrated through Dex, an identity service that uses OpenID Connect (OIDC) to drive authentication for other apps. Dex was developed and open-sourced by CoreOS.
