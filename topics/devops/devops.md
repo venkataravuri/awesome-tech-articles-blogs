@@ -79,7 +79,19 @@ Basic DNS Load Balancing provides a basic load balancing capability - round robi
 
 DNS based Global Server Load Balancing (GSLB) can provide an effective way to manage workloads across data centers, 
 
-Uses [Anycast DNS](https://www.cloudflare.com/learning/dns/what-is-anycast-dns/) technique. 
+Uses [Anycast DNS](https://www.cloudflare.com/learning/dns/what-is-anycast-dns/) technique.
+
+### Load balancers
+
+GTM (Global Traffic Manager) - industry name is "Global Load Balancer"
+
+GTM load balancer balances traffic for application servers across Data Centers. GTM is used as an **Intelligent DNS** server, handling DNS resolutions based on intelligent monitors and F5’s own iQuery protocol used to communicate with other BIGIP F5 devices. It is used in multiple data centre infrastructures, deciding where to resolve to request traffic to.
+
+LTM (Local Traffic Manager) - industry name is "Server load balancer"
+
+LTM load balances servers and also does cache, compression, persistence, etc. LTM network is a full reverse proxy, handling connections from clients. The F5 LTM uses Virtual Services (VSs) and Virtual IPs (VIPs) to configure a load balancing setup for a service.
+
+LTMs can handle load balancing in two ways, the first way is an nPathconfiguration, and second is a Secure Network Address Translation (SNAT) method. LTM load balances servers and also does caching, compression, persistence, etc.
 
 ## SRE
 
