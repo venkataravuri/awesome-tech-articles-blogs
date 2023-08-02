@@ -85,6 +85,7 @@ https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998
 
 ### Redshift Scalability
 
+https://docs.aws.amazon.com/redshift/latest/dg/c_high_level_system_architecture.html
 
 ### Redshift Performance Tuning
 
