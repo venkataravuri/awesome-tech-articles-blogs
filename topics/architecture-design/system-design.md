@@ -90,6 +90,21 @@ Blogs/Articles,
 |:star:|[Flash Sale](https://www.alibabacloud.com/blog/high-concurrency-practices-of-redis-snap-up-system_597858)| |
 |:star:|[Flash Sale Engineering](https://www.usenix.org/conference/srecon16europe/program/presentation/stolarsky)| |
 
+## Design a Stock Trading Platform
+
+- very low-latency and high-throughput
+- 
+- Replacing all your queues with the magic ring buffer.
+
+LMAX Disruptor:
+- https://code.google.com/archive/p/disruptor/wikis/BlogsAndArticles.wiki
+- https://lmax-exchange.github.io/disruptor/
+
+Matching Engine:
+
+- https://medium.com/lgogroup/a-matching-engine-for-our-values-part-1-795a29b400fa
+  
+
 ## Design a Search Engine
 
 ||Article / Blog| Notes
