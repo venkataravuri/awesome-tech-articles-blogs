@@ -1,5 +1,7 @@
 # AWS RDS, MySQL, PostgrSQL
 
+https://medium.com/@ronakdotpatel/rds-postgres-migration-with-zero-downtime-247eb4157260
+
 ### RPO & RTO
 - [Demand Zero RPO and Zero Downtime for Business Success](https://www.cockroachlabs.com/blog/demand-zero-rpo/)
 
