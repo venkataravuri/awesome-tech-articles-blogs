@@ -21,4 +21,4 @@ A curated list of awesome system design, design principles & patterns, technical
 |:chart_with_upwards_trend:|**[Analytics & Big Data](topics/data-analytics-big-data/stream-analytics-big-data.md)** <br/>**[Recommendations](topics/data-analytics-big-data/recommendations.md)**| Probalistic datastructures & algorithms, streaming analytics and more|
 |:ferris_wheel:|**[DevOps - Kubernetes, Infrastructure Automation](topics/devops/devops.md)** | DevOps articles, [Docker, Kubenetes](topics/devops/docker-kubernetes.md) |
 |:hotsprings:|**[Security](topics/devops/security.md)**| OAuth, CORS, CSRF, OWASP, MITRE.|
-|:green_book:|**[Java](topics/general/java.md), [JavaScript](topics/general/javascript.md), [Python]()**| Programming concepts.|
+|:green_book:|**[Java](topics/general/java.md), [JavaScript](topics/general/javascript.md), [Python](topics/general/python.md)**| Programming concepts.|
