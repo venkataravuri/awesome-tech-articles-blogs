@@ -73,6 +73,14 @@ Argo Rollout is a Kubernetes controller and has several options for Blue/Green d
 
 https://blog.algolia.com/one-year-load-balancing/
 
+### DNS GSLB
+
+Basic DNS Load Balancing provides a basic load balancing capability - round robin DNS. It also does not factor in data center availability, resulting in end users getting directed to unavailable services. It does not factor in the location of the end user, so without a georouting component users will be connected to data centers that could be very far away. 
+
+DNS based Global Server Load Balancing (GSLB) can provide an effective way to manage workloads across data centers, 
+
+Uses [Anycast DNS](https://www.cloudflare.com/learning/dns/what-is-anycast-dns/) technique. 
+
 ## SRE
 
 Performance Budgets
