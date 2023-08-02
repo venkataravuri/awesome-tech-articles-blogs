@@ -93,6 +93,10 @@ LTM load balances servers and also does cache, compression, persistence, etc. LT
 
 LTMs can handle load balancing in two ways, the first way is an nPathconfiguration, and second is a Secure Network Address Translation (SNAT) method. LTM load balances servers and also does caching, compression, persistence, etc.
 
+### Branching Strategies
+
+https://www.abtasty.com/blog/git-branching-strategies/
+
 ## SRE
 
 Performance Budgets
