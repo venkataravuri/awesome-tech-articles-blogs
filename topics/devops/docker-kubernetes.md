@@ -170,6 +170,9 @@ kOps stores the state and representation of your cluster to a dedicated S3 bucke
 
 VMware Tanzu Kubernetes Grid (TKG) provisions and manages the lifecycle of Tanzu Kubernetes clusters making use of Cluster API.
 
+Tanzu Kubernetes Grid uses a management cluster to create and manage workload clusters, and has different deployment options based on where that management cluster runs. 
+
+https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/index.html
 
 #### Kind
 
