@@ -156,3 +156,23 @@ Buildah focuses on building OCI container images while Podman specializes in the
 ### Kubernetes Cluster Deployment Tools
 
 
+#### kOps
+
+kOps, or Kubernetes Operations, can be compared to Rancher RKE, it’s an installer to create, destroy, upgrade and maintain production-grade Kubernetes clusters in public cloud.
+
+AWS and GCP are currently official supported while Azure is in Alpha status.
+
+ kOps provisions (and destroys) the necessary cloud infrastructure and has extensive possibilities to customize your cluster and enable all kinds of add-ons, such as AWS Load Balancer Controller, Cluster Autoscaler, Cert-manager, Metrics Server, Snapshot Controller etc.
+
+kOps stores the state and representation of your cluster to a dedicated S3 bucket. This bucket will become the source of truth for the cluster configuration for automatic idempotency and makes it possible to do dry-runs before applying changes.
+
+#### VMware TKG
+
+VMware Tanzu Kubernetes Grid (TKG) provisions and manages the lifecycle of Tanzu Kubernetes clusters making use of Cluster API.
+
+
+#### Kind
+
+Kind is a tool for running local Kubernetes clusters. Kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
+
+
