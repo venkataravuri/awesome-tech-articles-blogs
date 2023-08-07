@@ -128,4 +128,31 @@ During a Deployment update, it will create another ReplicaSet with a new configu
 
 Argo Rollouts uses Rollout resource instead of Deployment resource. Similar to Deployment, Rollout uses ReplicaSet to spin up new pods.
 
-# Docker
+> Docker Engine only runs on Linux, developers who use Windows and macOS for software development cannot run the engine until they spin up a virtual machine (VM) that runs linux.
+
+> Minikube on macOS uses Docker, using HyperKit as the hypervisor. We can switch to Containerd
+
+minikube start --container-runtime=containerd
+
+#### Docker Images Without Docker
+
+Docker Daemon with root privileges. It actually binds to a Unix socket instead of a TCP port. By default, users can only access the Unix socket using sudo command, which is owned by the user root.
+
+Docker alternatives to combat those, namely:
+- Buildah
+- Podman
+- Buildpacks: Buildpacks is a Cloud Native Computing Foundation (CNCF) project that focuses on building container images from source code. I
+
+**Buildah** can be used to create and run images from a Dockerfile and without.
+
+Buildah focuses on building OCI container images while Podman specializes in the management of the entire container lifecycle. 
+
+
+#### Docker <-> Dockerd <-> Containerd <-> runC
+
+[Docker, Dockerd, Containerd, runC](https://stackoverflow.com/questions/46649592/dockerd-vs-docker-containerd-vs-docker-runc-vs-docker-containerd-ctr-vs-docker-c)
+
+
+### Kubernetes Cluster Deployment Tools
+
+
