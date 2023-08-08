@@ -16,6 +16,72 @@
 * [Spam-Resilient Signals](#span-resilient-signals)
 * [Ranking & Scoring](#scoring)
 
+
+Semantic search is basically search with meaning.
+
+Elasticsearch has a very weak semantic search support but you can go around it using faceted searching and bag of words.
+
+> Elasticsearch 7.3 introduced introduced text similarity search with vector fields.
+
+They describe the application of using text embeddings (e.g., word embeddings and sentence embeddings) to implement this sort of semantic similarity measure
+
+Use BERT embedding for your sentences and add an embedding field to your ElasticSearch, as it is described in https://www.elastic.co/blog/text-similarity-search-with-vectors-in-elasticsearch
+
+For BERT embedding I suggest to use sentence-transformers from Huggingface library. You can find sample codes in https://towardsdatascience.com/how-to-build-a-semantic-search-engine-with-transformers-and-faiss-dcbea307a0e8
+
+Used machine learning to automate below tasks,
+
+- **Data Clustering** - Measure distance between words and/or documents to automatically discover topics (e.g. by **data clustering**) and **classify** query to one of these topics.
+
+#### Geo spatial queries in Elastic
+
+Map the field as a **geo_point** or for more flexibility to store other types of geolocations (e.g., polygons or linestrings), then map as a **geo_shape**.
+```
+{
+  "mappings" : {
+    "TYPE_NAME" : {
+      "properties" : {
+        "fieldName" : { "type" : "geo_point" }
+      }
+    }
+  }
+}
+```
+Once mapped, you can insert the location details using the point type.
+```
+{
+  "fieldName" : {
+    "type" : "point",
+    "coordinates" : {
+      "lat" : latitude,
+      "lon" : longitude
+    }
+  }
+}
+```
+
+Run a **geo_distance** filter to find points within the desired distance:
+```
+{
+  "filtered" : {
+    "query" : { "match_all" : {} },
+    "filter" : {
+      "geo_distance" : {
+        "distance" : "10mi",
+        "fieldName" : [ longitude, latitude ]
+      }
+    }
+  }
+}
+```
+
+#### Ingestion Pipelines
+
+Ingest pipelines let you perform common transformations on your data before indexing. For example, you can use pipelines to remove fields, extract values from text, and enrich your data.
+
+A pipeline consists of a series of configurable tasks called processors. Each processor runs sequentially, making specific changes to incoming documents. After the processors have run, Elasticsearch adds the transformed documents to your data stream or index.
+
+
 ## e-commerce search solutions
 
 Rating|Type|Topic
@@ -67,8 +133,8 @@ TODO
 Auto Complete – offers search query completions based on what the user has typed.
 There are at least two broad types of autocomplete,
 
-* Search Suggest
-* Result Suggest
+* Search Phrase Suggestions
+* Serch Result Suggestions
 
 Search Suggest returns suggestions for search phrases, usually based on previously logged searches, ranked by popularity or some other metric. This approach requires logging users' searches and ranking them so that the autocomplete suggestions evolve over time.
 
