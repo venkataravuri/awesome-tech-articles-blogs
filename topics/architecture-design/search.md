@@ -1,6 +1,6 @@
-# :mag: Search Topics & Terminology
+# :mag: NLP, NLU, Search Concepts
 
-* [Text Analysis / Text Mining (NLP)](../data-analytics-big-data/data-science.md)
+* [NLP - Text Analysis / Text Mining](../data-analytics-big-data/data-science.md)
   * [Tokenization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#tokenization)
   * [Stemming](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#stemming)
   * [Lemmatization](https://github.com/venkataravuri/learning-diary/blob/master/data-science.md#lemmatization)
