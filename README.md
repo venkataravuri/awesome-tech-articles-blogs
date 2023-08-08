@@ -10,7 +10,7 @@ A curated list of awesome system design, design principles & patterns, technical
 |:fire:|**[CNA Concepts](topics/architecture-design/design-concepts.md)** <br/> **[Design Patterns](topics/gof-design-patterns.md)** | Clout-Native Architectures, Domain Driven Design, CAP Therom, OOPS, GOF Patterns, ... |
 |:bar_chart:|**[AI / ML](https://github.com/venkataravuri/ai-ml)** | NLP, Neural Networks, PyTorch, Kaggle, Scikit-Learn and more. |
 |:love_hotel:|**[Multi-Tenant SaaS App Design](topics/architecture-design/saas-multi-tenancy.md)** | How to design metadata-driven multi-tenant SaaS services?|
-|:mag_right:|**[Search - Concepts, Articles & Blogs](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
+|:mag_right:|**[NLP, NLU, Search Concepts](topics/architecture-design/search.md)** | Autocomplete, Typeahead, Topic Mining, indexing, spell correction, ranking, rating, Faceted Search, relavance, and more |
 |:tada:|**[Kafka - Scalability & Performance](topics/architecture-design/kafka.md)** | Articles on designing highly available & scalable systems, performance optimization techniques & notes.|
 |:gem:|**[Redis - Scalability & Performance](topics/architecture-design/redis.md)** | Redis|
 |:ok_hand:|**[NoSQL - MongoDB, Redshift](topics/architecture-design/nosql.md)** | SQL & NoSQL concepts, concurrency, scalability, performance techniques and more.|
