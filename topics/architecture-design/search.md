@@ -192,3 +192,38 @@ Rating | Type | Topic
 :star: |:newspaper:|[How natural language processing helps LinkedIn members get support easily](https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support)
 :star: |:newspaper:|[Machine Learning for Smarter Search With Elasticsearch](https://dzone.com/articles/learning-to-rank-in-elasticsearch-machine-learning)
 :star: |:newspaper:|[Improving Elastic Search Query Result with Query Expansion using Topic Modeling](https://pkghosh.wordpress.com/2018/07/18/improving-elastic-search-query-result-with-query-expansion-using-topic-modeling/)
+
+### ElasticSearch Cluster
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20191216165538697.png%3Fx-oss-process%3Dimage%2Fwatermark%2Ctype_ZmFuZ3poZW5naGVpdGk%2Cshadow_10%2Ctext_aHR0cHM6Ly9lbGFzdGljc3RhY2suYmxvZy5jc2RuLm5ldA%3D%3D%2Csize_16%2Ccolor_FFFFFF%2Ct_70&f=1&nofb=1&ipt=71ec2d51747b12bd91fe3bfdb807a8f4b92b0c604d4d1e10da991ae86c69c7b8&ipo=images" height="35%" width="35%" />
+
+Master Eligible Nodes
+
+The master node is responsible for lightweight cluster-wide actions such as creating or deleting an index, tracking which nodes are part of the cluster, and deciding which shards to allocate to which nodes.
+
+
+Voting-only master-eligible node
+
+A voting-only master-eligible node is a node that participates in master elections but which will not act as the cluster’s elected master node
+
+Define a node’s roles by setting node.roles in elasticsearch.yml
+
+Data nodes hold the shards that contain the documents you have indexed. Data nodes handle data related operations like CRUD, search, and aggregations. The main benefit of having dedicated data nodes is the separation of the master and data roles. To create a dedicated data node, set:
+```
+node.roles: [ data ]
+```
+
+Ingest Node
+
+Ingest nodes are able to apply an ingest pipeline to a document in order to transform and enrich the document before indexing. 
+
+Other Nodes
+
+- ml node
+- data_content node
+- data_hot node
+- data_warm, data_cold, data_frozen nodes
+
+
+
+<img height="50%" width="50%" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F794174%2F202005%2F794174-20200508144128041-791009348.png&f=1&nofb=1&ipt=df248ec229a719164cd68d964cf335cde3def91a7b891d74a326e2e2dc020818&ipo=images" />
