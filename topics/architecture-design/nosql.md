@@ -80,8 +80,61 @@ https://docs.oracle.com/en/cloud/paas/nosql-cloud/csnsd/shard-keys-and-primary-k
 
 ## AWS Redshift
 
+
+
+Estimated Charges
+
+
+### Troubleshooting in Redshift
+
+Redshift is an OLAP database, it’s oriented to work on analytical queries as opposed to OLTP with transactional queries
+
+**It prefers to get a couple of big queries rather than a lot of small ones.**
+
+don’t want to overload/break Redshift you should avoid to:
+- Stream events: prefer Kinesis or Lambda to aggregate bulk of data.
+- Do multiple insert to load row by row. Prefer COPY.
+- Connect a reporting tool directly on Redshift. Every common reporting tool has a cached/in-memory database. Put the Redshift data in it.
+
+cluster nodes
+
+If you are not in a region where “ra3” nodes are available, use “dc2” nodes for your cluster, not “ds2”. Dense compute nodes have more RAM and an SSD disk (faster than HDD).
+
+**Bad queues and WLM management**
+
+Sometimes your queries are blocked by the “queues” aka “Workload Management” (WLM). Queues allow you to limit the number of parallel queries and the memory allocated to them, depending on the user or rules.
+
+### Distkeys
+
+Again, the main goal of distkeys is to avoid any broadcast of data between nodes. By doing so, you also want your nodes to be equally loaded. If data are not equally distributed, you will have “skewness”: the overloaded node will always be late compared to others.
+
+When you create a table, you have 3 distribution styles called “distyle”: EVEN, ALL, JOIN
+
+Sortkeys
+
+It sorts the data into the blocks (1 MB) of slices (a part of a node) of nodes, and stores the possible values in a block zone map (min and max values). 
+
+
+`STV_RECENTS` — This table holds information about currently active and recently run queries against a database
+
+```
+-- displays every query that run or will run
+SELECT user_name, db_name, pid, query
+FROM stv_recents WHERE status = ‘Running’; -- displays every running queries
+```
+
+`STV_INFLIGHT` — Check the stv_inflight table, To find which queries are currently in progress.
+```
+SELECT * FROM stv_inflight;
+```
+
+`STV_LOCKS` — Amazon Redshift locks tables to prevent two users from updating the same table at the same time, STV_LOCKS can be used to view any current updates on tables in the database, need superuser to view
+
+More about queries, refer to https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998
+
+
 https://medium.com/doctolib/redshift-troubleshouting-made-simple-ed73b38d10d5
-https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998
+
 
 ### Redshift Scalability
 
