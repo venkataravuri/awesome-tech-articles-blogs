@@ -1,9 +1,8 @@
 # Kafka Internals, Scalability & Performance
 
-### Challenges faced
-
-The application couldn’t send a heartbeat to the Kafka consumer coordinator and the application was going for a rebalance.
-
+### Kafka production challenges
+- Kafka consumers rebalances unexpectedly - https://stackoverflow.com/questions/27181693/how-does-consumer-rebalancing-work-in-kafka; https://stackoverflow.com/questions/56647442/kafka-keeps-rebalancing-consumers; https://stackoverflow.com/questions/71615472/kafka-commit-during-rebalancing
+- 
 
 ### How Kafka Nodes and zookeeper will communicate with each other?
 
