@@ -2,6 +2,22 @@
 
 ### DB Concepts
 
+#### Optimistic Lock Vs. Pessimistic Lock
+
+**Optimistic Locking** allows a conflict to occur, but it needs to detect it at write time. This can be done using either a physical or a logical clock. 
+
+- Logical clocks are superior to physical clocks when it comes to implementing a concurrency control mechanism, 
+- Use a **version column** to capture the read-time row snapshot information. The version column is going to be incremented every time an UPDATE or DELETE statement is executed while also being used for matching the expected row snapshot in the WHERE clause.
+
+**Pessimistic locking** aims to avoid conflicts by using locking.
+
+Pessimistic locking is suitable when the cost of retrying a transaction is very high or when contention is so large that many transactions would end up rolling back if optimistic locking were used.
+
+- Pptimistic locking can help you **_prevent Lost Updates_** even when using application-level transactions that incorporate the user-think time as well.
+- Optimistic locking works even across multiple database transactions since it doesn’t rely on locking physical records.
+
+#### ACID Properties
+
 A database transaction must satisfy the ACID property, which stands for Atomicity, Consistency, Isolation, and Durability.
 
 **Read Phenomena**
