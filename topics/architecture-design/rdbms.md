@@ -1,5 +1,15 @@
 # MySQL, PostgreSQL, AWS RDS
 
+- [DB Concepts]()
+  - [Optimistic Lock Vs. Pessimistic Lock]()
+  - [ACID Properties]()
+    - [Read Phenomena]()
+    - [Transaction Isolation Levels]()
+    - [RPO & RTO]()
+- [MySQL]()
+- [PostgreSQL]()
+- [AWS RDS]()
+
 ### DB Concepts
 
 #### Optimistic Lock Vs. Pessimistic Lock
@@ -38,7 +48,18 @@ A transaction can be interfered by other transactions that runs simultaneously w
 https://medium.com/@ronakdotpatel/rds-postgres-migration-with-zero-downtime-247eb4157260
 
 ### RPO & RTO
-- [Demand Zero RPO and Zero Downtime for Business Success](https://www.cockroachlabs.com/blog/demand-zero-rpo/)
+
+**RPO** stands for Recovery Point Objective. RPO is the maximum amount of data loss it considers acceptable when a failure or outage occurs.
+
+- RPO of ten minutes means, in the event of an outage, it can afford to lose up to ten minutes of data (lost transactions, etc.) before the company is seriously harmed.
+- **Zero RPO** is how companies describe a setup in which no data loss is acceptable, even in the event of an outage.
+
+Zero RPO systems can be more costly than less resilient, less available systems.
+
+**RTO** stands for Recovery Time Objective. RTO is the maximum amount of application downtime it considers acceptable when a failure or outage occurs.
+
+- RTO of ten minutes has decided that it can afford for its application to be offline for up to ten minutes in the event of an outage.
+- Zero RTO is how companies describe a setup in which application downtime is never acceptable, even when an outage occurs.
 
 ### Zero-Downtime Maintenances
 - [Zero Downtime Maintenances on MySQL RDS](https://workmarket.tech/zero-downtime-maintenances-on-mysql-rds-ba13b51103c2)
