@@ -70,9 +70,6 @@ Google S2 curve is based on Hilbert curve, a continuous fractal space-filling cu
 - S2 converts a given 2-D space into a 1-D continuous line which allows simple and efficient geospatial queries, enabling you to assign 1d numbers to objects. This consequently** converts the proximity 2d search problem into the simple 1d search** that we know.
 - Once objects are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees and Hash Tables.
 
-- [Google’s S2, geometry on the sphere, cells and Hilbert curve](https://blog.christianperone.com/2015/08/googles-s2-geometry-on-the-sphere-cells-and-hilbert-curve/)
-- [Google S2 library](https://medium.com/@self.maurya/lesser-known-things-about-googles-s2-fea42f852f67)
-
 Best usage of Google S2, https://gis.stackexchange.com/questions/236508/understanding-the-s2-library-geometry-on-the-sphere-cells-and-hilbert-curve-f
 
 #### Uber H3
@@ -82,15 +79,15 @@ Uber H3 is a geospatial indexing system using a hexagonal grid that can be (appr
 - Uber H3 enables users to partition the globe into hexagons for more accurate analysis.
 - H3 exposes functions that permit moving between resolutions in the H3 grid system. The functions produce parent (coarser) or children (finer) cells. You can determine surronding H3 cells and find nearby objects by key, which would be the encoded H3 cell string of the location at a given resolution.
 
+**Data stores**
+- **Elastic Search**: supports multiple geo query capabilities and has a **Geo Point field type**. **geo_distance query** for example finds documents with geopoints within the specified distance of a central point.
+- **MongoDB**: allows you to store geospatial data as GeoJSON points and supports geospatial query operations.
+- **PostgreSQL + PostGIS**: PostGIS is a spatial database extender for the PostgreSQL database. PostGIS adds support for geo-location allowing geospatial SQL-based queries.
 
 Blogs/Articles,
 
 - [Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
 - [Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
-
-- **Elastic Search**: supports multiple geo query capabilities and has a **Geo Point field type**. **geo_distance query** for example finds documents with geopoints within the specified distance of a central point.
-- **MongoDB**: allows you to store geospatial data as GeoJSON points and supports geospatial query operations.
-- **PostgreSQL + PostGIS**: PostGIS is a spatial database extender for the PostgreSQL database. PostGIS adds support for geo-location allowing geospatial SQL-based queries.
 
 ---
 
