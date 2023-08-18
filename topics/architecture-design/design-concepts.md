@@ -198,26 +198,6 @@ If we choose to implement distributed system, that means, we are tolerating netw
 #### Which database falls under which category (AP, CP)?
 https://bikas-katwal.medium.com/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15
 
-## Optimistic Lock Vs. Pessimistic Lock
-
-Optimistic Locking allows a conflict to occur, but it needs to detect it at write time. This can be done using either a physical or a logical clock. However, since logical clocks are superior to physical clocks when it comes to implementing a concurrency control mechanism, we are going to **use a version column** to capture the read-time row snapshot information.
-
-The version column is going to be incremented every time an UPDATE or DELETE statement is executed while also being used for matching the expected row snapshot in the WHERE clause.
-
-Pessimistic locking aims to avoid conflicts by using locking.
-
-optimistic locking can help you **_prevent Lost Updates_** even when using application-level transactions that incorporate the user-think time as well.
-
-optimistic locking works even across multiple database transactions since it doesn’t rely on locking physical records.
-
-Pessimistic locking is suitable when the cost of retrying a transaction is very high or when contention is so large that many transactions would end up rolling back if optimistic locking were used.
-
-#### Database Isolation Vs. Optimistic/Pessimistic Locks
-
-Depending on isolation level you've chosen, specific resource is going to be locked until given transaction commits or rollback - it can be lock on a whole table, row or block of sql. It's a pessimistic locking and it's ensured on database level when running a transaction.
-Optimistic locking on the other hand assumes that multiple transactions rarely interfere with each other so no locks are required in this approach. It is a application-side check that uses @Version attribute in order to establish whether version of a record has changed between fetching and attempting to update it.
-
-
 ### Peer to peer task choreography & Orchestration Engine
 
 Initially we adopted peer to peer task choreography. process flows are orchestrated in ad-hoc manner using a combination of event  driven pub/sub, making direct REST calls, and using a database to manage the state.
