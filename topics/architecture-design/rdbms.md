@@ -1,5 +1,24 @@
 # MySQL, PostgreSQL, AWS RDS
 
+### DB Concepts
+
+A database transaction must satisfy the ACID property, which stands for Atomicity, Consistency, Isolation, and Durability.
+
+**Read Phenomena**
+
+A transaction can be interfered by other transactions that runs simultaneously with it. This interference will cause something we called _read phenomenon_.
+
+- Dirty read –  A transaction reads data written by a concurrent uncommitted transaction.
+- Nonrepeatable read –  A transaction re-reads data it has previously read and finds that data has been modified by another transaction (that committed since the initial read).
+- Phantom read –  A phantom read is a situation that occurs when two identical queries are executed and the collection of rows returned by the second query is different.
+
+**Transaction Isolation Levels**
+
+- Read uncommitted - Transactions in this level can see data written by other uncommitted transactions
+- Read committed - where transactions can only see data that has been committed by other transactions. Because of this, dirty read is no longer possible.
+- Repeatable read -  ensures that the same select query will always return the same result, no matter how many times it is executed, even if some other concurrent transactions have committed new changes that satisfy the query.
+- Serializable - Concurrent transactions running in this level are guaranteed to be able to yield the same result as if they’re executed sequentially in some order, one after another without overlapping.
+
 https://medium.com/@ronakdotpatel/rds-postgres-migration-with-zero-downtime-247eb4157260
 
 ### RPO & RTO
