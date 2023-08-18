@@ -315,6 +315,8 @@ Two key attributes of an effective shard key are high **cardinality** and well-d
 
 [Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
 
+- [MongoDB Sharding Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#mongodb-sharded-cluster)
+- [Shrading with PostgreSQL Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#sharding-in-postgresql)
 
 #### Consistent Hasshing
 [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
