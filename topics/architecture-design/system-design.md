@@ -70,6 +70,9 @@ Since S2 uses the Hilbert Curve to enumerate the cells, this means that cell val
 - [Google’s S2, geometry on the sphere, cells and Hilbert curve](https://blog.christianperone.com/2015/08/googles-s2-geometry-on-the-sphere-cells-and-hilbert-curve/)
 - [Google S2 library](https://medium.com/@self.maurya/lesser-known-things-about-googles-s2-fea42f852f67)
 
+Best explanation of usage, https://gis.stackexchange.com/questions/236508/understanding-the-s2-library-geometry-on-the-sphere-cells-and-hilbert-curve-f
+
+
 Blogs/Articles,
 
 - [Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
