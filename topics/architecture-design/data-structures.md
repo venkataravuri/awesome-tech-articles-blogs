@@ -1,11 +1,3 @@
-# General Data Structures
-
-||Article / Blog||
-------------:|:------------|:-------------
-|:star::star:|[How Hashmap is designed?](https://medium.com/interviewnoodle/how-does-hashmap-works-internally-619debad797f)
-|:star::star:|[How to Implement LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
-
-
 ||Article / Blog||
 ------------: |:------------- | -------------
 |:star::star::star:|[Realtime tracking of top 100 twitter words per min/hour/day](https://stackoverflow.com/questions/10189685/realtime-tracking-of-top-100-twitter-words-per-min-hour-day)
@@ -67,6 +59,8 @@ It checks for presence of an element in a set.
 - The Exim mail transfer agent (MTA) uses Bloom filters in its rate-limit feature
 - Medium uses Bloom Filters to recommend stories to its members.
 - a simple _*spellchecker*_. You get the whole dictionary and add every word to the bloom filter. When you get a text you need to spellcheck, check every word against the filter. If you get a negative result back for a word, you’re sure that it’s misspelled and you can feel confident in highlighting it as one. Sometimes, however, you’d have a misspelled word that the filter marked as “maybe present” and then you’d fail to mark it as misspelled. But considering we didn’t need to store the entire dictionary in memory and we control the rate of false positives, this is probably an acceptable trade-off.
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.r1yGhcx0IT-dT1JRa3uQ1QHaGj%26pid%3DApi&f=1&ipt=9f82933fcc8bdb3eb62ab3689c7bf8ddd4100c3c54f4b1f2a0ee09ac2b9d194d&ipo=images" width="50%" height="50%" />
 
 #### How does a Bloom filter work?
 https://redislabs.com/blog/redis-redisbloom-bloom-filters/
