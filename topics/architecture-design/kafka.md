@@ -1,8 +1,21 @@
 # Kafka Internals, Scalability & Performance
 
+Kafka ~ immutable commit log
+
 ### Kafka production challenges
 - Kafka consumers rebalances unexpectedly - https://stackoverflow.com/questions/27181693/how-does-consumer-rebalancing-work-in-kafka; https://stackoverflow.com/questions/56647442/kafka-keeps-rebalancing-consumers; https://stackoverflow.com/questions/71615472/kafka-commit-during-rebalancing
 - 
+#### Kafka Streams
+
+In-Stream Analytics (In our case it is limited to Trends) 
+- Active SDDCs Count
+- Active Users Count
+- Latency Trends
+- Anomaly Detection - Abnormal change in trends
+
+KTable is localized in-memory store, used groupy and aggregate events, can be configured to use with ROCKS_DB by default.
+
+https://stackoverflow.com/questions/59628222/apache-kafka-implementing-a-ktable
 
 ### How Kafka Nodes and zookeeper will communicate with each other?
 
@@ -142,7 +155,7 @@ https://medium.com/javarevisited/kafka-partitions-and-consumer-groups-in-6-mins-
 
 Three different Message Delivery Guarantee types are supported by Kafka.
 
-- Exactly once: Despite broker failures or producer retries, Kafka guarantees that every message will be stored only once, without duplications or data loss
+- Exactly once: **Despite broker failures or producer retries**, Kafka guarantees that every message will be stored only once, without duplications or data loss
 - At-Least Once: Every message will always be saved in Kafka at least once, according to this rule. There is no chance of message loss, but if the producer tries again after the message has already been persisted, the message may be duplicated.
 - At most Once: Every message in Kafka is only stored once, at most. If the producer doesn’t retry on failures, messages could be lost.
 
@@ -232,16 +245,18 @@ Multiple partitions on a topic and these multiple partitions being consumed by m
 
 Create multiple partitions for the Topic in terms of parallelism/performance in the context of consumers. If you have multiple consumers in a single consumer group and multiple partitions in the topic, then it is guaranteed that consumers will receive data from different partitions which will give you parallelism and performance boost while processing from kafka. 
 
-### Scaling a Kafka consumer group with Kubernetes operator and HPA
+### How to auto-scale consumers through Kubernetes operator and HPA
 
 Leverage k8s’s Operator pattern and Custom Resource Definition (CRD) to manage the life cycle of a Kafka consumer group running a top a k8s cluster.
 
-The _**record-lag metric**_ and number of partitions per topic are dynamic values that can be changed anytime in production environment.
+Combination of _**record-lag metric**_ and number of partitions per topic are used to auto-scale consumers.
     
 The new CRD KconsumerGroup is a Primary Resource and its spec describes the individual consumer specification such as consumer name, image, the topic it should poll messages from, minReplicas indicates the minimum number of consumers to start with, averageRecordsLagLimit set the threshold for HPA to scale out. In term of status, we want to see active pods and a customised message.
 
-You can have multiple Kafka clusters share a common zookeeper ensemble but it's not recommended because it will complicate your ability to upgrade zookeeper
-
-### How did you setup Kafka on K8s?
+### How to setup Kafka on K8s?
     
 https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k8s-operator-2c1d21d7b89a
+
+#### Optimizations
+
+- Use Kafka Consumer to batch push into Redshift
