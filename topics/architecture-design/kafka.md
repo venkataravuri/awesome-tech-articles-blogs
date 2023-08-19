@@ -108,6 +108,11 @@ producer.send(producerRecord, new Callback() {
     - related to consumer commands
     - Zookeeper involved
 
+### Topic & Partition Strategy
+
+- Topics by product & tenant-group classfication
+- Partitions count is driven by tenant-group classification
+
 ### Java Producer with Keys
 
 When Kafka publishes a keyed message, the message is deterministically mapped to a partition based on the hash of the key. This provides a guarantee that messages with the same key are always routed to the same partition, which can be important for some applications. Remember that messages within a partition are always delivered in order to the consumer.
