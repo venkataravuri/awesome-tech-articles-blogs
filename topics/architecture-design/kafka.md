@@ -110,6 +110,8 @@ producer.send(producerRecord, new Callback() {
 
 ### Java Producer with Keys
 
+When Kafka publishes a keyed message, the message is deterministically mapped to a partition based on the hash of the key. This provides a guarantee that messages with the same key are always routed to the same partition, which can be important for some applications. Remember that messages within a partition are always delivered in order to the consumer.
+
 Keys become useful when a user wants to introduce ordering and ensure the messages that share the same key end up in the same partition.
 
 Batching messages enables a Kafka producer to increase its throughput. Reducing the number of network requests the producer makes in order to send data will improve the performance of the system.
