@@ -29,22 +29,25 @@ Cloud native apps are designed and built to exploit scale, elasticity, resilienc
 
 ## Twelve-Factor App
 
-12 Factor App is a set of best practices that guide you to build a great cloud native application.
+12 Factor App is set of principles for building the scalable and performant, independent, and most resilient cloud native applications.
 
-- In order that an application be deployed in the cloud and enjoy features such as auto scaling, it first needs to be cloud native
-- Using methodology, you can make scalable and resilient apps that can be continuously deployed with maximum agility.
-- Acts as a acceptance criteria when evaluating whether software is production ready.
-
-**Notes**
-
-- [Twelve Factor App Principles Quick Summary](https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser)
-- [Twelve Factor App Principles Detailed Summary](https://newrelic.com/blog/best-practices/twelve-factor-app)
+- Codebase (One codebase tracked in revision control, many deploys)
+- Dependencies (Explicitly declare and isolate the dependencies)
+- Config (Store configurations in an environment)
+- Backing Services (treat backing resources as attached resources)
+- Build, release, and Run (Strictly separate build and run stages)
+- Processes (execute the app as one or more stateless processes)
+- Port Binding (Export services via port binding)
+- Concurrency (Scale out via the process model)
+- Disposability (maximize the robustness with fast startup and graceful shutdown)
+- Dev/prod parity (Keep development, staging, and production as similar as possible)
+- Logs (Treat logs as event streams)
+- Admin processes (Run admin/management tasks as one-off processes)
 
 ### Domain Driven Design
 
-:star::star::star: https://medium.com/ssense-tech/domain-driven-design-effective-domain-modeling-and-its-perks-e4e3e3e0d5ee
+Domain-Driven Design (DDD) is about **mapping 'business domain' concepts into software artifacts**.
 
-- Domain-Driven Design (DDD) is about **mapping 'business domain' concepts into software artifacts**. 
 - It **emphasizes on rich domain model over anemic domain model**
 - The domain concepts & logic is modeled as Entities, Value Objects, and Aggregates with clear boundaries.
 - In anemic domain models, entities are represented by classes with data and connections to other entities. **Business logic is absent in these classes** and **logic is usually placed in managers, services, utilities, helpers, etc**.
@@ -56,14 +59,12 @@ Cloud native apps are designed and built to exploit scale, elasticity, resilienc
 - In DDD, each aggregate requires one repository. This means we have fewer repositories in DDD than the number of DAOs required to load and persist entities in an application with an anemic model.
 - In DDD, since the Order aggregate must contain all the business operations that can be performed on it, we need to move the logic to change the order status and to add an item, from the Service Layer to the Domain Layer
 
-DDD Architecture Layers 
+**DDD Architecture Layers**
 
 - Domain Layer contains entities & value objects along with **repository interface**. All the business logic will live in this layer.
 - UI Layer will contain the controller. 
 - Application Layer will contain the services. There is now a separate service for each operation that is performed on a specific area of the domain.
 - Infrastructure Layer will contain the implementation of the interfaces defined in the domain, as well as classes that provide this implementation. Any operations that require our application to communicate with the outside world should be implemented in this layer too.
-
-### How DDD benefits? Is it worth?
 
 ### SOLID Principles
 
@@ -75,13 +76,14 @@ DDD Architecture Layers
 
 **Design Pattern** - is like a cure against some disease. And **Disease** - is violation of _S.O.L.I.D._
 
-https://www.slideshare.net/DrTrucho/python-solid
+[SOLID priciples implementation using Python](https://www.slideshare.net/DrTrucho/python-solid)
 
-All Design Patterns compliance S.O.L.I.D principles, and other principles: Prefer composition to inheritance Incapsulate changes Do high cohesion and low coupling etc 
-
-https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling
-
-https://www.linkedin.com/pulse/solid-design-principles-python-examples-hiral-amodia
+All Design Patterns 
+- Compliance S.O.L.I.D principles,
+- and other principles
+  - Prefer composition to inheritance
+  - Encapsulate changes
+  - Do high cohesion and low coupling etc 
 
 **Single Responsibility Principle** states that **a class should have only one primary responsibility and should not take other responsibilities**. “A class should have only one reason to change”.
 
@@ -89,15 +91,15 @@ https://www.linkedin.com/pulse/solid-design-principles-python-examples-hiral-amo
 
 Following this principle ensures that a class is well defined to do what it is supposed to do. Adding any further features can be done by creating new entities that extend the existing class’s features and add more features to itself.
 
-Open-close is a principle which strategy pattern is a good way to implementing that, There are other patterns that help achieve OCP, like Abstract Factory. You can achieve OCP in a class by externalizing some of its responsibilities to a Strategy and writing new Strategies instead of modifying the class itself, but it is not the only way of respecting OCP. 
+Strategy pattern is a good way to implementing Open-close is a principle, There are other patterns that help achieve OCP, like Abstract Factory. You can achieve OCP in a class by externalizing some of its responsibilities to a Strategy and writing new Strategies instead of modifying the class itself, but it is not the only way of respecting OCP. 
 
 Collections.sort works on any collection of objects that implement the Comparable interface, it is not limited to sorting just integers or just strings — it is not limited to any specific type. The sorting algorithm will work as it was designed, so we can say that it is closed to modification, but the sorting criteria will vary depending on the compareTo method implementation
 
 _**Liskov Substitution Principle**_ states that "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
 
-The Interface Segregation Principle states that “No client should be forced to depend on methods it does not use”.
+The **Interface Segregation Principle** states that “No client should be forced to depend on methods it does not use”.
 
-The Dependency Inversion Principle states that:
+The **Dependency Inversion Principle** states that:
 
 a). High level module should not depend on low level modules. Both should depend on abstractions
 b). Abstractions should not depend on details. Details should depend on abstractions. 
@@ -117,14 +119,14 @@ The Read Models can be read by front-ends or by APIs.
 
 ### Resiliency Patterns
 
-In a distributed system, failures can happen. Network can have transient failures, hardware can fail, storage disks can corrupt. Therefore, design an application to be self-healing when failures occur. 
+In a distributed system, failures can happen. Network can have transient failures, hardware can fail, storage disks can corrupt. Therefore, design an application to be self-healing when failures occur.
+
+Resiliency is the capability to handle partial failures while continuing to execute and not crash. Applications that communicate with remote services and resources must be sensitive to transient faults. 
 
 This requires a three-pronged approach:
 - Detect failures.
 - Respond to failures gracefully.
 - Log and monitor failures, to give operational insight.
-
-Resiliency is the capability to handle partial failures while continuing to execute and not crash. Applications that communicate with remote services and resources must be sensitive to transient faults. 
 
 Transient faults include the momentary loss of network connectivity to components and services, the temporary unavailability of a service, or timeouts that arise when a service is busy. These faults are often self-correcting, and if the action is repeated after a suitable delay it is likely to succeed.
 
@@ -132,25 +134,21 @@ We decorate network-bound calls with resiliency aspects in following order:
 
 ** Retry ( CircuitBreaker ( RateLimiter ( TimeLimiter ( Bulkhead ( Function ) ) ) ) ) **
 
-Retry is applied at the end (if needed).
+The execution order: decorate a network call in order for resilience:
 
-The execution order:
-1. supplier, then decorate in order with resilience:
 2. RateLimiter (prevent a call if rate-limit exceeded)
 3. TimeLimiter (time-out a call)
 4. CircuitBreaker (fail-fast)
 5. Retry (retry on exceptions)
 6. Fallback (fallback as last resort)
 
-A suitable reference order is for example auto-configured in the Spring-Boot extension. See the official Guides, Getting started with resilience4j-spring-boot2 about Aspect order.
-
 Resilience4j is a lightweight fault tolerance designed for functional programming.
 
 ### Circuit Breaker
 
-A technique to avoid cascading failures in an interdependent microservices environment, where dependent service has outage or degraded performance. 
+A technique to **avoid cascading failures** in an interdependent microservices environment, where dependent service has outage or degraded performance. 
 
-Circuit Breaker framework monitors communications for failures. Once the failures reach a certain threshold, the circuit breaker trips, and all further calls to the circuit breaker return with an error or with some alternative service or default message
+Circuit Breaker framework **monitors communications for failures**. Once the failures reach a certain threshold, the circuit breaker trips, and all further calls to the circuit breaker return with an error or with some alternative service or default message
 
 It make sure system is responsive & resilient and threads are not waiting for an unresponsive call. 
 
@@ -161,7 +159,7 @@ The circuit breaker has three distinct states: Closed, Open, and Half-Open:
 
 ### Bulkhead
 
-Bulkehead for concurrency controller (limits concurrent handling) and circuit breaker to control constant overlaod.
+Bulkhead for concurrency controller (limits concurrent handling) and circuit breaker to control constant overlaod.
 
 Will protect from bursts & spikes. With bulkhead pattern, components of an application are isolated into pools so that if one fails, the others will continue to function.
 
@@ -171,19 +169,17 @@ The benefits of this pattern include:
 - Allows you to deploy services that offer a different quality of service for consuming applications. A high-priority consumer pool can be configured to use high-priority services.
 
 **References**
-
-https://dzone.com/articles/resilient-microservices-pattern-bulkhead-pattern
+- https://dzone.com/articles/resilient-microservices-pattern-bulkhead-pattern
 
 ### Idempotency
 
 Perform an operation multiple times without changing the result.
-
-Ex. Update the contact details of a user in the system, delete a file.
+- Update the contact details of a user in the system.
+- Delete a file.
 
 Not idempotent operations - send payment, create orders. REST - POST, PATCH
 
 Receives a request with the same idempotence key (could be UUID (or) request/reference id), it knows that it’s a retry.
-
 
 ### CAP Theorm
 
