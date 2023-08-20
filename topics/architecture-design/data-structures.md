@@ -1,4 +1,4 @@
-![image](https://github.com/venkataravuri/awesome-tech-articles-blogs/assets/3113165/5be2ec1d-0b84-48ec-8ffc-cf13fe3860b3)# Probabilistic Data Structures
+# Probabilistic Data Structures
 
 > Probabilistic data structures can't give you a definite answer, instead they provide you with a reasonable approximation of the answer and a way to approximate this estimation.
 
