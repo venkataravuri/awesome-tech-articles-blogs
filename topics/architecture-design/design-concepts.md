@@ -239,14 +239,19 @@ References
 
 ### Explan Event Loop in Node.js
 
-The key building blocks in non-blocking IO are: Event Demultiplexer, Event Queue, Event Loop
+The key building blocks in non-blocking IO are: 
+- Event Demultiplexer
+- Event Queue
+- Event Loop
 
-https://tusharf5.com/posts/node-design-patterns-reactor-pattern
+<img src="https://codeahoy.com/img/books/libuv/nodejs-event-loop-architecture.png" width="60%" height="60%" />
 
-Non blocking I/O - handle all I/O activities asynchronously
+<img src="https://i.stack.imgur.com/2sY2F.jpg" width="50%" height="50%" />
 
 #### Event Demultiplexer
-Also called Event Notification Interface is another way to react to events. In this mechanism the system collects and queues I/O events coming from a set of watched resources. It blocks the process until new events are available. So no CPU time is wasted waiting for events. This is also called the Event loop.
+In this mechanism the system collects and queues I/O events coming from a set of watched resources. 
+It blocks the process until new events are available. 
+So no CPU time is wasted waiting for events.
 
 ### Inversion of Control & Dependency Inversion
 
