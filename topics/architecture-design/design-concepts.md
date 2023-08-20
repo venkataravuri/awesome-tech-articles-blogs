@@ -198,33 +198,35 @@ If we choose to implement distributed system, that means, we are tolerating netw
 #### Which database falls under which category (AP, CP)?
 https://bikas-katwal.medium.com/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15
 
-### Peer to peer task choreography & Orchestration Engine
+### Peer to Peer Choreography
 
-Initially we adopted peer to peer task choreography. process flows are orchestrated in ad-hoc manner using a combination of event  driven pub/sub, making direct REST calls, and using a database to manage the state.
+Peer to peer task choreography using Pub/sub model worked for simplest of the flows, but quickly highlighted some of the issues associated with the approach:
 
-As the number of microservices grow and the complexity of the processes increases, getting visibility into these distributed workflows becomes difficult without a central orchestrator.
+- Process flows are “embedded” within the code of multiple microservices
+- As the number of microservices grow and the complexity of the processes increases, getting visibility into these distributed workflows becomes difficult without a central orchestrator.
+- Tight coupling and assumptions around input/output, SLAs etc, making it harder to adapt to changing needs
+- Cannot answer "How much are we done with process X"?
 
-Process flows are “embedded” within the code of multiple applications
+Orchestration Engine
 
-A JSON DSL based blueprint defines the execution flow.
+- Orchestrate microservices-based process flows.
+- Each task in process or business flows are implemented as microservices.
+- A workflow blueprint defines a series of tasks that needs be executed. Each of the tasks are either a control task (e.g. fork, join, decision, sub workflow, etc.) or a worker task
+- Workflow definitions are decoupled from the service implementations.
 
-A workflow blueprint defines a series of tasks that needs be executed. Each of the tasks are either a control task (e.g. fork, join, decision, sub workflow, etc.) or a worker task
+<img src="https://conductor.netflix.com/devguide/architecture/overview.png" width="50%" height="50%" />
 
-Workflow engine is a state machine, As workflow events occur combines with workflow blueprint with current state, to identify next state and schedules tasks, updates states machine
+<img src="https://conductor.netflix.com/devguide/architecture/conductor-architecture.png" width="40%" height="40%" />
 
-Task Workers are intended to be idempotent stateless functions. The polling model allows us to handle backpressure on the workers and provide auto-scalability based on the queue depth when possible.
+- Workflow engine is a state machine, As workflow events occur combines with workflow blueprint with current state, to identify next state and schedules tasks, updates states machine
+- Task Workers are intended to be idempotent stateless functions. The polling model allows us to handle backpressure on the workers and provide auto-scalability based on the queue depth when possible.
+- Workers are language agnostic, allowing each microservice to be written in the language most suited for the service.
 
-Workers are language agnostic, allowing each microservice to be written in the language most suited for the service.
-
-https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40
-
-
-### An note on HTTP error codes
-
-https://www.yeahhub.com/1xx-2xx-3xx-4xx-5xx-http-status-codes/
+References
+- https://conductor.netflix.com/devguide/architecture/index.html
+- https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40
 
 
-https://medium.com/javarevisited/completablefuture-usage-and-best-practises-4285c4ceaad4
 
 ### Explan Event Loop in Node.js
 
