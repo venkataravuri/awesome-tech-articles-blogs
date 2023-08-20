@@ -32,8 +32,7 @@ Top-K is a probabilistic data structure that allows you to find the most frequen
 
 HeavyKeeper is comprised of d arrays, and each array is comprised of w buckets. Each bucket consists of two fields: a fingerprint field and a counter field. HeavyKeeper computes the d hash functions, and maps fi to d buckets.
 
-<img src="https://d3i71xaburhd42.cloudfront.net/c076018f7828135cbb51d96cd0ff9b6f118798c4/4-Figure1-1.png" width="50%" height="50%" />
-
+<img src="https://nan01ab.github.io/assets/images/heavyk-ds.png" width="50%" height="50%" />
 
 ## Leaderboards
 
