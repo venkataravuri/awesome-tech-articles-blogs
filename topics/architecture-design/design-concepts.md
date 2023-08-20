@@ -183,17 +183,31 @@ Receives a request with the same idempotence key (could be UUID (or) request/ref
 
 ### CAP Theorm
 
-CAP (Consistency, Availability, and Partition tolerance) theorem helps us to make our choice while designing distributed systems. We can incorporate any two of these 3 functionalities into our system, not all of them.
-Consistency:
+CAP stands for Consistency, Availability and Partition Tolerance.
 
-Partition Tolerance:
+Partition Tolerance means, if there is a partition between nodes or the parts of the cluster in a distributed system are not able to talk to each other, the system should still be functioning.
 
-Tolerating partition means we are agreed to embrace distributed system - our machines are in different networks. There might have some sorts of network outage between different networks in distributed systems, but in that case our system should be operational. If our system does not tolerate network partition, then it is an application with one machine - not a distributed system.
+A distributed system always needs to be partition tolerant, we shouldn’t be making a system where a network partition brings down the whole system.
 
-If we choose to implement distributed system, that means, we are tolerating network partition. So, in the presence of P(Partition tolerance), we either choose C(Consistency) or A(Availability).
+CAP theorem means if there is network partition and if you want your system to keep functioning you can provide either **Availability** or **Consistency** and not both.
 
-#### Which database falls under which category (AP, CP)?
-https://bikas-katwal.medium.com/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15
+> Consistency in CAP theorem is not same as Consistency in RDBMS ACID.
+> CAP consistency talks about data consistency across cluster of nodes and not on a single server/node.
+
+Consistency means, if you write data to the distributed system, you should be able to read the same data at any point in time from any nodes of the system or simply return an error if data is in an inconsistent state. Never return inconsistent data.
+
+> Availability in CAP theorem is not the same as the downtime we talk about in our day to day system. Example 99.9% availability of a microservice is not the same as CAP theorem Availability.
+> CAP-Availibilty talks about if the cluster has network partition how the system will behave, whether it will start giving error or keep serving requests successfully.
+
+Availability means the system should always perform reads/writes on any non-failing node of the cluster successfully without any error. This is availability is mainly associated with network partition. i.e. in the presence of network partition whether a node returns success response or an error for read/write operation.
+
+A **single leader based system** that accepts reads and writes, should **never** be categorized under **Availability**. Making these kinds of system **Consistent and not Available**.
+
+All RDBMS are Consistent as all reads and writes go to a single node/server.
+
+Cassandra, any coordinator nodes can accept read or write requests and forwards requests to respective replicas based on the partition key. Cassandra is categorized as AP(Available and Partition Tolerant)
+
+[Source](https://bikas-katwal.medium.com/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15)
 
 ### Peer to Peer Choreography
 
@@ -204,7 +218,7 @@ Peer to peer task choreography using Pub/sub model worked for simplest of the fl
 - Tight coupling and assumptions around input/output, SLAs etc, making it harder to adapt to changing needs
 - Cannot answer "How much are we done with process X"?
 
-Orchestration Engine
+**Central Orchestration Engine**
 
 - Orchestrate microservices-based process flows.
 - Each task in process or business flows are implemented as microservices.
@@ -222,8 +236,6 @@ Orchestration Engine
 References
 - https://conductor.netflix.com/devguide/architecture/index.html
 - https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40
-
-
 
 ### Explan Event Loop in Node.js
 
