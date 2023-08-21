@@ -72,83 +72,18 @@ https://visualstorageintelligence.com/chargeback-vs-showback/
 #### API Gateway integration with EKS
 [API Gateway integration with EKS](https://aws.amazon.com/blogs/containers/integrate-amazon-api-gateway-with-amazon-eks/)
 
-## RDS PostgreSQL
+## AWS RDS - PostgreSQL
 
-#### How failover works in RDS?
-
-In an Amazon RDS Multi-AZ deployment, Amazon RDS automatically creates a primary database (DB) instance and synchronously replicates the data to an standby instance in a different AZ. When it detects a failure, Amazon RDS automatically fails over to a standby instance without manual intervention.
-
-_Standby instance does not take traffic, you need to setup read replicas_. Latest AWS preview offering provides two read replicas in multi-AZ deployment.
- 
-https://aws.amazon.com/rds/features/multi-az/
-
-#### How RDS instances are upgraded with near-zero downtime?
-
-Hardware maintenance, OS patching, Databases Engine major version ugrade needs RDS upgrade regularly.
-
-- For Multi-AZ deployments, Hardware & OS maintenance is applied to the secondary instance first, then the instance fails over, and then the primary instance is updated. Instance failover usually about 60 seconds)
-- 
-- Upgrades to the database engine level require downtime. In Multi-AZ deployment, both the primary and standby DB instances are upgraded at the same time using rolling upgrade. By using a read replica, you can perform most of the maintenance steps ahead of time and minimize the necessary changes during the actual outage.
-
-During failover, Amazon does a DNS swap internally so that your RDS endpoint points to the right machine, so you may have to restart your web processes that point to the DB so that they reconnect to the DB and pull in the new IP from a new DNS lookup.
-
-## Redshift
-
-### Datawarehouse Concepts
-Three Orthogonal concepts: 
-- Data model - Star schema & Snowflake
-- Workload characteristics (OLTP vs. OLAP)
-- and Physical data organisation (columnar).
-
-In a typical **_star schema_** world you will have **_dimension and fact_**. Mostly Dimensions are basically textual data and facts are numbers and generally dimension tables are small while fact table is large.
-
-Snowflake schemas extend the star concept by further normalizing the dimensions into multiple tables. For example, a product dimension may have the brand in a separate table.
-
-Star and snowflake schemas organize around a central fact table that contains measurements for a specific event, such as a sold item. The fact table has foreign key relationships to one or more dimension tables that contain descriptive attribute information for the sold item, such as customer or product. 
-
-In columnar DBs you can avoid star schema. you don’t need to separate the textual and numerical values in separate table anymore as its taken care in columnar storage. So adding star schema on top of redshift will not make it efficient.
+[RDS Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#aws-rds---mysql-postgresql)
 
 ### AWS Redshift
 
-* OLAP – Online analytics processing & Data warehouse service
-* Massive parallel processing
-* Columnar data storage, when storing data in columnar format Redshift uses a 1024Kb blocksize. Advanced compression due to columnar architecture.
-* Doesn’t require indexes or materialized views.
-* Amazon Redshift cluster consists of nodes
-* Each cluster has a _**leader node**_ and one or more _**compute nodes**_.
-    * The leader node receives queries from client applications, parses the queries, and develops query execution plans.
-    * The leader node then coordinates the parallel execution of these plans with the compute nodes and aggregates the intermediate results from these nodes.
-* Redshift can not work on Multi AZ!  All the cluster nodes are provisioned in the same Availability Zone. 
-* Can restore snapshots to a new AZ in case of outages.
-* Amazon Redshift workload management (WLM) enables users to flexibly manage priorities within workloads so that short, fast-running queries won't get stuck in queues behind long-running queries.
-
-#### Ecnryption
-* In transit with SSL
-* At rest with AES-256
-* You can enable encryption when you launch your cluster, or you can modify an unencrypted cluster to use AWS Key Management Service (AWS KMS) encryption. To do so, you can use either an AWS-managed key or a customer-managed key (CMK).
-* Amazon Redshift uses a hierarchy of encryption keys to encrypt the database.
-* You can use either AWS Key Management Service (AWS KMS) or a hardware security module (HSM) to manage the top-level encryption keys in this hierarchy.
-* When you choose AWS KMS for key management with Amazon Redshift, there is a four-tier hierarchy of encryption keys.
-* These keys, in hierarchical order, are the master key, a cluster encryption key (CEK), a database encryption key (DEK), and data encryption keys.
-
-### Redshift Peformance Metrics
-
-- **_svv_table_info_** - provides a lot of useful information on the performance health of your tables, including areas like,
- - table skew
- - Percent unsorted
- - Quality of the current table statistics
- - Sort key information
-
-- Use the ANALYZE command to update the statistical metadata that the query planner uses to build and choose optimal plans.
-- The VACUUM command is used to re-sort data added to non-empty tables, and to recover space freed when you delete or update a significant number of rows.
-
-
+[AWS Redshift Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#aws-redshift)
 
 ### Route 53
 
 - Geolocation routing policy – Use when you want to route traffic based on the location of your users.
 - Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
-
 
 #### CloudWatch
 
