@@ -161,3 +161,5 @@ Default Metrics – Network, Disk , CPU and Status check ( Instance and System).
 - CloudWatch logs helps you monitor EC2 instance/application/system logs. Logs send data to CloudWatch
 - Standard monitoring 5 mins. Detailed monitoring 1 minute - out of free tier.
 
+#### How do you SSH to Bastion servers?
+SSH Bastions as the entry point. The network path originates from the On-Prem network, goes through DX/VPN to the transit gateway (TGW), and then is routed to the Shared Services VPC.
