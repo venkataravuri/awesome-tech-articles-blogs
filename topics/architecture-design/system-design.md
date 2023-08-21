@@ -318,5 +318,13 @@ Two key attributes of an effective shard key are high **cardinality** and well-d
 - [MongoDB Sharding Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#mongodb-sharded-cluster)
 - [Shrading with PostgreSQL Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#sharding-in-postgresql)
 
+#### LRU Cache
+
+LRU cache is nothing but a combination of the **DoublyLinkedList** and the **HashMap** as shown below:
+
+<img src="https://www.baeldung.com/wp-content/uploads/2021/07/Screenshot-from-2021-07-09-02-10-25-1.png" width="50%" height="50%" />
+
+[LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
+
 #### Consistent Hasshing
 [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
