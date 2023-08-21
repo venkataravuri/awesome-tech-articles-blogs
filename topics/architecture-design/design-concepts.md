@@ -279,11 +279,14 @@ GraphQL, I see it as query language for API
 
 https://www.slideshare.net/nburk/react-graphql?qid=e496f1f4-ad5f-43fa-9b8b-e74762825f3e&v=&b=&from_search=5
 
-
 3 operation types:
 - Query
 - Mutation (Write and Get)
 - Subscription
+
+### gRPC
+
+[gRPC with Spring Boot](https://medium.com/thefreshwrites/building-a-grpc-service-with-spring-boot-3844168c2112)
 
 ### Test-Driven Development
 
