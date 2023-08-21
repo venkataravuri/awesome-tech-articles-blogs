@@ -78,10 +78,28 @@ In-application pooling - create per-shard connection pools and pick a connection
 
 ## AWS RDS - MySQL, PostgreSQL
 
-### Zero-Downtime Maintenance
+#### RDS Autofailovers
 
-RDS requires some downtime during its patching and upgrades. To upgrade MySQL RDS to a new version, you have to perform an upgrade on RDS Read Replica first and then promote the replica to be a new master and finally switch your application to the new master. This procedure will result in a few minutes downtime.
+In an Amazon RDS Multi-AZ deployment, Amazon RDS automatically creates a primary database (DB) instance and synchronously replicates the data to an standby instance in a different AZ. When it detects a failure, Amazon RDS automatically fails-over to a standby instance without manual intervention.
+
+_Standby instance does not take traffic, you need to setup read replicas_. Latest AWS preview offering provides two read replicas in multi-AZ deployment.
  
+https://aws.amazon.com/rds/features/multi-az/
+
+
+
+
+
+### Zero-Downtime Maintenance & Upgrades
+
+Hardware maintenance, OS patching, Databases Engine major version ugrade needs RDS upgrade regularly.
+
+- RDS requires some downtime during its patching and upgrades. To upgrade MySQL RDS to a new version, you have to perform an upgrade on RDS Read Replica first and then promote the replica to be a new master and finally switch your application to the new master. This procedure will result in a few minutes downtime.
+- For Multi-AZ deployments, Hardware & OS maintenance is applied to the secondary instance first, then the instance fails over, and then the primary instance is updated. Instance failover usually about 60 seconds)
+- Upgrades to the database engine level require downtime. In Multi-AZ deployment, both the primary and standby DB instances are upgraded at the same time using rolling upgrade. By using a read replica, you can perform most of the maintenance steps ahead of time and minimize the necessary changes during the actual outage.
+
+During failover, Amazon does a DNS swap internally so that your RDS endpoint points to the right machine, so you may have to restart your web processes that point to the DB so that they reconnect to the DB and pull in the new IP from a new DNS lookup.
+
 RDS MySQL Aurora cluster which reduced the downtime to 30 seconds during the upgrades. Most recently Aurora provides zero-downtime patching, cutting downtime during upgrades to 5 seconds. 
 
 RDS doesn’t officially support multi-master (M/M) replication. While RDS officially doesn’t support MySQL M/M, it doesn’t prevent you from implementing it on your own. 
