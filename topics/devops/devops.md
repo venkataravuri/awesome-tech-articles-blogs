@@ -3,6 +3,7 @@
 ## Table of Contents
 * [DevSecOps](#devsecops-pipelines)
 	* [GitOps](#gitops)
+* [Infrastructure Provisioning]() 
 * [SRE](#sre)
 	* [Observability](#observability)
 * [Kubernetes](docker-kubernetes.md)
@@ -16,37 +17,30 @@ https://newrelic.com/devops/what-is-devops
 ### DevSecOps Pipelines
 
 ### Pre-Build Stage
-* Automated Code Quality Inspection
+- **Automated Code Quality Inspection**
 	- SonarCube
 		- Cyclomatic Complexity calculated based on the number of paths through the code. Whenever the control flow of a function splits, the complexity counter gets incremented by one. 
  
-- Security Scanning -  Static application security testing (SAST), also referred to as static analysis to find security and quality issues by analyzing source code automatically with low false positives. 
+- **Security Scanning**
+	- _Static application security testing (SAST)_ / Static code analysis for application security, also referred to as static analysis to find security and quality issues by analyzing source code automatically with low false positives. - 
 	- Coverity - is the SAST solution for web application security. CWE, OWASP
-
-- Static code analysis for application security
-	- Fortify
+ 	- Fortify
 
 ### Build Stage
 
 - OSS Scan
 	- Source Composition Analysis
 		* Black Duck
-
-Static image analysis
-- Carbon Black
-
-Static workload analysis
-- Carbon Black
-
-Artifact signing using CoSign
-Image signing using CoSign
-
-Image Verification via Sigstore
-
+- Static image analysis
+	- Carbon Black
+- Static workload analysis
+	- Carbon Black
+- Artifact signing using CoSign
+	- Image signing using CoSign
+- Image Verification
+	- via Sigstore
 - Container Security
 	- Octane
-
-Secure infrastructure provisioning via Saltstack
 
 ### GitOps
 
@@ -73,6 +67,14 @@ Argo Rollout is a Kubernetes controller and has several options for Blue/Green d
 
 https://blog.algolia.com/one-year-load-balancing/
 
+### Branching Strategies
+
+https://www.abtasty.com/blog/git-branching-strategies/
+
+## Infrastructure Provisioning
+
+Secure infrastructure provisioning via Saltstack
+
 ### DNS GSLB
 
 Basic DNS Load Balancing provides a basic load balancing capability - round robin DNS. It also does not factor in data center availability, resulting in end users getting directed to unavailable services. It does not factor in the location of the end user, so without a georouting component users will be connected to data centers that could be very far away. 
@@ -93,9 +95,6 @@ LTM load balances servers and also does cache, compression, persistence, etc. LT
 
 LTMs can handle load balancing in two ways, the first way is an nPathconfiguration, and second is a Secure Network Address Translation (SNAT) method. LTM load balances servers and also does caching, compression, persistence, etc.
 
-### Branching Strategies
-
-https://www.abtasty.com/blog/git-branching-strategies/
 
 ## SRE
 
