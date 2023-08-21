@@ -36,10 +36,10 @@ From a client application point of view you also have some control in relation t
 - Read preferences - to control the consistency of the data returned by the query. For example, a ReadConcern of majority tells MongoDB to only return data that has been replicated to a majority of nodes in the replica set.
 - Write concerns - The write concern enables the application to specify the number of replica set members that must apply the write before MongoDB acknowledges the write to the application.
 
-### MongoDB Sharded Cluster
+### MongoDB Sharding
 
-A MongoDB sharded cluster consists of the following components:
-- **Shard**: Each shard contains a subset of the sharded data. Each shard can be deployed as a replica set.
+A **MongoDB sharded cluster** consists of the following components:
+- **Shard**: Each shard contains a subset of the sharded data. Each **shard can be deployed as a replica se**t.
 - **Mongos**: The mongos acts as a query router, providing an interface between client applications and the sharded cluster. Starting in MongoDB 4.4, mongos can support hedged reads to minimize latencies.
 - **Config servers**: Config servers store metadata and configuration settings for the cluster.
 
@@ -47,34 +47,29 @@ MongoDB supports automatically ensuring data and requests are sent to the correc
 
 <img src="https://www.mongodb.com/docs/manual/images/sharded-cluster-production-architecture.bakedsvg.svg" width="35%" height="35%" />
 
-[How to shard a collection?](https://www.mongodb.com/docs/manual/core/sharding-shard-a-collection/)
+#### Shard Keys
 
-#### How do you tune MongoDB?
+MongoDB uses the shard key to distribute the collection's documents across shards. The shard key consists of a field or multiple fields in the documents.
 
-Mongostat
-db.stats()
+To shard a collection, specify full namespace of the collection that you want to shard and the shard key. 
+
+Use ```mongosh``` method ```sh.shardCollection()``` to shard a collection:
+```
+sh.shardCollection(<namespace>, <key>) // Optional parameters omitted
+```
+
+- namespace - Specify the full namespace of the collection that you want to shard ("<database>.<collection>").
+- key - Specify a document { <shard key field1>: <1|"hashed">, ... } where
+ * 1 indicates range-based sharding
+ * "hashed" indicates hashed sharding.
+
+#### MongoDB Tuning
+
+Mongostat - db.stats()
 
 ### Additional Material
 
 [Active-Active Deployments - MongoDB](https://www.mongodb.com/blog/post/active-active-application-architectures-with-mongodb)
-
-### Sharding in MongoDB
-
-[MongoDB Sharding Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#mongodb-sharded-cluster)
-
-### Database Sharding
-|Rating|Type|Topic
-------------: | ------------- | -------------
-||:newspaper:|[Tinder - Geosharded Recommendations Part 1: Sharding Approach](https://medium.com/tinder-engineering/geosharded-recommendations-part-1-sharding-approach-d5d54e0ec77a)
-||:newspaper:|[MongoDB Sharding](https://docs.mongodb.com/manual/sharding/)
-||:newspaper:|[Sharding Pinterest: How we scaled our MySQL fleet](https://medium.com/pinterest-engineering/sharding-pinterest-how-we-scaled-our-mysql-fleet-3f341e96ca6f/)
-||:newspaper:|[Sharding & IDs at Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)
-||:newspaper:|[Patpal - Application Design Considerations for Sharding High Volume Databases](https://medium.com/paypal-engineering/application-design-considerations-for-sharding-high-volume-databases-429b9455a6c3)
-||:newspaper:|[Youtube - Scaling MySQL in the cloud with Vitess and Kubernetes](https://youtube-eng.googleblog.com/2015/04/scaling-mysql-in-cloud-with-vitess-and.html)
-
-https://luanjunyi.medium.com/system-design-paradigm-sharding-77cb6498a6dc
-
-https://docs.oracle.com/en/cloud/paas/nosql-cloud/csnsd/shard-keys-and-primary-keys.html)
 
 ## Time Series
 |Rating|Type|Topic
@@ -82,6 +77,20 @@ https://docs.oracle.com/en/cloud/paas/nosql-cloud/csnsd/shard-keys-and-primary-k
 |:star::star:|:newspaper:|[Alibaba Cloud - Key Concepts and Features of Time Series Databases](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
 ||:newspaper:|[Timescale - Time-series data: Why (and how) to use a relational database instead of NoSQL](https://www.alibabacloud.com/blog/key-concepts-and-features-of-time-series-databases_594734)
 
+## Datawarehouse Concepts
+
+Three Orthogonal concepts: 
+- Data model - Star schema & Snowflake
+- Workload characteristics (OLTP vs. OLAP)
+- and Physical data organisation (columnar).
+
+In a typical **_star schema_** world you will have **_dimension and fact_**. Mostly Dimensions are basically textual data and facts are numbers and generally dimension tables are small while fact table is large.
+
+Snowflake schemas extend the star concept by further normalizing the dimensions into multiple tables. For example, a product dimension may have the brand in a separate table.
+
+Star and snowflake schemas organize around a central fact table that contains measurements for a specific event, such as a sold item. The fact table has foreign key relationships to one or more dimension tables that contain descriptive attribute information for the sold item, such as customer or product. 
+
+In columnar DBs you can avoid star schema. you don’t need to separate the textual and numerical values in separate table anymore as its taken care in columnar storage. So adding star schema on top of redshift will not make it efficient.
 
 ## AWS Redshift
 
