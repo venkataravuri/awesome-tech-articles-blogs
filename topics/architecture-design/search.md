@@ -96,6 +96,29 @@ Use BERT embedding for your sentences and add an embedding field to your Elastic
 
 For BERT embedding I suggest to use sentence-transformers from Huggingface library. You can find sample codes in https://towardsdatascience.com/how-to-build-a-semantic-search-engine-with-transformers-and-faiss-dcbea307a0e8
 
+### Knowledge Base (KB) Article Suggestor
+
+A state-of-the-art search engine paired with a question-answering model. Alternative to Keyword-based search (Elastic/Coveo) which can’t answer questions.
+
+Personas: Customers, TSE, TAM, CSMs
+
+NLP + Col(v)BERT + Document Retriever + Question Answering
+
+1. Index our knowledge base
+2. Receive a question
+3. Find responsive documents
+4. Return the answer to the question
+
+Col(v)BERT, our custom-trained version of ColBERT, then searches for passages that contain the answer to the question.
+
+Major Components
+- Website scraping service
+- Content management managemnt
+- and index management system.
+
+
+
+
 Used machine learning to automate below tasks,
 
 - **Data Clustering** - Measure distance between words and/or documents to automatically discover topics (e.g. by **data clustering**) and **classify** query to one of these topics.
