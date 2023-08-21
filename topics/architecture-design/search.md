@@ -29,6 +29,19 @@
 
 Break the text into words.
 
+Popular subword-based tokenization algorithms are WordPiece, Byte-Pair Encoding (BPE), Unigram, and SentencePiece.	
+
+word-based tokenization (very large vocabulary size, large number of OOV tokens, and different meaning of very similar words) and character-based tokenization (very long sequences and less meaningful individual tokens).
+
+The subword-based tokenization algorithms do not split the frequently used words into smaller subwords. It rather splits the rare words into smaller meaningful subwords. For example, “boy” is not split but “boys” is split into “boy” and “s”. This helps the model learn that the word “boys” is formed using the word “boy” with slightly different meanings but the same root word.
+
+- Bye-Pair Encoding (BPE) used by GPT-2 and RoBERTa.
+- WordPiece used by BERT and DistilBERT
+
+### Word Embeddings
+
+Word2Vec - https://www.youtube.com/watch?v=gQddtTdmG_8
+
 ### TF-IDF
 
 |Rating|Type|Topic
