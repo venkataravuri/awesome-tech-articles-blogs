@@ -85,25 +85,28 @@ https://docs.oracle.com/en/cloud/paas/nosql-cloud/csnsd/shard-keys-and-primary-k
 
 ## AWS Redshift
 
+* It is a OLAP database – Online analytics processing & Data warehouse service
+* Massive parallel processing
+* Columnar data storage, when storing data in columnar format Redshift uses a 1024Kb blocksize. Advanced compression due to columnar architecture.
+* Doesn’t require indexes or materialized views.
+* Amazon Redshift cluster consists of nodes
+  * Each cluster has a _**leader node**_ and one or more _**compute nodes**_.
+    * The leader node receives queries from client applications, parses the queries, and develops query execution plans.
+    * The leader node then coordinates the parallel execution of these plans with the compute nodes and aggregates the intermediate results from these nodes.
+* Amazon Redshift workload management (WLM) enables users to flexibly manage priorities within workloads so that short, fast-running queries won't get stuck in queues behind long-running queries.
 
+[Redshift Architecture](https://docs.aws.amazon.com/redshift/latest/dg/c_high_level_system_architecture.html)
 
-Estimated Charges
-
-
-### Troubleshooting in Redshift
+### Redshift Scalability & Performance Tuning
 
 Redshift is an OLAP database, it’s oriented to work on analytical queries as opposed to OLTP with transactional queries
 
 **It prefers to get a couple of big queries rather than a lot of small ones.**
 
-don’t want to overload/break Redshift you should avoid to:
+You should avoid to,
 - Stream events: prefer Kinesis or Lambda to aggregate bulk of data.
 - Do multiple insert to load row by row. Prefer COPY.
 - Connect a reporting tool directly on Redshift. Every common reporting tool has a cached/in-memory database. Put the Redshift data in it.
-
-cluster nodes
-
-If you are not in a region where “ra3” nodes are available, use “dc2” nodes for your cluster, not “ds2”. Dense compute nodes have more RAM and an SSD disk (faster than HDD).
 
 **Bad queues and WLM management**
 
@@ -111,14 +114,15 @@ Sometimes your queries are blocked by the “queues” aka “Workload Managemen
 
 ### Distkeys
 
-Again, the main goal of distkeys is to avoid any broadcast of data between nodes. By doing so, you also want your nodes to be equally loaded. If data are not equally distributed, you will have “skewness”: the overloaded node will always be late compared to others.
+The goal of distkeys is to avoid any broadcast of data between nodes. By doing so, you also want your nodes to be equally loaded. If data are not equally distributed, you will have “skewness”: the overloaded node will always be late compared to others.
 
 When you create a table, you have 3 distribution styles called “distyle”: EVEN, ALL, JOIN
 
-Sortkeys
+### Sortkeys
 
-It sorts the data into the blocks (1 MB) of slices (a part of a node) of nodes, and stores the possible values in a block zone map (min and max values). 
+Redshift sorts the data into the blocks (1 MB) of slices (a part of a node) of nodes, and stores the possible values in a block zone map (min and max values). 
 
+### System Tables 
 
 `STV_RECENTS` — This table holds information about currently active and recently run queries against a database
 
@@ -135,15 +139,14 @@ SELECT * FROM stv_inflight;
 
 `STV_LOCKS` — Amazon Redshift locks tables to prevent two users from updating the same table at the same time, STV_LOCKS can be used to view any current updates on tables in the database, need superuser to view
 
-More about queries, refer to https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998
+- **_svv_table_info_** - provides a lot of useful information on the performance health of your tables, including areas like,
+ - table skew
+ - Percent unsorted
+ - Quality of the current table statistics
+ - Sort key information
 
+- Use the ANALYZE command to update the statistical metadata that the query planner uses to build and choose optimal plans.
+- The VACUUM command is used to re-sort data added to non-empty tables, and to recover space freed when you delete or update a significant number of rows.
 
-https://medium.com/doctolib/redshift-troubleshouting-made-simple-ed73b38d10d5
-
-
-### Redshift Scalability
-
-https://docs.aws.amazon.com/redshift/latest/dg/c_high_level_system_architecture.html
-
-### Redshift Performance Tuning
-
+[Redshift Troubleshooting Guide - 1](https://medium.com/develbyte/troubleshooting-in-redshift-c1ca4c7f7998)
+[Redshift Troubleshooting Guide - 2](https://medium.com/doctolib/redshift-troubleshouting-made-simple-ed73b38d10d5)
