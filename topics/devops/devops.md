@@ -139,6 +139,8 @@ Prometheus is one way of solving this problem. It is a time-series database, whi
 Prometheus polls your application for its latest metrics data – this is known as scraping
 Prometheus uses a pull-based approach for getting metrics.
 
+### Istio
 
-#### How do you SSH to Bastion servers?
-SSH Bastions as the entry point. The network path originates from the On-Prem network, goes through DX/VPN to the transit gateway (TGW), and then is routed to the Shared Services VPC. 
+Istio Gateway + Virtual Service
+
+[Automatic mTLS using Istio Service Mesh in AWS EKS](https://stackoverflow.com/questions/64107791/how-to-enable-automatic-mtls-using-istio-mesh-in-aws-eks)
