@@ -21,6 +21,7 @@
 - [Design a Finate State Machine](system-design.md#design-a-finate-sate-machine)
 - [Design a Elevator](system-design.md#design-a-elevator)
 - [Design a TinyURL Service](system-design.md#design-a-tinyurl-service)
+- [Design a LRU Cache & LFU Cache](system-design.md#design-a-tinyurl-service)
 
 **Design Concepts**
 
