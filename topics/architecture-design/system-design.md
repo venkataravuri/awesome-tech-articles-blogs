@@ -356,4 +356,13 @@ LRU cache is nothing but a combination of the **DoublyLinkedList** and the **Has
 
 
 #### Consistent Hasshing
+
 [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
+
+Ditributed hash table to bypass the memory limitations of using a single computer, allowing for the construction of arbitrarily large hash tables across multipe servers.
+
+**Rehashing Problem**: Keys need to be redistributed when a server crashes or new server added. This is true for any distribution scheme, including simple modulo distribution scheme ```hashes modulo N```. Most keys will need to be moved to a different server. So, even if a single server is removed or added, all keys will likely need to be rehashed into a different server.
+
+**Consistent Hashing** is a distribution scheme that does not depend directly on the number of servers, so that, when adding or removing servers, the number of keys that need to be relocated is minimized.
+
+It uses a circle, or hash ring.
