@@ -21,7 +21,7 @@
 - [Design a Finate State Machine](system-design.md#design-a-finate-sate-machine)
 - [Design a Elevator](system-design.md#design-a-elevator)
 - [Design a TinyURL Service](system-design.md#design-a-tinyurl-service)
-- [Design a LRU Cache & LFU Cache](system-design.md#design-a-tinyurl-service)
+- [Design a LRU Cache & LFU Cache](system-design.md#lru-cache)
 
 **Design Concepts**
 
@@ -52,6 +52,8 @@ System design approaches for apps such as DoorDash, Dunzo, Zomato, Swiggy, Blink
 ---
 
 ### Geo-Proxmity Search
+
+[Geo Spatial Notes](https://tarunjain07.medium.com/geospatial-geohash-notes-15cbc50b329d)
 
 _**Spatial indices** are a family of algorithms that arrange geometric data for efficient search._
 
@@ -304,15 +306,24 @@ Partitioning of relational data, usually refers to decomposing your tables eithe
 🔹 Vertical partitioning: means some columns are moved to new tables. Each table contains the same number of rows but fewer columns.
 🔹 Horizontal partitioning (often called sharding): Divides a table into multiple smaller tables. Each table is a separate data store, and it contains the same number of columns, but fewer rows.
 
-The routing algorithm decides which partition (shard) stores the dat,
+Two attributes of an effective shard key are,
+- **high cardinality** 
+- and well-distributed **frequency**.
+  
+**Cardinality** describes number of possible values of the shard key. For example, if the database designer chooses a yes/no data field as a shard key, the number of shards is restricted to two.
+
+**Frequency** refers to the distribution of the data along the possible values. It is the probability of storing specific information in a particular shard. For example, a database designer chooses age as a shard key for a fitness website. Most of the records might go into nodes for subscribers aged 30–45 and result in database hotspots.
+
+The routing algorithm decides which partition (shard) stores the data,
 
 **Range Based Partitioning**: This algorithm uses ordered columns, such as integers, longs, timestamps, to separate the rows. For example, the diagram below uses the User ID column for range partition: User IDs 1 and 2 are in shard 1, User IDs 3 and 4 are in shard 2.
 
 **Hash-based sharding**: This algorithm applies a hash function to one column or several columns to decide which row goes to which table. For example, the diagram below uses User ID mod 2 as a hash function. User IDs 1 and 3 are in shard 1, User IDs 2 and 4 are in shard 2.
 
-**Geo-Hashing?**
+**Geohashing** converts geographic information into an alphanumeric hash. A geohash is used to identify a rectangular area around a fixed point.
 
-Two key attributes of an effective shard key are high **cardinality** and well-distributed **frequency**. **Cardinality** refers to the number of possible values of that key. If a shard key only has three possible values, then there can only be a maximum of three shards. **Frequency** refers to the distribution of the data along the possible values. 
+- The length of the hash determines the precision of the area identified. This allows you to use a hierarchical search where the length of the geohash corresponds to the size of a search area.
+- Efficient Proximity queries such as “How far is the nearest business?” or “How many users are nearby?”
 
 [Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
 
@@ -326,6 +337,9 @@ LRU cache is nothing but a combination of the **DoublyLinkedList** and the **Has
 <img src="https://www.baeldung.com/wp-content/uploads/2021/07/Screenshot-from-2021-07-09-02-10-25-1.png" width="50%" height="50%" />
 
 [LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
+
+#### LFU Cache
+
 
 #### Consistent Hasshing
 [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
