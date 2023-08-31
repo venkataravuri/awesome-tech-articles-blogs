@@ -3,8 +3,15 @@
 Kafka ~ immutable commit log
 
 ### Kafka production challenges
-- Kafka consumers rebalances unexpectedly - https://stackoverflow.com/questions/27181693/how-does-consumer-rebalancing-work-in-kafka; https://stackoverflow.com/questions/56647442/kafka-keeps-rebalancing-consumers; https://stackoverflow.com/questions/71615472/kafka-commit-during-rebalancing
-- 
+- Frequent consumers rebalances
+    - Frequent rebalances are usually caused because it is taking too long for the consumer to process batches. This happens because the consumer is processing the batch for a long time (and heartbeats are not being sent) and therefore the brokers think that consumer was lost and they start re-balancing.
+    - Suggest to create smaller batches by reducing the value of ```max.partition.fetch.bytes``` or extend/increase heartbeat intervals by increasing the value of ```heartbeat.interval.ms```.
+
+Kafka has implemented "Incremental Cooperative Rebalancing". So now there is no need for all consumers to stop the processing ("stop the world event") to rebalance work in group, when new consumer appears in group or some consumer goes offline.
+
+- https://stackoverflow.com/questions/56647442/kafka-keeps-rebalancing-consumers
+- https://stackoverflow.com/questions/71615472/kafka-commit-during-rebalancing
+
 #### Kafka Streams
 
 In-Stream Analytics (In our case it is limited to Trends) 
@@ -27,7 +34,6 @@ Apache Kafka uses Zookeeper to,
 In order to remain part of the Kafka cluster, each broker has to send keep-alive to Zookeeper in regular intervals. This is something every Zookeeper client does by default. If the broker doesn't heartbeat Zookeeper every zookeeper.session.timeout.ms milliseconds (6000 by default), Zookeeper will assume the broker is dead. This will cause leader election for all partitions that had a leader on that broker. If this broker happened to be the controller, you will also see a new controller elected.
 
 Source: https://stackoverflow.com/questions/54013250/how-kafka-nodes-and-zookeeper-will-communicate-with-each-other
-
 
 #### What is Difference between broker-list and bootstrap servers?
 
