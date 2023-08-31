@@ -20,7 +20,7 @@
 - [Design a Voting System](system-design.md#design-a-voting-system)
 - [Design a Finate State Machine](system-design.md#design-a-finate-sate-machine)
 - [Design a Elevator](system-design.md#design-a-elevator)
-- [Design a TinyURL Service](system-design.md#design-a-tinyurl-service)
+- [Design a TinyURL Service](system-design.md#design-tinyurl-service)
 - [Design a LRU Cache & LFU Cache](system-design.md#lru-cache)
 
 **Design Concepts**
@@ -268,13 +268,27 @@ https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-se
 
 ## Design TinyURL Service
 
-#### Design Considerations & Challenges
+Generate a 6 or 7 character short and unique key for a given URL.
 
-- URL Shortening logic: 6 or 7 or 8 random characters
-- Unquiness of Short URL & Concurrency 
+- Hash URL Technique
+  - Use MD5 hash algorithm, produces 128-bit hash value. After base64 encoding results a string having more than 21 characters. Choosing first or last 6 characters cause **duplicate keys**.
+- Generating keys offline
+  - Generates random six-letter strings beforehand and stores them in a database.
+  - **Concurrency**: As soon as a key is used, it should be marked in the database to ensure that it is not used again.
+  - Use two tables to store keys: one for keys that are not used yet, and one for all the used keys.
+  - Keep some keys in memory to quickly provide them whenever a server needs them.
+  - Loads some keys in memory, it can move them to the used keys table. This ensures each server gets unique keys.
 
-|:star:|[Tiny URL Design](https://www.thinksoftwarelearning.com/pages/tiny-url-design)
-|:star:|[Twitter Snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)
+## Unique Key Generation
+
+To generate the roughly-sorted 64 bit ids in an uncoordinated manner through compostion of,
+
+**timestamp + worker number + sequence number**
+
+- Sequence numbers are per-thread
+- and worker numbers are chosen at startup via zookeeper (though that’s overridable via a config file).
+
+Source: [Twitter Snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)
 
 ## Design a Twitter
 
