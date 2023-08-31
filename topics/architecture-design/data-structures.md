@@ -18,7 +18,6 @@ Top-K is a probabilistic data structure that allows you to find the most frequen
 - Maintains a list of K most frequent items.
 - Finding the largest K elements in a data set or a stream.
 - Top-K is based on the HeavyKeepers algorithm. 
-
 - Most frequent keywords on Google search engine
 - Most watched videos on Youtube
 - [Most played songs on Spotify in past 24 hours](https://stackoverflow.com/questions/50207691/design-a-service-to-calculate-the-top-k-listened-to-songs-in-past-24-hrs)
@@ -58,8 +57,6 @@ A data structure that enables you to store information about the presence of an 
 - If you ask Bloom Filter whether an item exists in a set, it can provide you any of the 2 answers — ‘May be present’ or ‘No. 
 - Bloom filter guarantees ‘No’ answer for membership check if the item does not exist in the set, but it’s not so sure about the item when it exists in the set.
 - It certainly say that if an item is 'not exists', it can't certainly say that if the item 'exists'. 
-
-
 - Is this URL malicious? Google Chrome Browser uses Bloom Filters to identify malicious websites by their URLs. Google’s Chrome web browser uses a Bloom filter as a first level screen of suspicious URLs, and positive results are subjected to a second level test to confirm the issue before a warning is issued to the user.
 - Is this word contained in the document?
 - Is this IP address blacklisted?
