@@ -123,6 +123,8 @@ HyperLogLog (HLL) used to count number of distinct values in te presence of dupl
 
 <img src="https://image.slidesharecdn.com/techconf2013d3-2-131118235931-phpapp01/95/rakutentechconf2013-d32-counting-big-databy-streaming-algorithms-14-638.jpg?cb=1384819384" width="60%" height="60%" />
 
+**Count-Min Sketches** can tell you approximately _how many times each element in a multiset_ occurs. HyperLogLog, on the other hand, can tell you _how many unique elements a multiset_ has. This is known as the **Cardinality-Estimation problem**.
+
 ## Probabilistic Data Structures in Redis
 
 [Redis](https://redislabs.com/blog/streaming-analytics-with-probabilistic-data-structures/)
