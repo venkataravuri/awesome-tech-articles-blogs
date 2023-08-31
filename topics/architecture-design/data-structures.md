@@ -103,23 +103,25 @@ References
 - [Probabilistic data structures. Part 3. Frequency](https://www.slideshare.net/gakhov/probabilistic-data-structures-part-3-frequency)
 - [Big Data with Sketchy Structures, Part 1 — the Count-Min Sketch](https://towardsdatascience.com/big-data-with-sketchy-structures-part-1-the-count-min-sketch-b73fb3a33e2a)
 
-## Counting / Cardinality
+## Count-distinct Problem
+
+aka. Cardinality Estimation Problem
 
 - Count the number of unique visitors for the specified date range, visited site and geography, etc.
 - How many different words are used in Wikipedia?
 - How do we count distinct things in a stream?
 
-> Algorithms: Linear counting, probabilistic counting, LogLog, HyperLogLog, HyperLogLog++).
+> Algorithms: Linear counting, probabilistic counting, LogLog, HyperLogLog, HyperLogLog++.
 
 ### HyperLogLog
-HyperLogLog (HLL) is a useful and interesting probabilistic data structure used to count unique values in a given data set with good accuracy and speed. Normally, to count unique values accurately requires memory proportional to the number of unique values. This becomes a problem when working with large data sets. HyperLogLog solves this problem by allowing us to trade memory consumption for (tunable) precision, making it possible to estimate cardinalities larger than 1 billion with a standard error of 2% using only 1.5 kilobytes of memory.
+HyperLogLog (HLL) used to count number of distinct values in te presence of duplicates.
 
-- A hash-based probabilistic algorithm for counting number of distinct values in te presence of duplicates.
-- HyperLogLog++ is improved version of HyperLogLog.
 - HLL counts unique items in a stream, without having to remember the whole history. 
-In fact, an HLL counter takes up to 12KB of memory regardless of how many items you put into it. Lastly, an HLL counter will have a standard error rate of 0.81%, which is a perfectly sustainable error rate for most streaming analytics use cases.
-- HLL can be used to aggregate information about visitor IDs for each day and site, masks for each day are saved, and a query can be processed using bitwise OR-ing of the daily masks.
+- HLL counter takes up to 12KB of memory regardless of how many items you put into it.
+- HLL counter will have a standard error rate of 0.81%.
 - Redis uses the HyperLogLog data structure to count unique elements in a set
+
+<img src="https://image.slidesharecdn.com/techconf2013d3-2-131118235931-phpapp01/95/rakutentechconf2013-d32-counting-big-databy-streaming-algorithms-14-638.jpg?cb=1384819384" width="60%" height="60%" />
 
 ## Probabilistic Data Structures in Redis
 
