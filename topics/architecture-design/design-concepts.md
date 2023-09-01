@@ -20,7 +20,7 @@
 
 ### Cloud Native Applications
 
-Cloud native apps are designed and built to exploit scale, elasticity, resiliency, and flexibility provided by in public, private, and hybrid clouds.
+Cloud native apps are designed and built to exploit scale, elasticity, resiliency, and flexibility provided by public, private, and hybrid clouds.
 
 - Usually designed as self contained services or microservices, packed as containers for portability, deployed to immutable infrastructure.
 - Microservices are the core of cloud native application architecture
@@ -49,13 +49,11 @@ Cloud native apps are designed and built to exploit scale, elasticity, resilienc
 Domain-Driven Design (DDD) is about **mapping 'business domain' concepts into software artifacts**.
 
 - It **emphasizes on rich domain model over anemic domain model**
-- The domain concepts & logic is modeled as Entities, Value Objects, and Aggregates with clear boundaries.
+- The domain concepts & logic is modeled as **Entities, Value Objects, and Aggregates** with clear boundaries.
 - In anemic domain models, entities are represented by classes with data and connections to other entities. **Business logic is absent in these classes** and **logic is usually placed in managers, services, utilities, helpers, etc**.
 - Traditonal anemic domain models, leads to a **fat Service Layer where facade classes accumulate more business logic** with time and domain objects become mere data carriers with getters and setters. **Since proper responsibility boundaries are not defined, domain-specific business logic and responsibilities may leak into other components.**
 - DDD architecture promotes a rich model and thin services.
-
-- Bounded contexts are defined with explicit boundaries and the relationships
-
+- **Bounded contexts** are defined with **explicit boundaries and the relationships**
 - In DDD, each aggregate requires one repository. This means we have fewer repositories in DDD than the number of DAOs required to load and persist entities in an application with an anemic model.
 - In DDD, since the Order aggregate must contain all the business operations that can be performed on it, we need to move the logic to change the order status and to add an item, from the Service Layer to the Domain Layer
 
@@ -89,20 +87,21 @@ All Design Patterns
 
 **Open-Closed Principle** states that “Software entities (classes, modules, functions, etc.) **should be open for extension, but closed for modification**_.”
 
-Following this principle ensures that a class is well defined to do what it is supposed to do. Adding any further features can be done by creating new entities that extend the existing class’s features and add more features to itself.
+- Following this principle ensures that a class is well defined to do what it is supposed to do. Adding any further features can be done by creating new entities that extend the existing class’s features and add more features to itself.
 
-Strategy pattern is a good way to implementing Open-close is a principle, There are other patterns that help achieve OCP, like Abstract Factory. You can achieve OCP in a class by externalizing some of its responsibilities to a Strategy and writing new Strategies instead of modifying the class itself, but it is not the only way of respecting OCP. 
+- Strategy pattern is a good way to implementing Open-close is a principle, There are other patterns that help achieve OCP, like Abstract Factory. You can achieve OCP in a class by externalizing some of its responsibilities to a Strategy and writing new Strategies instead of modifying the class itself, but it is not the only way of respecting OCP. 
 
-Collections.sort works on any collection of objects that implement the Comparable interface, it is not limited to sorting just integers or just strings — it is not limited to any specific type. The sorting algorithm will work as it was designed, so we can say that it is closed to modification, but the sorting criteria will vary depending on the compareTo method implementation
+- Collections.sort works on any collection of objects that implement the Comparable interface, it is not limited to sorting just integers or just strings — it is not limited to any specific type. The sorting algorithm will work as it was designed, so we can say that it is closed to modification, but the sorting criteria will vary depending on the compareTo method implementation
 
-_**Liskov Substitution Principle**_ states that "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+_**Liskov Substitution Principle**_ states that **"Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.**"
 
-The **Interface Segregation Principle** states that “No client should be forced to depend on methods it does not use”.
+The **Interface Segregation Principle** states that “**No client should be forced to depend on methods it does not use**”.
 
 The **Dependency Inversion Principle** states that:
+- High level module should not depend on low level modules. Both should depend on abstractions
+- Abstractions should not depend on details. Details should depend on abstractions.
 
-a). High level module should not depend on low level modules. Both should depend on abstractions
-b). Abstractions should not depend on details. Details should depend on abstractions. 
+[Dependency Inversion Principle By Example](https://www.tutorialsteacher.com/ioc/dependency-inversion-principle)
 
 ### Event Sourcing & CQRS
 
