@@ -75,6 +75,10 @@ https://www.abtasty.com/blog/git-branching-strategies/
 
 Secure infrastructure provisioning via Saltstack
 
+### OSI Layer Model
+
+https://www.freecodecamp.org/news/osi-model-networking-layers-explained-in-plain-english/
+
 ### DNS GSLB
 
 Basic DNS Load Balancing provides a basic load balancing capability - round robin DNS. It also does not factor in data center availability, resulting in end users getting directed to unavailable services. It does not factor in the location of the end user, so without a georouting component users will be connected to data centers that could be very far away. 
