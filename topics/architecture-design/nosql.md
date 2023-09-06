@@ -108,6 +108,10 @@ In columnar DBs you can avoid star schema. you don’t need to separate the text
 
 ### Redshift Scalability & Performance Tuning
 
+Redshift is a columnar database with compressed storage, it **doesn't use indexes like transactional databases** — such as MySQL, Microsoft SQL, and PostgreSQL — would. Instead, **it uses DISTKEYs and SORTKEYs**.
+
+https://popsql.com/learn-sql/redshift/how-to-use-distkey-sortkey-and-define-column-compression-encoding-in-redshift
+
 Redshift is an OLAP database, it’s oriented to work on analytical queries as opposed to OLTP with transactional queries
 
 **It prefers to get a couple of big queries rather than a lot of small ones.**
