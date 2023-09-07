@@ -128,24 +128,33 @@ Sample Policy JSON
 ## EKS
 
 #### API Gateway integration with EKS
+
+API Gateway private integrations let you expose services running an EKS cluster to clients outside of your VPC using Network Load Balancers (NLB) and Application Load Balancers (ALB).
+
+<img src="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2021/04/06/image-30.jpg" width="70%" height="70%" />
+
 [API Gateway integration with EKS](https://aws.amazon.com/blogs/containers/integrate-amazon-api-gateway-with-amazon-eks/)
 
-## AWS RDS - PostgreSQL
+## AWS RDS 
 
-[RDS Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#aws-rds---mysql-postgresql)
+### AWS RDS PostgreSQL
+
+[Take me to RDS Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#aws-rds---mysql-postgresql)
 
 ### AWS Redshift
 
-[AWS Redshift Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#aws-redshift)
+[Take me to AWS Redshift Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#aws-redshift)
 
-### Route 53
+### AWS Route 53
 
 - Geolocation routing policy – Use when you want to route traffic based on the location of your users.
 - Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
 
 #### CloudWatch
 
-CloudWatch is for logging. CloudTrail is for auditing your calls.
+**CloudWatch** is for logging. 
+
+**CloudTrail** is for auditing your calls.
 
 Default Metrics – Network, Disk , CPU and Status check ( Instance and System). Memory – RAM is a custom metric
 
