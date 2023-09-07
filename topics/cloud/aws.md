@@ -15,7 +15,7 @@ https://devopsdice.com/difference-between-aws-transit-gateway-and-vpc-peering/
 
 #### Security Group
 
-A security group acts as a virtual firewall for EC2 instance to control inbound and outbound traffic.
+Security Group is a stateful firewall for the EC2 instances to control inbound and outbound traffic. It acts like a virtual firewall that can be attached to the instance or instances.
 
 - By default, a security group would allow all outbound traffic to any destination, any protocol. 
 - Security Groups are stateful. When an inbound rule is added, outbound traffic is automatically allowed. 
@@ -23,17 +23,39 @@ A security group acts as a virtual firewall for EC2 instance to control inbound 
 - By default all inbound traffic is denied, all outbound traffic is allowed.
 - Multiple security groups can be attached to an instance.
 
+#### NACL
+
+NACL is a stateless virtual firewall that works at the subnet level. Everything both Inbound and Outbound traffic is allowed in default NACL. In NACL you need to specify explicitly what to block in Inbound and Outbound Rules.
+
 #### Difference between AWS Security Groups and NACL?
-The difference between Security Group and NACLs is that, Security Group act as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic at the instance level, while ACLs act as a firewall for associated subnets, controlling both inbound and outbound traffic at the subnet level.
+- Security Group act as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic at the instance level.
+- NACLs act as a firewall for associated subnets, controlling both inbound and outbound traffic at the subnet level.
     
 Securty Groups are first line of defense. Network ACLs are second line.
 
-https://devopsdice.com/difference-between-aws-security-group-and-nacl/
-https://visualstorageintelligence.com/chargeback-vs-showback/
-
-- [AWS Direct Connect](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect.html)
 
 - [AWS Direct Connect + AWS Transit Gateway + VPN](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-aws-transit-gateway-vpn.html)
+
+### Chargeback vs Showback
+
+Chargebacks work by notifying departments of the costs of their technology usage and simultaneously requiring payment. Often, this payment occurs automatically as a budget deduction.
+
+- Chargebacks require payment directly from departments themselves.
+- With chargebacks, each department is responsible for its own IT budget.
+
+**Showback**
+- Showbacks work by preparing a document (similar to a billing statement) that shows the cost of technology usage (such as a storage array or a software license).
+- This document is typically shared with the department using the technology, but the department is not expected to pay for it through their budget.
+
+## AWS Direct Connect
+
+AWS Direct Connect makes it easy to establish a dedicated connection from an on-premises network to one or more VPCs.
+
+- It uses industry-standard 802.1Q VLANs to connect to Amazon VPC using private IP addresses.
+
+<img src="https://docs.aws.amazon.com/images/whitepapers/latest/aws-vpc-connectivity-options/images/image6.png" width="40%" height="40%" />
+
+[AWS Direct Connect](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect.html)
 
 ## EC2
 
