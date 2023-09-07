@@ -33,9 +33,6 @@ NACL is a stateless virtual firewall that works at the subnet level. Everything 
     
 Securty Groups are first line of defense. Network ACLs are second line.
 
-
-- [AWS Direct Connect + AWS Transit Gateway + VPN](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-aws-transit-gateway-vpn.html)
-
 ### Chargeback vs Showback
 
 Chargebacks work by notifying departments of the costs of their technology usage and simultaneously requiring payment. Often, this payment occurs automatically as a budget deduction.
@@ -53,7 +50,7 @@ AWS Direct Connect makes it easy to establish a dedicated connection from an on-
 
 - It uses industry-standard 802.1Q VLANs to connect to Amazon VPC using private IP addresses.
 
-<img src="https://docs.aws.amazon.com/images/whitepapers/latest/aws-vpc-connectivity-options/images/image6.png" width="40%" height="40%" />
+<img src="https://docs.aws.amazon.com/images/whitepapers/latest/aws-vpc-connectivity-options/images/image6.png" width="60%" height="60%" />
 
 [AWS Direct Connect](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect.html)
 
@@ -78,16 +75,55 @@ Run health checks from ELB
 
 ## Identity & Access Managment (IAM)
 
-- [AWS IAM Users vs. IAM Roles](https://www.howtogeek.com/devops/iam-users-vs-iam-roles-which-one-should-you-use/) 
+<img src="https://devopsdice.com/wp-content/uploads/2022/03/IAM-1.png" width="50%" height="50%" />
 
-https://devopsdice.com/aws-iam-identity-and-access-management/
-
-https://visualstorageintelligence.com/chargeback-vs-showback/
+- User – End-user or one specific individual person. So these are the people logging into the console and also interacting with us by running API commands.
+- Groups – A collection of users under one set of permissions. For example, your marketing team might need access to read and write certain files stored in the S3 bucket and they’re going to need a specific set of permissions to allow them to do this. So it makes sense to create a group with the required permissions and then all you need to do is add the relevant users into that group and they will all have permissions.
+- Role – You create roles and can then assign them to AWS Services, or external services/users.
+- Policies – A document that defines one or more permissions. Policies can be attached to a user, group, or role.
 
 #### IAM Roles for EC2
 - Avoid using user credentials on servers
 - IAM roles can be assigned/replaced to EC2 instances.
 - Roles are universal. Applicable to all regions.
+
+#### IAM Policies
+
+- **Anatomy of a policy**: JSON doc with Effect, Action, Resource, Conditions, Policy Variable
+- Explicit DENY has precedence over ALLOW
+
+Sample Policy JSON
+```
+{
+  "Version": "2012–10–17",
+  "Statement": [
+    {
+      "Sid": "FirstStatement",
+      "Effect": "Allow",
+      "Action": [
+		"ec2:AttachVolume",
+		"ec2:DettachVolume"
+		]
+      "Resource": "arn:aws:ec2:*:*:instance/*",
+	  "Condition":{
+		"StringsEqual": {"ec2:ResourceTag/Department": "Development"}
+	  }
+    },
+	{
+      "Sid": "SecondStatement",
+      "Effect": "Allow",
+      "Action": [
+		"ec2:AttachVolume",
+		"ec2:DettachVolume"
+		]
+      "Resource": "arn:aws:ec2:*:*:volume/*",
+	  "Condition":{
+		"StringsEqual": {"ec2:ResourceTag/VolumeUser": "${aws:username}"}
+	  }
+    }
+  ]
+}
+```
 
 ## EKS
 
