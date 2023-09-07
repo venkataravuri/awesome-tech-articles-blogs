@@ -285,6 +285,8 @@ https://www.slideshare.net/nburk/react-graphql?qid=e496f1f4-ad5f-43fa-9b8b-e7476
 
 ### gRPC
 
+https://piotrminkowski.com/2023/08/29/introduction-to-grpc-with-spring-boot/
+
 [gRPC with Spring Boot](https://medium.com/thefreshwrites/building-a-grpc-service-with-spring-boot-3844168c2112)
 
 ### Test-Driven Development
