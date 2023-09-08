@@ -99,6 +99,10 @@ LTM load balances servers and also does cache, compression, persistence, etc. LT
 
 LTMs can handle load balancing in two ways, the first way is an nPathconfiguration, and second is a Secure Network Address Translation (SNAT) method. LTM load balances servers and also does caching, compression, persistence, etc.
 
+## Terraform
+
+https://stackoverflow.com/questions/43209940/terraform-state-locking-using-dynamodb
+
 
 ## SRE
 
