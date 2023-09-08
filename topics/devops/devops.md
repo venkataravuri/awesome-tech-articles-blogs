@@ -103,6 +103,11 @@ LTMs can handle load balancing in two ways, the first way is an nPathconfigurati
 
 https://stackoverflow.com/questions/43209940/terraform-state-locking-using-dynamodb
 
+## Helm Charts
+
+https://www.freecodecamp.org/news/what-is-a-helm-chart-tutorial-for-kubernetes-beginners/
+
+
 
 ## SRE
 
