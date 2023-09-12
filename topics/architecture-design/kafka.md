@@ -273,3 +273,5 @@ https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k
 #### Optimizations
 
 - Use Kafka Consumer to batch push into Redshift
+
+https://www.confluent.io/blog/kafka-consumer-multi-threaded-messaging/
