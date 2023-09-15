@@ -289,6 +289,12 @@ https://piotrminkowski.com/2023/08/29/introduction-to-grpc-with-spring-boot/
 
 [gRPC with Spring Boot](https://medium.com/thefreshwrites/building-a-grpc-service-with-spring-boot-3844168c2112)
 
+### WebSocket
+
+- **Full-Duplex Protocol**: WebSocket is a full-duplex protocol as it allows the application to send and receive data at the same time.
+- **Stateful Protocol**: It means the connection between server and client will not be terminated until and unless closed by any one of them either by the client or by the server. Once the connection is terminated from one end it is also closed by another end.
+- **3-way handshake**: Websocket uses a 3-way handshake also known as TCP connection for establishing communication between a client and server.
+
 ### Test-Driven Development
 
 ## Cache Strategies
