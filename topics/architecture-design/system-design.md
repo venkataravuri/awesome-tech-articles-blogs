@@ -43,11 +43,10 @@
 
 System design approaches for apps such as DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
 
-- :star::star::star: [DoorDash System Design](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
-- :star: [Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
-- :star: [Yelp System Design](https://systemdesigntutorial.com/yelp/)
+- [DoorDash System Design](https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2)
+- [Architecture and Design Principles for Online Food Delivery System](https://sandesh-deshmane.medium.com/architecture-and-design-principles-for-online-food-delivery-system-33bfda73785d)
+- [Yelp System Design](https://systemdesigntutorial.com/yelp/)
 - [Vehicle Routing Problem - Google OR Tools](https://developers.google.com/optimization/routing/vrp) & [Vehicle Routing Problem - OptaPlanner](https://www.optaplanner.org/learn/useCases/vehicleRoutingProblem.html)
-- [Food Delivery Time Prediction using ML](https://towardsdatascience.com/is-the-food-here-yet-f13a7bb0cd20)
 
 ---
 
