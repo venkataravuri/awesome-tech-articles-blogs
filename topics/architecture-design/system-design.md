@@ -297,7 +297,7 @@ For given URL, generate a 6 or 7 character short unique key.
 ### Option 1: Hash URL Technique
   - Use MD5 hash algorithm, produces 128-bit hash value. After base64 encoding results a string having more than 21 characters. Choosing first or last 6 characters cause **duplicate keys**.
 
-### Generating keys offline
+### Option 2: Generating Keys Offline
 
 - Step 1: Generate random six-letter strings beforehand and stores them in a database.
   
@@ -316,55 +316,54 @@ For given URL, generate a 6 or 7 character short unique key.
 
 Twitter is read-heavy
 
-Publishing
+### Publishing
 
 Publishing is the step where the feed data is pushed according to each specific user. This can be a quite heavy operation, as a user may have millions of friends or followers. To deal with this, we have three different approaches:
 
-Pull Model (or Fan-out on load)
+#### Pull Model (or Fan-out on load)
 
 When a user creates a tweet, and a follower reloads their newsfeed, the feed is created and stored in memory.
 
-Push Model (or Fan-out on write)
+#### Push Model (or Fan-out on write)
 
 In this model, once a user creates a tweet, it is "pushed" to all the follower's feeds immediately. This prevents the system from having to go through a user's entire followers list to check for updates.
 
-Hybrid model allows only users with a lesser number of followers to use the push model and for users with a higher number of followers celebrities, the pull model will be used.
+**Hybrid model** allows only users with a lesser number of followers to use the push model and for users with a higher number of followers celebrities, the pull model will be used.
 
-- Fanout approach for writes -Do a lot of processing when tweets arrive to figure out where tweets should go. This makes read time access fast and easy. Don’t do any computation on reads.
-- 
+- Fanout approach for writes
+- Do a lot of processing when tweets arrive to figure out where tweets should go. This makes read time access fast and easy. Don’t do any computation on reads.
 
 https://systemdesigntutorial.com/design-twitter/
 
-### Data Partitioning & Sharding
+## Data Partitioning & Sharding
 
 Partitioning of relational data, usually refers to decomposing your tables either row-wise (horizontally) or column-wise (vertically).
 
-🔹 Vertical partitioning: means some columns are moved to new tables. Each table contains the same number of rows but fewer columns.
-🔹 Horizontal partitioning (often called sharding): Divides a table into multiple smaller tables. Each table is a separate data store, and it contains the same number of columns, but fewer rows.
+- **Vertical partitioning**: means some columns are moved to new tables. Each table contains the same number of rows but fewer columns.
+- **Horizontal partitioning** (often called **sharding**): Divides a table into multiple smaller tables. Each table is a separate data store, and it contains the same number of columns, but fewer rows.
 
 Two attributes of an effective shard key are,
 - **high cardinality** 
 - and well-distributed **frequency**.
   
-**Cardinality** describes number of possible values of the shard key. For example, if the database designer chooses a yes/no data field as a shard key, the number of shards is restricted to two.
+- **Cardinality** describes number of possible values of the shard key. For example, if the database designer chooses a yes/no data field as a shard key, the number of shards is restricted to two.
 
-**Frequency** refers to the distribution of the data along the possible values. It is the probability of storing specific information in a particular shard. For example, a database designer chooses age as a shard key for a fitness website. Most of the records might go into nodes for subscribers aged 30–45 and result in database hotspots.
+- **Frequency** refers to the distribution of the data along the possible values. It is the probability of storing specific information in a particular shard. For example, a database designer chooses age as a shard key for a fitness website. Most of the records might go into nodes for subscribers aged 30–45 and result in database hotspots.
 
 The routing algorithm decides which partition (shard) stores the data,
 
-**Range Based Partitioning**: This algorithm uses ordered columns, such as integers, longs, timestamps, to separate the rows. For example, the diagram below uses the User ID column for range partition: User IDs 1 and 2 are in shard 1, User IDs 3 and 4 are in shard 2.
+- **Range Based Partitioning**: This algorithm uses ordered columns, such as integers, longs, timestamps, to separate the rows. For example, the diagram below uses the User ID column for range partition: User IDs 1 and 2 are in shard 1, User IDs 3 and 4 are in shard 2.
 
-**Hash-based sharding**: This algorithm applies a hash function to one column or several columns to decide which row goes to which table. For example, the diagram below uses User ID mod 2 as a hash function. User IDs 1 and 3 are in shard 1, User IDs 2 and 4 are in shard 2.
+- **Hash-based sharding**: This algorithm applies a hash function to one column or several columns to decide which row goes to which table. For example, the diagram below uses User ID mod 2 as a hash function. User IDs 1 and 3 are in shard 1, User IDs 2 and 4 are in shard 2.
 
-**Geohashing** converts geographic information into an alphanumeric hash. A geohash is used to identify a rectangular area around a fixed point.
-
-- The length of the hash determines the precision of the area identified. This allows you to use a hierarchical search where the length of the geohash corresponds to the size of a search area.
-- Efficient Proximity queries such as “How far is the nearest business?” or “How many users are nearby?”
-
-[Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
+- **Geo-Hashing** converts geographic information into an alphanumeric hash
+  - The length of the hash determines the precision of the area identified. This allows you to use a hierarchical search where the length of the geohash corresponds to the size of a search area.
+  - Efficient Proximity queries such as “How far is the nearest business?” or “How many users are nearby?”
 
 - [MongoDB Sharding Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#mongodb-sharded-cluster)
 - [Shrading with PostgreSQL Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#sharding-in-postgresql)
+
+[Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
 
 #### LRU & LFU Cache
 
