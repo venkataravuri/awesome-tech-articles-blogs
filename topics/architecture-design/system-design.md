@@ -3,8 +3,8 @@
 
 ### Table of Contents
 
-- [Design a Gorcery/food Delvery Application](system-design.md#design-a-food--grocery-delivery-system)
-- [Geo-Proxmity Search / Spatial Search]()
+- [Design a Gorcery/Food Delvery Application](system-design.md#design-a-food--grocery-delivery-system)
+- [Geo-Proxmity Search / Spatial Search](system-design.md#geo-proxmity-search)
 - [Design a Flash Sale System](system-design.md#design-a-flash-sale-system)
 - [Design a Search Engine](system-design.md#design-a-search-engine)
 - [Design a Parking Lot System](system-design.md#design-a-parking-lot)
@@ -20,7 +20,7 @@
 - [Design a Voting System](system-design.md#design-a-voting-system)
 - [Design a Finate State Machine](system-design.md#design-a-finate-sate-machine)
 - [Design a Elevator](system-design.md#design-a-elevator)
-- [Design a TinyURL Service](system-design.md#design-tinyurl-service)
+- [Design a TinyURL Service](system-design.md#design-tinyurl-service-or-url-shortner)
 - [Design a LRU Cache & LFU Cache](system-design.md#lru-cache)
 
 **Design Concepts**
@@ -289,7 +289,7 @@ https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-se
 ------------: | ------------- | -------------
 |:star:|[Elevator System Design](https://medium.com/geekculture/system-design-elevator-system-design-interview-question-6e8d03ce1b44)
 
-## Design TinyURL Service
+## Design TinyURL Service (Or) URL Shortner
 
 Generate a 6 or 7 character short and unique key for a given URL.
 
@@ -367,16 +367,13 @@ The routing algorithm decides which partition (shard) stores the data,
 - [MongoDB Sharding Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/nosql.md#mongodb-sharded-cluster)
 - [Shrading with PostgreSQL Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#sharding-in-postgresql)
 
-#### LRU Cache
+#### LRU & LFU Cache
 
 LRU cache is nothing but a combination of the **DoublyLinkedList** and the **HashMap** as shown below:
 
 <img src="https://www.baeldung.com/wp-content/uploads/2021/07/Screenshot-from-2021-07-09-02-10-25-1.png" width="50%" height="50%" />
 
 [LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
-
-#### LFU Cache
-
 
 #### Consistent Hasshing
 
