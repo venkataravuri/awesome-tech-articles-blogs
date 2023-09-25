@@ -22,11 +22,12 @@
 - [Design a Elevator](system-design.md#design-a-elevator)
 - [Design a TinyURL Service](system-design.md#design-tinyurl-service-or-url-shortner)
 - [Design a LRU Cache & LFU Cache](system-design.md#lru--lfu-cache)
-- 
+  
 **Design Concepts**
 
 - [Data Partitioning & Sharding](#data-partitioning--sharding)
-- [Consistent Hashing]()
+- [Consistent Hashing](system-design.md#consistent-hashing)
+  
 ---
 
 ### Quick Guidelines
@@ -291,27 +292,25 @@ https://medium.com/@prefixyteam/how-we-built-prefixy-a-scalable-prefix-search-se
 
 ## Design TinyURL Service (Or) URL Shortner
 
-Generate a 6 or 7 character short and unique key for a given URL.
+For given URL, generate a 6 or 7 character short unique key.
 
-- Hash URL Technique
+### Option 1: Hash URL Technique
   - Use MD5 hash algorithm, produces 128-bit hash value. After base64 encoding results a string having more than 21 characters. Choosing first or last 6 characters cause **duplicate keys**.
-- Generating keys offline
-  - Generates random six-letter strings beforehand and stores them in a database.
-  - **Concurrency**: As soon as a key is used, it should be marked in the database to ensure that it is not used again.
-  - Use two tables to store keys: one for keys that are not used yet, and one for all the used keys.
-  - Keep some keys in memory to quickly provide them whenever a server needs them.
-  - Loads some keys in memory, it can move them to the used keys table. This ensures each server gets unique keys.
 
-## Unique Key Generation
+### Generating keys offline
 
-To generate the roughly-sorted 64 bit ids in an uncoordinated manner through compostion of,
+- Step 1: Generate random six-letter strings beforehand and stores them in a database.
+  
+  **Unique Key Generation** - leverage Twitter Snowflake to generate the roughly-sorted 64 bit ids in an uncoordinated manner through compostion of **timestamp + worker number + sequence number**.
+  - Sequence numbers are per-thread
+  - Worker numbers are chosen at startup via zookeeper (though that’s overridable via a config file).
 
-**timestamp + worker number + sequence number**
+  Source: [Twitter Snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)
 
-- Sequence numbers are per-thread
-- and worker numbers are chosen at startup via zookeeper (though that’s overridable via a config file).
-
-Source: [Twitter Snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)
+- Step 2: **Concurrency**: As soon as a key is used, it should be marked in the database to ensure that it is not used again.
+- Step 3: Use two tables to store keys: one for keys that are not used yet, and one for all the used keys.
+- Step 4: Keep some keys in memory to quickly provide them whenever a server needs them.
+- Step 5: Loads some keys in memory, it can move them to the used keys table. This ensures each server gets unique keys.
 
 ## Design a Twitter
 
