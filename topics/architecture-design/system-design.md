@@ -384,7 +384,7 @@ LRU cache implemented using a combination of the **DoublyLinkedList** and the **
 
 #### Consistent Hashing
 
-[Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
+[Consistent Hashing Notes](https://systemdesign.one/consistent-hashing-explained/#consistent-hashing)
 
 A dtributed hash table (a large hash tables across multipe servers) is subject to rehashing problems.
 
@@ -392,4 +392,10 @@ A dtributed hash table (a large hash tables across multipe servers) is subject t
 
 **Consistent Hashing** is a distribution scheme that does not depend directly on the number of servers, so that, when adding or removing servers, the number of keys that need to be relocated is minimized.
 
-It uses a circle, or hash ring.
+Consistent hashing is a distributed systems technique that operates by assigning the data objects and nodes a position on a virtual ring structure (hash ring). Consistent hashing minimizes the number of keys to be remapped when the total number of nodes changes.
+
+<img src="https://systemdesign.one/consistent-hashing-explained/Consistent-hashing-Deletion-of-node.webp" height="70%" width="70%" />
+
+The failure (crash) of a node results in the movement of data objects from the failed node to the immediate neighboring node in the clockwise direction. The remaining nodes on the hash ring are unaffected
+
+
