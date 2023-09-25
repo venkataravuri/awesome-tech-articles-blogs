@@ -177,6 +177,9 @@ The benefits of this pattern include:
 **References**
 - https://dzone.com/articles/resilient-microservices-pattern-bulkhead-pattern
 
+**Antifragility Vs. Resilency**
+A resilience strategy seeks stability, survival or a "business as usual" outcome, while antifragility seeks an outcome of continuous improvement using a disruption as a catalyst for change. 
+
 ### Idempotency
 
 Perform an operation multiple times without changing the result.
