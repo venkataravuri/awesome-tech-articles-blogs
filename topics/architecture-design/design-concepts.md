@@ -120,6 +120,9 @@ The patterns employs "One Write Model, N Read Models"
 
 The Read Models can be read by front-ends or by APIs.
 
+- [CQRS: What? Why? How?](https://sderosiaux.medium.com/cqrs-what-why-how-945543482313)
+- [Pattern: Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html)
+
 ### Resiliency Patterns
 
 In a distributed system, failures can happen. Network can have transient failures, hardware can fail, storage disks can corrupt. Therefore, design an application to be self-healing when failures occur.
