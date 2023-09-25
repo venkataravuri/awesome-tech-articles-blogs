@@ -21,12 +21,12 @@
 - [Design a Finate State Machine](system-design.md#design-a-finate-sate-machine)
 - [Design a Elevator](system-design.md#design-a-elevator)
 - [Design a TinyURL Service](system-design.md#design-tinyurl-service-or-url-shortner)
-- [Design a LRU Cache & LFU Cache](system-design.md#lru-cache)
-
+- [Design a LRU Cache & LFU Cache](system-design.md#lru--lfu-cache)
+- 
 **Design Concepts**
 
 - [Data Partitioning & Sharding](#data-partitioning--sharding)
-
+- [Consistent Hashing]()
 ---
 
 ### Quick Guidelines
@@ -369,17 +369,24 @@ The routing algorithm decides which partition (shard) stores the data,
 
 #### LRU & LFU Cache
 
-LRU cache is nothing but a combination of the **DoublyLinkedList** and the **HashMap** as shown below:
+**LRU Cache**
+
+LRU cache implemented using a combination of the **DoublyLinkedList** and the **HashMap** as shown below:
 
 <img src="https://www.baeldung.com/wp-content/uploads/2021/07/Screenshot-from-2021-07-09-02-10-25-1.png" width="50%" height="50%" />
 
-[LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
+- [LRU Cache in Java](https://www.baeldung.com/java-lru-cache)
 
-#### Consistent Hasshing
+**LFU Cache**
+
+- [Least Frequently Used Cache](https://www.educative.io/answers/what-is-least-frequently-used-cache-replace-policy)
+- [Least Frequently Used Cache](https://algotree.org/algorithms/hash_table_and_set/lfu_cache/)
+
+#### Consistent Hashing
 
 [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
 
-Ditributed hash table to bypass the memory limitations of using a single computer, allowing for the construction of arbitrarily large hash tables across multipe servers.
+A dtributed hash table (a large hash tables across multipe servers) is subject to rehashing problems.
 
 **Rehashing Problem**: Keys need to be redistributed when a server crashes or new server added. This is true for any distribution scheme, including simple modulo distribution scheme ```hashes modulo N```. Most keys will need to be moved to a different server. So, even if a single server is removed or added, all keys will likely need to be rehashed into a different server.
 
