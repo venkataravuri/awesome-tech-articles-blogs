@@ -52,25 +52,48 @@ System design approaches for apps such as DoorDash, Dunzo, Zomato, Swiggy, Blink
 
 ### Geo-Proxmity Search
 
-[Geo Spatial Notes](https://tarunjain07.medium.com/geospatial-geohash-notes-15cbc50b329d)
+**Geospatial Data**
 
-_**Spatial indices** are a family of algorithms that arrange geometric data for efficient search._
+Geospatial data records geographical location. Usually 4 geometry are used to store geographic data,
+- Point: A single position on earth
+- Line: A set of points that connect
+- Polygon: A set of points representing a boundary of the specific area
+- Multi-Polygon: A collection of polygons that share the same properties
 
-For example, doing queries like “return all buildings in this area”, “find 1000 closest gas stations to this point”, and returning results within milliseconds even when searching millions of objects.
+**Spatial Partitioning + Indexing**
+
+Indexing geospatial data is trickier since it has 2 dimensions: x and y. It requires a different indexing methodology.
+
+Geo Spatial indices are a family of algorithms that arrange geometric data for efficient search to answer roximity queries such as,
+- Find 1000 closest gas stations to this point?
+- How many users are nearby?
+
+#### Geohash
+
+Geohash is a geospatial indexing algorithm that encodes any geo location to a text by splitting the world into an equal-sized unit called cell(or grid) where each has a specific hash assigned to it.
+
+- It converts geographic information into an alphanumeric hash.
+- A geohash is used to identify a rectangular area around a fixed point.
+- The length of the hash determines the precision of the area identified.
+- This allows you to use a hierarchical search where the length of the geohash corresponds to the size of a search area.
+- It provides a way to shard a large data set into buckets based on a zoomed-in level. Entities in the same bucket are in close proximity.
+
+**Finding neighbours**
+
+As each character encodes additional precision, shared prefixes denote geographic proximity.
 
 #### Quatree
-A quadtree is a spatial tree data structure in which each node has exactly four children. A child node can either be a limited list of objects, or a list containing four inner sub-quadtrees.
 
-A quadtree is a tree data structure in which each node has zero or four children. Its main peculiarity is its way of recursively dividing a flat 2-D space into four quadrants.
+A quadtree is a tree data structure in which each node has zero or four children. It recursively divides a flat 2-D space into four quadrants.
+
+#### Space-filling Curves
+A space-filling curve is a line that is bent around in a predetermined fashion until it fills a 2-dimensional plane. This is a way to convert a given 2-D space into a 1-D continuous line which allows simple and efficient geospatial queries, enabling you to assign 1d numbers to objects. This consequently converts the proximity 2d search problem into the simple 1d search.
+
+Once objects are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees and Hash Tables.
 
 #### Google's S2 library
 
-Google S2 curve is based on Hilbert curve, a continuous fractal space-filling curve. Hilbert curve is continuous but not differentiable, and can be considered to have infinite length. It visits every point in the unit square.
-
-- S2 uses the Hilbert Curve to enumerate the cells, this means that cell values close in value are also spatially close to each other.
-- A space-filling curve is just a line that is bent around in a predetermined fashion until it fills a 2-dimensional plane. This line can be bent recursively to form multiple iterations of depth into smaller and smaller areas.
-- S2 converts a given 2-D space into a 1-D continuous line which allows simple and efficient geospatial queries, enabling you to assign 1d numbers to objects. This consequently** converts the proximity 2d search problem into the simple 1d search** that we know.
-- Once objects are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees and Hash Tables.
+Google S2 curve is based on Hilbert curve, a continuous fractal space-filling curve. S2 uses the Hilbert Curve to enumerate the cells, this means that cell values close in value are also spatially close to each other.
 
 Best usage of Google S2, https://gis.stackexchange.com/questions/236508/understanding-the-s2-library-geometry-on-the-sphere-cells-and-hilbert-curve-f
 
@@ -86,8 +109,9 @@ Uber H3 is a geospatial indexing system using a hexagonal grid that can be (appr
 - **MongoDB**: allows you to store geospatial data as GeoJSON points and supports geospatial query operations.
 - **PostgreSQL + PostGIS**: PostGIS is a spatial database extender for the PostgreSQL database. PostGIS adds support for geo-location allowing geospatial SQL-based queries.
 
-Blogs/Articles,
-
+**References**
+- [Geo Spatial Notes](https://tarunjain07.medium.com/geospatial-geohash-notes-15cbc50b329d)
+- [Typeahead + Proximity Search at Nextdoor](https://engblog.nextdoor.com/typeahead-search-at-nextdoor-1875e70c67e8)
 - [Find Restaurants with Geospatial Queries - MongoDB](https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/)
 - [Geo-Proximity Search — 5 Approaches](https://medium.com/@ibrahim.zananiri/proximity-searching-four-approaches-78c626500e43)
 
