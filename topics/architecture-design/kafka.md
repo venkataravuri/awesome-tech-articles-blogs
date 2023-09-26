@@ -182,7 +182,7 @@ PID and a sequence number are bundled together with the message and sent to the 
 
 The Idempotent producer ensures Exactly Once Semantics message delivery per partition. To do so in multiple partitions, Kafka guarantees atomic transactions, which powers the applications to produce multiple TopicPartitions atomically. All writes to these TopicPartitions will either succeed or fail as a single unit. The application must provide a unique id, TransactionalId, to the producer, which is stable across all sessions of the application.....
         
-        <Code>
+```
 {
     producer.initTransactions();
     try{
@@ -197,11 +197,10 @@ The Idempotent producer ensures Exactly Once Semantics message delivery per part
         producer.abortTransaction();
     }
 } 
-</Code>
+```
         
 What about consumer?
 https://dzone.com/articles/kafka-clients-at-most-once-at-least-once-exactly-o
-        
 
 ### If a new consumer joins a consumer group, how would the partitions be assigned to the new consumer?
 
