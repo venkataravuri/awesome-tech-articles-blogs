@@ -18,7 +18,7 @@ A curated list of awesome system design, design principles & patterns, technical
 |:hamburger:|**[Probabilistic Data Structures](topics/architecture-design/data-structures.md)** | Memory efficient data structures - Is URL malicious?, Top K tickers in stock ticker stream, Is IP adress blocked?, Top k listened songs in 24 hrs, Frequent sold items, ...|
 |:cloud:|**[Cloud Computing - AWS](topics/cloud/cloud.md)** | Best practices & interesting articles on public cloud|
 |:heavy_dollar_sign:|**[Business & Digital Transformation](topics/architecture-design/digital-transformation.md)** | What is Digital Transformation? How to do? ...|
-|:chart_with_upwards_trend:|**[Analytics & Big Data](topics/data-analytics-big-data/stream-analytics-big-data.md)** <br/>**[Recommendations](topics/data-analytics-big-data/recommendations.md)**| Probalistic datastructures & algorithms, streaming analytics and more|
-|:ferris_wheel:|**[DevOps - Kubernetes, Infrastructure Automation](topics/devops/devops.md)** | DevOps articles, [Docker, Kubenetes](topics/devops/docker-kubernetes.md) |
+|:chart_with_upwards_trend:|**[Analytics & Big Data](topics/data-analytics-big-data/stream-analytics-big-data.md)** & <br/> **[Recommendations](topics/data-analytics-big-data/recommendations.md)**| Probalistic datastructures & algorithms, streaming analytics and more|
+|:ferris_wheel:|**[DevOps](topics/devops/devops.md)** & <br/> **[Kubernetes, Infrastructure Automation](topics/devops/docker-kubernetes.md)** | DevOps articles, Docker, Kubenetes |
 |:hotsprings:|**[Security](topics/devops/security.md)**| OAuth, CORS, CSRF, OWASP, MITRE.|
 |:green_book:|**[Java](topics/general/java.md), [JavaScript](topics/general/javascript.md), [Python](topics/general/python.md)**| Programming concepts.|
