@@ -156,3 +156,20 @@ Prometheus uses a pull-based approach for getting metrics.
 Istio Gateway + Virtual Service
 
 [Automatic mTLS using Istio Service Mesh in AWS EKS](https://stackoverflow.com/questions/64107791/how-to-enable-automatic-mtls-using-istio-mesh-in-aws-eks)
+
+Peer and request authentication policies are stored separately by kind, PeerAuthentication and RequestAuthentication respectively.
+
+**Peer authentication**
+
+Peer authentication policies specify the mutual TLS mode Istio enforces on target workloads. The following modes are supported:
+- PERMISSIVE: Workloads accept both mutual TLS and plain text traffic. This mode is most useful during migrations when workloads without sidecar cannot use mutual TLS. Once workloads are migrated with sidecar injection, you should switch the mode to STRICT.
+- STRICT: Workloads only accept mutual TLS traffic.
+- DISABLE: Mutual TLS is disabled. From a security perspective, you shouldn’t use this mode unless you provide your own security solution.
+
+Request authentication
+
+Request authentication policies specify the values needed to validate a JSON Web Token (JWT). These values include, among others, the following:
+
+- The location of the token in the request
+- The issuer or the request
+- The public JSON Web Key Set (JWKS)
