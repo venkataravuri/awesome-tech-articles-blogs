@@ -274,4 +274,25 @@ https://medium.com/hacking-talent/mastering-apache-kafka-on-kubernetes-strimzi-k
 
 - Use Kafka Consumer to batch push into Redshift
 
-https://www.confluent.io/blog/kafka-consumer-multi-threaded-messaging/
+### Decoupling consumption and processing
+
+**Multi-threaded Kafka consumer**
+
+A naive approach might be to process each message in a separate thread taken from a thread pool, while using automatic offset commits (default config). Unfortunately, this may cause some undesirable effects:
+- Offset might be committed before a record is processed
+- Message processing order can’t be guaranteed since messages from the same partition could be processed in parallel.
+
+While the goal is to achieve record processing parallelization, you also want your multi-threaded solution to maintain the features that a common, single-threaded approach has: processing order guarantees per partition and at-least-once delivery semantics.
+
+The solution described in this blog post uses runnable tasks executed by a thread pool for processing records. The rest of this blog post describes how it works.
+
+Note: This implementation might not be optimal for all use cases. Its goal is to demonstrate key aspects that need to be considered when implementing a multi-threaded consumer model.
+Decoupling consumption and processing
+
+In a multi-threaded implementation, the main consumer thread delegates records processing to other threads.
+
+Records are retrieved using the poll method, the same as with a single-threaded implementation. Then, the records are grouped by partition, which results in multiple collections where each holds records from only a single partition. In order to process those collections, runnable tasks are created for each and submitted to an instance of Java’s built-in thread pool implementation.
+
+<img src="https://cdn.confluent.io/wp-content/uploads/decoupling-consumption-600x344.png" width="60%" height="60%" />
+
+[Source](https://www.confluent.io/blog/kafka-consumer-multi-threaded-messaging/)
