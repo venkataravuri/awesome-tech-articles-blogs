@@ -1,12 +1,54 @@
 # Kubernetes
 
-## Networking
+## Kubernetes Networking
 
-Source: https://itnext.io/an-illustrated-guide-to-kubernetes-networking-part-1-d1ede3322727
+Kubernetes platform include nodes, applications, containers, and pods. These components communicate using different networking methods such as,
 
-Kubernetes Networking has one important fundamental design philosophy: **_Every Pod has a unique IP_**
+- Internet-to-service networking
+- Container-to-container networking
+- Pod-to-pod networking
+- Pod-to-service networking
 
-This Pod IP is shared by all the containers in this Pod, and it’s routable from all the other Pods.
+Kubernetes Network Model has a few general rules to keep in mind:
+
+- Every Pod gets its own IP address: There should be no need to create links between Pods and no need to map container ports to host ports.
+- Pods on a node should be able to communicate with all Pods on all nodes without NAT.
+- Agents on a node (system daemons, Kubelet) can communicate with all the Pods in that node.
+- Containers within a Pod share a network namespace (IP and MAC address), so they can communicate with each other using the loopback address.
+
+### Internet-to-service networking
+
+<img src="https://opensource.com/sites/default/files/2022-05/3internettoservicenets.jpg" height="80%" width="80%" />
+
+### Container-to-container networking
+
+Container-to-container networking happens through the Pod network namespace. Every Pod has its own network namespace, and containers inside that Pod share the same IP address and ports. All communication between these containers happens through localhost, as they are all part of the same namespace.
+
+<img src="https://opensource.com/sites/default/files/2022-05/1containerandpodnets.jpg" />
+
+### Pod-to-Pod networking
+
+With Kubernetes, every node has a designated CIDR range of IPs for Pods. This ensures that every Pod receives a unique IP address that other Pods in the cluster can see. When a new Pod is created, the IP addresses never overlap. Unlike container-to-container networking, Pod-to-Pod communication happens using real IPs, whether you deploy the Pod on the same node or a different node in the cluster.
+
+The diagram shows that for Pods to communicate with each other, the traffic must flow between the Pod network namespace and the Root network namespace. This is achieved by connecting both the Pod namespace and the Root namespace by a virtual ethernet device or a veth pair (veth0 to Pod namespace 1 and veth1 to Pod namespace 2 in the diagram). A virtual network bridge connects these virtual interfaces, allowing traffic to flow between them using the Address Resolution Protocol (ARP).
+
+### Pod-to-Service networking
+
+Pods are very dynamic. They may need to scale up or down based on demand. They may be created again in case of an application crash or a node failure. These events cause a Pod's IP address to change, which would make networking a challenge.
+
+Kubernetes solves this problem by using the Service function, which does the following:
+- Assigns a static virtual IP address in the frontend to connect any backend Pods associated with the Service.
+- Load-balances any traffic addressed to this virtual IP to the set of backend Pods.
+- Keeps track of the IP address of a Pod, such that even if the Pod IP address changes, the clients don't have any trouble connecting to the Pod because they only directly connect with the static virtual IP address of the Service itself.
+
+<img src="https://opensource.com/sites/default/files/2022-05/2podtoservicenets.jpg" height="80%" width="80%" />
+
+The in-cluster load balancing occurs in two ways:
+
+- IPTABLES: In this mode, kube-proxy watches for changes in the API Server. For each new Service, it installs iptables rules, which capture traffic to the Service's clusterIP and port, then redirects traffic to the backend Pod for the Service. The Pod is selected randomly. This mode is reliable and has a lower system overhead because Linux Netfilter handles traffic without the need to switch between userspace and kernel space.
+- IPVS: IPVS is built on top of Netfilter and implements transport-layer load balancing. IPVS uses the Netfilter hook function, using the hash table as the underlying data structure, and works in the kernel space. This means that kube-proxy in IPVS mode redirects traffic with lower latency, higher throughput, and better performance than kube-proxy in iptables mode.
+
+
 
 Ever notice some “pause” containers running on your Kubernetes nodes? They are called “sandbox containers”, whose only job is to reserve and hold a network namespace (netns) which is shared by all the containers in a pod. This way, a pod IP doesn’t change even if a container dies and a new one in created in it’s place.
 
@@ -23,7 +65,6 @@ NetworkPolicy in a Kubernetes cluster, it is not a replacement for firewalls. A 
 **In TKG ** Antrea is default CNI.
 
 https://medium.com/geekculture/k8s-node-ip-vs-pod-ip-vs-cluster-ip-65f75d4432b8
-
 
 ### Calico
 
