@@ -296,3 +296,10 @@ Records are retrieved using the poll method, the same as with a single-threaded 
 <img src="https://cdn.confluent.io/wp-content/uploads/decoupling-consumption-600x344.png" width="60%" height="60%" />
 
 [Source](https://www.confluent.io/blog/kafka-consumer-multi-threaded-messaging/)
+
+In Spring Boot,
+
+The @KafkaListener will create multiple consumers for you.
+
+You can configure all of them to use the same topic and belong to the same group. The Kafka coordinator will distribute partitions to your consumers.
+
