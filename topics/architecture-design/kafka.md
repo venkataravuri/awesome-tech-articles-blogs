@@ -18,7 +18,7 @@ In-Stream Analytics (In our case it is limited to Trends)
 - Active SDDCs Count
 - Active Users Count
 - Latency Trends
-- Anomaly Detection - Abnormal change in trends
+- Anomaly Detection - Abnormal change in trends - Using Moving Average algorithms.
 
 KTable is localized in-memory store, used groupy and aggregate events, can be configured to use with ROCKS_DB by default.
 
