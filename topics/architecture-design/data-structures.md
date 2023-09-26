@@ -13,7 +13,7 @@ Probabilistic data structures allow for constant memory space and extremely fast
 
 ## Top Trends - Top-K
 
-Top-K is a probabilistic data structure that allows you to find the most frequent items in a data stream.
+Top-K is a probabilistic data structure that allows you to **find the most frequent items in a data stream**.
 
 - Maintains a list of K most frequent items.
 - Finding the largest K elements in a data set or a stream.
@@ -52,7 +52,7 @@ References
 
 ### Bloom Filters
 
-A data structure that enables you to store information about the presence of an element in a set in a very small space of a fixed size. 
+A data structure that enables you to **store information about the presence of an element in a set** in a very small space of a fixed size. 
 
 - If you ask Bloom Filter whether an item exists in a set, it can provide you any of the 2 answers — ‘May be present’ or ‘No. 
 - Bloom filter guarantees ‘No’ answer for membership check if the item does not exist in the set, but it’s not so sure about the item when it exists in the set.
@@ -87,7 +87,7 @@ Bloom filters varients for streaming data,
 
 ### Count-Min Sketch
 
-A space-efficient probabilistic data structure to estimate frequencies of elements in data streams. To Estimate number of times an element occurs in a set.
+A space-efficient probabilistic data structure to **estimate frequencies of elements in data streams**. To Estimate number of times an element occurs in a set.
 
 [Count-Min Sketch](https://coblob.com/blogs/Count-Min-Sketch-to-solve-Top-K-or-Frequent-K-Heavy-Hitters-System-Design-problems-5b21ca3eeb7f6fbccd473689)
 
@@ -114,7 +114,7 @@ aka. Cardinality Estimation Problem
 > Algorithms: Linear counting, probabilistic counting, LogLog, HyperLogLog, HyperLogLog++.
 
 ### HyperLogLog
-HyperLogLog (HLL) used to count number of distinct values in te presence of duplicates.
+HyperLogLog (HLL) used to **count number of distinct values in te presence of duplicates**.
 
 - HLL counts unique items in a stream, without having to remember the whole history. 
 - HLL counter takes up to 12KB of memory regardless of how many items you put into it.
