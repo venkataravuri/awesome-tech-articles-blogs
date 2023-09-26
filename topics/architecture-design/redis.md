@@ -11,6 +11,9 @@ Redis ~ **Re**mote **Di**ctionary **S**ervice
     - [List of Redis Data Structures](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Jo5_Qy3oXe4i0gqLQINi0A.png)
 - Operations on any Type
 
+- https://stackoverflow.com/questions/9625246/what-are-the-underlying-data-structures-used-for-redis
+- https://redis.io/commands/hmset/
+
 ### Redis Sorted Sets
 
 [Try to understand Sorted Sets with a leaderboard example](https://medium.com/analytics-vidhya/redis-sorted-sets-explained-2d8b6302525)
