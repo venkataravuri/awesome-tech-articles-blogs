@@ -350,6 +350,8 @@ Two attributes of an effective shard key are,
 
 - **Frequency** refers to the distribution of the data along the possible values. It is the probability of storing specific information in a particular shard. For example, a database designer chooses age as a shard key for a fitness website. Most of the records might go into nodes for subscribers aged 30–45 and result in database hotspots.
 
+> Cassandra is often used for time series data, and hotspotting can be a real issue. Breaking incoming data into buckets by year:month:day:hour, using four columns to route to a partition can decrease hotspots. 
+
 The routing algorithm decides which partition (shard) stores the data,
 
 - **Range Based Partitioning**: This algorithm uses ordered columns, such as integers, longs, timestamps, to separate the rows. For example, the diagram below uses the User ID column for range partition: User IDs 1 and 2 are in shard 1, User IDs 3 and 4 are in shard 2.
@@ -364,6 +366,15 @@ The routing algorithm decides which partition (shard) stores the data,
 - [Shrading with PostgreSQL Notes](https://github.com/venkataravuri/awesome-tech-articles-blogs/blob/master/topics/architecture-design/rdbms.md#sharding-in-postgresql)
 
 [Source](https://blog.bytebytego.com/p/vertical-partitioning-vs-horizontal)
+
+**Difference between Clustered and Non-clustered Index**
+
+- A cluster index is a type of index that sorts the data rows in the table on their key values, whereas the Non-clustered index stores the data at one location and indices at another location.
+- Clustered index stores data pages in the leaf nodes of the index, while the Non-clustered index method never stores data pages in the leaf nodes of the index.
+- The cluster index doesn’t require additional disk space, whereas the Non-clustered index requires additional disk space.
+- Cluster index offers faster data access, on the other hand, the Non-clustered index is slower.
+
+Difference between Clustered and Non-clustered Index
 
 #### LRU & LFU Cache
 
