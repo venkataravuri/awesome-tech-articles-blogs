@@ -40,6 +40,8 @@
 
 ---
 
+[What happens when you type amazon com or www google com in the browser?](https://systemdesign.one/what-happens-when-you-type-url-into-your-browser/)
+
 ### Design a Food/Grocery Delivery System
 
 System design approaches for apps such as DoorDash, Dunzo, Zomato, Swiggy, Blinkit and more ...
