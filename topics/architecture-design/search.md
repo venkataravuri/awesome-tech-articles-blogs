@@ -23,17 +23,41 @@
 * [Spam-Resilient Signals](#span-resilient-signals)
 * [Ranking & Scoring](#scoring)
 
-## Lexical Search
+# Search
+
+## Lexical or Keyword search
 
 Lexical (or sparse) retrieval, relies upon a data structure called an inverted index to perform efficient keyword matching.
 
 Lexical search algorithms are based upon word frequencies.
 
+Lexical involves more advanced techniques like lemmatization and stemming or vice versa.
+
 Sparse retrieval algorithms exist (e.g., TF-IDF), BM25 achieves impressive performance.
+
+Vector space models represent documents and queries as vectors, a long series of numbers and run a similarity function over them to find the closest document.
+
+TF-IDF with the vector space model is to look at the data in a table format. Below shows a document-term matrix, where each row represents a document, and each column represents a unique term/keyword.
+
+Each document can then be represented as a long series of numbers (one for each unique term in the corpus) or in other words a vector.
+
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/0*gdNQx9I2MtAqQw30.png" width="70%" height="70%" />
+
+ traditional vectors space model, you are going to end up with a very long vector where most of the elements, values are zero. This is very inefficient, and you can see why they are often called sparse vector embedding…
+
+ TF-IDF etc which results in sparse embedding vectors where most of the vector is zero.
 
 ## Semantic Search
 
+“Semantic Search” which should understand the meaning of the words or terms and not just matching the word or linguistic form.
 
+### Sparse vs Dense embeddings
+
+One major difference between embedding and the traditional vectors created using TF-IDF is that embeddings have a fixed length and do not depend on the number of unique words in the collection.
+
+## Vector embedding, Vector stores and Vector search methods
+
+Dense embedding better than Sparse embeddings?
 
 ## Text Analysis / Text Mining
 
