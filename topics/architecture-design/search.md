@@ -51,6 +51,8 @@ Each document can then be represented as a long series of numbers (one for each 
 
 “Semantic Search” which should understand the meaning of the words or terms and not just matching the word or linguistic form.
 
+In this context, after converting your data into meaningful vector values, k-nearest neighbor (kNN) search algorithm is utilized to find vector representations in a dataset that are most similar to a query vector. Elasticsearch supports two methods for kNN search, exact brute-force kNN and approximate kNN, also known as ANN.
+
 ### Sparse vs Dense embeddings
 
 One major difference between embedding and the traditional vectors created using TF-IDF is that embeddings have a fixed length and do not depend on the number of unique words in the collection.
@@ -59,6 +61,7 @@ One major difference between embedding and the traditional vectors created using
 
 Dense embedding better than Sparse embeddings?
 
+ Elasticsearch converts text field data into a searchable format by performing text analysis.
 ## Text Analysis / Text Mining
 
 ### Tokenization
