@@ -23,6 +23,18 @@
 * [Spam-Resilient Signals](#span-resilient-signals)
 * [Ranking & Scoring](#scoring)
 
+## Lexical Search
+
+Lexical (or sparse) retrieval, relies upon a data structure called an inverted index to perform efficient keyword matching.
+
+Lexical search algorithms are based upon word frequencies.
+
+Sparse retrieval algorithms exist (e.g., TF-IDF), BM25 achieves impressive performance.
+
+## Semantic Search
+
+
+
 ## Text Analysis / Text Mining
 
 ### Tokenization
