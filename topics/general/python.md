@@ -98,6 +98,25 @@ FastAPI is built on top of Starlette, which is a lightweight ASGI framework. Thi
 
 Uvicorn is a web server that is specifically designed for use with the FastAPI web framework. 
 
+
+ Explain the caching strategies of Django. ?
+
+Django has its own inbuilt caching system that allows us to store our dynamic pages. So that we don’t have to request them again when we need them. The advantage of the Django Cache framework is that it allows us to cache data such as templates or the entire site. Django provides four different types of caching options, they are:
+
+    per-site cache – It is the most straightforward to set up and caches your entire website.
+    per-view cache – Individual views can be cached using the per-view cache.
+    Template fragment caching allows you to cache only a portion of a template.
+    low-level cache API – It can manually set, retrieve, and maintain particular objects in the cache using the low-level cache API.
+
+Explain the role of Django middleware and provide some examples
+
+Django middleware is a series of hooks that process requests and responses globally before they reach the view or after they leave the view. Middleware can be used for various purposes, such as authentication, session management, and caching. Some examples of Django middleware include:
+
+    AuthenticationMiddleware: Handles user authentication and associates users with requests.
+    SessionMiddleware: Manages sessions for users.
+    CsrfViewMiddleware: Protects against cross-site request forgery attacks.
+    
+
 https://towardsdatascience.com/build-an-async-python-service-with-fastapi-sqlalchemy-196d8792fa08
 
 
