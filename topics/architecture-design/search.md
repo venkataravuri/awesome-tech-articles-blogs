@@ -134,6 +134,22 @@ Different types of components that you can expect to find in a pipeline. The mai
 - Intent Classifiers
 - Entity Extractors
 
+ntity Extraction algorithms or techniques in Natural Language Processing (NLP):
+
+    Named Entity Recognition (NER): This is a subtask of information extraction that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc1234.
+
+    Rule-based Models: These models use a set of predefined rules and patterns to identify entities. For example, regular expression-based rules can be written to extract entities5.
+
+    Dictionary Lookups: This technique involves matching words and phrases in the text with a pre-existing dictionary or list of entities4.
+
+    Part of Speech (POS) Tagging and Dependency Parsing: These techniques involve analyzing the grammatical structure of a sentence to extract entities4.
+
+    Probabilistic Models: These models, such as Hidden Markov Models (HMMs) and Conditional Random Fields (CRFs), assign probabilities to sequences of words being entities5.
+
+    Deep Learning Models: Deep learning techniques, such as Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM) networks, and Transformer-based models like BERT, have been used for entity extraction126.
+
+Each of these techniques has its strengths and weaknesses, and the choice of technique often depends on the specific use case and the nature of the data
+
 ### Semantic Search
 
 Semantic search is basically search with meaning.
