@@ -1,6 +1,6 @@
 
 - [Python Abstract Classes](https://medium.com/analytics-vidhya/abc-in-python-abstract-base-class-35808a9d6b32)
-
+- [Pydantic]()
   
 ### What are decorators in Python?
 
@@ -119,4 +119,6 @@ Django middleware is a series of hooks that process requests and responses globa
 
 https://towardsdatascience.com/build-an-async-python-service-with-fastapi-sqlalchemy-196d8792fa08
 
+## Pydantic
 
+TODO
